@@ -1,5 +1,9 @@
 # RIA-EISA Simulation Repository README
 
+Yuxuan Zhanga,b, Weitong Hu*c, Tongzhou Zhangd
+aCollege of Communication Engineering, Jilin University, Changchun, China; bChangchun FAWAY Automobile Components CO., LTD, Changchun, China; cAviation University of Air Force, Changchun, China; dCollege of Computer Science and Technology, Jilin University, Changchun, China 
+*csoft@hotmail.com
+
 ## Overview
 
 This repository contains five PyTorch-based numerical simulations supporting the Extended Integrated Symmetry Algebra (EISA) with Recursive Info-Algebra (RIA) framework, as described in the manuscript "Towards a Unified Framework: The Extended Integrated Symmetry Algebra (EISA) Theory with Recursive Info-Algebra (RIA) Extension" submitted to *New Journal of Physics*. These simulations validate key theoretical predictions, including self-organization, transient fluctuations, particle hierarchies, cosmological evolution, and emergent reflective processes. Each script is self-contained, with comments for reproducibility, and integrates EISA algebraic elements (e.g., generators \(F_i\), \(B_k\)) with RIA recursion (VQC-optimized loss \(S_{vn} + (1 - Fid)\)).
