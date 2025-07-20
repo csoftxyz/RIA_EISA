@@ -15,19 +15,19 @@ The simulations demonstrate the framework's coherence under constrained computat
 
 This repository contains five PyTorch-based simulations supporting the EISA-RIA framework for quantum field dynamics.
 
-## c1bs.py: Recursive Entropy Stabilization
+## c1b.py: Recursive Entropy Stabilization
 Evolves noisy density matrices via RIA recursion with EISA seeding to quantify self-organization, verifying entropy reduction and fidelity thresholds.
 
-## c2as.py: Transient Fluctuations and Curvature Feedback
+## c2a.py: Transient Fluctuations and Curvature Feedback
 Models φ(t) dynamics under ε(t), computing curvature and GW predictions to test phase transition criticality.
 
-## c3a1s.py: Particle Spectra and Constant Freezing
+## c3a1.py: Particle Spectra and Constant Freezing
 Computes branching and constants via potential minimization, verifying hierarchies and norms.
 
-## c4as.py: Cosmic Evolution and Multi-Messenger Predictions
+## c4a.py: Cosmic Evolution and Multi-Messenger Predictions
 Solves Friedmann with densities, forecasting signals and tension resolution.
 
-## c5cs.py: Quantum Information Dynamics
+## c5c.py: Quantum Information Dynamics
 Simulates dynamics under constraints with network data.
 
 For details, refer to the paper.
