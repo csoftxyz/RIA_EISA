@@ -209,4 +209,4 @@ plt.show()
 print(f"Simulated late H (CMB norm): {H_tau_cmb[-1]:.2f} vs expected ~1")
 print(f"GW peak freq: {gw_freq[np.argmax(gw_power)]:.2e} Hz vs LIGO pred ~1e10 Hz")
 
-# Note: Normalized time tau = H0 * t for stability. Clamped H_sq >=0. Added atol/rtol. Simulates crackling to de Sitter. CMB/GW as before. Tension via param tweak.
+# Note: Normalized time tau = H0 * t for stability. Clamped H_sq >=0. Added atol/rtol. Simulates crackling to de Sitter. CMB/GW as before. Tension via param tweak. Uncertainties ~10-20% due to simplification; compare to ΛCDM for validation.
