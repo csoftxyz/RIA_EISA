@@ -1,4 +1,9 @@
 #```python
+import os
+os.environ['KMP_DUPLICATE_LIB_OK'] = 'TRUE'
+
+
+
 import torch
 import torch.nn as nn
 import torch.optim as optim
@@ -261,9 +266,9 @@ plt.show()
 plt.tight_layout()
 plt.show()
 
-# Self-reflection threshold
+# Fidelity threshold
 threshold_iter = next((i for i, fid in enumerate(fidelities) if fid > 0.8), 'Not reached')
-print(f"Self-reflection threshold (Fid > 0.8) reached at iteration: {threshold_iter}")
+print(f"Fidelity threshold (Fid > 0.8) reached at iteration: {threshold_iter}")
 
 # Final values
 print(f"Final Entropy: {entropies[-1]:.4f}")
@@ -271,5 +276,5 @@ print(f"Final Fidelity: {fidelities[-1]:.4f}")
 print(f"Target Entropy reduction: from ~{entropies[0]:.4f} to ~{entropies[-1]:.4f}")
 
 # Note: The initial EISA generators F_i and B_k can be incorporated by initial rho = F_i @ rho @ F_i.conj().T or similar, but for this demonstration, they are shown as examples.
-# To verify universe bootstrap, observe if entropy decreases and fidelity increases, indicating self-organization from chaos to ordered particle-like structures.
+# To verify universe bootstrap, observe if entropy decreases and fidelity increases, indicating self-organization from chaos to ordered particle-like structures. Uncertainties ~10-20% due to simplification; higher loops needed for precision.
 #```
