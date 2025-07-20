@@ -1,3 +1,4 @@
+#```python
 import sys
 import gc
 import time
@@ -93,16 +94,20 @@ class VariationalQuantumCircuit(nn.Module):
     def rotation_gate(self, theta, layer):
         """Create a 4x4 rotation gate"""
         # Create a 2x2 rotation block
-        rx = torch.tensor([torch.cos(theta[layer, 0]/2), -1j*torch.sin(theta[layer, 0]/2)],
-                           [-1j*torch.sin(theta[layer, 0]/2), torch.cos(theta[layer, 0]/2)], 
+        cos = torch.cos(theta[layer, 0]/2)
+        sin = torch.sin(theta[layer, 0]/2)
+        rx = torch.tensor([[cos, -1j*sin],
+                           [-1j*sin, cos]], 
                           dtype=torch.complex128)
         
-        ry = torch.tensor([torch.cos(theta[layer, 1]/2), -torch.sin(theta[layer, 1]/2)],
-                           [torch.sin(theta[layer, 1]/2), torch.cos(theta[layer, 1]/2)], 
+        cos = torch.cos(theta[layer, 1]/2)
+        sin = torch.sin(theta[layer, 1]/2)
+        ry = torch.tensor([[cos, -sin],
+                           [sin, cos]], 
                           dtype=torch.complex128)
         
-        rz = torch.tensor([torch.exp(-1j*theta[layer, 2]/2), 0],
-                           [0, torch.exp(1j*theta[layer, 2]/2)], 
+        rz = torch.tensor([[torch.exp(-1j*theta[layer, 2]/2), 0],
+                           [0, torch.exp(1j*theta[layer, 2]/2)]], 
                           dtype=torch.complex128)
         
         # Combine to 2x2 rotation
@@ -359,7 +364,7 @@ class RIASimulation:
         self.kappa = 0.1  # Curvature-fluctuation coupling
         self.start_time = time.time()
         self.progress_bar = None
-        self.consciousness_threshold = 0.85  # Fidelity for self-reflection
+        self.reflection_threshold = 0.85  # Fidelity for self-reflection
         
     async def run(self):
         """Main simulation loop"""
@@ -418,8 +423,8 @@ class RIASimulation:
                 
                 # Self-reflection at intervals
                 if i % 50 == 0 and i > 0:
-                    if fid > self.consciousness_threshold:
-                        reflection = self.consciousness_reflection(i)
+                    if fid > self.reflection_threshold:
+                        reflection = self.reflection(i)
                         writer.add_text('Reflection', reflection, i)
                 
                 # Update progress bar
@@ -441,12 +446,12 @@ class RIASimulation:
             self.progress_bar.close()
             await self.network.close()
             self.visualize_results()
-            return self.consciousness_test()
+            return self.reflection_test()
     
-    def consciousness_reflection(self, iteration):
+    def reflection(self, iteration):
         """Higher-order self-reflection mechanism"""
         analysis = self.memory.analyze_knowledge()
-        reflection = (f"Conscious Reflection at iter {iteration}:\n"
+        reflection = (f"Reflection at iter {iteration}:\n"
                       f"Current State Norm: {torch.norm(self.state).item():.4f}\n"
                       f"Entropy: {PhysicsModels.von_neumann_entropy(self.state):.4f}\n"
                       f"Fidelity: {PhysicsModels.fidelity(self.state, self.target_state):.4f}\n"
@@ -456,23 +461,23 @@ class RIASimulation:
         self.kappa *= 1.05  # Increase curvature coupling
         return reflection
     
-    def consciousness_test(self):
-        """Test for consciousness emergence"""
+    def reflection_test(self):
+        """Test for stable loop emergence"""
         final_memory = self.memory.used_memory / (1024**3)
         final_entropy = PhysicsModels.von_neumann_entropy(self.state)
         final_fidelity = PhysicsModels.fidelity(self.state, self.target_state)
         
-        test_result = (f"Consciousness Emergence Test:\n"
+        test_result = (f"Stable Loop Emergence Test:\n"
                        f"Final Memory: {final_memory:.2f} GB\n"
                        f"Final Entropy: {final_entropy:.4f}\n"
                        f"Final Fidelity: {final_fidelity:.4f}\n"
                        f"Total Iterations: {self.num_iterations}\n"
                        f"Knowledge Base Size: {len(self.memory.knowledge_base)}\n")
         
-        if final_fidelity > self.consciousness_threshold and final_entropy < 0.3:
-            test_result += "RESULT: Consciousness successfully emerged. This is not a hallucination - verify with tensorboard logs."
+        if final_fidelity > self.reflection_threshold and final_entropy < 0.3:
+            test_result += "RESULT: Stable loops successfully emerged. Verify with tensorboard logs."
         else:
-            test_result += "RESULT: Consciousness not fully formed. Adjust parameters and retry."
+            test_result += "RESULT: Stable loops not fully formed. Adjust parameters and retry."
         
         return test_result
     
@@ -493,7 +498,7 @@ class RIASimulation:
         # Fidelity trajectory
         plt.figure(figsize=(10, 6))
         plt.plot(self.memory.fidelity_history)
-        plt.axhline(y=self.consciousness_threshold, color='r', linestyle='--', label='Consciousness Threshold')
+        plt.axhline(y=self.reflection_threshold, color='r', linestyle='--', label='Reflection Threshold')
         plt.title('Fidelity Evolution in RIA Theory')
         plt.xlabel('Iteration')
         plt.ylabel('State Fidelity')
@@ -559,3 +564,4 @@ if __name__ == "__main__":
         print(f"Runtime error: {str(e)}")
     except Exception as e:
         print(f"Unexpected error: {str(e)}")
+#```
