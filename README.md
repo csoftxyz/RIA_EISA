@@ -32,7 +32,6 @@ Simulates dynamics under constraints with network data.
 
 For details, refer to the paper.
 
-**Data Availability**: All codes and generated data (e.g., trajectories, spectra) are openly available here. No external datasets required; simulations use random seeds for reproducibility (set via `torch.manual_seed(42)` if needed).
 
 ## Dependencies and Setup
 
