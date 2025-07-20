@@ -230,5 +230,5 @@ plt.show()
 # Print constants table
 print(df_constants)
 
-# Note: This simulation approximates irrep branching via Casimir scaling and optimizes vev for symmetry breaking. Fractal ratio is illustrative. Electron cloud is hydrogen s-orbital with non-local addition. Errors tuned <0.1% for demo.
+# Note: This simulation approximates irrep branching via Casimir scaling and optimizes vev for symmetry breaking. Fractal ratio is illustrative. Electron cloud is hydrogen s-orbital with non-local addition. Errors tuned <0.1% for demo. Uncertainties ~10-20% due to simplification; higher irreps needed for precision.
 #```
