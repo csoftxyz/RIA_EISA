@@ -164,7 +164,7 @@ plt.figure(figsize=(15, 12))
 plt.subplot(3, 3, 1)
 plt.plot(entropies)
 plt.title('Von Neumann Entropy Trajectory')
-plt.xlabel('Iteration')
+#plt.xlabel('Iteration')#To display the table text below while hiding 'Iteration'.
 plt.ylabel('Entropy')
 plt.grid(True)
 
@@ -172,7 +172,7 @@ plt.grid(True)
 plt.subplot(3, 3, 2)
 plt.plot(fidelities)
 plt.title('Fidelity Trajectory')
-plt.xlabel('Iteration')
+#plt.xlabel('Iteration')#To display the table text below while hiding 'Iteration'.
 plt.ylabel('Fidelity')
 plt.grid(True)
 
@@ -180,7 +180,7 @@ plt.grid(True)
 plt.subplot(3, 3, 3)
 plt.plot(losses)
 plt.title('Loss Trajectory')
-plt.xlabel('Iteration')
+#plt.xlabel('Iteration')#To display the table text below while hiding 'Iteration'.
 plt.ylabel('Loss')
 plt.grid(True)
 
@@ -189,7 +189,7 @@ plt.subplot(3, 3, 4)
 plt.scatter(entropies, fidelities, c=np.arange(len(entropies)), cmap='viridis')
 plt.colorbar(label='Iteration')
 plt.title('Entropy vs Fidelity')
-plt.xlabel('Entropy')
+#plt.xlabel('Entropy')
 plt.ylabel('Fidelity')
 plt.grid(True)
 
@@ -197,7 +197,7 @@ plt.grid(True)
 plt.subplot(3, 3, 5)
 plt.plot(theta_rx_hist)
 plt.title('Theta RX Parameter Evolution')
-plt.xlabel('Iteration')
+#plt.xlabel('Iteration')#To display the table text below while hiding 'Iteration'.
 plt.ylabel('Theta RX')
 plt.grid(True)
 
@@ -205,7 +205,7 @@ plt.grid(True)
 plt.subplot(3, 3, 6)
 plt.plot(theta_ry_hist)
 plt.title('Theta RY Parameter Evolution')
-plt.xlabel('Iteration')
+#plt.xlabel('Iteration')#To display the table text below while hiding 'Iteration'.
 plt.ylabel('Theta RY')
 plt.grid(True)
 
