@@ -1,0 +1,10 @@
+aiohttp
+nest-asyncio
+numpy
+matplotlib
+pandas
+scipy
+tensorboard
+torch
+torchdiffeq
+tqdm
