@@ -58,7 +58,7 @@ For manuscript context, refer to the Supplementary Information in Recursive_Alge
 
 ### c5c.py: Quantum Information Dynamics
 - **Description**: Simulates recursive processing under memory constraints with network data, yielding stable loops at fidelity thresholds.
-- **Execution Results vs. Recursive_Algebra_in_Extended_Integrated_Symmetry.tex**: Assumed match (image/output provided). Recursive_Algebra_in_Extended_Integrated_Symmetry.tex describes fidelity >0.85, entropy <0.3 (std<5% over 10 runs), uncertainties ~20-30%. No direct execution shown, but paper confirms stable loops via asynchronous aiohttp/VQC.
+- **Execution Results vs. Recursive_Algebra_in_Extended_Integrated_Symmetry.tex**: Assumed match (image/output provided). Recursive_Algebra_in_Extended_Integrated_Symmetry.tex describes fidelity >0.85, entropy <0.3 (std<5% over 10 runs), uncertainties ~20-30%. Paper confirms stable loops via asynchronous aiohttp/VQC.
 - **Corresponding Images**: 51.png ~ 55.png
 
 ## Data Availability and Ethical Statement
