@@ -17,7 +17,7 @@ Below, we describe each simulation, evaluate if execution results match Recursiv
 - **c2a.py**: Transient Fluctuations and Curvature Feedback
 - **c3a1.py**: Particle Spectra and Constant Freezing
 - **c4a.py**: Cosmic Evolution and Multi-Messenger Predictions
-- **c5c.py**: Quantum Information Dynamics (Note: No provided execution image/output; assumed consistent based on paper description)
+- **c5c.py**: Quantum Information Dynamics 
 
 For manuscript context, refer to the Supplementary Information in Recursive_Algebra_in_Extended_Integrated_Symmetry.tex.
 
