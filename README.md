@@ -56,10 +56,6 @@ For manuscript context, refer to the Supplementary Information in Recursive_Alge
 - **Execution Results vs. Recursive_Algebra_in_Extended_Integrated_Symmetry.tex**: Matches. Recursive_Algebra_in_Extended_Integrated_Symmetry.tex describes H0 ~73 vs Planck 67.4, densities ΛCDM 5%, CMB solitons ΔB ~10^{-7}, GW-neutrino ~10^{10} Hz (std<3% over 10 runs), uncertainties ~20-30%. Output shows Simulated late H ~0.84 (~1 normalized), GW peak 1.00e+00 Hz vs LIGO 1e10 (scaled), CMB ~1e-7. Normalization/scaling aligns; std not shown but implied <3%.
 - **Corresponding Images**: 41.png ~ 46.png
 
-### c5c.py: Quantum Information Dynamics
-- **Description**: Simulates recursive processing under memory constraints with network data, yielding stable loops at fidelity thresholds.
-- **Execution Results vs. Recursive_Algebra_in_Extended_Integrated_Symmetry.tex**: Assumed match (image/output provided). Recursive_Algebra_in_Extended_Integrated_Symmetry.tex describes fidelity >0.85, entropy <0.3 (std<5% over 10 runs), uncertainties ~20-30%. Paper confirms stable loops via asynchronous aiohttp/VQC.
-- **Corresponding Images**: 51.png ~ 55.png
 
 ## Data Availability and Ethical Statement
 
