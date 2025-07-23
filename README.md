@@ -49,7 +49,7 @@ For manuscript context, refer to the Supplementary Information in Recursive_Alge
 - **Execution Notes**: 
   - All simulations run in CPU-only mode for floating-point consistency
   - ECC memory ensures bit-level precision during extended computations
-  - Execute scripts with: `MKL_NUM_THREADS=20 OMP_NUM_THREADS=20 python c1b.py`
+  - Execute scripts with: `python c1b.py`
 
 ## Simulations and Evaluation Against Recursive_Algebra_in_Extended_Integrated_Symmetry.tex
 
