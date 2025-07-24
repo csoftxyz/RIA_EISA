@@ -20,7 +20,6 @@ To ensure numerical precision, simulations were executed on CPU for floating-poi
 - **c2a.py**: Transient Fluctuations and Curvature Feedback
 - **c3a1.py**: Particle Spectra and Constant Freezing
 - **c4a.py**: Cosmic Evolution and Multi-Messenger Predictions
-- **18.tex**: Manuscript LaTeX source for context
 
 For manuscript details, refer to Sections IV (Computational Methods) and V (Results), and Appendix A (Supplementary Information).
 
