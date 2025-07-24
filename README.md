@@ -44,7 +44,7 @@ For manuscript details, refer to Sections IV (Computational Methods) and V (Resu
   - For reproducibility, fix random seeds (e.g., `torch.manual_seed(42)`).
   - Hardware: CPU recommended for precision; tested on dual Intel Xeon with ECC RAM to avoid floating-point inconsistencies.
 
-## Simulations and Evaluation Against Manuscript (18.tex)
+## Simulations and Evaluation Against Manuscript 
 
 ### c1b.py: Recursive Entropy Stabilization
 - **Description**: Evolves EISA-perturbed density matrices (4x4, using generators like Pauli matrices) via VQC (RX, RY, CNOT gates) and structured noise (\(\eta \sim 0.01\)), minimizing loss \(S_{vn} + (1 - Fid)\) to target ordered state. Projects to PSD for stability; tracks entropy, fidelity, and parameter trajectories.
