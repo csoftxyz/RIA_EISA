@@ -1,8 +1,5 @@
-#```python
 import os
 os.environ['KMP_DUPLICATE_LIB_OK'] = 'TRUE'
-
-
 
 import torch
 import torch.nn as nn
@@ -10,16 +7,19 @@ import torch.optim as optim
 import matplotlib.pyplot as plt
 import numpy as np
 
-# Project to PSD
-def project_to_psd(rho, epsilon=1e-10):
+# Project to PSD with enhanced regularization
+def project_to_psd(rho, epsilon=1e-6):
+    # Ensure Hermitian and add regularization before decomposition
+    rho = (rho + rho.conj().T) / 2  # Force Hermitian
+    rho += epsilon * torch.eye(rho.shape[0], dtype=rho.dtype, device=rho.device)  # Stronger regularization
     eigenvalues, eigenvectors = torch.linalg.eigh(rho)
-    eigenvalues = eigenvalues.real.clamp(min=0.0) + epsilon  # Small epsilon for numerical stability
+    eigenvalues = eigenvalues.real.clamp(min=epsilon)  # Clamp to avoid zero eigenvalues
     eigenvalues = eigenvalues / eigenvalues.sum()  # Renormalize to trace 1
     diag = torch.diag(eigenvalues.to(dtype=torch.complex128))
     return eigenvectors @ diag @ eigenvectors.conj().T
 
 # Denman-Beavers iteration for differentiable matrix square root with regularization
-def matrix_sqrt_db(A, num_iters=30, epsilon=1e-10):
+def matrix_sqrt_db(A, num_iters=30, epsilon=1e-6):
     Y = A.clone() + epsilon * torch.eye(A.shape[-1], dtype=A.dtype, device=A.device)
     Z = torch.eye(A.shape[-1], dtype=A.dtype, device=A.device)
     for _ in range(num_iters):
@@ -31,13 +31,13 @@ def matrix_sqrt_db(A, num_iters=30, epsilon=1e-10):
         Z = Z_next
     return Y
 
-# Von Neumann entropy using eigvalsh (only eigenvalues, no phase issue)
+# Von Neumann entropy
 def von_neumann_entropy(rho):
-    eigenvalues = torch.linalg.eigvalsh(rho)
+    eigenvalues = torch.linalg.eigh(rho)[0].real  # Use real part of eigenvalues
     eigenvalues = eigenvalues.clamp(min=1e-8)
     return -torch.sum(eigenvalues * torch.log(eigenvalues))
 
-# Fidelity using matrix_sqrt_db
+# Fidelity calculation
 def fidelity(rho, sigma):
     sqrt_rho = matrix_sqrt_db(rho)
     inner = sqrt_rho @ sigma @ sqrt_rho
@@ -45,67 +45,77 @@ def fidelity(rho, sigma):
     tr = torch.trace(sqrt_inner).real
     return tr ** 2
 
-# Helper functions for quantum gates (unchanged)
+# Quantum gates with gradient support
 def rx(theta):
-    cos = torch.cos(theta/2)
-    sin = torch.sin(theta/2)
-    r = torch.zeros(2, 2, dtype=torch.complex128)
-    r[0, 0] = cos
-    r[0, 1] = -1j * sin
-    r[1, 0] = -1j * sin
-    r[1, 1] = cos
-    return r
+    cos = torch.cos(theta / 2)
+    sin = torch.sin(theta / 2)
+    r00 = cos + 0j
+    r01 = -1j * sin
+    r10 = -1j * sin
+    r11 = cos + 0j
+    row1 = torch.stack([r00, r01])
+    row2 = torch.stack([r10, r11])
+    return torch.stack([row1, row2])
 
 def ry(theta):
-    cos = torch.cos(theta/2)
-    sin = torch.sin(theta/2)
-    r = torch.zeros(2, 2, dtype=torch.complex128)
-    r[0, 0] = cos
-    r[0, 1] = -sin
-    r[1, 0] = sin
-    r[1, 1] = cos
-    return r
+    cos = torch.cos(theta / 2)
+    sin = torch.sin(theta / 2)
+    r00 = cos + 0j
+    r01 = -sin + 0j
+    r10 = sin + 0j
+    r11 = cos + 0j
+    row1 = torch.stack([r00, r01])
+    row2 = torch.stack([r10, r11])
+    return torch.stack([row1, row2])
 
 def cnot():
-    r = torch.zeros(4, 4, dtype=torch.complex128)
-    r[0, 0] = 1
-    r[1, 1] = 1
-    r[2, 3] = 1
-    r[3, 2] = 1
-    return r
+    return torch.tensor([[1,0,0,0], [0,1,0,0], [0,0,0,1], [0,0,1,0]], dtype=torch.complex128)
 
-# Generate random density matrix
-def random_density_matrix(dim=4):
+# EISA generators (Pauli matrices as examples)
+F_i = torch.tensor([[1, 0], [0, -1]], dtype=torch.complex128)  # Fermionic (Pauli Z)
+B_k = torch.tensor([[0, 1], [1, 0]], dtype=torch.complex128)  # Bosonic (Pauli X)
+
+# Create EISA-perturbed density matrix
+def eisa_perturbed_density_matrix(dim=4):
+    # Create random pure state
     psi = torch.randn(dim, dtype=torch.complex128)
     psi = psi / torch.norm(psi)
-    return torch.outer(psi, psi.conj())
+    rho = torch.outer(psi, psi.conj())
+    
+    # Apply fermionic generator perturbation (F_i ⊗ I)
+    F_extended = torch.kron(F_i, torch.eye(2, dtype=torch.complex128))
+    rho = F_extended @ rho @ F_extended.conj().T
+    
+    # Apply bosonic generator perturbation (I ⊗ B_k)
+    B_extended = torch.kron(torch.eye(2, dtype=torch.complex128), B_k)
+    rho = B_extended @ rho @ B_extended.conj().T
+    
+    # Normalize and return
+    return rho / torch.trace(rho).real
 
-# Apply VQC circuit
-def apply_vqc(rho, params):
+# Apply VQC circuit with increased layers
+def apply_vqc(rho, params, num_layers=4):
     theta_rx, theta_ry = params[0], params[1]
-    U_rx = torch.kron(rx(theta_rx), torch.eye(2, dtype=torch.complex128))
-    rho = U_rx @ rho @ U_rx.conj().T
-    U_ry = torch.kron(torch.eye(2, dtype=torch.complex128), ry(theta_ry))
-    rho = U_ry @ rho @ U_ry.conj().T
-    U_cnot = cnot()
-    rho = U_cnot @ rho @ U_cnot.conj().T
+    for _ in range(num_layers):
+        U_rx = torch.kron(rx(theta_rx), torch.eye(2, dtype=torch.complex128))
+        rho = U_rx @ rho @ U_rx.conj().T
+        U_ry = torch.kron(torch.eye(2, dtype=torch.complex128), ry(theta_ry))
+        rho = U_ry @ rho @ U_ry.conj().T
+        U_cnot = cnot()
+        rho = U_cnot @ rho @ U_cnot.conj().T
     return rho
 
-# Target ordered state (pure state |00><00|)
+# Target ordered state |00⟩⟨00|
 target_rho = torch.zeros(4, 4, dtype=torch.complex128)
 target_rho[0, 0] = 1.0
 
 # Simulation parameters
-eta = 0.1  # Noise parameter
-learning_rate = 0.01  # Learning rate for optimization
+eta = 0.01  # Adjusted noise parameter
+learning_rate = 0.001
 num_iterations = 1000  # Number of iterations
 
-# Initial EISA generators (simplified for demonstration; Pauli matrices for 1-qubit, kron for 2-qubit if needed)
-F_i = torch.tensor([[1, 0], [0, -1]], dtype=torch.complex128)  # Fermionic example (Pauli Z)
-B_k = torch.tensor([[0, 1], [1, 0]], dtype=torch.complex128)  # Bosonic example (Pauli X)
-
-# Initial random density matrix (from noise)
-rho_init = random_density_matrix()
+# Initialize EISA-perturbed density matrix
+rho_init = eisa_perturbed_density_matrix()
 
 # VQC parameters to optimize
 params = torch.nn.Parameter(torch.tensor([0.0, 0.0], dtype=torch.float64))
@@ -116,22 +126,30 @@ optimizer = optim.Adam([params], lr=learning_rate)
 entropies = []
 fidelities = []
 losses = []
-params_history = []  # For visualizing parameter evolution
+params_history = []
+
+# Structured EISA noise generators
+F_extended = torch.kron(F_i, torch.eye(2, dtype=torch.complex128))
+B_extended = torch.kron(torch.eye(2, dtype=torch.complex128), B_k)
+eisa_generators = [F_extended, B_extended]
 
 for iter in range(num_iterations):
     optimizer.zero_grad()
     
-    # Evolve the initial rho using VQC
+    # Evolve using VQC
     rho_evolved = apply_vqc(rho_init, params)
     
-    # Add Hermitian noise
-    noise_real = torch.randn(4, 4)
-    noise_imag = torch.randn(4, 4)
-    noise = eta * torch.complex(noise_real, noise_imag)
-    noise = (noise + noise.conj().T) / 2  # Ensure Hermitian
+    # Add structured EISA noise
+    noise = torch.zeros_like(rho_evolved)
+    for gen in eisa_generators:
+        coeff_real = eta * torch.randn(1).item()
+        coeff_imag = eta * torch.randn(1).item()
+        noise_term = coeff_real * gen.real + 1j * coeff_imag * gen.imag
+        noise += noise_term
+    
     rho_evolved = rho_evolved + noise
     trace = torch.trace(rho_evolved).real
-    rho_evolved = rho_evolved / trace if trace != 0 else rho_evolved  # Normalize, avoid div by zero
+    rho_evolved = rho_evolved / trace if trace != 0 else rho_evolved
     
     # Project to PSD for stability
     rho_evolved = project_to_psd(rho_evolved)
@@ -139,7 +157,8 @@ for iter in range(num_iterations):
     # Compute loss components
     S_vn = von_neumann_entropy(rho_evolved)
     Fid = fidelity(rho_evolved, target_rho)
-    loss = S_vn + (1 - Fid)
+    purity = torch.trace(rho_evolved @ rho_evolved).real
+    loss = S_vn + (1 - Fid) + 0.5 * (1 - purity)
     
     # Backprop and update
     loss.backward()
@@ -154,7 +173,7 @@ for iter in range(num_iterations):
     if iter % 100 == 0:
         print(f"Iter {iter}: Entropy {S_vn.item():.4f}, Fidelity {Fid.item():.4f}, Loss {loss.item():.4f}")
 
-# Convert params_history to arrays for plotting
+# Convert to arrays for plotting
 params_history = np.array(params_history)
 theta_rx_hist = params_history[:, 0]
 theta_ry_hist = params_history[:, 1]
@@ -164,7 +183,6 @@ plt.figure(figsize=(15, 12))
 plt.subplot(3, 3, 1)
 plt.plot(entropies)
 plt.title('Von Neumann Entropy Trajectory')
-#plt.xlabel('Iteration')#To display the table text below while hiding 'Iteration'.
 plt.ylabel('Entropy')
 plt.grid(True)
 
@@ -172,7 +190,6 @@ plt.grid(True)
 plt.subplot(3, 3, 2)
 plt.plot(fidelities)
 plt.title('Fidelity Trajectory')
-#plt.xlabel('Iteration')#To display the table text below while hiding 'Iteration'.
 plt.ylabel('Fidelity')
 plt.grid(True)
 
@@ -180,7 +197,6 @@ plt.grid(True)
 plt.subplot(3, 3, 3)
 plt.plot(losses)
 plt.title('Loss Trajectory')
-#plt.xlabel('Iteration')#To display the table text below while hiding 'Iteration'.
 plt.ylabel('Loss')
 plt.grid(True)
 
@@ -189,7 +205,6 @@ plt.subplot(3, 3, 4)
 plt.scatter(entropies, fidelities, c=np.arange(len(entropies)), cmap='viridis')
 plt.colorbar(label='Iteration')
 plt.title('Entropy vs Fidelity')
-#plt.xlabel('Entropy')
 plt.ylabel('Fidelity')
 plt.grid(True)
 
@@ -197,7 +212,6 @@ plt.grid(True)
 plt.subplot(3, 3, 5)
 plt.plot(theta_rx_hist)
 plt.title('Theta RX Parameter Evolution')
-#plt.xlabel('Iteration')#To display the table text below while hiding 'Iteration'.
 plt.ylabel('Theta RX')
 plt.grid(True)
 
@@ -205,7 +219,6 @@ plt.grid(True)
 plt.subplot(3, 3, 6)
 plt.plot(theta_ry_hist)
 plt.title('Theta RY Parameter Evolution')
-#plt.xlabel('Iteration')#To display the table text below while hiding 'Iteration'.
 plt.ylabel('Theta RY')
 plt.grid(True)
 
@@ -263,18 +276,43 @@ plt.ylabel('Frequency')
 plt.grid(True)
 plt.show()
 
+# Detailed visualization for 0-200 iter
+plt.figure(figsize=(15, 5))
+
+# Zoomed Entropy Trajectory (0-200 iter)
+plt.subplot(1, 3, 1)
+plt.plot(entropies[:201])
+plt.title('Entropy Trajectory (0-200 Iter)')
+plt.ylabel('Entropy')
+plt.grid(True)
+
+# Zoomed Fidelity Trajectory (0-200 iter)
+plt.subplot(1, 3, 2)
+plt.plot(fidelities[:201])
+plt.title('Fidelity Trajectory (0-200 Iter)')
+plt.ylabel('Fidelity')
+plt.grid(True)
+
+# Zoomed Loss Trajectory (0-200 iter)
+plt.subplot(1, 3, 3)
+plt.plot(losses[:201])
+plt.title('Loss Trajectory (0-200 Iter)')
+plt.ylabel('Loss')
+plt.grid(True)
+
 plt.tight_layout()
 plt.show()
 
-# Fidelity threshold
+# Fidelity threshold analysis
 threshold_iter = next((i for i, fid in enumerate(fidelities) if fid > 0.8), 'Not reached')
 print(f"Fidelity threshold (Fid > 0.8) reached at iteration: {threshold_iter}")
 
 # Final values
+print(f"Initial Entropy: {entropies[0]:.4f}")
 print(f"Final Entropy: {entropies[-1]:.4f}")
 print(f"Final Fidelity: {fidelities[-1]:.4f}")
-print(f"Target Entropy reduction: from ~{entropies[0]:.4f} to ~{entropies[-1]:.4f}")
+print(f"Entropy reduction: {entropies[0]-entropies[-1]:.4f} ({100*(entropies[0]-entropies[-1])/entropies[0]:.1f}%)")
 
-# Note: The initial EISA generators F_i and B_k can be incorporated by initial rho = F_i @ rho @ F_i.conj().T or similar, but for this demonstration, they are shown as examples.
-# To verify universe bootstrap, observe if entropy decreases and fidelity increases, indicating self-organization from chaos to ordered particle-like structures. Uncertainties ~10-20% due to simplification; higher loops needed for precision.
-#```
+# EISA verification note
+print("\nNote: Density matrix initialized with EISA generators (F_i ⊗ I and I ⊗ B_k)")
+print("Structured noise constructed from EISA algebra elements")
