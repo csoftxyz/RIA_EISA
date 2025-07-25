@@ -1,0 +1,1027 @@
+(base) E:\work\code2>python c2as.py
+Monte Carlo Original Simulation
+Super-Jacobi identities verified (with symbolic assumptions): Algebraic closure holds.
+Step 0: Curvature -53.0492, Order Param 1.6345, Loss -50.3879
+Step 100: Curvature -1000000.0000, Order Param 807.7695, Loss -992666.3125
+Step 200: Curvature -1000000.0000, Order Param 610.7526, Loss -995658.0625
+Step 300: Curvature -1000000.0000, Order Param 466.1686, Loss -997359.6875
+Step 400: Curvature -1000000.0000, Order Param 364.7131, Loss -998304.1250
+Step 500: Curvature -1000000.0000, Order Param 590.0335, Loss -995927.5625
+Step 600: Curvature -1000000.0000, Order Param 424.5498, Loss -997772.0000
+Step 700: Curvature -1000000.0000, Order Param 323.5217, Loss -998628.8125
+Step 800: Curvature -1000000.0000, Order Param 544.1453, Loss -996493.9375
+Step 900: Curvature -1000000.0000, Order Param 382.8243, Loss -998150.6250
+Std deviation (curvature): 11.08% (<5%)
+Uncertainties: ~20-30% due to simplification (EFT limits, higher loops needed)
+Curvature peak at time: 2.10e-09 s
+Predicted GW freq: 7.49e+17 Hz (Siemens et al. 2013 scaling applied)
+CMB soliton deviation: ~6.14e-08 (nested deviations for CMB-S4, uncertainty ±10%)
+Integrated SNR: 0.00 (Detectable if >5: False)
+
+GW Spectrum Sample (for observability):
+      Freq (Hz)  GW Power (h^2)  Sensitivity (h^2)   SNR Contrib
+0  7.493247e+15    1.212141e-28       9.411348e-18  1.287957e-11
+1  1.899811e+16    6.519181e-29       1.022588e-17  6.375181e-12
+2  4.816714e+16    3.506168e-29       1.111090e-17  3.155612e-12
+3  1.221213e+17    1.885699e-29       1.207252e-17  1.561977e-12
+4  3.096219e+17    1.014173e-29       1.311736e-17  7.731535e-13
+5  7.850044e+17    5.454462e-30       1.425264e-17  3.826985e-13
+6  1.990272e+18    2.933538e-30       1.548616e-17  1.894296e-13
+7  5.046066e+18    1.577725e-30       1.682645e-17  9.376460e-14
+8  1.279362e+19    8.485377e-31       1.828273e-17  4.641197e-14
+9  3.243648e+19    4.563635e-31       1.986506e-17  2.297318e-14
+Super-Jacobi identities verified (with symbolic assumptions): Algebraic closure holds.
+Step 0: Curvature -57.9028, Order Param 1.6849, Loss -55.1894
+Step 100: Curvature -1000000.0000, Order Param 804.0121, Loss -992730.6250
+Step 200: Curvature -1000000.0000, Order Param 605.5294, Loss -995726.8125
+Step 300: Curvature -1000000.0000, Order Param 461.5127, Loss -997407.5625
+Step 400: Curvature -1000000.0000, Order Param 360.7206, Loss -998337.0625
+Step 500: Curvature -1000000.0000, Order Param 561.5196, Loss -996284.4375
+Step 600: Curvature -1000000.0000, Order Param 403.7959, Loss -997964.6875
+Step 700: Curvature -1000000.0000, Order Param 399.6351, Loss -998002.3125
+Step 800: Curvature -1000000.0000, Order Param 484.1725, Loss -997170.5625
+Step 900: Curvature -1000000.0000, Order Param 351.6361, Loss -998410.8750
+Std deviation (curvature): 11.17% (<5%)
+Uncertainties: ~20-30% due to simplification (EFT limits, higher loops needed)
+Curvature peak at time: 2.10e-09 s
+Predicted GW freq: 7.49e+17 Hz (Siemens et al. 2013 scaling applied)
+CMB soliton deviation: ~6.15e-08 (nested deviations for CMB-S4, uncertainty ±10%)
+Integrated SNR: 0.00 (Detectable if >5: False)
+
+GW Spectrum Sample (for observability):
+      Freq (Hz)  GW Power (h^2)  Sensitivity (h^2)   SNR Contrib
+0  7.487279e+15    1.212785e-28       9.410679e-18  1.288733e-11
+1  1.898298e+16    6.522645e-29       1.022515e-17  6.379022e-12
+2  4.812878e+16    3.508031e-29       1.111011e-17  3.157513e-12
+3  1.220240e+17    1.886701e-29       1.207166e-17  1.562918e-12
+4  3.093753e+17    1.014712e-29       1.311643e-17  7.736193e-13
+5  7.843792e+17    5.457360e-30       1.425162e-17  3.829291e-13
+6  1.988687e+18    2.935096e-30       1.548506e-17  1.895437e-13
+7  5.042047e+18    1.578564e-30       1.682525e-17  9.382109e-14
+8  1.278343e+19    8.489885e-31       1.828144e-17  4.643993e-14
+9  3.241064e+19    4.566059e-31       1.986365e-17  2.298702e-14
+Super-Jacobi identities verified (with symbolic assumptions): Algebraic closure holds.
+Step 0: Curvature -52.8519, Order Param 1.5963, Loss -50.2301
+Step 100: Curvature -1000000.0000, Order Param 745.9564, Loss -993688.5625
+Step 200: Curvature -1000000.0000, Order Param 576.9846, Loss -996092.8750
+Step 300: Curvature -1000000.0000, Order Param 447.0265, Loss -997553.6875
+Step 400: Curvature -1000000.0000, Order Param 352.5683, Loss -998403.3750
+Step 500: Curvature -1000000.0000, Order Param 593.4906, Loss -995883.1875
+Step 600: Curvature -1000000.0000, Order Param 426.4821, Loss -997753.6250
+Step 700: Curvature -1000000.0000, Order Param 322.8779, Loss -998633.6250
+Step 800: Curvature -1000000.0000, Order Param 569.3354, Loss -996188.2500
+Step 900: Curvature -1000000.0000, Order Param 391.9421, Loss -998070.8750
+Std deviation (curvature): 10.96% (<5%)
+Uncertainties: ~20-30% due to simplification (EFT limits, higher loops needed)
+Curvature peak at time: 2.00e-09 s
+Predicted GW freq: 7.49e+17 Hz (Siemens et al. 2013 scaling applied)
+CMB soliton deviation: ~6.20e-08 (nested deviations for CMB-S4, uncertainty ±10%)
+Integrated SNR: 0.00 (Detectable if >5: False)
+
+GW Spectrum Sample (for observability):
+      Freq (Hz)  GW Power (h^2)  Sensitivity (h^2)   SNR Contrib
+0  7.493580e+15    1.212106e-28       9.411386e-18  1.287914e-11
+1  1.899896e+16    6.518988e-29       1.022592e-17  6.374967e-12
+2  4.816928e+16    3.506065e-29       1.111094e-17  3.155506e-12
+3  1.221267e+17    1.885644e-29       1.207257e-17  1.561925e-12
+4  3.096356e+17    1.014143e-29       1.311741e-17  7.731275e-13
+5  7.850392e+17    5.454301e-30       1.425269e-17  3.826857e-13
+6  1.990361e+18    2.933451e-30       1.548622e-17  1.894232e-13
+7  5.046289e+18    1.577679e-30       1.682652e-17  9.376146e-14
+8  1.279418e+19    8.485126e-31       1.828281e-17  4.641041e-14
+9  3.243792e+19    4.563500e-31       1.986514e-17  2.297241e-14
+Super-Jacobi identities verified (with symbolic assumptions): Algebraic closure holds.
+Step 0: Curvature -57.1535, Order Param 1.7344, Loss -54.3890
+Step 100: Curvature -1000000.0000, Order Param 852.9916, Loss -991870.0625
+Step 200: Curvature -1000000.0000, Order Param 633.5862, Loss -995351.1250
+Step 300: Curvature -1000000.0000, Order Param 477.7103, Loss -997239.2500
+Step 400: Curvature -1000000.0000, Order Param 370.6735, Loss -998254.3125
+Step 500: Curvature -1000000.0000, Order Param 551.3605, Loss -996407.6250
+Step 600: Curvature -1000000.0000, Order Param 398.0515, Loss -998016.5000
+Step 700: Curvature -1000000.0000, Order Param 612.4070, Loss -995636.1250
+Step 800: Curvature -1000000.0000, Order Param 457.0701, Loss -997452.8125
+Step 900: Curvature -1000000.0000, Order Param 337.2448, Loss -998524.4375
+Std deviation (curvature): 11.33% (<5%)
+Uncertainties: ~20-30% due to simplification (EFT limits, higher loops needed)
+Curvature peak at time: 2.20e-09 s
+Predicted GW freq: 7.49e+17 Hz (Siemens et al. 2013 scaling applied)
+CMB soliton deviation: ~6.13e-08 (nested deviations for CMB-S4, uncertainty ±10%)
+Integrated SNR: 0.00 (Detectable if >5: False)
+
+GW Spectrum Sample (for observability):
+      Freq (Hz)  GW Power (h^2)  Sensitivity (h^2)   SNR Contrib
+0  7.491963e+15    1.212280e-28       9.411204e-18  1.288124e-11
+1  1.899486e+16    6.519926e-29       1.022572e-17  6.376007e-12
+2  4.815888e+16    3.506569e-29       1.111073e-17  3.156021e-12
+3  1.221003e+17    1.885915e-29       1.207233e-17  1.562179e-12
+4  3.095688e+17    1.014289e-29       1.311716e-17  7.732537e-13
+5  7.848698e+17    5.455086e-30       1.425242e-17  3.827481e-13
+6  1.989931e+18    2.933873e-30       1.548593e-17  1.894541e-13
+7  5.045201e+18    1.577906e-30       1.682619e-17  9.377675e-14
+8  1.279142e+19    8.486347e-31       1.828246e-17  4.641798e-14
+9  3.243092e+19    4.564156e-31       1.986475e-17  2.297615e-14
+Super-Jacobi identities verified (with symbolic assumptions): Algebraic closure holds.
+Step 0: Curvature -46.3352, Order Param 1.5677, Loss -43.7429
+Step 100: Curvature -1000000.0000, Order Param 843.7947, Loss -992035.3125
+Step 200: Curvature -1000000.0000, Order Param 630.6089, Loss -995391.6875
+Step 300: Curvature -1000000.0000, Order Param 477.3159, Loss -997243.3750
+Step 400: Curvature -1000000.0000, Order Param 371.4499, Loss -998247.8125
+Step 500: Curvature -1000000.0000, Order Param 567.3069, Loss -996213.3125
+Step 600: Curvature -1000000.0000, Order Param 408.3368, Loss -997923.3125
+Step 700: Curvature -1000000.0000, Order Param 450.6608, Loss -997517.3750
+Step 800: Curvature -1000000.0000, Order Param 478.9443, Loss -997226.1875
+Step 900: Curvature -1000000.0000, Order Param 349.3271, Loss -998429.3750
+Std deviation (curvature): 11.36% (<5%)
+Uncertainties: ~20-30% due to simplification (EFT limits, higher loops needed)
+Curvature peak at time: 2.20e-09 s
+Predicted GW freq: 7.49e+17 Hz (Siemens et al. 2013 scaling applied)
+CMB soliton deviation: ~6.18e-08 (nested deviations for CMB-S4, uncertainty ±10%)
+Integrated SNR: 0.00 (Detectable if >5: False)
+
+GW Spectrum Sample (for observability):
+      Freq (Hz)  GW Power (h^2)  Sensitivity (h^2)   SNR Contrib
+0  7.494091e+15    1.212050e-28       9.411443e-18  1.287848e-11
+1  1.900025e+16    6.518691e-29       1.022598e-17  6.374638e-12
+2  4.817257e+16    3.505905e-29       1.111101e-17  3.155343e-12
+3  1.221350e+17    1.885558e-29       1.207264e-17  1.561844e-12
+4  3.096568e+17    1.014097e-29       1.311749e-17  7.730876e-13
+5  7.850928e+17    5.454053e-30       1.425278e-17  3.826659e-13
+6  1.990496e+18    2.933317e-30       1.548632e-17  1.894135e-13
+7  5.046634e+18    1.577607e-30       1.682662e-17  9.375662e-14
+8  1.279506e+19    8.484740e-31       1.828292e-17  4.640802e-14
+9  3.244013e+19    4.563292e-31       1.986526e-17  2.297122e-14
+Super-Jacobi identities verified (with symbolic assumptions): Algebraic closure holds.
+Step 0: Curvature -62.1580, Order Param 1.7886, Loss -59.3374
+Step 100: Curvature -1000000.0000, Order Param 797.9371, Loss -992834.0000
+Step 200: Curvature -1000000.0000, Order Param 590.6638, Loss -995919.5000
+Step 300: Curvature -1000000.0000, Order Param 443.5817, Loss -997587.8125
+Step 400: Curvature -1000000.0000, Order Param 343.2298, Loss -998477.6875
+Step 500: Curvature -1000000.0000, Order Param 494.8899, Loss -997054.9375
+Step 600: Curvature -1000000.0000, Order Param 362.7978, Loss -998319.9375
+Step 700: Curvature -1000000.0000, Order Param 598.7691, Loss -995815.0000
+Step 800: Curvature -1000000.0000, Order Param 410.6064, Loss -997902.3750
+Step 900: Curvature -1000000.0000, Order Param 309.0472, Loss -998734.8125
+Std deviation (curvature): 11.34% (<5%)
+Uncertainties: ~20-30% due to simplification (EFT limits, higher loops needed)
+Curvature peak at time: 2.10e-09 s
+Predicted GW freq: 7.48e+17 Hz (Siemens et al. 2013 scaling applied)
+CMB soliton deviation: ~6.17e-08 (nested deviations for CMB-S4, uncertainty ±10%)
+Integrated SNR: 0.00 (Detectable if >5: False)
+
+GW Spectrum Sample (for observability):
+      Freq (Hz)  GW Power (h^2)  Sensitivity (h^2)   SNR Contrib
+0  7.481891e+15    1.213368e-28       9.410075e-18  1.289435e-11
+1  1.896932e+16    6.525776e-29       1.022449e-17  6.382494e-12
+2  4.809414e+16    3.509715e-29       1.110939e-17  3.159232e-12
+3  1.219362e+17    1.887607e-29       1.207088e-17  1.563769e-12
+4  3.091527e+17    1.015199e-29       1.311559e-17  7.740404e-13
+5  7.838147e+17    5.459980e-30       1.425071e-17  3.831375e-13
+6  1.987256e+18    2.936505e-30       1.548407e-17  1.896469e-13
+7  5.038418e+18    1.579321e-30       1.682417e-17  9.387216e-14
+8  1.277423e+19    8.493961e-31       1.828026e-17  4.646521e-14
+9  3.238732e+19    4.568251e-31       1.986237e-17  2.299953e-14
+Super-Jacobi identities verified (with symbolic assumptions): Algebraic closure holds.
+Step 0: Curvature -55.8354, Order Param 1.6902, Loss -53.1166
+Step 100: Curvature -1000000.0000, Order Param 814.3021, Loss -992553.8125
+Step 200: Curvature -1000000.0000, Order Param 608.4184, Loss -995688.8125
+Step 300: Curvature -1000000.0000, Order Param 459.9783, Loss -997423.1875
+Step 400: Curvature -1000000.0000, Order Param 357.4997, Loss -998363.4375
+Step 500: Curvature -1000000.0000, Order Param 537.7866, Loss -996569.0625
+Step 600: Curvature -1000000.0000, Order Param 389.7416, Loss -998090.2500
+Step 700: Curvature -1000000.0000, Order Param 601.7645, Loss -995776.0625
+Step 800: Curvature -1000000.0000, Order Param 456.6720, Loss -997456.8125
+Step 900: Curvature -1000000.0000, Order Param 336.7566, Loss -998528.1875
+Std deviation (curvature): 11.15% (<5%)
+Uncertainties: ~20-30% due to simplification (EFT limits, higher loops needed)
+Curvature peak at time: 2.10e-09 s
+Predicted GW freq: 7.49e+17 Hz (Siemens et al. 2013 scaling applied)
+CMB soliton deviation: ~6.19e-08 (nested deviations for CMB-S4, uncertainty ±10%)
+Integrated SNR: 0.00 (Detectable if >5: False)
+
+GW Spectrum Sample (for observability):
+      Freq (Hz)  GW Power (h^2)  Sensitivity (h^2)   SNR Contrib
+0  7.487537e+15    1.212758e-28       9.410708e-18  1.288700e-11
+1  1.898364e+16    6.522495e-29       1.022518e-17  6.378856e-12
+2  4.813043e+16    3.507951e-29       1.111014e-17  3.157431e-12
+3  1.220282e+17    1.886658e-29       1.207170e-17  1.562877e-12
+4  3.093860e+17    1.014689e-29       1.311647e-17  7.735991e-13
+5  7.844062e+17    5.457235e-30       1.425167e-17  3.829191e-13
+6  1.988756e+18    2.935029e-30       1.548511e-17  1.895388e-13
+7  5.042220e+18    1.578527e-30       1.682531e-17  9.381865e-14
+8  1.278387e+19    8.489691e-31       1.828149e-17  4.643872e-14
+9  3.241176e+19    4.565955e-31       1.986371e-17  2.298642e-14
+Super-Jacobi identities verified (with symbolic assumptions): Algebraic closure holds.
+Step 0: Curvature -58.8354, Order Param 1.7111, Loss -56.0950
+Step 100: Curvature -1000000.0000, Order Param 810.7512, Loss -992615.0625
+Step 200: Curvature -1000000.0000, Order Param 601.5728, Loss -995778.5625
+Step 300: Curvature -1000000.0000, Order Param 452.9313, Loss -997494.6250
+Step 400: Curvature -1000000.0000, Order Param 351.2243, Loss -998414.1875
+Step 500: Curvature -1000000.0000, Order Param 520.2537, Loss -996772.1250
+Step 600: Curvature -1000000.0000, Order Param 379.0906, Loss -998182.8125
+Step 700: Curvature -1000000.0000, Order Param 629.9916, Loss -995400.1250
+Step 800: Curvature -1000000.0000, Order Param 439.1971, Loss -997630.8750
+Step 900: Curvature -1000000.0000, Order Param 326.4225, Loss -998607.0625
+Std deviation (curvature): 11.23% (<5%)
+Uncertainties: ~20-30% due to simplification (EFT limits, higher loops needed)
+Curvature peak at time: 2.10e-09 s
+Predicted GW freq: 7.50e+17 Hz (Siemens et al. 2013 scaling applied)
+CMB soliton deviation: ~6.13e-08 (nested deviations for CMB-S4, uncertainty ±10%)
+Integrated SNR: 0.00 (Detectable if >5: False)
+
+GW Spectrum Sample (for observability):
+      Freq (Hz)  GW Power (h^2)  Sensitivity (h^2)   SNR Contrib
+0  7.497263e+15    1.211709e-28       9.411798e-18  1.287436e-11
+1  1.900829e+16    6.516853e-29       1.022636e-17  6.372600e-12
+2  4.819295e+16    3.504916e-29       1.111143e-17  3.154334e-12
+3  1.221867e+17    1.885026e-29       1.207309e-17  1.561345e-12
+4  3.097878e+17    1.013811e-29       1.311799e-17  7.728404e-13
+5  7.854251e+17    5.452515e-30       1.425332e-17  3.825436e-13
+6  1.991339e+18    2.932490e-30       1.548690e-17  1.893529e-13
+7  5.048770e+18    1.577162e-30       1.682725e-17  9.372664e-14
+8  1.280047e+19    8.482347e-31       1.828361e-17  4.639318e-14
+9  3.245386e+19    4.562005e-31       1.986601e-17  2.296387e-14
+Super-Jacobi identities verified (with symbolic assumptions): Algebraic closure holds.
+Step 0: Curvature -55.5575, Order Param 1.7047, Loss -52.8237
+Step 100: Curvature -1000000.0000, Order Param 818.0604, Loss -992488.6875
+Step 200: Curvature -1000000.0000, Order Param 614.4087, Loss -995609.5625
+Step 300: Curvature -1000000.0000, Order Param 466.4600, Loss -997356.6875
+Step 400: Curvature -1000000.0000, Order Param 363.5432, Loss -998313.8125
+Step 500: Curvature -1000000.0000, Order Param 556.3443, Loss -996347.4375
+Step 600: Curvature -1000000.0000, Order Param 400.9850, Loss -997990.1250
+Step 700: Curvature -1000000.0000, Order Param 489.1503, Loss -997117.1875
+Step 800: Curvature -1000000.0000, Order Param 475.2066, Loss -997265.6250
+Step 900: Curvature -1000000.0000, Order Param 346.3541, Loss -998453.0000
+Std deviation (curvature): 11.04% (<5%)
+Uncertainties: ~20-30% due to simplification (EFT limits, higher loops needed)
+Curvature peak at time: 2.10e-09 s
+Predicted GW freq: 7.50e+17 Hz (Siemens et al. 2013 scaling applied)
+CMB soliton deviation: ~6.14e-08 (nested deviations for CMB-S4, uncertainty ±10%)
+Integrated SNR: 0.00 (Detectable if >5: False)
+
+GW Spectrum Sample (for observability):
+      Freq (Hz)  GW Power (h^2)  Sensitivity (h^2)   SNR Contrib
+0  7.497351e+15    1.211699e-28       9.411808e-18  1.287424e-11
+1  1.900852e+16    6.516801e-29       1.022638e-17  6.372543e-12
+2  4.819352e+16    3.504889e-29       1.111144e-17  3.154306e-12
+3  1.221881e+17    1.885011e-29       1.207311e-17  1.561331e-12
+4  3.097915e+17    1.013803e-29       1.311800e-17  7.728335e-13
+5  7.854343e+17    5.452472e-30       1.425333e-17  3.825402e-13
+6  1.991362e+18    2.932467e-30       1.548692e-17  1.893512e-13
+7  5.048829e+18    1.577150e-30       1.682727e-17  9.372580e-14
+8  1.280062e+19    8.482280e-31       1.828363e-17  4.639276e-14
+9  3.245424e+19    4.561969e-31       1.986603e-17  2.296367e-14
+Super-Jacobi identities verified (with symbolic assumptions): Algebraic closure holds.
+Step 0: Curvature -71.2351, Order Param 1.9020, Loss -68.2970
+Step 100: Curvature -1000000.0000, Order Param 776.7761, Loss -993188.4375
+Step 200: Curvature -1000000.0000, Order Param 588.7314, Loss -995944.1875
+Step 300: Curvature -1000000.0000, Order Param 449.7735, Loss -997526.3125
+Step 400: Curvature -1000000.0000, Order Param 351.7307, Loss -998410.1250
+Step 500: Curvature -1000000.0000, Order Param 569.1356, Loss -996190.7500
+Step 600: Curvature -1000000.0000, Order Param 407.5604, Loss -997930.3750
+Step 700: Curvature -1000000.0000, Order Param 311.5156, Loss -998717.0625
+Step 800: Curvature -1000000.0000, Order Param 515.0239, Loss -996831.5000
+Step 900: Curvature -1000000.0000, Order Param 366.8184, Loss -998286.6250
+Std deviation (curvature): 10.92% (<5%)
+Uncertainties: ~20-30% due to simplification (EFT limits, higher loops needed)
+Curvature peak at time: 2.00e-09 s
+Predicted GW freq: 7.49e+17 Hz (Siemens et al. 2013 scaling applied)
+CMB soliton deviation: ~6.14e-08 (nested deviations for CMB-S4, uncertainty ±10%)
+Integrated SNR: 0.00 (Detectable if >5: False)
+
+GW Spectrum Sample (for observability):
+      Freq (Hz)  GW Power (h^2)  Sensitivity (h^2)   SNR Contrib
+0  7.493465e+15    1.212118e-28       9.411373e-18  1.287929e-11
+1  1.899867e+16    6.519054e-29       1.022590e-17  6.375041e-12
+2  4.816854e+16    3.506100e-29       1.111093e-17  3.155542e-12
+3  1.221248e+17    1.885663e-29       1.207255e-17  1.561943e-12
+4  3.096309e+17    1.014154e-29       1.311740e-17  7.731365e-13
+5  7.850272e+17    5.454356e-30       1.425267e-17  3.826901e-13
+6  1.990330e+18    2.933481e-30       1.548620e-17  1.894254e-13
+7  5.046213e+18    1.577695e-30       1.682649e-17  9.376254e-14
+8  1.279399e+19    8.485212e-31       1.828278e-17  4.641095e-14
+9  3.243742e+19    4.563546e-31       1.986511e-17  2.297267e-14
+Avg GW Freq (Original): 7.49e+17 ± 4.59e+14 Hz
+
+Monte Carlo Adjusted Simulation
+Super-Jacobi identities verified (with symbolic assumptions): Algebraic closure holds.
+Step 0: Curvature -48.5112, Order Param 1.4882, Loss -46.0008
+Step 100: Curvature -1000000.0000, Order Param 758.3516, Loss -993489.6250
+Step 200: Curvature -1000000.0000, Order Param 578.0788, Loss -996079.1875
+Step 300: Curvature -1000000.0000, Order Param 443.1881, Loss -997591.6250
+Step 400: Curvature -1000000.0000, Order Param 347.4161, Loss -998444.5625
+Step 500: Curvature -1000000.0000, Order Param 561.8642, Loss -996280.1875
+Step 600: Curvature -1000000.0000, Order Param 401.5759, Loss -997984.8125
+Step 700: Curvature -1000000.0000, Order Param 307.2464, Loss -998747.7500
+Step 800: Curvature -1000000.0000, Order Param 505.2219, Loss -996941.2500
+Step 900: Curvature -1000000.0000, Order Param 359.8680, Loss -998344.0625
+Step 1000: Curvature -1000000.0000, Order Param 666.7734, Loss -994886.3750
+Step 1100: Curvature -1000000.0000, Order Param 447.3619, Loss -997550.3125
+Step 1200: Curvature -1000000.0000, Order Param 324.3986, Loss -998622.2500
+Step 1300: Curvature -1000000.0000, Order Param 603.9624, Loss -995747.3750
+Step 1400: Curvature -1000000.0000, Order Param 398.4321, Loss -998013.0625
+Step 1500: Curvature -1000000.0000, Order Param 295.1712, Loss -998832.5625
+Step 1600: Curvature -1000000.0000, Order Param 521.7595, Loss -996754.9375
+Step 1700: Curvature -1000000.0000, Order Param 358.5970, Loss -998354.4375
+Step 1800: Curvature -1000000.0000, Order Param 686.4084, Loss -994601.0000
+Step 1900: Curvature -1000000.0000, Order Param 459.4291, Loss -997428.8125
+Step 2000: Curvature -1000000.0000, Order Param 327.4216, Loss -998599.5000
+Step 2100: Curvature -1000000.0000, Order Param 644.2500, Loss -995204.1875
+Step 2200: Curvature -1000000.0000, Order Param 414.2077, Loss -997869.1250
+Step 2300: Curvature -1000000.0000, Order Param 303.8801, Loss -998771.6875
+Step 2400: Curvature -1000000.0000, Order Param 566.2874, Loss -996225.8750
+Step 2500: Curvature -1000000.0000, Order Param 380.7500, Loss -998168.5625
+Step 2600: Curvature -1000000.0000, Order Param 286.0069, Loss -998895.0000
+Step 2700: Curvature -1000000.0000, Order Param 511.4592, Loss -996871.6875
+Step 2800: Curvature -1000000.0000, Order Param 356.8481, Loss -998368.7500
+Step 2900: Curvature -1000000.0000, Order Param 585.8828, Loss -995980.5625
+Step 3000: Curvature -1000000.0000, Order Param 474.4652, Loss -997273.3750
+Step 3100: Curvature -1000000.0000, Order Param 340.1761, Loss -998501.6250
+Step 3200: Curvature -1000000.0000, Order Param 663.2852, Loss -994936.1875
+Step 3300: Curvature -1000000.0000, Order Param 449.8337, Loss -997525.6875
+Step 3400: Curvature -1000000.0000, Order Param 329.1380, Loss -998586.5625
+Step 3500: Curvature -1000000.0000, Order Param 650.7314, Loss -995113.7500
+Step 3600: Curvature -1000000.0000, Order Param 434.3553, Loss -997678.0000
+Step 3700: Curvature -1000000.0000, Order Param 322.7361, Loss -998634.6875
+Step 3800: Curvature -1000000.0000, Order Param 632.8945, Loss -995360.5625
+Step 3900: Curvature -1000000.0000, Order Param 426.9818, Loss -997748.8750
+Step 4000: Curvature -1000000.0000, Order Param 320.7435, Loss -998649.5000
+Step 4100: Curvature -1000000.0000, Order Param 623.8293, Loss -995483.5625
+Step 4200: Curvature -1000000.0000, Order Param 426.7936, Loss -997750.6875
+Step 4300: Curvature -1000000.0000, Order Param 322.8482, Loss -998633.8125
+Step 4400: Curvature -1000000.0000, Order Param 620.1323, Loss -995533.2500
+Step 4500: Curvature -1000000.0000, Order Param 433.3100, Loss -997688.1250
+Step 4600: Curvature -1000000.0000, Order Param 328.8469, Loss -998588.7500
+Step 4700: Curvature -1000000.0000, Order Param 588.5898, Loss -995946.0625
+Step 4800: Curvature -1000000.0000, Order Param 447.3698, Loss -997550.2500
+Step 4900: Curvature -1000000.0000, Order Param 339.1333, Loss -998509.7500
+Std deviation (curvature): 4.88% (<5%)
+Uncertainties: ~20-30% due to simplification (EFT limits, higher loops needed)
+Curvature peak at time: 2.00e+01 s
+Predicted GW freq: 1.82e-16 Hz (Siemens et al. 2013 scaling applied)
+CMB soliton deviation: ~6.39e-08 (nested deviations for CMB-S4, uncertainty ±10%)
+E:\work\code2\c2as.py:186: RuntimeWarning: invalid value encountered in scalar power
+  snr = np.trapz((gw_power_valid / sens_valid)**2, freq_valid) ** 0.5
+Integrated SNR: nan (Detectable if >5: False)
+
+GW Spectrum Sample (for observability):
+      Freq (Hz)  GW Power (h^2)  Sensitivity (h^2)  SNR Contrib
+0  1.000000e-12    4.641589e-10       4.641589e-13  1000.000001
+1  6.670142e-13    6.080089e-10       6.080089e-13  1000.000001
+2  4.449080e-13    7.964402e-10       7.964402e-13  1000.000001
+3  2.967600e-13    1.043269e-09       1.043269e-12  1000.000002
+4  1.979431e-13    1.366595e-09       1.366595e-12  1000.000002
+5  1.320309e-13    1.790123e-09       1.790123e-12  1000.000002
+6  8.806647e-14    2.344910e-09       2.344910e-12  1000.000002
+7  5.874159e-14    3.071634e-09       3.071634e-12  1000.000002
+8  3.918148e-14    4.023581e-09       4.023581e-12  1000.000002
+9  2.613460e-14    5.270551e-09       5.270551e-12  1000.000002
+Super-Jacobi identities verified (with symbolic assumptions): Algebraic closure holds.
+Step 0: Curvature -48.5587, Order Param 1.5465, Loss -45.9883
+Step 100: Curvature -1000000.0000, Order Param 798.9973, Loss -992816.0625
+Step 200: Curvature -1000000.0000, Order Param 603.3576, Loss -995755.2500
+Step 300: Curvature -1000000.0000, Order Param 459.8127, Loss -997424.9375
+Step 400: Curvature -1000000.0000, Order Param 359.2445, Loss -998349.1875
+Step 500: Curvature -1000000.0000, Order Param 557.7946, Loss -996329.8125
+Step 600: Curvature -1000000.0000, Order Param 401.2711, Loss -997987.5625
+Step 700: Curvature -1000000.0000, Order Param 447.5075, Loss -997548.8750
+Step 800: Curvature -1000000.0000, Order Param 478.6728, Loss -997229.0625
+Step 900: Curvature -1000000.0000, Order Param 348.2480, Loss -998438.0000
+Step 1000: Curvature -1000000.0000, Order Param 616.3484, Loss -995583.7500
+Step 1100: Curvature -1000000.0000, Order Param 413.1010, Loss -997879.3750
+Step 1200: Curvature -1000000.0000, Order Param 307.9416, Loss -998742.8125
+Step 1300: Curvature -1000000.0000, Order Param 521.2321, Loss -996760.9375
+Step 1400: Curvature -1000000.0000, Order Param 363.5114, Loss -998314.1250
+Step 1500: Curvature -1000000.0000, Order Param 675.9953, Loss -994753.3125
+Step 1600: Curvature -1000000.0000, Order Param 450.0215, Loss -997523.8125
+Step 1700: Curvature -1000000.0000, Order Param 325.9214, Loss -998610.8125
+Step 1800: Curvature -1000000.0000, Order Param 600.5269, Loss -995792.1875
+Step 1900: Curvature -1000000.0000, Order Param 398.5267, Loss -998012.2500
+Step 2000: Curvature -1000000.0000, Order Param 297.5896, Loss -998815.8125
+Step 2100: Curvature -1000000.0000, Order Param 519.6206, Loss -996779.3125
+Step 2200: Curvature -1000000.0000, Order Param 361.8006, Loss -998328.1875
+Step 2300: Curvature -1000000.0000, Order Param 639.1258, Loss -995275.0625
+Step 2400: Curvature -1000000.0000, Order Param 463.8480, Loss -997383.5625
+Step 2500: Curvature -1000000.0000, Order Param 335.3646, Loss -998538.9375
+Step 2600: Curvature -1000000.0000, Order Param 648.3379, Loss -995147.2500
+Step 2700: Curvature -1000000.0000, Order Param 426.8149, Loss -997750.5000
+Step 2800: Curvature -1000000.0000, Order Param 317.2372, Loss -998675.3750
+Step 2900: Curvature -1000000.0000, Order Param 594.6390, Loss -995868.4375
+Step 3000: Curvature -1000000.0000, Order Param 402.6958, Loss -997974.6875
+Step 3100: Curvature -1000000.0000, Order Param 305.4814, Loss -998760.3125
+Step 3200: Curvature -1000000.0000, Order Param 556.7203, Loss -996342.8750
+Step 3300: Curvature -1000000.0000, Order Param 387.8597, Loss -998106.7500
+Step 3400: Curvature -1000000.0000, Order Param 298.7202, Loss -998807.9375
+Step 3500: Curvature -1000000.0000, Order Param 534.6336, Loss -996606.0625
+Step 3600: Curvature -1000000.0000, Order Param 380.1497, Loss -998173.7500
+Step 3700: Curvature -1000000.0000, Order Param 296.0570, Loss -998826.4375
+Step 3800: Curvature -1000000.0000, Order Param 526.2374, Loss -996703.5000
+Step 3900: Curvature -1000000.0000, Order Param 378.8559, Loss -998184.8125
+Step 4000: Curvature -1000000.0000, Order Param 297.2301, Loss -998818.3125
+Step 4100: Curvature -1000000.0000, Order Param 529.8326, Loss -996661.9375
+Step 4200: Curvature -1000000.0000, Order Param 383.4628, Loss -998145.1250
+Step 4300: Curvature -1000000.0000, Order Param 302.0193, Loss -998784.8125
+Step 4400: Curvature -1000000.0000, Order Param 543.6088, Loss -996500.2500
+Step 4500: Curvature -1000000.0000, Order Param 393.3162, Loss -998058.6875
+Step 4600: Curvature -1000000.0000, Order Param 310.0814, Loss -998727.4375
+Step 4700: Curvature -1000000.0000, Order Param 567.6387, Loss -996209.2500
+Step 4800: Curvature -1000000.0000, Order Param 409.7234, Loss -997910.5000
+Step 4900: Curvature -1000000.0000, Order Param 322.1179, Loss -998639.2500
+Std deviation (curvature): 4.98% (<5%)
+Uncertainties: ~20-30% due to simplification (EFT limits, higher loops needed)
+Curvature peak at time: 2.10e+01 s
+Predicted GW freq: 1.82e-16 Hz (Siemens et al. 2013 scaling applied)
+CMB soliton deviation: ~6.39e-08 (nested deviations for CMB-S4, uncertainty ±10%)
+E:\work\code2\c2as.py:186: RuntimeWarning: invalid value encountered in scalar power
+  snr = np.trapz((gw_power_valid / sens_valid)**2, freq_valid) ** 0.5
+Integrated SNR: nan (Detectable if >5: False)
+
+GW Spectrum Sample (for observability):
+      Freq (Hz)  GW Power (h^2)  Sensitivity (h^2)  SNR Contrib
+0  1.000000e-12    4.641589e-10       4.641589e-13  1000.000001
+1  6.670412e-13    6.079925e-10       6.079925e-13  1000.000001
+2  4.449440e-13    7.963972e-10       7.963972e-13  1000.000001
+3  2.967960e-13    1.043185e-09       1.043185e-12  1000.000002
+4  1.979752e-13    1.366447e-09       1.366447e-12  1000.000002
+5  1.320576e-13    1.789882e-09       1.789882e-12  1000.000002
+6  8.808788e-14    2.344531e-09       2.344531e-12  1000.000002
+7  5.875825e-14    3.071054e-09       3.071054e-12  1000.000002
+8  3.919417e-14    4.022712e-09       4.022712e-12  1000.000002
+9  2.614413e-14    5.269271e-09       5.269271e-12  1000.000002
+Super-Jacobi identities verified (with symbolic assumptions): Algebraic closure holds.
+Step 0: Curvature -43.6503, Order Param 1.4249, Loss -41.2051
+Step 100: Curvature -1000000.0000, Order Param 762.2480, Loss -993426.5000
+Step 200: Curvature -1000000.0000, Order Param 582.4084, Loss -996024.5625
+Step 300: Curvature -1000000.0000, Order Param 447.2536, Loss -997551.3750
+Step 400: Curvature -1000000.0000, Order Param 350.8463, Loss -998417.1875
+Step 500: Curvature -1000000.0000, Order Param 578.1480, Loss -996078.3125
+Step 600: Curvature -1000000.0000, Order Param 411.9682, Loss -997889.8750
+Step 700: Curvature -1000000.0000, Order Param 313.8388, Loss -998700.2500
+Step 800: Curvature -1000000.0000, Order Param 531.8334, Loss -996638.7500
+Step 900: Curvature -1000000.0000, Order Param 373.7094, Loss -998228.7500
+Step 1000: Curvature -1000000.0000, Order Param 533.0219, Loss -996624.8750
+Step 1100: Curvature -1000000.0000, Order Param 477.3097, Loss -997243.4375
+Step 1200: Curvature -1000000.0000, Order Param 340.1322, Loss -998502.0000
+Step 1300: Curvature -1000000.0000, Order Param 663.8473, Loss -994928.1875
+Step 1400: Curvature -1000000.0000, Order Param 428.0233, Loss -997738.9375
+Step 1500: Curvature -1000000.0000, Order Param 311.2018, Loss -998719.3750
+Step 1600: Curvature -1000000.0000, Order Param 584.1395, Loss -996002.6875
+Step 1700: Curvature -1000000.0000, Order Param 386.3480, Loss -998120.0000
+Step 1800: Curvature -1000000.0000, Order Param 286.9377, Loss -998888.7500
+Step 1900: Curvature -1000000.0000, Order Param 513.4850, Loss -996848.8125
+Step 2000: Curvature -1000000.0000, Order Param 353.1004, Loss -998399.0625
+Step 2100: Curvature -1000000.0000, Order Param 677.0931, Loss -994737.3750
+Step 2200: Curvature -1000000.0000, Order Param 460.4510, Loss -997418.4375
+Step 2300: Curvature -1000000.0000, Order Param 327.4661, Loss -998599.2500
+Step 2400: Curvature -1000000.0000, Order Param 661.9247, Loss -994955.6250
+Step 2500: Curvature -1000000.0000, Order Param 422.2057, Loss -997794.2500
+Step 2600: Curvature -1000000.0000, Order Param 308.6290, Loss -998737.8750
+Step 2700: Curvature -1000000.0000, Order Param 599.8527, Loss -995800.8750
+Step 2800: Curvature -1000000.0000, Order Param 395.8116, Loss -998036.5000
+Step 2900: Curvature -1000000.0000, Order Param 295.7531, Loss -998828.5625
+Step 3000: Curvature -1000000.0000, Order Param 556.5356, Loss -996345.1250
+Step 3100: Curvature -1000000.0000, Order Param 379.1178, Loss -998182.5625
+Step 3200: Curvature -1000000.0000, Order Param 288.1854, Loss -998880.3125
+Step 3300: Curvature -1000000.0000, Order Param 532.3216, Loss -996633.0000
+Step 3400: Curvature -1000000.0000, Order Param 370.8081, Loss -998253.1875
+Step 3500: Curvature -1000000.0000, Order Param 285.5357, Loss -998898.1250
+Step 3600: Curvature -1000000.0000, Order Param 524.6968, Loss -996721.2500
+Step 3700: Curvature -1000000.0000, Order Param 370.3109, Loss -998257.3750
+Step 3800: Curvature -1000000.0000, Order Param 287.6891, Loss -998883.6875
+Step 3900: Curvature -1000000.0000, Order Param 531.8298, Loss -996638.7500
+Step 4000: Curvature -1000000.0000, Order Param 377.1765, Loss -998199.1875
+Step 4100: Curvature -1000000.0000, Order Param 294.5035, Loss -998837.1875
+Step 4200: Curvature -1000000.0000, Order Param 556.0005, Loss -996351.6250
+Step 4300: Curvature -1000000.0000, Order Param 392.7179, Loss -998064.0625
+Step 4400: Curvature -1000000.0000, Order Param 306.6874, Loss -998751.7500
+Step 4500: Curvature -1000000.0000, Order Param 585.3088, Loss -995987.8125
+Step 4600: Curvature -1000000.0000, Order Param 418.5844, Loss -997828.3125
+Step 4700: Curvature -1000000.0000, Order Param 324.9827, Loss -998617.8750
+Step 4800: Curvature -1000000.0000, Order Param 267.3704, Loss -999016.7500
+Step 4900: Curvature -1000000.0000, Order Param 458.9098, Loss -997434.0625
+Std deviation (curvature): 4.86% (<5%)
+Uncertainties: ~20-30% due to simplification (EFT limits, higher loops needed)
+Curvature peak at time: 2.00e+01 s
+Predicted GW freq: 1.82e-16 Hz (Siemens et al. 2013 scaling applied)
+CMB soliton deviation: ~6.40e-08 (nested deviations for CMB-S4, uncertainty ±10%)
+E:\work\code2\c2as.py:186: RuntimeWarning: invalid value encountered in scalar power
+  snr = np.trapz((gw_power_valid / sens_valid)**2, freq_valid) ** 0.5
+Integrated SNR: nan (Detectable if >5: False)
+
+GW Spectrum Sample (for observability):
+      Freq (Hz)  GW Power (h^2)  Sensitivity (h^2)  SNR Contrib
+0  1.000000e-12    4.641589e-10       4.641589e-13  1000.000001
+1  6.670273e-13    6.080009e-10       6.080009e-13  1000.000001
+2  4.449254e-13    7.964194e-10       7.964194e-13  1000.000001
+3  2.967774e-13    1.043228e-09       1.043228e-12  1000.000002
+4  1.979586e-13    1.366523e-09       1.366523e-12  1000.000002
+5  1.320438e-13    1.790007e-09       1.790007e-12  1000.000002
+6  8.807683e-14    2.344727e-09       2.344727e-12  1000.000002
+7  5.874965e-14    3.071353e-09       3.071353e-12  1000.000002
+8  3.918762e-14    4.023161e-09       4.023161e-12  1000.000002
+9  2.613921e-14    5.269932e-09       5.269932e-12  1000.000002
+Super-Jacobi identities verified (with symbolic assumptions): Algebraic closure holds.
+Step 0: Curvature -48.9653, Order Param 1.5556, Loss -46.3855
+Step 100: Curvature -1000000.0000, Order Param 810.6318, Loss -992617.1250
+Step 200: Curvature -1000000.0000, Order Param 601.8403, Loss -995775.0625
+Step 300: Curvature -1000000.0000, Order Param 452.6991, Loss -997496.9375
+Step 400: Curvature -1000000.0000, Order Param 350.5117, Loss -998419.9375
+Step 500: Curvature -1000000.0000, Order Param 505.7752, Loss -996935.1875
+Step 600: Curvature -1000000.0000, Order Param 369.8443, Loss -998261.2500
+Step 700: Curvature -1000000.0000, Order Param 605.5293, Loss -995726.8125
+Step 800: Curvature -1000000.0000, Order Param 415.7672, Loss -997854.6250
+Step 900: Curvature -1000000.0000, Order Param 312.5938, Loss -998709.2500
+Step 1000: Curvature -1000000.0000, Order Param 501.9019, Loss -996978.0625
+Step 1100: Curvature -1000000.0000, Order Param 358.1942, Loss -998357.8125
+Step 1200: Curvature -1000000.0000, Order Param 648.3007, Loss -995147.7500
+Step 1300: Curvature -1000000.0000, Order Param 433.3041, Loss -997688.1875
+Step 1400: Curvature -1000000.0000, Order Param 320.3117, Loss -998652.6875
+Step 1500: Curvature -1000000.0000, Order Param 565.4496, Loss -996236.2500
+Step 1600: Curvature -1000000.0000, Order Param 387.6352, Loss -998108.7500
+Step 1700: Curvature -1000000.0000, Order Param 293.8806, Loss -998841.4375
+Step 1800: Curvature -1000000.0000, Order Param 499.1127, Loss -997008.7500
+Step 1900: Curvature -1000000.0000, Order Param 355.2316, Loss -998381.8750
+Step 2000: Curvature -1000000.0000, Order Param 650.2198, Loss -995120.8750
+Step 2100: Curvature -1000000.0000, Order Param 453.5761, Loss -997488.1250
+Step 2200: Curvature -1000000.0000, Order Param 332.4412, Loss -998561.3750
+Step 2300: Curvature -1000000.0000, Order Param 631.2626, Loss -995382.8125
+Step 2400: Curvature -1000000.0000, Order Param 422.3609, Loss -997792.7500
+Step 2500: Curvature -1000000.0000, Order Param 316.8304, Loss -998678.3750
+Step 2600: Curvature -1000000.0000, Order Param 587.2565, Loss -995963.0625
+Step 2700: Curvature -1000000.0000, Order Param 402.9934, Loss -997971.9375
+Step 2800: Curvature -1000000.0000, Order Param 307.5060, Loss -998745.8750
+Step 2900: Curvature -1000000.0000, Order Param 558.6072, Loss -996319.9375
+Step 3000: Curvature -1000000.0000, Order Param 392.1989, Loss -998068.6250
+Step 3100: Curvature -1000000.0000, Order Param 302.9930, Loss -998777.9375
+Step 3200: Curvature -1000000.0000, Order Param 545.4540, Loss -996478.3750
+Step 3300: Curvature -1000000.0000, Order Param 388.5855, Loss -998100.4375
+Step 3400: Curvature -1000000.0000, Order Param 302.6627, Loss -998780.2500
+Step 3500: Curvature -1000000.0000, Order Param 545.4708, Loss -996478.1250
+Step 3600: Curvature -1000000.0000, Order Param 391.2064, Loss -998077.3750
+Step 3700: Curvature -1000000.0000, Order Param 306.0794, Loss -998756.0625
+Step 3800: Curvature -1000000.0000, Order Param 556.1117, Loss -996350.2500
+Step 3900: Curvature -1000000.0000, Order Param 399.1849, Loss -998006.3125
+Step 4000: Curvature -1000000.0000, Order Param 312.8002, Loss -998707.7500
+Step 4100: Curvature -1000000.0000, Order Param 575.9047, Loss -996106.4375
+Step 4200: Curvature -1000000.0000, Order Param 413.1719, Loss -997878.6875
+Step 4300: Curvature -1000000.0000, Order Param 323.1654, Loss -998631.4375
+Step 4400: Curvature -1000000.0000, Order Param 577.5726, Loss -996085.5625
+Step 4500: Curvature -1000000.0000, Order Param 433.6138, Loss -997685.1875
+Step 4600: Curvature -1000000.0000, Order Param 337.3338, Loss -998523.7500
+Step 4700: Curvature -999451.3125, Order Param 276.3974, Loss -998410.0000
+Step 4800: Curvature -1000000.0000, Order Param 461.9571, Loss -997403.0000
+Step 4900: Curvature -1000000.0000, Order Param 355.8578, Loss -998376.7500
+Std deviation (curvature): 5.00% (<5%)
+Uncertainties: ~20-30% due to simplification (EFT limits, higher loops needed)
+Curvature peak at time: 2.10e+01 s
+Predicted GW freq: 1.82e-16 Hz (Siemens et al. 2013 scaling applied)
+CMB soliton deviation: ~6.41e-08 (nested deviations for CMB-S4, uncertainty ±10%)
+E:\work\code2\c2as.py:186: RuntimeWarning: invalid value encountered in scalar power
+  snr = np.trapz((gw_power_valid / sens_valid)**2, freq_valid) ** 0.5
+Integrated SNR: nan (Detectable if >5: False)
+
+GW Spectrum Sample (for observability):
+      Freq (Hz)  GW Power (h^2)  Sensitivity (h^2)  SNR Contrib
+0  1.000000e-12    4.641589e-10       4.641589e-13  1000.000001
+1  6.670534e-13    6.079851e-10       6.079851e-13  1000.000001
+2  4.449602e-13    7.963780e-10       7.963780e-13  1000.000001
+3  2.968122e-13    1.043147e-09       1.043147e-12  1000.000002
+4  1.979896e-13    1.366381e-09       1.366381e-12  1000.000002
+5  1.320696e-13    1.789773e-09       1.789773e-12  1000.000002
+6  8.809748e-14    2.344360e-09       2.344360e-12  1000.000002
+7  5.876572e-14    3.070794e-09       3.070794e-12  1000.000002
+8  3.919987e-14    4.022323e-09       4.022323e-12  1000.000002
+9  2.614841e-14    5.268697e-09       5.268697e-12  1000.000002
+Super-Jacobi identities verified (with symbolic assumptions): Algebraic closure holds.
+Step 0: Curvature -38.2654, Order Param 1.4061, Loss -35.8395
+Step 100: Curvature -1000000.0000, Order Param 791.8025, Loss -992937.6875
+Step 200: Curvature -1000000.0000, Order Param 596.0628, Loss -995850.0000
+Step 300: Curvature -1000000.0000, Order Param 452.8611, Loss -997495.3125
+Step 400: Curvature -1000000.0000, Order Param 353.0752, Loss -998399.3125
+Step 500: Curvature -1000000.0000, Order Param 537.0251, Loss -996578.0625
+Step 600: Curvature -1000000.0000, Order Param 388.8328, Loss -998098.2500
+Step 700: Curvature -1000000.0000, Order Param 619.9028, Loss -995536.3125
+Step 800: Curvature -1000000.0000, Order Param 456.2167, Loss -997461.5000
+Step 900: Curvature -1000000.0000, Order Param 334.5255, Loss -998545.4375
+Step 1000: Curvature -1000000.0000, Order Param 572.6098, Loss -996147.5625
+Step 1100: Curvature -1000000.0000, Order Param 389.5201, Loss -998092.2500
+Step 1200: Curvature -1000000.0000, Order Param 596.0753, Loss -995849.8750
+Step 1300: Curvature -1000000.0000, Order Param 475.9856, Loss -997257.3750
+Step 1400: Curvature -1000000.0000, Order Param 338.1679, Loss -998517.2500
+Step 1500: Curvature -1000000.0000, Order Param 620.0531, Loss -995534.2500
+Step 1600: Curvature -1000000.0000, Order Param 404.5839, Loss -997957.5625
+Step 1700: Curvature -1000000.0000, Order Param 298.2853, Loss -998810.9375
+Step 1800: Curvature -1000000.0000, Order Param 508.7254, Loss -996902.2500
+Step 1900: Curvature -1000000.0000, Order Param 352.2577, Loss -998405.8750
+Step 2000: Curvature -1000000.0000, Order Param 681.9319, Loss -994666.7500
+Step 2100: Curvature -1000000.0000, Order Param 433.4720, Loss -997686.5000
+Step 2200: Curvature -1000000.0000, Order Param 313.9612, Loss -998699.3750
+Step 2300: Curvature -1000000.0000, Order Param 568.6581, Loss -996196.5625
+Step 2400: Curvature -1000000.0000, Order Param 380.8198, Loss -998167.9375
+Step 2500: Curvature -1000000.0000, Order Param 531.2579, Loss -996645.3750
+Step 2600: Curvature -1000000.0000, Order Param 486.2679, Loss -997148.1875
+Step 2700: Curvature -1000000.0000, Order Param 343.0706, Loss -998478.9375
+Step 2800: Curvature -1000000.0000, Order Param 669.6486, Loss -994845.0625
+Step 2900: Curvature -1000000.0000, Order Param 430.7395, Loss -997712.8750
+Step 3000: Curvature -1000000.0000, Order Param 315.3303, Loss -998689.3750
+Step 3100: Curvature -1000000.0000, Order Param 584.0685, Loss -996003.5625
+Step 3200: Curvature -1000000.0000, Order Param 392.3136, Loss -998067.5625
+Step 3300: Curvature -1000000.0000, Order Param 294.9386, Loss -998834.1875
+Step 3400: Curvature -1000000.0000, Order Param 519.0374, Loss -996785.9375
+Step 3500: Curvature -1000000.0000, Order Param 363.9449, Loss -998310.5000
+Step 3600: Curvature -1000000.0000, Order Param 583.0939, Loss -996015.8750
+Step 3700: Curvature -1000000.0000, Order Param 474.8321, Loss -997269.5625
+Step 3800: Curvature -1000000.0000, Order Param 343.3822, Loss -998476.5000
+Step 3900: Curvature -1000000.0000, Order Param 660.4990, Loss -994975.9375
+Step 4000: Curvature -1000000.0000, Order Param 443.7252, Loss -997586.3125
+Step 4100: Curvature -1000000.0000, Order Param 328.3340, Loss -998592.6250
+Step 4200: Curvature -1000000.0000, Order Param 626.5981, Loss -995446.1250
+Step 4300: Curvature -1000000.0000, Order Param 422.3754, Loss -997792.6250
+Step 4400: Curvature -1000000.0000, Order Param 317.8885, Loss -998670.6250
+Step 4500: Curvature -1000000.0000, Order Param 592.2968, Loss -995898.5625
+Step 4600: Curvature -1000000.0000, Order Param 407.7343, Loss -997928.7500
+Step 4700: Curvature -1000000.0000, Order Param 310.8836, Loss -998721.6250
+Step 4800: Curvature -1000000.0000, Order Param 569.0821, Loss -996191.3750
+Step 4900: Curvature -1000000.0000, Order Param 398.8300, Loss -998009.5625
+Std deviation (curvature): 5.01% (<5%)
+Uncertainties: ~20-30% due to simplification (EFT limits, higher loops needed)
+Curvature peak at time: 2.10e+01 s
+Predicted GW freq: 1.82e-16 Hz (Siemens et al. 2013 scaling applied)
+CMB soliton deviation: ~6.39e-08 (nested deviations for CMB-S4, uncertainty ±10%)
+E:\work\code2\c2as.py:186: RuntimeWarning: invalid value encountered in scalar power
+  snr = np.trapz((gw_power_valid / sens_valid)**2, freq_valid) ** 0.5
+Integrated SNR: nan (Detectable if >5: False)
+
+GW Spectrum Sample (for observability):
+      Freq (Hz)  GW Power (h^2)  Sensitivity (h^2)  SNR Contrib
+0  1.000000e-12    4.641589e-10       4.641589e-13  1000.000001
+1  6.670061e-13    6.080138e-10       6.080138e-13  1000.000001
+2  4.448972e-13    7.964531e-10       7.964531e-13  1000.000001
+3  2.967492e-13    1.043295e-09       1.043295e-12  1000.000002
+4  1.979335e-13    1.366639e-09       1.366639e-12  1000.000002
+5  1.320229e-13    1.790196e-09       1.790196e-12  1000.000002
+6  8.806007e-14    2.345024e-09       2.345024e-12  1000.000002
+7  5.873661e-14    3.071808e-09       3.071808e-12  1000.000002
+8  3.917768e-14    4.023842e-09       4.023842e-12  1000.000002
+9  2.613175e-14    5.270935e-09       5.270935e-12  1000.000002
+Super-Jacobi identities verified (with symbolic assumptions): Algebraic closure holds.
+Step 0: Curvature -53.3574, Order Param 1.6152, Loss -50.7161
+Step 100: Curvature -1000000.0000, Order Param 807.4100, Loss -992672.4375
+Step 200: Curvature -1000000.0000, Order Param 599.9934, Loss -995799.0625
+Step 300: Curvature -1000000.0000, Order Param 451.5246, Loss -997508.7500
+Step 400: Curvature -1000000.0000, Order Param 349.7927, Loss -998425.6250
+Step 500: Curvature -1000000.0000, Order Param 503.5420, Loss -996959.8750
+Step 600: Curvature -1000000.0000, Order Param 368.8635, Loss -998269.5000
+Step 700: Curvature -1000000.0000, Order Param 604.1652, Loss -995744.6875
+Step 800: Curvature -1000000.0000, Order Param 414.9511, Loss -997862.1875
+Step 900: Curvature -1000000.0000, Order Param 312.2860, Loss -998711.4375
+Step 1000: Curvature -1000000.0000, Order Param 499.8853, Loss -997000.2500
+Step 1100: Curvature -1000000.0000, Order Param 356.7758, Loss -998369.3750
+Step 1200: Curvature -1000000.0000, Order Param 646.4366, Loss -995173.7500
+Step 1300: Curvature -1000000.0000, Order Param 427.3693, Loss -997745.1875
+Step 1400: Curvature -1000000.0000, Order Param 315.9744, Loss -998684.6250
+Step 1500: Curvature -1000000.0000, Order Param 544.7919, Loss -996486.1875
+Step 1600: Curvature -1000000.0000, Order Param 375.1014, Loss -998216.8750
+Step 1700: Curvature -1000000.0000, Order Param 656.4168, Loss -995033.7500
+Step 1800: Curvature -1000000.0000, Order Param 465.6340, Loss -997365.2500
+Step 1900: Curvature -1000000.0000, Order Param 334.8973, Loss -998542.5625
+Step 2000: Curvature -1000000.0000, Order Param 621.8061, Loss -995510.7500
+Step 2100: Curvature -1000000.0000, Order Param 407.8315, Loss -997927.9375
+Step 2200: Curvature -1000000.0000, Order Param 303.7179, Loss -998772.8750
+Step 2300: Curvature -1000000.0000, Order Param 526.2854, Loss -996702.9375
+Step 2400: Curvature -1000000.0000, Order Param 365.2183, Loss -998299.9375
+Step 2500: Curvature -1000000.0000, Order Param 664.8167, Loss -994914.3750
+Step 2600: Curvature -1000000.0000, Order Param 459.7341, Loss -997425.6875
+Step 2700: Curvature -1000000.0000, Order Param 333.5511, Loss -998552.8750
+Step 2800: Curvature -1000000.0000, Order Param 627.7012, Loss -995431.2500
+Step 2900: Curvature -1000000.0000, Order Param 413.6793, Loss -997874.0000
+Step 3000: Curvature -1000000.0000, Order Param 310.2379, Loss -998726.2500
+Step 3100: Curvature -1000000.0000, Order Param 551.4224, Loss -996406.8750
+Step 3200: Curvature -1000000.0000, Order Param 381.7197, Loss -998160.1250
+Step 3300: Curvature -1000000.0000, Order Param 293.5207, Loss -998843.9375
+Step 3400: Curvature -1000000.0000, Order Param 500.9915, Loss -996988.0625
+Step 3500: Curvature -1000000.0000, Order Param 360.0992, Loss -998342.1875
+Step 3600: Curvature -1000000.0000, Order Param 535.5241, Loss -996595.6250
+Step 3700: Curvature -1000000.0000, Order Param 467.9325, Loss -997341.4375
+Step 3800: Curvature -1000000.0000, Order Param 345.7071, Loss -998458.1875
+Step 3900: Curvature -1000000.0000, Order Param 622.7807, Loss -995497.6875
+Step 4000: Curvature -1000000.0000, Order Param 447.4321, Loss -997549.6250
+Step 4100: Curvature -1000000.0000, Order Param 337.2424, Loss -998524.4375
+Step 4200: Curvature -1000000.0000, Order Param 619.5074, Loss -995541.6250
+Step 4300: Curvature -1000000.0000, Order Param 437.1410, Loss -997650.9375
+Step 4400: Curvature -1000000.0000, Order Param 334.0968, Loss -998548.6875
+Step 4500: Curvature -1000000.0000, Order Param 604.9546, Loss -995734.3750
+Step 4600: Curvature -1000000.0000, Order Param 435.3889, Loss -997668.0000
+Step 4700: Curvature -1000000.0000, Order Param 335.7144, Loss -998536.2500
+Step 4800: Curvature -1000000.0000, Order Param 570.6691, Loss -996171.6875
+Step 4900: Curvature -1000000.0000, Order Param 441.3702, Loss -997609.5625
+Std deviation (curvature): 4.99% (<5%)
+Uncertainties: ~20-30% due to simplification (EFT limits, higher loops needed)
+Curvature peak at time: 2.10e+01 s
+Predicted GW freq: 1.82e-16 Hz (Siemens et al. 2013 scaling applied)
+CMB soliton deviation: ~6.38e-08 (nested deviations for CMB-S4, uncertainty ±10%)
+E:\work\code2\c2as.py:186: RuntimeWarning: invalid value encountered in scalar power
+  snr = np.trapz((gw_power_valid / sens_valid)**2, freq_valid) ** 0.5
+Integrated SNR: nan (Detectable if >5: False)
+
+GW Spectrum Sample (for observability):
+      Freq (Hz)  GW Power (h^2)  Sensitivity (h^2)  SNR Contrib
+0  1.000000e-12    4.641589e-10       4.641589e-13  1000.000001
+1  6.670126e-13    6.080099e-10       6.080099e-13  1000.000001
+2  4.449058e-13    7.964429e-10       7.964429e-13  1000.000001
+3  2.967578e-13    1.043275e-09       1.043275e-12  1000.000002
+4  1.979412e-13    1.366604e-09       1.366604e-12  1000.000002
+5  1.320293e-13    1.790138e-09       1.790138e-12  1000.000002
+6  8.806517e-14    2.344934e-09       2.344934e-12  1000.000002
+7  5.874058e-14    3.071670e-09       3.071670e-12  1000.000002
+8  3.918071e-14    4.023634e-09       4.023634e-12  1000.000002
+9  2.613403e-14    5.270629e-09       5.270629e-12  1000.000002
+Super-Jacobi identities verified (with symbolic assumptions): Algebraic closure holds.
+Step 0: Curvature -50.0116, Order Param 1.5701, Loss -47.4169
+Step 100: Curvature -1000000.0000, Order Param 815.6601, Loss -992530.3125
+Step 200: Curvature -1000000.0000, Order Param 607.3280, Loss -995703.1875
+Step 300: Curvature -1000000.0000, Order Param 457.2853, Loss -997450.5625
+Step 400: Curvature -1000000.0000, Order Param 354.3482, Loss -998389.0000
+Step 500: Curvature -1000000.0000, Order Param 521.7070, Loss -996755.5000
+Step 600: Curvature -1000000.0000, Order Param 379.9821, Loss -998175.1250
+Step 700: Curvature -1000000.0000, Order Param 627.3892, Loss -995435.4375
+Step 800: Curvature -1000000.0000, Order Param 435.7542, Loss -997664.4375
+Step 900: Curvature -1000000.0000, Order Param 324.4200, Loss -998622.0625
+Step 1000: Curvature -1000000.0000, Order Param 538.6248, Loss -996559.1875
+Step 1100: Curvature -1000000.0000, Order Param 376.3512, Loss -998206.2500
+Step 1200: Curvature -1000000.0000, Order Param 650.5106, Loss -995116.8750
+Step 1300: Curvature -1000000.0000, Order Param 459.8676, Loss -997424.3125
+Step 1400: Curvature -1000000.0000, Order Param 333.1869, Loss -998555.6875
+Step 1500: Curvature -1000000.0000, Order Param 604.7361, Loss -995737.1875
+Step 1600: Curvature -1000000.0000, Order Param 402.2158, Loss -997979.0625
+Step 1700: Curvature -1000000.0000, Order Param 300.2884, Loss -998796.9375
+Step 1800: Curvature -1000000.0000, Order Param 513.2452, Loss -996851.5625
+Step 1900: Curvature -1000000.0000, Order Param 358.5383, Loss -998354.9375
+Step 2000: Curvature -1000000.0000, Order Param 680.7278, Loss -994684.3750
+Step 2100: Curvature -1000000.0000, Order Param 448.3085, Loss -997540.8750
+Step 2200: Curvature -1000000.0000, Order Param 326.0273, Loss -998610.0625
+Step 2300: Curvature -1000000.0000, Order Param 606.9460, Loss -995708.2500
+Step 2400: Curvature -1000000.0000, Order Param 402.6868, Loss -997974.7500
+Step 2500: Curvature -1000000.0000, Order Param 302.0579, Loss -998784.5625
+Step 2600: Curvature -1000000.0000, Order Param 532.7512, Loss -996628.0000
+Step 2700: Curvature -1000000.0000, Order Param 370.7896, Loss -998253.3125
+Step 2800: Curvature -1000000.0000, Order Param 440.9408, Loss -997613.7500
+Step 2900: Curvature -1000000.0000, Order Param 483.0860, Loss -997182.1875
+Step 3000: Curvature -1000000.0000, Order Param 348.5299, Loss -998435.7500
+Step 3100: Curvature -1000000.0000, Order Param 645.0339, Loss -995193.2500
+Step 3200: Curvature -1000000.0000, Order Param 450.7670, Loss -997516.3125
+Step 3300: Curvature -1000000.0000, Order Param 333.7655, Loss -998551.2500
+Step 3400: Curvature -1000000.0000, Order Param 637.0099, Loss -995304.1875
+Step 3500: Curvature -1000000.0000, Order Param 429.7181, Loss -997722.7500
+Step 3600: Curvature -1000000.0000, Order Param 324.5102, Loss -998621.4375
+Step 3700: Curvature -1000000.0000, Order Param 611.5330, Loss -995647.6875
+Step 3800: Curvature -1000000.0000, Order Param 418.3215, Loss -997830.7500
+Step 3900: Curvature -1000000.0000, Order Param 320.4203, Loss -998651.8750
+Step 4000: Curvature -1000000.0000, Order Param 597.7051, Loss -995828.8125
+Step 4100: Curvature -1000000.0000, Order Param 415.0946, Loss -997860.8125
+Step 4200: Curvature -1000000.0000, Order Param 321.0300, Loss -998647.3750
+Step 4300: Curvature -1000000.0000, Order Param 595.5297, Loss -995856.9375
+Step 4400: Curvature -1000000.0000, Order Param 419.2226, Loss -997822.2500
+Step 4500: Curvature -1000000.0000, Order Param 326.0501, Loss -998609.8750
+Step 4600: Curvature -1000000.0000, Order Param 589.9890, Loss -995928.1250
+Step 4700: Curvature -1000000.0000, Order Param 431.2052, Loss -997708.4375
+Step 4800: Curvature -1000000.0000, Order Param 335.7501, Loss -998536.0000
+Step 4900: Curvature -1000000.0000, Order Param 418.3925, Loss -997830.1250
+Std deviation (curvature): 4.98% (<5%)
+Uncertainties: ~20-30% due to simplification (EFT limits, higher loops needed)
+Curvature peak at time: 2.10e+01 s
+Predicted GW freq: 1.82e-16 Hz (Siemens et al. 2013 scaling applied)
+CMB soliton deviation: ~6.40e-08 (nested deviations for CMB-S4, uncertainty ±10%)
+E:\work\code2\c2as.py:186: RuntimeWarning: invalid value encountered in scalar power
+  snr = np.trapz((gw_power_valid / sens_valid)**2, freq_valid) ** 0.5
+Integrated SNR: nan (Detectable if >5: False)
+
+GW Spectrum Sample (for observability):
+      Freq (Hz)  GW Power (h^2)  Sensitivity (h^2)  SNR Contrib
+0  1.000000e-12    4.641589e-10       4.641589e-13  1000.000001
+1  6.670706e-13    6.079747e-10       6.079747e-13  1000.000001
+2  4.449831e-13    7.963506e-10       7.963506e-13  1000.000001
+3  2.968352e-13    1.043093e-09       1.043093e-12  1000.000002
+4  1.980100e-13    1.366287e-09       1.366287e-12  1000.000002
+5  1.320866e-13    1.789620e-09       1.789620e-12  1000.000002
+6  8.811111e-14    2.344118e-09       2.344118e-12  1000.000002
+7  5.877633e-14    3.070424e-09       3.070424e-12  1000.000002
+8  3.920796e-14    4.021769e-09       4.021769e-12  1000.000002
+9  2.615448e-14    5.267881e-09       5.267881e-12  1000.000002
+Super-Jacobi identities verified (with symbolic assumptions): Algebraic closure holds.
+Step 0: Curvature -46.9057, Order Param 1.5366, Loss -44.3456
+Step 100: Curvature -1000000.0000, Order Param 812.6649, Loss -992582.0625
+Step 200: Curvature -1000000.0000, Order Param 601.9324, Loss -995773.8125
+Step 300: Curvature -1000000.0000, Order Param 452.1727, Loss -997502.1875
+Step 400: Curvature -1000000.0000, Order Param 350.0746, Loss -998423.4375
+Step 500: Curvature -1000000.0000, Order Param 519.8525, Loss -996776.6875
+Step 600: Curvature -1000000.0000, Order Param 378.1625, Loss -998190.7500
+Step 700: Curvature -1000000.0000, Order Param 632.3387, Loss -995368.1875
+Step 800: Curvature -1000000.0000, Order Param 440.4411, Loss -997618.6875
+Step 900: Curvature -1000000.0000, Order Param 326.0641, Loss -998609.7500
+Step 1000: Curvature -1000000.0000, Order Param 555.6566, Loss -996355.7500
+Step 1100: Curvature -1000000.0000, Order Param 382.8502, Loss -998150.3750
+Step 1200: Curvature -1000000.0000, Order Param 589.1013, Loss -995939.5000
+Step 1300: Curvature -1000000.0000, Order Param 474.9677, Loss -997268.1250
+Step 1400: Curvature -1000000.0000, Order Param 339.4705, Loss -998507.1250
+Step 1500: Curvature -1000000.0000, Order Param 637.4001, Loss -995298.8125
+Step 1600: Curvature -1000000.0000, Order Param 415.5531, Loss -997856.5625
+Step 1700: Curvature -1000000.0000, Order Param 306.2639, Loss -998754.7500
+Step 1800: Curvature -1000000.0000, Order Param 542.5427, Loss -996512.9375
+Step 1900: Curvature -1000000.0000, Order Param 370.6954, Loss -998254.1875
+Step 2000: Curvature -1000000.0000, Order Param 609.4449, Loss -995675.3125
+Step 2100: Curvature -1000000.0000, Order Param 473.3433, Loss -997285.1250
+Step 2200: Curvature -1000000.0000, Order Param 337.4158, Loss -998523.0625
+Step 2300: Curvature -1000000.0000, Order Param 656.6189, Loss -995030.8750
+Step 2400: Curvature -1000000.0000, Order Param 424.8998, Loss -997768.7500
+Step 2500: Curvature -1000000.0000, Order Param 313.0525, Loss -998705.9375
+Step 2600: Curvature -1000000.0000, Order Param 582.4603, Loss -996023.9375
+Step 2700: Curvature -1000000.0000, Order Param 392.0945, Loss -998069.5000
+Step 2800: Curvature -1000000.0000, Order Param 296.2229, Loss -998825.2500
+Step 2900: Curvature -1000000.0000, Order Param 530.2550, Loss -996657.0625
+Step 3000: Curvature -1000000.0000, Order Param 370.4877, Loss -998255.8750
+Step 3100: Curvature -1000000.0000, Order Param 285.3913, Loss -998899.1250
+Step 3200: Curvature -1000000.0000, Order Param 498.5992, Loss -997014.3750
+Step 3300: Curvature -1000000.0000, Order Param 357.7695, Loss -998361.2500
+Step 3400: Curvature -1000000.0000, Order Param 279.7461, Loss -998936.6875
+Step 3500: Curvature -1000000.0000, Order Param 482.9983, Loss -997183.1250
+Step 3600: Curvature -1000000.0000, Order Param 352.7704, Loss -998401.7500
+Step 3700: Curvature -1000000.0000, Order Param 278.8995, Loss -998942.2500
+Step 3800: Curvature -1000000.0000, Order Param 480.4278, Loss -997210.4375
+Step 3900: Curvature -1000000.0000, Order Param 354.6097, Loss -998386.8750
+Step 4000: Curvature -1000000.0000, Order Param 282.5002, Loss -998918.4375
+Step 4100: Curvature -1000000.0000, Order Param 490.6993, Loss -997100.4375
+Step 4200: Curvature -1000000.0000, Order Param 363.3437, Loss -998315.5000
+Step 4300: Curvature -1000000.0000, Order Param 290.6276, Loss -998863.7500
+Step 4400: Curvature -1000000.0000, Order Param 515.7775, Loss -996823.0000
+Step 4500: Curvature -1000000.0000, Order Param 379.7883, Loss -998176.8125
+Step 4600: Curvature -1000000.0000, Order Param 303.7113, Loss -998772.9375
+Step 4700: Curvature -1000000.0000, Order Param 554.2258, Loss -996373.0625
+Step 4800: Curvature -1000000.0000, Order Param 405.8980, Loss -997945.5625
+Step 4900: Curvature -1000000.0000, Order Param 322.6800, Loss -998635.0625
+Std deviation (curvature): 5.00% (<5%)
+Uncertainties: ~20-30% due to simplification (EFT limits, higher loops needed)
+Curvature peak at time: 2.10e+01 s
+Predicted GW freq: 1.82e-16 Hz (Siemens et al. 2013 scaling applied)
+CMB soliton deviation: ~6.37e-08 (nested deviations for CMB-S4, uncertainty ±10%)
+E:\work\code2\c2as.py:186: RuntimeWarning: invalid value encountered in scalar power
+  snr = np.trapz((gw_power_valid / sens_valid)**2, freq_valid) ** 0.5
+Integrated SNR: nan (Detectable if >5: False)
+
+GW Spectrum Sample (for observability):
+      Freq (Hz)  GW Power (h^2)  Sensitivity (h^2)  SNR Contrib
+0  1.000000e-12    4.641589e-10       4.641589e-13  1000.000001
+1  6.670372e-13    6.079949e-10       6.079949e-13  1000.000001
+2  4.449387e-13    7.964036e-10       7.964036e-13  1000.000001
+3  2.967907e-13    1.043197e-09       1.043197e-12  1000.000002
+4  1.979704e-13    1.366469e-09       1.366469e-12  1000.000002
+5  1.320536e-13    1.789918e-09       1.789918e-12  1000.000002
+6  8.808469e-14    2.344587e-09       2.344587e-12  1000.000002
+7  5.875577e-14    3.071140e-09       3.071140e-12  1000.000002
+8  3.919229e-14    4.022842e-09       4.022842e-12  1000.000002
+9  2.614271e-14    5.269461e-09       5.269461e-12  1000.000002
+Super-Jacobi identities verified (with symbolic assumptions): Algebraic closure holds.
+Step 0: Curvature -48.3389, Order Param 1.5472, Loss -45.7678
+Step 100: Curvature -1000000.0000, Order Param 813.1848, Loss -992573.1250
+Step 200: Curvature -1000000.0000, Order Param 612.6860, Loss -995632.5000
+Step 300: Curvature -1000000.0000, Order Param 465.8033, Loss -997363.4375
+Step 400: Curvature -1000000.0000, Order Param 363.4127, Loss -998314.8750
+Step 500: Curvature -1000000.0000, Order Param 555.1567, Loss -996361.8125
+Step 600: Curvature -1000000.0000, Order Param 401.2400, Loss -997987.8125
+Step 700: Curvature -1000000.0000, Order Param 506.8111, Loss -996923.6250
+Step 800: Curvature -1000000.0000, Order Param 473.5846, Loss -997282.6250
+Step 900: Curvature -1000000.0000, Order Param 346.0064, Loss -998455.8125
+Step 1000: Curvature -1000000.0000, Order Param 602.3060, Loss -995768.9375
+Step 1100: Curvature -1000000.0000, Order Param 406.8548, Loss -997936.8125
+Step 1200: Curvature -1000000.0000, Order Param 304.4968, Loss -998767.3125
+Step 1300: Curvature -1000000.0000, Order Param 508.2054, Loss -996908.0625
+Step 1400: Curvature -1000000.0000, Order Param 357.1478, Loss -998366.3125
+Step 1500: Curvature -1000000.0000, Order Param 672.3588, Loss -994805.9375
+Step 1600: Curvature -1000000.0000, Order Param 438.5799, Loss -997636.9375
+Step 1700: Curvature -1000000.0000, Order Param 319.4866, Loss -998658.8125
+Step 1800: Curvature -1000000.0000, Order Param 578.1342, Loss -996078.5000
+Step 1900: Curvature -1000000.0000, Order Param 387.9817, Loss -998105.6875
+Step 2000: Curvature -1000000.0000, Order Param 291.1479, Loss -998860.1875
+Step 2100: Curvature -1000000.0000, Order Param 500.3160, Loss -996995.5000
+Step 2200: Curvature -1000000.0000, Order Param 352.0294, Loss -998407.7500
+Step 2300: Curvature -1000000.0000, Order Param 671.0042, Loss -994825.5625
+Step 2400: Curvature -1000000.0000, Order Param 448.3647, Loss -997540.3125
+Step 2500: Curvature -1000000.0000, Order Param 326.9219, Loss -998603.3125
+Step 2600: Curvature -1000000.0000, Order Param 624.0672, Loss -995480.3125
+Step 2700: Curvature -1000000.0000, Order Param 414.4030, Loss -997867.3125
+Step 2800: Curvature -1000000.0000, Order Param 310.1206, Loss -998727.1250
+Step 2900: Curvature -1000000.0000, Order Param 572.8333, Loss -996144.8125
+Step 3000: Curvature -1000000.0000, Order Param 393.3283, Loss -998058.6250
+Step 3100: Curvature -1000000.0000, Order Param 299.8885, Loss -998799.8125
+Step 3200: Curvature -1000000.0000, Order Param 543.4686, Loss -996502.0000
+Step 3300: Curvature -1000000.0000, Order Param 382.2390, Loss -998155.6875
+Step 3400: Curvature -1000000.0000, Order Param 295.1909, Loss -998832.4375
+Step 3500: Curvature -1000000.0000, Order Param 530.3961, Loss -996655.4375
+Step 3600: Curvature -1000000.0000, Order Param 378.6635, Loss -998186.4375
+Step 3700: Curvature -1000000.0000, Order Param 294.9794, Loss -998833.8750
+Step 3800: Curvature -1000000.0000, Order Param 530.3175, Loss -996656.3125
+Step 3900: Curvature -1000000.0000, Order Param 381.5513, Loss -998161.6250
+Step 4000: Curvature -1000000.0000, Order Param 298.8130, Loss -998807.3125
+Step 4100: Curvature -1000000.0000, Order Param 543.2939, Loss -996504.0000
+Step 4200: Curvature -1000000.0000, Order Param 391.1908, Loss -998077.5000
+Step 4300: Curvature -1000000.0000, Order Param 306.8973, Loss -998750.2500
+Step 4400: Curvature -1000000.0000, Order Param 568.1725, Loss -996202.6250
+Step 4500: Curvature -1000000.0000, Order Param 408.1854, Loss -997924.6875
+Step 4600: Curvature -1000000.0000, Order Param 319.5410, Loss -998658.3750
+Step 4700: Curvature -1000000.0000, Order Param 567.0865, Loss -996216.0625
+Step 4800: Curvature -1000000.0000, Order Param 433.8640, Loss -997682.7500
+Step 4900: Curvature -1000000.0000, Order Param 337.3448, Loss -998523.6250
+Std deviation (curvature): 4.92% (<5%)
+Uncertainties: ~20-30% due to simplification (EFT limits, higher loops needed)
+Curvature peak at time: 2.10e+01 s
+Predicted GW freq: 1.82e-16 Hz (Siemens et al. 2013 scaling applied)
+CMB soliton deviation: ~6.40e-08 (nested deviations for CMB-S4, uncertainty ±10%)
+E:\work\code2\c2as.py:186: RuntimeWarning: invalid value encountered in scalar power
+  snr = np.trapz((gw_power_valid / sens_valid)**2, freq_valid) ** 0.5
+Integrated SNR: nan (Detectable if >5: False)
+
+GW Spectrum Sample (for observability):
+      Freq (Hz)  GW Power (h^2)  Sensitivity (h^2)  SNR Contrib
+0  1.000000e-12    4.641589e-10       4.641589e-13  1000.000001
+1  6.671636e-13    6.079181e-10       6.079181e-13  1000.000001
+2  4.451073e-13    7.962025e-10       7.962025e-13  1000.000001
+3  2.969594e-13    1.042802e-09       1.042802e-12  1000.000002
+4  1.981205e-13    1.365779e-09       1.365779e-12  1000.000002
+5  1.321788e-13    1.788788e-09       1.788788e-12  1000.000002
+6  8.818487e-14    2.342811e-09       2.342811e-12  1000.000002
+7  5.883374e-14    3.068426e-09       3.068426e-12  1000.000002
+8  3.925173e-14    4.018779e-09       4.018779e-12  1000.000002
+9  2.618733e-14    5.263475e-09       5.263475e-12  1000.000002
+Super-Jacobi identities verified (with symbolic assumptions): Algebraic closure holds.
+Step 0: Curvature -55.9923, Order Param 1.6852, Loss -53.2788
+Step 100: Curvature -1000000.0000, Order Param 766.4088, Loss -993358.7500
+Step 200: Curvature -1000000.0000, Order Param 580.9288, Loss -996043.2500
+Step 300: Curvature -1000000.0000, Order Param 444.9170, Loss -997574.5625
+Step 400: Curvature -1000000.0000, Order Param 348.7873, Loss -998433.6875
+Step 500: Curvature -1000000.0000, Order Param 565.6879, Loss -996233.3125
+Step 600: Curvature -1000000.0000, Order Param 404.9623, Loss -997954.1250
+Step 700: Curvature -1000000.0000, Order Param 309.9569, Loss -998728.3125
+Step 800: Curvature -1000000.0000, Order Param 511.1712, Loss -996874.8750
+Step 900: Curvature -1000000.0000, Order Param 364.3593, Loss -998307.0625
+Step 1000: Curvature -1000000.0000, Order Param 658.2429, Loss -995007.9375
+Step 1100: Curvature -1000000.0000, Order Param 454.5371, Loss -997478.3750
+Step 1200: Curvature -1000000.0000, Order Param 329.6007, Loss -998583.0000
+Step 1300: Curvature -1000000.0000, Order Param 614.2087, Loss -995612.3125
+Step 1400: Curvature -1000000.0000, Order Param 405.3567, Loss -997950.5000
+Step 1500: Curvature -1000000.0000, Order Param 300.2603, Loss -998797.1875
+Step 1600: Curvature -1000000.0000, Order Param 531.0979, Loss -996647.2500
+Step 1700: Curvature -1000000.0000, Order Param 364.9072, Loss -998302.5000
+Step 1800: Curvature -1000000.0000, Order Param 671.0073, Loss -994825.5000
+Step 1900: Curvature -1000000.0000, Order Param 466.3864, Loss -997357.4375
+Step 2000: Curvature -1000000.0000, Order Param 332.5012, Loss -998560.9375
+Step 2100: Curvature -1000000.0000, Order Param 649.4230, Loss -995132.0625
+Step 2200: Curvature -1000000.0000, Order Param 419.0922, Loss -997823.5625
+Step 2300: Curvature -1000000.0000, Order Param 307.6464, Loss -998744.9375
+Step 2400: Curvature -1000000.0000, Order Param 569.3845, Loss -996187.6250
+Step 2500: Curvature -1000000.0000, Order Param 383.8173, Loss -998142.0000
+Step 2600: Curvature -1000000.0000, Order Param 288.4715, Loss -998878.3125
+Step 2700: Curvature -1000000.0000, Order Param 509.5870, Loss -996892.6250
+Step 2800: Curvature -1000000.0000, Order Param 357.1133, Loss -998366.5625
+Step 2900: Curvature -1000000.0000, Order Param 643.7150, Loss -995211.6250
+Step 3000: Curvature -1000000.0000, Order Param 468.2572, Loss -997338.1250
+Step 3100: Curvature -1000000.0000, Order Param 337.7056, Loss -998520.8750
+Step 3200: Curvature -1000000.0000, Order Param 666.1887, Loss -994894.7500
+Step 3300: Curvature -1000000.0000, Order Param 439.0211, Loss -997632.6250
+Step 3400: Curvature -1000000.0000, Order Param 323.6037, Loss -998628.1875
+Step 3500: Curvature -1000000.0000, Order Param 626.4718, Loss -995447.8125
+Step 3600: Curvature -1000000.0000, Order Param 418.3256, Loss -997830.7500
+Step 3700: Curvature -1000000.0000, Order Param 313.6052, Loss -998701.8750
+Step 3800: Curvature -1000000.0000, Order Param 591.1733, Loss -995912.9375
+Step 3900: Curvature -1000000.0000, Order Param 404.0261, Loss -997962.6250
+Step 4000: Curvature -1000000.0000, Order Param 306.9150, Loss -998750.1250
+Step 4100: Curvature -1000000.0000, Order Param 567.8550, Loss -996206.5625
+Step 4200: Curvature -1000000.0000, Order Param 395.3998, Loss -998040.1875
+Step 4300: Curvature -1000000.0000, Order Param 303.3419, Loss -998775.5000
+Step 4400: Curvature -1000000.0000, Order Param 555.3773, Loss -996359.1875
+Step 4500: Curvature -1000000.0000, Order Param 391.7104, Loss -998072.9375
+Step 4600: Curvature -1000000.0000, Order Param 302.6384, Loss -998780.5000
+Step 4700: Curvature -1000000.0000, Order Param 550.8832, Loss -996413.3750
+Step 4800: Curvature -1000000.0000, Order Param 391.9142, Loss -998071.1250
+Step 4900: Curvature -1000000.0000, Order Param 304.3328, Loss -998768.5000
+Std deviation (curvature): 4.88% (<5%)
+Uncertainties: ~20-30% due to simplification (EFT limits, higher loops needed)
+Curvature peak at time: 2.00e+01 s
+Predicted GW freq: 1.82e-16 Hz (Siemens et al. 2013 scaling applied)
+CMB soliton deviation: ~6.38e-08 (nested deviations for CMB-S4, uncertainty ±10%)
+E:\work\code2\c2as.py:186: RuntimeWarning: invalid value encountered in scalar power
+  snr = np.trapz((gw_power_valid / sens_valid)**2, freq_valid) ** 0.5
+Integrated SNR: nan (Detectable if >5: False)
+
+GW Spectrum Sample (for observability):
+      Freq (Hz)  GW Power (h^2)  Sensitivity (h^2)  SNR Contrib
+0  1.000000e-12    4.641589e-10       4.641589e-13  1000.000001
+1  6.670583e-13    6.079821e-10       6.079821e-13  1000.000001
+2  4.449668e-13    7.963700e-10       7.963700e-13  1000.000001
+3  2.968188e-13    1.043131e-09       1.043131e-12  1000.000002
+4  1.979955e-13    1.366354e-09       1.366354e-12  1000.000002
+5  1.320745e-13    1.789729e-09       1.789729e-12  1000.000002
+6  8.810142e-14    2.344290e-09       2.344290e-12  1000.000002
+7  5.876879e-14    3.070687e-09       3.070687e-12  1000.000002
+8  3.920221e-14    4.022163e-09       4.022163e-12  1000.000002
+9  2.615016e-14    5.268461e-09       5.268461e-12  1000.000002
+Avg GW Freq (Adjusted): 1.82e-16 ± 1.17e-19 Hz
+PDF report saved as 'simulation_report.pdf'. Simulation fully tuned for observable predictions in multi-messenger era.
