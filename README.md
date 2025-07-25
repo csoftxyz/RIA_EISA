@@ -9,7 +9,7 @@ Yuxuan Zhang^{a,b}, Weitong Hu^{c,*}, Tongzhou Zhang^d
 
 ## Overview
 
-This repository contains four PyTorch-based numerical simulations supporting the Extended Integrated Symmetry Algebra (EISA) with Recursive Info-Algebra (RIA) framework, as described in the manuscript "Recursive Algebra in Extended Integrated Symmetry: An Effective Framework for Quantum Field Dynamics" (LaTeX source: 18.tex). These simulations validate key theoretical predictions, including self-organization from chaos via entropy minimization, transient fluctuations inducing curvature feedback and phase transitions, particle mass hierarchies and fundamental constants from irrep branching, and cosmological evolution resolving Hubble tension with multi-messenger signatures.
+This repository contains four PyTorch-based numerical simulations supporting the Extended Integrated Symmetry Algebra (EISA) with Recursive Info-Algebra (RIA) framework, as described in the manuscript "Recursive Algebra in Extended Integrated Symmetry: An Effective Framework for Quantum Field Dynamics" (LaTeX source: 27.tex). These simulations validate key theoretical predictions, including self-organization from chaos via entropy minimization, transient fluctuations inducing curvature feedback and phase transitions, particle mass hierarchies and fundamental constants from irrep branching, and cosmological evolution resolving Hubble tension with multi-messenger signatures.
 
 Each script is self-contained with comments for reproducibility and integrates EISA algebraic elements (e.g., generators \(F_i\), \(B_k\) for bosonic/fermionic sectors) with RIA recursion (VQC-optimized loss involving Von Neumann entropy \(S_{vn}\) and fidelity). Simulations approximate EFT dynamics below Planck scale, with uncertainties ~10-20% due to simplifications (e.g., 4x4-8x8 matrices). Outputs quantify observables like entropy reduction (~30.6%), GW frequencies (~10^{10} Hz), mass ratios (~10^5), and H_0 values (~73 km/s/Mpc vs. Planck 67.4).
 
@@ -71,10 +71,10 @@ For manuscript details, refer to Sections IV (Computational Methods) and V (Resu
 
 ## Data Availability and Ethical Statement
 
-All codes, parameters, and generated data (e.g., trajectories, spectra, plots) are available in this repository. No external datasets used; random seeds ensure reproducibility. Monte Carlo analyses (10 runs per simulation) confirm robustness, with std devs reported.
+All codes, parameters, and generated data (e.g., trajectories, spectra, plots) are available in this repository. No external datasets used; random seeds ensure reproducibility (e.g., `torch.manual_seed(42)`). Monte Carlo analyses (10 runs per simulation) confirm robustness, with std devs reported.
 
 **Computational Integrity**: CPU execution with ECC memory ensures precision and prevents errors.
 
 Ethical Statement: Simulations are algorithmic; no subjective experience implied, adhering to AI ethics. Computations follow open-source principles; no conflicts of interest.
 
-For issues or contributions, contact csoft@hotmail.com.
+For issues or contributions, contact csoft@hotmail.com & csoft@live.cn.
