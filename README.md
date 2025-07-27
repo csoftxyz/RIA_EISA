@@ -76,6 +76,16 @@ For detailed methodology and results, refer to Sections IV (Computational Method
 - **Execution Results vs. Manuscript**: Matches Appendices A & B. Super-Jacobi: all low-dim true, 8x8 residuals <4.06e-16 (Figure 51 heatmap). Bayesian: log-difference ~2.31 favoring RIA (Figure 52 scatterplot). Supports "near-perfect coherence".
 - **Outputs**: Console: verification results; Plots: residuals heatmap, posterior scatterplot.
 
+## Detailed Guides
+- [EISA Algebra Basics](https://github.com/csoftxyz/RIA_EISA/wiki/EISA-Algebra-Basics): Explains superalgebra structure and generators.
+- [RIA Optimization](https://github.com/csoftxyz/RIA_EISA/wiki/RIA-Optimization): VQC setup and loss minimization.
+- [Simulation Tutorials](https://github.com/csoftxyz/RIA_EISA/wiki/Simulation-Tutorials): Step-by-step for each script (c1b.py etc.).
+- [Validation Code (c5cs.py)](https://github.com/csoftxyz/RIA_EISA/wiki/Validation-Code-c5cs.py): SymPy for Super-Jacobi and Bayesian analysis.
+- [Equation Self-Consistency in the Manuscript](https://github.com/csoftxyz/RIA_EISA/wiki/Equation-Self-Consistency-in-the-Manuscript): Overview of how equations in the manuscript are internally consistent.
+
+For more detailed descriptions, please visit  
+https://github.com/csoftxyz/RIA_EISA/wiki
+
 ## Data Availability and Ethical Statement
 
 All codes, parameters, and generated data (e.g., trajectories, spectra, plots) are available in this repository, submitted as supplementary material for PRD review. No external datasets used; random seeds ensure reproducibility (e.g., `torch.manual_seed(42)`). Monte Carlo analyses (10-20 runs per simulation) confirm robustness, with reported std devs.
