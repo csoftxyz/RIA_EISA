@@ -78,11 +78,11 @@ For detailed methodology and results, refer to Sections IV (Computational Method
 - **Outputs**: Console: verification results; Plots: residuals heatmap, posterior scatterplot.
 
 ## Detailed Guides
-- [EISA Algebra Basics](https://github.com/csoftxyz/RIA_EISA/wiki/eisa_algebra): Explains superalgebra structure and generators.
-- [RIA Optimization](https://github.com/csoftxyz/RIA_EISA/wiki/ria_optimization): VQC setup and loss minimization.
-- [Simulation Tutorials](https://github.com/csoftxyz/RIA_EISA/wiki/simulations): Step-by-step for each script (c1b.py etc.).
-- [Validation Code (c5cs.py)](https://github.com/csoftxyz/RIA_EISA/wiki/validation): SymPy for Super-Jacobi and Bayesian analysis.
-- [Equation Self-Consistency in the Manuscript](https://github.com/csoftxyz/RIA_EISA/wiki/equation_self_consistency): Overview of how equations in the manuscript are internally consistent.
+- [EISA Algebra Basics](https://github.com/csoftxyz/RIA_EISA/wiki/eisa_algebra.md): Explains superalgebra structure and generators.
+- [RIA Optimization](https://github.com/csoftxyz/RIA_EISA/wiki/ria_optimization.md): VQC setup and loss minimization.
+- [Simulation Tutorials](https://github.com/csoftxyz/RIA_EISA/wiki/simulations.md): Step-by-step for each script (c1b.py etc.).
+- [Validation Code (c5cs.py)](https://github.com/csoftxyz/RIA_EISA/wiki/validation.md): SymPy for Super-Jacobi and Bayesian analysis.
+- [Equation Self-Consistency in the Manuscript](https://github.com/csoftxyz/RIA_EISA/wiki/equation_self_consistency.md): Overview of how equations in the manuscript are internally consistent.
 
 For more detailed descriptions, please visit  
 https://github.com/csoftxyz/RIA_EISA/wiki
