@@ -6,6 +6,7 @@ Yuxuan Zhang^{a,b}, Weitong Hu^{c,*}, Tongzhou Zhang^d
 ^c Aviation University of Air Force, Changchun, China  
 ^d College of Computer Science and Technology, Jilin University, Changchun, China  
 * csoft@hotmail.com & csoft@live.cn
+* https://github.com/csoftxyz/RIA_EISA/wiki
 
 ## Overview
 
