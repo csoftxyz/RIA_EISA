@@ -84,6 +84,7 @@ For detailed methodology and results, refer to Sections IV (Computational Method
 - [Validation Code (c5cs.py)](https://github.com/csoftxyz/RIA_EISA/wiki/validation.md): SymPy for Super-Jacobi and Bayesian analysis.
 - [Equation Self-Consistency in the Manuscript](https://github.com/csoftxyz/RIA_EISA/wiki/equation_self_consistency.md): Overview of how equations in the manuscript are internally consistent.
 - [Comparisons with Mainstream Theories](https://github.com/csoftxyz/RIA_EISA/wiki/Comparisons-with-Mainstream-Theories): Highlights differences from established models while honoring their foundational contributions.
+- [Acknowledgment of Prior Work](https://github.com/csoftxyz/RIA_EISA/wiki/Acknowledgment-of-Prior-Work): Honors foundational research inspiring the framework, including the SPIE publication.
 
 For more detailed descriptions, please visit  
 https://github.com/csoftxyz/RIA_EISA/wiki
