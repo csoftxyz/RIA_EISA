@@ -8,6 +8,8 @@ Yuxuan Zhang^{a,b}, Weitong Hu^{c,*}, Tongzhou Zhang^d
 * csoft@hotmail.com & csoft@live.cn
 * https://github.com/csoftxyz/RIA_EISA/wiki
 
+Given that the paper is available as a preprint on preprints.org, please visit the URL: https://www.preprints.org/manuscript/202507.2681/v1 for access. We warmly welcome reviews and feedback from global peers. DOI: 10.20944/preprints202507.2681.v1 (registering DOI).
+
 ## Overview
 
 This repository provides four PyTorch-based numerical simulations supporting the Extended Integrated Symmetry Algebra (EISA) with Recursive Info-Algebra (RIA) framework, as detailed in the manuscript "Recursive Algebra in Extended Integrated Symmetry: An Effective Framework for Quantum Field Dynamics" (LaTeX source: 30.tex), submitted for consideration to Physical Review D (PRD) as part of a PhD dissertation. These simulations validate key theoretical predictions, including self-organization from chaos via entropy minimization, transient fluctuations inducing curvature feedback and phase transitions, particle mass hierarchies and fundamental constants from irrep branching, and cosmological evolution resolving Hubble tension with multi-messenger signatures.
