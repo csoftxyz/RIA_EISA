@@ -7,6 +7,7 @@ Yuxuan Zhang^{a,b}, Weitong Hu^{c,*}, Tongzhou Zhang^d
 ^d College of Computer Science and Technology, Jilin University, Changchun, China  
 * csoft@hotmail.com & csoft@live.cn
 * https://github.com/csoftxyz/RIA_EISA/wiki
+* [About My Research Attitude](Attitude.md): About My Research Attitude.
 
 Given that the paper is available as a preprint on preprints.org, please visit the URL: https://www.preprints.org/manuscript/202507.2681/v1 for access. We warmly welcome reviews and feedback from global peers. DOI: 10.20944/preprints202507.2681.v1 (registering DOI).
 
