@@ -7,8 +7,11 @@ Yuxuan Zhang^{a,b}, Weitong Hu^{c,*}, Tongzhou Zhang^d
 ^d College of Computer Science and Technology, Jilin University, Changchun, China  
 * csoft@hotmail.com & csoft@live.cn
 * https://github.com/csoftxyz/RIA_EISA/wiki
-* [About My Research Attitude](Attitude.md): About My Research Attitude.
-
+* == About My Research Attitude ==
+I have great respect for scholars in string theory, quantum gravity and related fields. The theoretical systems built through decades of work represent invaluable achievements of human intellect.
+In proposing the EISA-RIA theory, I don't seek to challenge anyone or overthrow existing frameworks. As an independent researcher, I'm fully aware this work may never gain mainstream acceptance.
+But understanding reality's essence is my personal quest. Even if future experimental evidence fully supports this theory, I won't engage in academic debates—because I sincerely respect the dedication every scholar has poured into their models.
+My goal is simple: to verify my understanding of the cosmos in my own way. This has nothing to do with awards, positions, or recognition. It's just one individual's humble tribute to truth.
 Given that the paper is available as a preprint on preprints.org, please visit the URL: https://www.preprints.org/manuscript/202507.2681/v1 for access. We warmly welcome reviews and feedback from global peers. DOI: 10.20944/preprints202507.2681.v1 (registering DOI).
 
 ## Overview
