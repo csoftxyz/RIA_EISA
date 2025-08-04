@@ -114,4 +114,4 @@ All codes, parameters, and generated data (e.g., trajectories, spectra, plots) a
 
 Ethical Statement: Simulations are algorithmic; no subjective experience implied, adhering to AI ethics. Open-source principles followed; no conflicts of interest.
 
-For issues or contributions, contact csoft@hotmail.com & csoft@live.cn. This README supports the PhD submission process, with all materials archived for peer scrutiny.
+For issues or contributions, contact csoft@hotmail.com & csoft@live.cn. 
