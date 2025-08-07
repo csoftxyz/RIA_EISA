@@ -91,7 +91,8 @@ For detailed methodology and results, refer to Sections IV (Computational Method
 - [Equation Self-Consistency in the Manuscript](https://github.com/csoftxyz/RIA_EISA/wiki/equation_self_consistency.md): Overview of how equations in the manuscript are internally consistent.
 - [Comparisons with Mainstream Theories](https://github.com/csoftxyz/RIA_EISA/wiki/Comparisons-with-Mainstream-Theories): Highlights differences from established models while honoring their foundational contributions.
 - [Fun Interpretations of Equations in the Manuscript](https://github.com/csoftxyz/RIA_EISA/wiki/Fun-Interpretations-of-Equations-in-the-Manuscript): Offers playful and accessible explanations of the equations in the manuscript, designed to engage young learners with colorful analogies and examples.
-
+- [EISA-RIA Crucible](https://github.com/csoftxyz/RIA_EISA/wiki/EISA_RIA_Crucible.md): EISA-RIA Crucible: Five Near-Term Experiments for Decisive Falsification.
+- 
 ## Possible Related Experiments
 - [MIT Double-Slit Experiment](https://github.com/csoftxyz/RIA_EISA/wiki/MIT_Double_Slit_Experiment.md): MIT Double-Slit Experiment with Single-Atom Wave Packets and EISA-RIA Interpretation.
 - [NANOGrav GW Background](https://github.com/csoftxyz/RIA_EISA/wiki/NANOGrav_GW_Background.md): NANOGrav GW Background Power Spectrum Features and EISA-RIA Interpretation.
