@@ -89,7 +89,7 @@ For detailed methodology and results, refer to Sections IV (Computational Method
 - [Simulation Tutorials](https://github.com/csoftxyz/RIA_EISA/wiki/simulations.md): Step-by-step for each script (c1b.py etc.).
 - [Validation Code (c5cs.py)](https://github.com/csoftxyz/RIA_EISA/wiki/validation.md): SymPy for Super-Jacobi and Bayesian analysis.
 - [Equation Self-Consistency in the Manuscript](https://github.com/csoftxyz/RIA_EISA/wiki/equation_self_consistency.md): Overview of how equations in the manuscript are internally consistent.
-- [Comparisons with Mainstream Theories](https://github.com/csoftxyz/RIA_EISA/wiki/Comparisons-with-Mainstream-Theories): Highlights differences from established models while honoring their foundational contributions.
+
 - [Fun Interpretations of Equations in the Manuscript](https://github.com/csoftxyz/RIA_EISA/wiki/Fun-Interpretations-of-Equations-in-the-Manuscript): Offers playful and accessible explanations of the equations in the manuscript, designed to engage young learners with colorful analogies and examples.
 - [EISA-RIA Crucible](https://github.com/csoftxyz/RIA_EISA/wiki/EISA_RIA_Crucible.md): EISA-RIA Crucible: Five Near-Term Experiments for Decisive Falsification.
 - 
