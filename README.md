@@ -82,35 +82,35 @@ For detailed methodology and results, refer to Sections IV (Computational Method
 - **Execution Results vs. Manuscript**: Matches Section V.G. Manuscript: κ≈0.31, n≈7, A_v≈2.1×10^{-9}, χ²/dof~1.1 (vs. ΛCDM 1.0-1.03). Outputs: recovered params within bounds, χ²/dof~1.1.  
 - **Outputs**: Console: ML point, χ²; Plots: fit/residuals, corner plot.  
 ## Detailed Guides  
-- [EISA Algebra Basics](eisa_algebra.md): Explains superalgebra structure and generators.  
-- [RIA Optimization](ria_optimization.md): VQC setup and loss minimization.  
-- [Simulation Tutorials](simulations/): Step-by-step for each script (c1.py etc.).  
-- [Validation Code (c5.py)](validation.md): SymPy for Super-Jacobi and Bayesian analysis.  
-- [Universe Simulator (c6.py)](universe_simulator.md): Grid-based RG flow and particle generation.  
-- [CMB Inverse Analysis (c7.py)](cmb_inverse.md): MCMC fitting to Planck data.  
-- [Equation Self-Consistency in the Manuscript](equation_self_consistency.md): Overview of how equations in the manuscript are internally consistent.  
+- [EISA Algebra Basics](https://github.com/csoftxyz/RIA_EISA/wiki/eisa_algebra.md): Explains superalgebra structure and generators.  
+- [RIA Optimization](https://github.com/csoftxyz/RIA_EISA/wiki/ria_optimization.md): VQC setup and loss minimization.  
+- [Simulation Tutorials](https://github.com/csoftxyz/RIA_EISA/wiki/simulations/): Step-by-step for each script (c1.py etc.).  
+- [Validation Code (c5.py)](https://github.com/csoftxyz/RIA_EISA/wiki/validation.md): SymPy for Super-Jacobi and Bayesian analysis.  
+- [Universe Simulator (c6.py)](https://github.com/csoftxyz/RIA_EISA/wiki/universe_simulator.md): Grid-based RG flow and particle generation.  
+- [CMB Inverse Analysis (c7.py)](https://github.com/csoftxyz/RIA_EISA/wiki/cmb_inverse.md): MCMC fitting to Planck data.  
+- [Equation Self-Consistency in the Manuscript](https://github.com/csoftxyz/RIA_EISA/wiki/equation_self_consistency.md): Overview of how equations in the manuscript are internally consistent.  
 - [Fun Interpretations of Equations in the Manuscript](https://github.com/csoftxyz/RIA_EISA/wiki/Fun-Interpretations-of-Equations-in-the-Manuscript): Offers playful and accessible explanations of the equations in the manuscript, designed to engage young learners with colorful analogies and examples.  
 ## Possible Related Experiments  
-- [MIT Double-Slit Experiment](MIT_Double_Slit_Experiment.md): MIT Double-Slit Experiment with Single-Atom Wave Packets and EISA-RIA Interpretation.  
-- [NANOGrav GW Background](NANOGrav_GW_Background.md): NANOGrav GW Background Power Spectrum Features and EISA-RIA Interpretation.  
-- [NANOGrav GW Background Frequency Range & Amplitude](NANOGrav_GW_Background_Frequency_Range_Amplitude.md): NANOGrav GW Background Frequency Range & Amplitude Features and EISA-RIA Interpretation.  
-- [NANOGrav GW Background Polarization Modes](NANOGrav_GW_Background_Polarization_Modes.md): NANOGrav GW Background Polarization Modes Features and EISA-RIA Interpretation.  
-- [NANOGrav GW Background Non-Gaussianity & Transients](NANOGrav_GW_Background_Non_Gaussianity_Transients.md): NANOGrav GW Background Non-Gaussianity & Transients Features and EISA-RIA Interpretation.  
-- [NANOGrav GW Background Multi-Messenger Correlations Features](NANOGrav_GW_Background_Multi_Messenger_Correlations_Features.md): NANOGrav GW Background Multi-Messenger Correlations Features and EISA-RIA Interpretation.  
-- [NANOGrav GW Background Cosmological Integration Features](NANOGrav_GW_Background_Cosmological_Integration_Features.md): NANOGrav GW Background Cosmological Integration Features and EISA-RIA Interpretation.  
-- [LHC Mass Anomalies](LHC_Mass_Anomalies.md): LHC Mass Anomalies and EISA-RIA Interpretation.  
-- [CMB Deviations](CMB_Deviations.md): CMB Deviations and EISA-RIA Interpretation.  
-- [SLAC/Brookhaven Breit-Wheeler Experiment with Photon-Photon Collisions](SLAC_Brookhaven.md): SLAC/Brookhaven Breit-Wheeler Experiment with Photon-Photon Collisions and EISA-RIA Interpretation.  
-- [Muon g-2 Experiment with Anomaly Resolution ](Muon_g_2.md): Muon g-2 Experiment with Anomaly Resolution and EISA-RIA Interpretation.  
-- [Neutrino Mass Hierarchy and CP Violation with JUNO Prospects ](Neutrino_Mass.md): Neutrino Mass Hierarchy and CP Violation with JUNO Prospects and EISA-RIA Interpretation.  
-- [Lepton Flavor Universality Violation (LHCb Legacy Issue) ](LHCb_Legacy_Issue.md): Lepton Flavor Universality Violation (LHCb Legacy Issue) and EISA-RIA Interpretation.  
-- [EISA-RIA Predictions for New Particles at High Energies](New_Particles_at_High_Energies.md): EISA-RIA Predictions for New Particles at High Energies.  
+- [MIT Double-Slit Experiment](https://github.com/csoftxyz/RIA_EISA/wiki/MIT_Double_Slit_Experiment.md): MIT Double-Slit Experiment with Single-Atom Wave Packets and EISA-RIA Interpretation.  
+- [NANOGrav GW Background](https://github.com/csoftxyz/RIA_EISA/wiki/NANOGrav_GW_Background.md): NANOGrav GW Background Power Spectrum Features and EISA-RIA Interpretation.  
+- [NANOGrav GW Background Frequency Range & Amplitude](https://github.com/csoftxyz/RIA_EISA/wiki/NANOGrav_GW_Background_Frequency_Range_Amplitude.md): NANOGrav GW Background Frequency Range & Amplitude Features and EISA-RIA Interpretation.  
+- [NANOGrav GW Background Polarization Modes](https://github.com/csoftxyz/RIA_EISA/wiki/NANOGrav_GW_Background_Polarization_Modes.md): NANOGrav GW Background Polarization Modes Features and EISA-RIA Interpretation.  
+- [NANOGrav GW Background Non-Gaussianity & Transients](https://github.com/csoftxyz/RIA_EISA/wiki/NANOGrav_GW_Background_Non_Gaussianity_Transients.md): NANOGrav GW Background Non-Gaussianity & Transients Features and EISA-RIA Interpretation.  
+- [NANOGrav GW Background Multi-Messenger Correlations Features](https://github.com/csoftxyz/RIA_EISA/wiki/NANOGrav_GW_Background_Multi_Messenger_Correlations_Features.md): NANOGrav GW Background Multi-Messenger Correlations Features and EISA-RIA Interpretation.  
+- [NANOGrav GW Background Cosmological Integration Features](https://github.com/csoftxyz/RIA_EISA/wiki/NANOGrav_GW_Background_Cosmological_Integration_Features.md): NANOGrav GW Background Cosmological Integration Features and EISA-RIA Interpretation.  
+- [LHC Mass Anomalies](https://github.com/csoftxyz/RIA_EISA/wiki/LHC_Mass_Anomalies.md): LHC Mass Anomalies and EISA-RIA Interpretation.  
+- [CMB Deviations](https://github.com/csoftxyz/RIA_EISA/wiki/CMB_Deviations.md): CMB Deviations and EISA-RIA Interpretation.  
+- [SLAC/Brookhaven Breit-Wheeler Experiment with Photon-Photon Collisions](https://github.com/csoftxyz/RIA_EISA/wiki/SLAC_Brookhaven.md): SLAC/Brookhaven Breit-Wheeler Experiment with Photon-Photon Collisions and EISA-RIA Interpretation.  
+- [Muon g-2 Experiment with Anomaly Resolution ](https://github.com/csoftxyz/RIA_EISA/wiki/Muon_g_2.md): Muon g-2 Experiment with Anomaly Resolution and EISA-RIA Interpretation.  
+- [Neutrino Mass Hierarchy and CP Violation with JUNO Prospects ](https://github.com/csoftxyz/RIA_EISA/wiki/Neutrino_Mass.md): Neutrino Mass Hierarchy and CP Violation with JUNO Prospects and EISA-RIA Interpretation.  
+- [Lepton Flavor Universality Violation (LHCb Legacy Issue) ](https://github.com/csoftxyz/RIA_EISA/wiki/LHCb_Legacy_Issue.md): Lepton Flavor Universality Violation (LHCb Legacy Issue) and EISA-RIA Interpretation.  
+- [EISA-RIA Predictions for New Particles at High Energies](https://github.com/csoftxyz/RIA_EISA/wiki/New_Particles_at_High_Energies.md): EISA-RIA Predictions for New Particles at High Energies.  
 ## Science Education for Teenagers  
-- [Chapter 1 ](Chapter1.md): The "Lego Primary Colors" Manual for Physics  
-- [Chapter 2 ](Chapter2.md): Setting Rules for Cosmic Lego—Physics’ "Lego Constitution"  
-- [Chapter 3 ](Chapter3.md): Weighing Cosmic Lego—Predicting Dark Matter with the "Lego Scale"  
-- [Chapter 4 ](Chapter4.md): The Lego Engine of an Expanding Universe—Stepping on the Gas for Cosmic Acceleration  
-- [Chapter 5 ](Chapter5.md): Final Appendix: Issuing "Anti-Counterfeit Certificates" for Cosmic Lego  
+- [Chapter 1 ](https://github.com/csoftxyz/RIA_EISA/wiki/Chapter1.md): The "Lego Primary Colors" Manual for Physics  
+- [Chapter 2 ](https://github.com/csoftxyz/RIA_EISA/wiki/Chapter2.md): Setting Rules for Cosmic Lego—Physics’ "Lego Constitution"  
+- [Chapter 3 ](https://github.com/csoftxyz/RIA_EISA/wiki/Chapter3.md): Weighing Cosmic Lego—Predicting Dark Matter with the "Lego Scale"  
+- [Chapter 4 ](https://github.com/csoftxyz/RIA_EISA/wiki/Chapter4.md): The Lego Engine of an Expanding Universe—Stepping on the Gas for Cosmic Acceleration  
+- [Chapter 5 ](https://github.com/csoftxyz/RIA_EISA/wiki/Chapter5.md): Final Appendix: Issuing "Anti-Counterfeit Certificates" for Cosmic Lego  
 ### API Reference  
 - Core functions: `project_to_psd()`, `von_neumann_entropy()`, `fidelity()` from c1.py.  
 - RNN model: `EnhancedRNNModel` from c2.py.  
