@@ -1,4 +1,7 @@
 # RIA-EISA Simulation Repository README
+Categorical Formalization of Recursive String-Inspired
+Symmetries: A First-Principles Approach to Quantum Field
+Dynamics & Recursive Algebra in Extended Integrated Symmetry: An Effective Framework for Quantum Field Dynamics
 Yuxuan Zhang^{a,b}, Weitong Hu^{c,*}, Tongzhou Zhang^d  
 ^a College of Communication Engineering, Jilin University, Changchun, China  
 ^b Changchun FAWAY Automobile Components CO., LTD, Changchun, China  
