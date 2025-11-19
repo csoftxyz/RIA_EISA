@@ -6,7 +6,7 @@ Yuxuan Zhang^{a,b}, Weitong Hu^{c,*}
 ^a College of Communication Engineering, Jilin University, Changchun, China  
 ^c Aviation University of Air Force, Changchun, China  
 
-* csoft@hotmail.com & csoft@live.cn  
+* csoft@live.cn &  csoft@hotmail.com 
 * https://github.com/csoftxyz/RIA_EISA/wiki  
 * == About My Research Attitude ==  
 I have great respect for scholars in string theory, quantum gravity and related fields. The theoretical systems built through decades of work represent invaluable achievements of human intellect.  
