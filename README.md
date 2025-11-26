@@ -32,7 +32,8 @@ To ensure numerical precision for PhD-level scrutiny and peer review, simulation
 - **c4.py**: Cosmic Evolution and Multi-Messenger Predictions  
 - **c5.py**: Superalgebra Verification and Bayesian Analysis  
 - **c6.py**: EISA Universe Simulator  
-- **c7.py**: CMB Power Spectrum Inverse Analysis  
+- **c7.py**: CMB Power Spectrum Inverse Analysis
+- **z3_algebra_verify.py**: The full set of graded Jacobi identities is verified analytically in low dimensions and numerically in a faithful 19-dimensional matrix representation, with residuals ≤ 8 × 10−13 over 107 random tests.
 For detailed methodology and results, refer to Sections IV (Computational Methods) and V (Results), and Appendix A (Supplementary Information) in the manuscript.  
 ## Dependencies and Setup  
 - **Python Version**: 3.12+ (tested on 3.12.3)  
