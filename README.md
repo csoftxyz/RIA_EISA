@@ -2,6 +2,7 @@
 Categorical Formalization of Recursive String-Inspired
 Symmetries: A First-Principles Approach to Quantum Field
 Dynamics & Recursive Algebra in Extended Integrated Symmetry: An Effective Framework for Quantum Field Dynamics
+& A Z3-Graded Lie Superalgebra with Cubic Vacuum Triality
 Yuxuan Zhang^{a,b}, Weitong Hu^{c,*}
 ^a College of Communication Engineering, Jilin University, Changchun, China  
 ^c Aviation University of Air Force, Changchun, China  
