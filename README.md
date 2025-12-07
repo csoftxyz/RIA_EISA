@@ -33,7 +33,67 @@ To ensure numerical precision for PhD-level scrutiny and peer review, simulation
 - **c5.py**: Superalgebra Verification and Bayesian Analysis  
 - **c6.py**: EISA Universe Simulator  
 - **c7.py**: CMB Power Spectrum Inverse Analysis
-- **z3_algebra_verify.py**: The full set of graded Jacobi identities is verified analytically in low dimensions and numerically in a faithful 19-dimensional matrix representation, with residuals ≤ 8 × 10−13 over 107 random tests.
+- 
+Z₃-Graded Lie Superalgebra Numerical Verifier
+
+A Python implementation for verifying the algebraic closure of a 15-dimensional Z₃-graded Lie superalgebra with cubic vacuum triality.
+
+Overview
+
+This code provides numerical verification of a finite-dimensional Z₃-graded Lie superalgebra structure that unifies gauge fields, fermionic matter, and vacuum sectors. The implementation focuses on the critical mixing sector between these components and demonstrates exact closure of the graded Jacobi identities.
+
+Key Features
+
+• 15-dimensional representation (9 gauge + 3 fermionic + 3 vacuum generators)
+
+• Z₃-graded bracket operations with commutation factor ω = e^(2πi/3)
+
+• U(3) gauge sector implementation using Gell-Mann matrices
+
+• Exact Jacobi identity verification with machine-precision residuals (~10⁻¹⁶)
+
+• Unique mixing term [F, ζ] = -TᵃBᵃ fixed by representation invariance
+
+Installation & Usage
+
+# Install dependencies
+pip install numpy
+
+# Run verification
+python z3_algebra_4.py
+
+
+Expected Output
+
+Successful execution will display:
+
+----------------------------------------
+FINAL RESIDUAL: 3.2456e-16
+----------------------------------------
+[VICTORY] The Z3 Vacuum Coupling is Mathematically Exact.
+Structure: [F, Z] = - T^a B^a
+
+
+Mathematical Background
+
+The code verifies the algebraic structure proposed in "A Z₃-Graded Lie Superalgebra with Cubic Vacuum Triality" (Symmetry submission ID: symmetry-4031108), demonstrating:
+
+• Graded Jacobi identities with Z₃ commutation factors
+
+• Faithful matrix representation of the algebra
+
+• Zero-parameter construction - all coefficients fixed by representation theory
+
+Files
+
+• z3_algebra_4.py - Main verification script
+
+• requirements.txt - Python dependencies
+
+Citation
+
+This code accompanies the theoretical work on Z₃-graded algebraic structures. Please cite the relevant papers if used in research.
+- 
 For detailed methodology and results, refer to Sections IV (Computational Methods) and V (Results), and Appendix A (Supplementary Information) in the manuscript.  
 ## Dependencies and Setup  
 - **Python Version**: 3.12+ (tested on 3.12.3)  
