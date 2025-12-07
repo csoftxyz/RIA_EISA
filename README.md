@@ -33,7 +33,8 @@ To ensure numerical precision for PhD-level scrutiny and peer review, simulation
 - **c5.py**: Superalgebra Verification and Bayesian Analysis  
 - **c6.py**: EISA Universe Simulator  
 - **c7.py**: CMB Power Spectrum Inverse Analysis
-- 
+- **z3_algebra_4.py**: Z₃-Graded Lie Superalgebra Numerical Verifier
+  
 Z₃-Graded Lie Superalgebra Numerical Verifier
 
 A Python implementation for verifying the algebraic closure of a 15-dimensional Z₃-graded Lie superalgebra with cubic vacuum triality.
