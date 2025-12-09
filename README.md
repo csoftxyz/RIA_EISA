@@ -106,7 +106,7 @@ This repo includes seven PyTorch-based simulations validating theoretical predic
 Welcome contributions! Fork, branch, commit, push, PR. Code of Conduct: Open-source ethics; no conflicts.
 
 ## Contact
-Queries: csoft@hotmail.com.  
+Queries: csoft@live.cn.  
 Discussions: Issues tab or email authors.  
 Wiki editable—improve it!  
 
