@@ -1,9 +1,9 @@
 # RIA-EISA Simulation Repository README
 
-1 A Z3-Graded Lie Superalgebra with Cubic Vacuum Triality
-2 Cubic Vacuum Triality: A Toy Model of Everything with Zero Free Parameters; Link: https://www.preprints.org/manuscript/202512.0873/v1
-3 Categorical Formalization of Recursive String-Inspired Symmetries: A First-Principles Approach to Quantum Field Dynamics 
-4 Recursive Algebra in Extended Integrated Symmetry: An Effective Framework for Quantum Field Dynamics
+* 1 A Z3-Graded Lie Superalgebra with Cubic Vacuum Triality; Link: https://www.preprints.org/manuscript/202511.1876/v1
+* 2 Cubic Vacuum Triality: A Toy Model of Everything with Zero Free Parameters; Link: https://www.preprints.org/manuscript/202512.0873/v1
+* 3 Categorical Formalization of Recursive String-Inspired Symmetries: A First-Principles Approach to Quantum Field Dynamics 
+* 4 Recursive Algebra in Extended Integrated Symmetry: An Effective Framework for Quantum Field Dynamics
 
 Yuxuan Zhang^{a,b}, Weitong Hu^{c,*}
 ^a College of Communication Engineering, Jilin University, Changchun, China  
