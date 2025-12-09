@@ -1,5 +1,9 @@
 # RIA-EISA Simulation Repository README
 
+Yuxuan Zhang^{a,b}, Weitong Hu^{c,*}
+^a College of Communication Engineering, Jilin University, Changchun, China  
+^c Aviation University of Air Force, Changchun, China  
+
 ## Overview
 This repository hosts simulations and verification code for the Z3-Graded Lie Superalgebra series, focusing on algebraic structures with cubic vacuum triality. Key highlights include machine-precision closure (residuals ~0) in z3_algebra_4.py, unifying SM, gravity, cosmology, black holes, and entanglement with zero free parameters.
 
