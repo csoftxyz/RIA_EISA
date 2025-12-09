@@ -1,8 +1,10 @@
 # RIA-EISA Simulation Repository README
-Categorical Formalization of Recursive String-Inspired
-Symmetries: A First-Principles Approach to Quantum Field
-Dynamics & Recursive Algebra in Extended Integrated Symmetry: An Effective Framework for Quantum Field Dynamics
-& A Z3-Graded Lie Superalgebra with Cubic Vacuum Triality
+
+1 A Z3-Graded Lie Superalgebra with Cubic Vacuum Triality
+2 Cubic Vacuum Triality: A Toy Model of Everything with Zero Free Parameters;
+3 Categorical Formalization of Recursive String-Inspired Symmetries: A First-Principles Approach to Quantum Field Dynamics 
+4 Recursive Algebra in Extended Integrated Symmetry: An Effective Framework for Quantum Field Dynamics
+
 Yuxuan Zhang^{a,b}, Weitong Hu^{c,*}
 ^a College of Communication Engineering, Jilin University, Changchun, China  
 ^c Aviation University of Air Force, Changchun, China  
