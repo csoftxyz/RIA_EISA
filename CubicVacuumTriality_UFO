@@ -1,1 +1,9 @@
 
+"Please note: The UFO model introduces the effective ternary couplings derived from the algebra. While a standard fixed-order MG5 run will correctly reproduce the inclusive cross-section enhancement (
+σ_total
+), reproducing the exact lineshape near the 
+2m_t
+ threshold requires treating the ternary exchange as a modification to the static potential in your NRQCD resummation framework (or simply rescaling the K-factor in the threshold bin), rather than a pure Breit-Wigner resonance search."
+ 
+
+
