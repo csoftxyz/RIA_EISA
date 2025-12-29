@@ -123,7 +123,7 @@ We hold deep respect for decades of work in string theory, quantum gravity, and 
 ### Historical Development and Early Works
 The current Z₃-graded framework evolved from earlier explorations of integrated symmetry algebras and transient quantum dynamics. These foundational ideas are documented in the following preprints and proceedings, demonstrating that the theory is not an isolated speculation but the result of systematic refinement over several years:
 - **Early EISA Preprint Series** (initial concepts of Extended Integrated Symmetry Algebra):  
-  v1: https://www.preprints.org/manuscript/202507.2681/v1  
+  v1: https://www.preprints.org/manuscript/202507.2681/v4  
   v7 (major refinement): https://www.preprints.org/manuscript/202507.2681/v7  
 - **Foundational Proceedings Paper** (origin of transient quantum dynamics and graviton-cosmic phase transition ideas):  
   **Title**: Towards a Unified Framework of Transient Quantum Dynamics Integrating Graviton Models with Cosmic Phase Transitions and Observational Verifications  
