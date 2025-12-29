@@ -1,11 +1,11 @@
 
 # RIA-EISA Simulation Repository README
-**Yuxuan Zhang**^{a,b}, **Weitong Hu**^{c,*}, **Wei Zhang**^{d}  
+**Yuxuan Zhang**^{a,b}, **Weitong Hu**^{c,*}
 ^a College of Communication Engineering, Jilin University, Changchun, China  
 ^b csoft@live.cn  
 ^c Aviation University of Air Force, Changchun, China (Corresponding Author)  
 ^c csoft@hotmail.com  
-^d College of Computer Science and Technology, Jilin University, Changchun, China  
+
 
 ## Overview
 This repository contains the complete simulation and verification suite for the **Z₃-Graded Lie Superalgebra with Cubic Vacuum Triality** series. The framework is a finite-dimensional (19D: 12+4+3) ℤ₃-graded algebraic structure from which Standard Model parameters, gravitational constant, cosmological constant, black-hole entropy scaling, and vacuum entanglement properties emerge as representation-theoretic invariants — with **zero free parameters**.
