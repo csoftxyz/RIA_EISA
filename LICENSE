@@ -1,6 +1,6 @@
- License
+LICENSE
 
-Copyright (c) 2025 csoftxyz
+Copyright (c) 2025 Yuxuan Zhang (csoftxyz)
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -9,8 +9,18 @@ to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
 copies of the Software, and to permit persons to whom the Software is
 furnished to do so, subject to the following conditions:
 
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
+1. The above copyright notice and this permission notice shall be included in all
+   copies or substantial portions of the Software.
+
+2. If the Software is used in research, publications, presentations, or any derivative work,
+   proper attribution must be given by citing the following papers:
+   - Zhang, Y.; Hu, W. A Z₃-Graded Lie Superalgebra with Cubic Vacuum Triality.
+     Symmetry 2026, 18(1), 54. https://doi.org/10.3390/sym18010054
+   - Zhang, Y.; Hu, W. An Exact Z₃-Graded Algebraic Framework Underlying Observed
+     Fundamental Constants. (Preprint/Submitted, DOI: https://doi.org/10.20944/preprints202512.2527.v1)
+
+3. Commercial use of the Software in closed-source products or services requires
+   explicit written permission from the copyright holders.
 
 THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
 IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
