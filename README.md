@@ -10,18 +10,30 @@
 ## Overview
 This repository contains the complete simulation and verification suite for the **Z₃-Graded Lie Superalgebra with Cubic Vacuum Triality** series. The framework is a finite-dimensional (19D: 12+4+3) ℤ₃-graded algebraic structure from which Standard Model parameters, gravitational constant, cosmological constant, black-hole entropy scaling, and vacuum entanglement properties emerge as representation-theoretic invariants — with **zero free parameters**.
 
-### Published & Preprinted Papers
-1. **Published (Part 1 – Algebraic Foundation)**  
+### Publications & Preprints
+
+Our Z₃-graded algebraic framework spans high-energy unification, particle physics, cosmology, and low-energy condensed matter phenomena.
+
+1. **Algebraic Foundation (Published)**  
    **Title**: A Z₃-Graded Lie Superalgebra with Cubic Vacuum Triality  
    **Journal**: Symmetry 2026, 18(1), 54  
    **DOI**: https://doi.org/10.3390/sym18010054  
    **PDF**: https://www.mdpi.com/2073-8994/18/1/54/pdf  
 
-2. **Preprinted & Submitted (Part 2 – Phenomenological Extension)**  
+2. **Phenomenological Extension: Fundamental Constants & Predictions (Under Review)**  
    **Title**: An Exact Z₃-Graded Algebraic Framework Underlying Observed Fundamental Constants  
+   **Journal**: Submitted to Universe (MDPI) – Under Review  
    **Preprint DOI**: https://doi.org/10.20944/preprints202512.2527.v1  
-   **Link**: https://www.preprints.org/manuscript/202512.2527/v1  
-   **Submitted**: Universe (MDPI), Manuscript ID: universe-4095403 (Under Review, Dec 2025)
+   **PDF**: https://www.preprints.org/manuscript/202512.2527/v1/download  
+
+3. **Low-Energy Application: Nanoscale Transport (Submitted)**  
+   **Title**: Z₃ Vacuum Inertia in Nanoscale Transport  
+   **Journal**: Submitted to Symmetry (MDPI)  – Under Review 
+   **Preprint DOI**: https://doi.org/10.20944/preprints202601.0109.v1  
+   **PDF**: https://www.preprints.org/manuscript/202601.0109/v1/download  
+
+**Project Highlight**:  
+With the algebraic foundation published in *Symmetry* and the ongoing submissions covering high-energy unification (fundamental constants, gauge couplings, cosmological constant) through to low-energy quantum coherence in nanoscale systems, our Z₃-graded framework is forming a preliminary closed loop from fundamental physics to emergent condensed matter phenomena.
 
 ## Core Verification Scripts (Self-Contained)
 
