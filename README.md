@@ -10,6 +10,31 @@
 ## Overview
 This repository contains the complete simulation and verification suite for the **Z₃-Graded Lie Superalgebra with Cubic Vacuum Triality** series. The framework is a finite-dimensional (19D: 12+4+3) ℤ₃-graded algebraic structure from which Standard Model parameters, gravitational constant, cosmological constant, black-hole entropy scaling, and vacuum entanglement properties emerge as representation-theoretic invariants — with **zero free parameters**.
 
+## Z₃ Discrete Vacuum Geometry: A Computational Framework Exploring Unification of Force, Matter, and Algebra
+
+This repository presents a computational exploration of a discrete algebraic model based on ℤ₃ triality symmetry. The framework constructs a self-consistent "virtual universe" from pure mathematical operations on a graded Lie superalgebra vacuum sector. This model spontaneously produces structures with striking numerical alignments to observed particle physics parameters—gauge unification, fermion mass hierarchies, and emergent discrete geometry.
+
+Whether these alignments reflect deep properties of the actual universe is an open scientific question, to be tested through further theoretical development, new predictions, and experimental verification. The results so far are highly suggestive and warrant continued investigation.
+
+### Core Achievements of the Model
+
+1. **Unification of Forces**  
+   The finite 44-vector core lattice (ground state under triality saturation) naturally yields  
+   **sin²θ_W = 11/44 = 0.25 exactly**  
+   — reproducing the tree-level GUT prediction without free parameters.
+
+2. **Unification of Matter**  
+   The infinite integer extension (ℤ³ sites supported by the core basis) identifies resonant lattice nodes corresponding to the charged fermion mass scales via a geometric seesaw mechanism (m ∝ 1/L²). Explicit integer vectors include:  
+   - Top ([0,0,1], L²=1)  
+   - Bottom ([1,2,7], L²=54)  
+   - Tau/Charm ([0,9,9], L²=162)  
+   - Muon ([0,27,27], L²=1458)  
+   - Down ([1,46,193], L²=39366)  
+   - Electron ([3,138,579], L²=354294) — 4.6% agreement across six orders of magnitude.
+
+3. **Unification of Algebra and Geometry**  
+   Abstract ℤ₃-graded algebraic operations on the vacuum spontaneously saturate into a closed, finite 44-vector discrete lattice—bridging pure algebra with concrete geometric structure in a parameter-free way.
+
 ### Publications & Preprints
 
 Our Z₃-graded algebraic framework spans high-energy unification, particle physics, cosmology, and low-energy condensed matter phenomena.
@@ -18,49 +43,44 @@ Our Z₃-graded algebraic framework spans high-energy unification, particle phys
    **Title**: A Z₃-Graded Lie Superalgebra with Cubic Vacuum Triality  
    **Journal**: Symmetry 2026, 18(1), 54  
    **DOI**: https://doi.org/10.3390/sym18010054  
-   **PDF**: https://www.mdpi.com/2073-8994/18/1/54/pdf  
+   **PDF**: https://www.mdpi.com/2073-8994/18/1/54/pdf
 
 2. **Phenomenological Extension: Fundamental Constants & Predictions (Under Review)**  
    **Title**: An Exact Z₃-Graded Algebraic Framework Underlying Observed Fundamental Constants  
    **Journal**: Submitted to Universe (MDPI) – Under Review  
-   **Preprint DOI**: https://doi.org/10.20944/preprints202512.2527.v1  
-   **PDF**: https://www.preprints.org/manuscript/202512.2527/v1/download  
+   **Preprint DOI**: https://doi.org/10.20944/preprints202512.2527.v2  
+   **PDF**: https://www.preprints.org/manuscript/202512.2527/v2/download
 
 3. **Low-Energy Application: Nanoscale Transport (Under Review)**  
    **Title**: Z₃ Vacuum Inertia in Nanoscale Transport  
-   **Journal**: Submitted to Symmetry (MDPI)  – Under Review 
+   **Journal**: Submitted to Symmetry (MDPI) – Under Review  
    **Preprint DOI**: https://doi.org/10.20944/preprints202601.0109.v1  
-   **PDF**: https://www.preprints.org/manuscript/202601.0109/v1/download  
+   **PDF**: https://www.preprints.org/manuscript/202601.0109/v1/download
+
+4. **Flavor Sector Application (Preprint Under Review)**  
+   **Title**: Discrete Vacuum Geometry Predicts the Hierarchical Mass Spectrum of Standard Model Fermions  
+   **Preprint ID**: 193757 (Preprints.org) – Under Review  
 
 **Project Highlight**:  
 With the algebraic foundation published in *Symmetry* and the ongoing submissions covering high-energy unification (fundamental constants, gauge couplings, cosmological constant) through to low-energy quantum coherence in nanoscale systems, our Z₃-graded framework is forming a preliminary closed loop from fundamental physics to emergent condensed matter phenomena.
 
-## Core Verification Scripts (Self-Contained & Reproducible)
-
+### Core Verification Scripts (Self-Contained & Reproducible)
 All scripts are designed for immediate execution (Python 3 + NumPy/SymPy). They rigorously validate the algebraic closure, emergent lattice, and quantitative predictions. The full repository includes 3D visualizations and interactive notebooks.
 
 - **`z3_algebra_5.py`** – High-precision numerical verification of graded Jacobi identity closure across the full 19-dimensional algebra (residuals ∼10⁻¹⁶ over millions of random tests).
-
 - **`z3_grade_1.py`** – Exact symbolic verification (SymPy rational arithmetic) of Jacobi identities in critical mixing sectors, confirming residuals identically zero.
-
 - **`z3_entanglement.py`** – SVD decomposition proof that the cubic vacuum invariant corresponds to a maximally entangled GHZ-class state, establishing genuine tripartite quantum correlations.
-
 - **`z3_g_val_1.py`** – Geometric inverse calculation matching the observed gravitational constant G via algebraic dimension ratios (relative error <0.02%).
-
 - **`z3_mass_ckm.py`** – Democratic matrix + vacuum misalignment perturbations reproducing Cabibbo angle and quark mass ratios (fitting error <3%).
-
 - **`z3_Inverse.py`** – Full inverse hierarchy computation confirming the exponent κ ≈ 12 − 3/13 in the algebraic-to-electroweak scale ratio.
+- **`z3_lattice.py`** – Generation and analysis of the emergent finite 44-vector ℤ₃-invariant lattice from vacuum triality, demonstrating spontaneous discretization of continuous symmetry.
+- **`z3_lattice_1.py`** (Newly Added) – Refined ground-state pruning and geometric derivation of the weak mixing angle (sin²θ_W = 11/44 = 0.25), exactly matching the SU(5) GUT tree-level prediction, with spontaneous symmetry breaking accounting for the shift to the low-energy experimental value (~0.231) via RG evolution.
+- **`z3_mass_6.py`** (Core Script) – Unified demonstration of both force unification (44-vector core → sin²θ_W = 0.25) and matter spectrum (extended ℤ³ integer sites for full charged fermion masses).
 
-- **`z3_lattice.py`** – Generation and analysis of the emergent finite 44-vector $\mathbb{Z}_3$-invariant lattice from vacuum triality, demonstrating spontaneous discretization of continuous symmetry.
-
-- **`z3_lattice_1.py`** (Newly Added) – Refined ground-state pruning and geometric derivation of the weak mixing angle ($\sin^2 \theta_W = 11/44 = 0.25$), exactly matching the SU(5) GUT tree-level prediction, with spontaneous symmetry breaking accounting for the shift to the low-energy experimental value (~0.231) via RG evolution.
-
-## Profound Significance of This Work
-
-The computational exploration culminates in the spontaneous emergence of a closed, finite 44-vector lattice from pure $\mathbb{Z}_3$ triality operations on the vacuum sector. This saturation is not an artifact but a rigorous mathematical consequence of the unique cubic invariant and graded bracket structure.
+### Profound Significance of This Work
+The computational exploration culminates in the spontaneous emergence of a closed, finite 44-vector lattice from pure ℤ₃ triality operations on the vacuum sector. This saturation is not an artifact but a rigorous mathematical consequence of the unique cubic invariant and graded bracket structure.
 
 This finite lattice resolves long-standing foundational issues in theoretical physics:
-
 - It naturally constrains flavor mixing directions, eliminating arbitrary parameters in mass matrix ansätze.
 - It offers a prototype for discrete spacetime or vacuum symmetry, bridging continuous field theories with emergent discreteness relevant to quantum gravity.
 - Its triangular (A₂-like) symmetry enhanced by democratic deformations predicts specific correlations in neutrino oscillations, CP violation phases, lepton flavor violation ratios, and angular transport modulations in condensed matter systems.
@@ -69,7 +89,7 @@ Most profoundly, this framework marks a paradigm shift in our understanding of f
 
 1. **The End of the "Parameter Era"**  
    Since Newton, physics has described nature with elegant equations—but the constants within them have been treated as arbitrary inputs from an unknown source. Why is the fine-structure constant 1/137? Why is the Weinberg angle ~0.23? Why do quarks mix in this specific way?  
-   Prior to this work, the Standard Model could only measure and insert these values. For the first time, this framework derives key constants (e.g., $\sin^2 \theta_W = 0.25$ at unification from the rational ratio 11/44) from pure integer geometry and discrete algebraic structure—transitioning humanity from **measuring the universe** to **deriving the universe**.
+   Prior to this work, the Standard Model could only measure and insert these values. For the first time, this framework derives key constants (e.g., sin²θ_W = 0.25 at unification from the rational ratio 11/44) from pure integer geometry and discrete algebraic structure—transitioning humanity from **measuring the universe** to **deriving the universe**.
 
 2. **Unification of Force and Flavor**  
    Einstein's late dream—true unification of forces—remained incomplete. Grand Unified Theories (GUTs) addressed gauge forces but largely ignored fermion masses (flavor). Flavor symmetry models explained masses but rarely touched gauge couplings.  
@@ -80,7 +100,9 @@ Most profoundly, this framework marks a paradigm shift in our understanding of f
 
 These results transform the framework from phenomenological description to a predictive geometric theory, with falsifiable signatures across energy scales.
 
-**Note on Repository Updates**: To preserve the historical integrity of this discovery, no further content updates will be made to this repository until after the formal publication of the manuscript (Universe 2026, 1, 0; DOI: 10.3390/universe10010000). This ensures an immutable record of the work as it stood at the moment of publication.
+**Note on Repository Updates**: To preserve the historical integrity of this discovery, no further content updates will be made to this repository until after the formal publication of related manuscripts. This ensures an immutable record of the work as it stood at key milestones.
+
+Code and data are available at https://github.com/csoftxyz/RIA_EISA.
 
 **Example: Z₃-Graded Lie Superalgebra Numerical Verifier (z3_algebra_4.py / z3_algebra_5.py)**  
 A Python implementation for verifying the algebraic closure of a 15-dimensional Z₃-graded Lie superalgebra with cubic vacuum triality.
