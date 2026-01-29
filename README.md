@@ -45,21 +45,28 @@ Our Z₃-graded algebraic framework spans high-energy unification, particle phys
    **DOI**: https://doi.org/10.3390/sym18010054  
    **PDF**: https://www.mdpi.com/2073-8994/18/1/54/pdf
 
-2. **Phenomenological Extension: Fundamental Constants & Predictions (Under Review)**  
+2. **Phenomenological Extension: Fundamental Constants & Predictions**  
    **Title**: An Exact Z₃-Graded Algebraic Framework Underlying Observed Fundamental Constants  
-   **Journal**: Submitted to Universe (MDPI) – Under Review  
    **Preprint DOI**: https://doi.org/10.20944/preprints202512.2527.v2  
    **PDF**: https://www.preprints.org/manuscript/202512.2527/v2/download
 
-3. **Low-Energy Application: Nanoscale Transport (Under Review)**  
+3. **Low-Energy Application: Nanoscale Transport**  
    **Title**: Z₃ Vacuum Inertia in Nanoscale Transport  
-   **Journal**: Submitted to Symmetry (MDPI) – Under Review  
-   **Preprint DOI**: https://doi.org/10.20944/preprints202601.0109.v1  
+   **Preprint DOI**: https://doi.org/10.20944/preprints202601.0109.v1  https://doi.org/10.20944/preprints202601.0109.v2
    **PDF**: https://www.preprints.org/manuscript/202601.0109/v1/download
 
-4. **Flavor Sector Application (Preprint Under Review)**  
+4. **Flavor Sector Application **  
    **Title**: Discrete Vacuum Geometry Predicts the Hierarchical Mass Spectrum of Standard Model Fermions  
-   **Preprint ID**: 193757 (Preprints.org) – Under Review  
+   **Preprint ID**: (https://www.preprints.org/manuscript/202601.0914)
+   Using a formal geometric scaling \(m \propto L^{-2}\) (where \(L\) is the Euclidean norm of selected lattice vectors) anchored to the top-quark mass (173 GeV), the framework yields the following **curious numerical proximities**:
+- Electron: ~0.49 MeV (4.6% agreement)
+- Muon: ~118 MeV (12% agreement)
+- Qualitative up/down quark mass inversion (\(m_u < m_d\))
+- Exact Weinberg angle \(\sin^2 \theta_W = 0.25\)
+- Higgs-related scale ratio ~0.727 (0.3%)
+- Strong/weak coupling ratio ≈0.95 (near equipartition)
+- CKM CP phase ≈65.3° (5% agreement)
+- Neutrino mixing: exact 45° (maximal atmospheric) and \(\cos^2 \theta_{12} = 1/3\) (exact tri-bimaximal solar)
 
 **Project Highlight**:  
 With the algebraic foundation published in *Symmetry* and the ongoing submissions covering high-energy unification (fundamental constants, gauge couplings, cosmological constant) through to low-energy quantum coherence in nanoscale systems, our Z₃-graded framework is forming a preliminary closed loop from fundamental physics to emergent condensed matter phenomena.
