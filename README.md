@@ -52,8 +52,8 @@ Our Z₃-graded algebraic framework spans high-energy unification, particle phys
 
 3. **Low-Energy Application: Nanoscale Transport**  
    **Title**: Z₃ Vacuum Inertia in Nanoscale Transport  
-   **Preprint DOI**: https://doi.org/10.20944/preprints202601.0109.v1  
-   **PDF**: https://www.preprints.org/manuscript/202601.0109/v1/download
+   **Preprint DOI**: https://doi.org/10.20944/preprints202601.0109.v2  
+   **PDF**: https://www.preprints.org/manuscript/202601.0109/v2/download
 
 4. **Flavor Sector Application **  
    **Title**: Discrete Vacuum Geometry Predicts the Hierarchical Mass Spectrum of Standard Model Fermions  
@@ -76,7 +76,7 @@ All scripts are designed for immediate execution (Python 3 + NumPy/SymPy). They 
 
 ### Z₃-Graded Algebraic Framework: Core Scripts & Standard Model Predictions
 
-This repository contains numerical and symbolic demonstrations of key results from the published Z₃-graded Lie superalgebra framework (Universe 2026, Symmetry 2026, Nanomaterials 2026). The structure yields **exact gauge unification** (sin²θ_W = 0.25), **fermion mass hierarchy** via ℤ³ lattice embedding, and related Standard Model parameters without free inputs.
+This repository contains numerical and symbolic demonstrations of key results from the published Z₃-graded Lie superalgebra framework. The structure yields **exact gauge unification** (sin²θ_W = 0.25), **fermion mass hierarchy** via ℤ³ lattice embedding, and related Standard Model parameters without free inputs.
 
 #### Foundational Algebra Verification
 - **`z3_algebra_5.py`** **(Core)** – High-precision numerical verification of graded Jacobi identity closure across the full 19-dimensional algebra (residuals ∼10⁻¹⁶ over millions of random tests). **Establishes mathematical closure of the Z₃-graded superalgebra.**
