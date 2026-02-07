@@ -68,6 +68,10 @@ Our Z₃-graded algebraic framework spans high-energy unification, particle phys
 - CKM CP phase ≈65.3° (5% agreement)
 - Neutrino mixing: exact 45° (maximal atmospheric) and \(\cos^2 \theta_{12} = 1/3\) (exact tri-bimaximal solar)
 
+5.**A Z₃-Graded Topological Quantum Computing Architecture Based on the Discrete 44-Vector Vacuum Lattice**  
+   **Preprint DOI**:Preprint DOI: 10.20944/preprints202602.0488.v1  
+   **PDF**: Link: https://www.preprints.org/manuscript/202602.0488/v1  
+
 **Project Highlight**:  
 With the algebraic foundation published in *Symmetry* and the ongoing submissions covering high-energy unification (fundamental constants, gauge couplings, cosmological constant) through to low-energy quantum coherence in nanoscale systems, our Z₃-graded framework is forming a preliminary closed loop from fundamental physics to emergent condensed matter phenomena.
 
@@ -99,8 +103,34 @@ This repository contains numerical and symbolic demonstrations of key results fr
 - **`z3_mass_ckm.py`** – Democratic matrix + vacuum misalignment perturbations reproducing **Cabibbo angle** and quark mass ratios (fitting error <3%).
 - **`z3_Inverse.py`** – Computes inverse hierarchy exponent κ ≈ 12 − 3/13 linking algebraic scale to electroweak scale.
 - **`z3_g_val_1.py`** – Geometric calculation of **gravitational constant G** via algebraic dimension ratios (relative error <0.02%).
-
 The **44-vector lattice** (generated in `z3_lattice*.py` and used throughout) is the central geometric object yielding gauge unification and serving as the "core" for matter embeddings. The algebraic closure (`z3_algebra_5.py`) underpins the entire framework.
+
+# Vacuum Inertia in Nanoscale Transport
+This repository provides a complete, self-contained suite of reproducible Python scripts (using only NumPy, SymPy, Matplotlib, and Graphviz) for closed-loop symbolic and numerical validation of the Z₃ Vacuum Inertia framework. The scripts rigorously verify the full logic chain—from Z₃-graded Lie superalgebra construction and exact closure to ab initio quantitative predictions for THz skin depth saturation and nanoscale superconductivity enhancement—without external fitting parameters or unverified steps. Key features include symbolic derivations of core formulas, numerical Jacobi closure checks (residuals ≤ 10⁻¹³), reproducible experimental overlay figures, mindmap visualizations of the logic flow, and comprehensive demonstration of algebraic self-consistency, naturalness, quantitative validation, discriminating signatures, and theoretical constraints.s
+- **`z3_vacuum_theory_chain_verify_fixed.py`**  
+  Step-by-step symbolic verification of the full theoretical chain: graded brackets → effective coupling → in-medium renormalization → condensate → vacuum pairing → nanoscale Tc(d) enhancement. Generates closed-loop prediction plot from algebraic τ_vac.
+- **`z3_quantitative_logic_chain_verify.py`**  
+  Reproducible validation of the Quantitative Comparison section. Symbolically derives surface profile, skin depth saturation, and Tc thresholds. Prints manuscript tables and generates THz skin depth overlay plot.
+- **`z3_theoretical_consistency_verify_fixed.py`**  
+  Verification of the Theoretical Consistency section: RG flow/naturalness, ab initio timescale, phonon complementarity, discriminating signatures. Includes numerical Tc(d) illustration from τ_vac.
+- **`z3_nami_sensitivity_show.py`**  
+  Generates all three supplementary figures:  
+  - Tc enhancement vs nanowire diameter (with experimental data overlay)  
+  - THz skin depth saturation in high-purity copper  
+  - Sensitivity of ξ_vac to surface enhancement η (robustness demonstration)
+- **`z3_nanomaterials_chapter1_mindmap_vertical.py`**  
+  Generates a vertical Graphviz mindmap of the complete Chapter 1 logic chain (colored nodes for reviewer concerns: algebra, coupling, renormalization, naturalness, validation, discriminating features, constraints).
+  
+# Z₃-Graded Topological Quantum Computing Architecture
+### Key Features
+- Monte Carlo simulation of Z₃ toric code fault-tolerance threshold (L=8–16 lattices)
+- Identification of threshold crossing in the low-p regime (∼1.8%)
+- High-resolution visualization with statistical confidence intervals
+- Reproducible ab initio lattice construction and PyMatching decoder
+- **`z3_threshold_massive.py`**  
+  Performs low-p threshold scan via Monte Carlo (2000 trials per point, L=8,12,16). Constructs triangular toric lattice, injects noise, computes syndromes, and uses PyMatching for decoding. Outputs logical error rates and identifies threshold region.
+- **`z3_threshold_massive_show.py`**  
+  Generates professional threshold plot from simulation data, including Wilson score 95% confidence intervals, no-correction reference line, and shaded threshold region. Saves as high-resolution PDF/PNG (Nature Communications style).
 
 ### Profound Significance of This Work
 The computational exploration culminates in the spontaneous emergence of a closed, finite 44-vector lattice from pure ℤ₃ triality operations on the vacuum sector. This saturation is not an artifact but a rigorous mathematical consequence of the unique cubic invariant and graded bracket structure.
