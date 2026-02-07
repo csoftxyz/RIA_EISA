@@ -73,7 +73,7 @@ Our Z₃-graded algebraic framework spans high-energy unification, particle phys
    **PDF**: Link: https://www.preprints.org/manuscript/202602.0488/v1  
 
 **Project Highlight**:  
-With the algebraic foundation published in *Symmetry* and the ongoing submissions covering high-energy unification (fundamental constants, gauge couplings, cosmological constant) through to low-energy quantum coherence in nanoscale systems, our Z₃-graded framework is forming a preliminary closed loop from fundamental physics to emergent condensed matter phenomena.
+With the algebraic foundation published in *Symmetry* (2026, 18, 54) and ongoing preprints/submissions extending the framework across scales—from high-energy unification (fundamental constants, gauge couplings, cosmological constant) through low-energy quantum coherence in nanoscale systems to fault-tolerant **Z₃-graded topological quantum computing architectures** based on the discrete 44-vector vacuum lattice—our Z₃-graded framework is forming a preliminary closed loop that connects fundamental physics to emergent phenomena in condensed matter and quantum information processing.
 
 ### Core Verification Scripts (Self-Contained & Reproducible)
 All scripts are designed for immediate execution (Python 3 + NumPy/SymPy). They rigorously validate the algebraic closure, emergent lattice, and quantitative predictions. The full repository includes 3D visualizations and interactive notebooks.
