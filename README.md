@@ -80,30 +80,59 @@ All scripts are designed for immediate execution (Python 3 + NumPy/SymPy). They 
 
 ### Z₃-Graded Algebraic Framework: Core Scripts & Standard Model Predictions
 
-This repository contains numerical and symbolic demonstrations of key results from the published Z₃-graded Lie superalgebra framework. The structure yields **exact gauge unification** (sin²θ_W = 0.25), **fermion mass hierarchy** via ℤ³ lattice embedding, and related Standard Model parameters without free inputs.
+## 📂 Repository Structure & Script Categories
 
-#### Foundational Algebra Verification
-- **`z3_algebra_5.py`** **(Core)** – High-precision numerical verification of graded Jacobi identity closure across the full 19-dimensional algebra (residuals ∼10⁻¹⁶ over millions of random tests). **Establishes mathematical closure of the Z₃-graded superalgebra.**
-- **`z3_grade_1.py`** – Exact symbolic verification (SymPy rational arithmetic) of Jacobi identities in critical mixing sectors, confirming residuals identically zero.
-- **`z3_entanglement.py`** – SVD decomposition proof that the cubic vacuum invariant corresponds to a maximally entangled GHZ-class state, establishing genuine tripartite quantum correlations.
+### 1. Foundational Algebra Verification
+- **`z3_algebra_5.py`** — High-precision numerical verification of graded Jacobi identity closure across the full 19-dimensional algebra (residuals ∼10⁻¹⁶ over millions of random tests). Establishes mathematical closure of the Z₃-graded superalgebra.
+- **`z3_grade_1.py`** — Exact symbolic verification (SymPy rational arithmetic) of Jacobi identities in critical mixing sectors, confirming residuals identically zero.
+- **`z3_entanglement.py`** — SVD decomposition proof that the cubic vacuum invariant corresponds to a maximally entangled GHZ-class state.
 
-#### Core 44-Vector Lattice & Gauge Unification
-- **`z3_lattice_1.py`** **(Core – Newly Added)** – Refined ground-state pruning and geometric derivation of the **weak mixing angle sin²θ_W = 11/44 = 0.25**, exactly matching SU(5) GUT tree-level prediction; RG evolution explains low-energy shift to ∼0.231.
-- **`z3_lattice.py`** **(Core)** – Generation and analysis of the emergent finite **44-vector ℤ₃-invariant lattice** from vacuum triality, demonstrating spontaneous discretization of continuous symmetry.
-- **`z3_mass_6.py`** **(Core Script)** – Unified demonstration of **gauge unification** (44-vector core → sin²θ_W = 0.25) and **full charged fermion mass spectrum** (extended ℤ³ integer lattice sites).
-- **`z3_strong_coupling.py`** – Generates the **44-vector Z₃ core lattice** and predicts relative strong coupling strength by geometrically partitioning vectors into weak- and strong-type components (matches observed strong/weak DoF ratio).
+### 2. Core 44-Vector Lattice & Gauge Unification
+- **`z3_lattice_1.py`** (Core – Newly Added) — Refined ground-state pruning and geometric derivation of sin²θ_W = 11/44 = 0.25, exactly matching SU(5) GUT tree-level prediction.
+- **`z3_lattice.py`** (Core) — Generation and analysis of the emergent finite 44-vector ℤ₃-invariant lattice from vacuum triality.
+- **`z3_mass_6.py`** (Core Script) — Unified demonstration of gauge unification and full charged fermion mass spectrum via inverse-squared norm scaling.
+- **`z3_strong_coupling.py`** — Classifies vectors into weak/strong-type components and predicts strong/weak coupling ratio analogies.
 
-#### Standard Model Parameter Predictions
-- **`z3_cosmo_constant.py`** – Computes combinatorial enhancement factor from 4-point vacuum fluctuations on the **44-vector Z₃ lattice**, relating it to the observed cosmological constant scale (∼10⁶ enhancement resolves hierarchy).
-- **`z3_ckm_angles.py`** – Derives **CKM quark mixing angles** (V_us, V_cb, V_ub) geometrically via integer vector misalignment with democratic [1,1,1] direction (errors <5%).
-- **`z3_cp_phase.py`** – Predicts **CKM CP-violating phase** (∼68–75°) from triality rotation angles and projective geometry on the 44-vector lattice.
-- **`z3_higgs.py`** – Investigates **Higgs-to-top mass ratio** (m_H/m_t ≈ 0.726) using geometric length ratios in the 44-vector lattice.
-- **`z3_mass_quarks.py`** – Searches ℤ³ integer vectors to reproduce **lighter quark masses** (up, down, strange, charm, bottom) via m ∝ 1/L², anchored to top quark (errors ∼few %).
-- **`z3_pmns.py`** – Derives **neutrino PMNS mixing angles** from lattice geometry, recovering near-maximal atmospheric and tribimaximal solar mixing.
-- **`z3_mass_ckm.py`** – Democratic matrix + vacuum misalignment perturbations reproducing **Cabibbo angle** and quark mass ratios (fitting error <3%).
-- **`z3_Inverse.py`** – Computes inverse hierarchy exponent κ ≈ 12 − 3/13 linking algebraic scale to electroweak scale.
-- **`z3_g_val_1.py`** – Geometric calculation of **gravitational constant G** via algebraic dimension ratios (relative error <0.02%).
-The **44-vector lattice** (generated in `z3_lattice*.py` and used throughout) is the central geometric object yielding gauge unification and serving as the "core" for matter embeddings. The algebraic closure (`z3_algebra_5.py`) underpins the entire framework.
+### 3. Fermion Mass Hierarchy & Selection Rules
+- **`z3_mass_quarks.py`** — Searches extended lattice for up/strange quark vectors and verifies geometric up/down mass inversion.
+- **`z3_comparative_check_mod_9.py`** — Verifies modulo-9 resonance (L² ≡ 0 mod 9) and computes triality stability Δ for fermion vectors.
+- **`z3_comparative_check.py`** — Compares Δ values of physical vectors vs random neighbors to support selection rules.
+
+### 4. Quark Mixing & CP Violation
+- **`z3_ckm_angles.py`** — Derives CKM magnitudes (V_us, V_cb, V_ub) via integer vector misalignments to democratic direction.
+- **`z3_cp_phase.py`** — Explores triality rotations and projective phase difference (120° − magic angle) for CKM CP phase approximation.
+
+### 5. Neutrino Mixing Parameters
+- **`z3_pmns.py`** — Computes symmetric projections yielding exact tri-bimaximal neutrino mixing angles.
+- **`Z3_Neutrino_Hunter.py`** — Large-scale search (L² ≤ 5000) for θ₁₃ and neutrino mass ratio candidates (multiprocessing).
+- **`Z3_Neutrino_Hybrid_Hunter.py`** — Extended search (L
+² ≤ 20000) focusing on hybrid axis [-2,1,1] for refined θ₁₃.
+- **`Z3_Neutrino_Hybrid_Hunter_one_shot.py`** — Rapid brute-force scan for exact integer 1/sin²θ₁₃ (44/45).
+
+### 6. Additional Phenomenological Alignments
+- **`z3_higgs.py`** — Tests geometric ratios for Higgs-to-top mass ratio proximity.
+- **`z3_cosmo_constant.py`** — Computes N⁴ combinatorial factor and demonstrates cosmological constant scale compensation.
+
+### 7. Visualizations and Lattice Renderings
+- **`z3_mass_show.py`** — Standard dual-panel visualization: 3D lattice + logarithmic fermion mass comparison.
+- **`z3_mass_show_1.py`** — Advanced dual visualization with L² and Δ annotations, updated for strange quark and mod-9.
+- **`z3_crystal_44_schematic.py`** — Schematic crystal-style 3D rendering with classification and connections.
+- **`z3_44_vector_crystal_visualizer.py`** — High-resolution crystal visualization with customizable thresholds.
+- **`z3_vacuum_lattice_crystal_44.py`** — Crystal rendering emphasizing type classification and norm levels.
+- **`z3_show_4.py`** — Early dual visualization highlighting weak sector and sin²θ_W = 0.25.
+- **`z3_show_5.py`** — Network graph of 44-vector lattice with Tr(A⁴) combinatorial factor.
+- **`z3_show_6.py`** — Comprehensive dual-panel (lattice + mass hierarchy) with RG equation.
+- **`z3_show_8.py`** — Refined mass hierarchy dual visualization with RG annotation.
+- **`z3_show_9.py`** — Dual-panel CKM misalignment angles + bar chart comparison.
+- **`z3_show_10.py`** — Horizontal bar chart of geometric ratios for Higgs-to-top mass.
+- **`z3_show_11.py`** — Polar diagram of triality phase, magic angle, and CP phase difference.
+- **`z3_show_12.py`** — Dual-panel component count (pie + bar chart) for strong coupling analogies.
+- **`z3_show_13.py`** — Dual 3D contrasting TBM neutrino large mixing vs quark-like small mixing.
+- **`z3_show_14.py`** — Dual-panel cosmological constant hierarchy with compensation diagram.
+- **`z3_show_15.py`** — 3D visualization of θ₁₃ basis projection candidates colored by integer score.
+- **`z3_show_16.py`** — General-purpose high-quality crystal lattice rendering with classification.
+- **`z3_show_17.py`** — Lattice visualization highlighting physical fermion vectors with L²/Δ annotations.
+- **`z3_speculative_extensions_flowchart.py`** — Directed flowchart of formal algebraic extensions and analogies.
 
 # Vacuum Inertia in Nanoscale Transport
 This repository provides a complete, self-contained suite of reproducible Python scripts (using only NumPy, SymPy, Matplotlib, and Graphviz) for closed-loop symbolic and numerical validation of the Z₃ Vacuum Inertia framework. The scripts rigorously verify the full logic chain—from Z₃-graded Lie superalgebra construction and exact closure to ab initio quantitative predictions for THz skin depth saturation and nanoscale superconductivity enhancement—without external fitting parameters or unverified steps. Key features include symbolic derivations of core formulas, numerical Jacobi closure checks (residuals ≤ 10⁻¹³), reproducible experimental overlay figures, mindmap visualizations of the logic flow, and comprehensive demonstration of algebraic self-consistency, naturalness, quantitative validation, discriminating signatures, and theoretical constraints.s
