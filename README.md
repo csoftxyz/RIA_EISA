@@ -122,7 +122,7 @@ This directory contains tools for exploring the geometric origins of PMNS mixing
   Full multi-task parallel framework that simultaneously searches neutrino, gauge, Higgs, and flavour sectors. Designed for high-memory environments (tested on a 768 GB RAM server with MAX_L_SQ_HUGE = 100000, generating ~2.8 million lattice points). Outputs detailed logs of geometric matches, including hundreds of near-matches for θ₁₃. The neutrino task alone identifies the characteristic bimodal distribution in 1/sin²θ₁₃.
 
 - **`Z3_Universe_Solver_output_analysis.py`**  
-  Post-processing script that parses the solver log file (`Z3_Universe_Solver_output.txt`), extracts all reported 1/sin²θ₁₃ values, and generates the key diagnostic histogram showing dual peaks at ~44 (lattice anchor) and ~45 (vacuum singlet), with the experimental value (44.64) in the intermediate valley. Example output (from a full 768 GB run) is included in the repository as `figures/Z3_Universe_Solver_output_analysis_1.png`:
+  Post-processing script that parses the solver log file (`Z3_Universe_Solver_output.txt`), extracts all reported 1/sin²θ₁₃ values, and generates the key diagnostic histogram showing dual peaks at ~44 (lattice anchor) and ~45 (vacuum singlet), with the experimental value (44.64) in the intermediate valley. Example output (from a full 768 GB run) is included in the repository as `Z3_Universe_Solver_output_analysis_1.png`:
 
 
 ### 6. Additional Phenomenological Alignments
