@@ -103,11 +103,28 @@ All scripts are designed for immediate execution (Python 3 + NumPy/SymPy). They 
 - **`z3_cp_phase.py`** — Explores triality rotations and projective phase difference (120° − magic angle) for CKM CP phase approximation.
 
 ### 5. Neutrino Mixing Parameters
-- **`z3_pmns.py`** — Computes symmetric projections yielding exact tri-bimaximal neutrino mixing angles.
-- **`Z3_Neutrino_Hunter.py`** — Large-scale search (L² ≤ 5000) for θ₁₃ and neutrino mass ratio candidates (multiprocessing).
-- **`Z3_Neutrino_Hybrid_Hunter.py`** — Extended search (L
-² ≤ 20000) focusing on hybrid axis [-2,1,1] for refined θ₁₃.
-- **`Z3_Neutrino_Hybrid_Hunter_one_shot.py`** — Rapid brute-force scan for exact integer 1/sin²θ₁₃ (44/45).
+
+This directory contains tools for exploring the geometric origins of PMNS mixing angles and neutrino mass ratios within the Z₃ vacuum framework. The scripts perform large-scale lattice searches for integer vectors that yield mixing parameters close to experimental values, with particular emphasis on the observed θ₁₃ (1/sin²θ₁₃ ≈ 44.64) emerging in the "valley" between the two natural geometric anchors at 44 (lattice-aligned) and 45 (vacuum singlet).
+
+- **`z3_pmns.py`**  
+  Computes exact tri-bimaximal neutrino mixing using symmetric projections onto the Z₃-graded structure. Reproduces the classic values sin²θ₂₃ = 0.5, cos²θ₁₂ = 1/3, and θ₁₃ = 0 analytically.
+
+- **`Z3_Neutrino_Hunter.py`**  
+  Large-scale parallel search (L² ≤ 5000) for candidate vectors yielding θ₁₃ and neutrino mass hierarchy ratios. Uses multiprocessing to scan the fundamental domain of the integer lattice.
+
+- **`Z3_Neutrino_Hybrid_Hunter.py`**  
+  Extended search (L² ≤ 20000) focused on projections near the hybrid axis [-2, 1, 1]/√6, which provides refined approximations to the observed θ₁₃.
+
+- **`Z3_Neutrino_Hybrid_Hunter_one_shot.py`**  
+  Rapid brute-force one-shot scan optimised for near-integer values of 1/sin²θ₁₃ around 44–45. Designed for quick exploration and verification of the dual-peak structure reported in the published works.
+
+- **`Z3_Universe_Solver.py`** (main solver)  
+  Full multi-task parallel framework that simultaneously searches neutrino, gauge, Higgs, and flavour sectors. Designed for high-memory environments (tested on a 768 GB RAM server with MAX_L_SQ_HUGE = 100000, generating ~2.8 million lattice points). Outputs detailed logs of geometric matches, including hundreds of near-matches for θ₁₃. The neutrino task alone identifies the characteristic bimodal distribution in 1/sin²θ₁₃.
+
+- **`Z3_Universe_Solver_output_analysis.py`**  
+  Post-processing script that parses the solver log file (`Z3_Universe_Solver_output.txt`), extracts all reported 1/sin²θ₁₃ values, and generates the key diagnostic histogram showing dual peaks at ~44 (lattice anchor) and ~45 (vacuum singlet), with the experimental value (44.64) in the intermediate valley. Example output (from a full 768 GB run) is included in the repository as `figures/Z3_Universe_Solver_output_analysis_1.png`:
+
+  ![Bimodal distribution of 1/sin²θ₁₃](figures/Z3_Universe_Solver_output_analysis_1.png)
 
 ### 6. Additional Phenomenological Alignments
 - **`z3_higgs.py`** — Tests geometric ratios for Higgs-to-top mass ratio proximity.
@@ -133,6 +150,9 @@ All scripts are designed for immediate execution (Python 3 + NumPy/SymPy). They 
 - **`z3_show_16.py`** — General-purpose high-quality crystal lattice rendering with classification.
 - **`z3_show_17.py`** — Lattice visualization highlighting physical fermion vectors with L²/Δ annotations.
 - **`z3_speculative_extensions_flowchart.py`** — Directed flowchart of formal algebraic extensions and analogies.
+- **`z3_show_6_b.py`**  
+  Generates a 3D visualization of the Z₃-graded vacuum lattice produced by iterative triality rotations and graded bracket closures from the orthonormal basis and democratic vectors (±[1,1,1]/√3); the structure spontaneously saturates at exactly 44 unique vectors, forming a rigid, self-interlocking topology analogous to the classical Chinese Luban mortise-and-tenon lock, with vectors colour-coded by norm class (democratic core ≈√3 in vivid magenta #D81B60, root-like ≈√2 in deep blue #1E88E5, hybrid tenons in deep green #43A047, residual basis in dark grey #546E7A).  
+  
 
 # Vacuum Inertia in Nanoscale Transport
 This repository provides a complete, self-contained suite of reproducible Python scripts (using only NumPy, SymPy, Matplotlib, and Graphviz) for closed-loop symbolic and numerical validation of the Z₃ Vacuum Inertia framework. The scripts rigorously verify the full logic chain—from Z₃-graded Lie superalgebra construction and exact closure to ab initio quantitative predictions for THz skin depth saturation and nanoscale superconductivity enhancement—without external fitting parameters or unverified steps. Key features include symbolic derivations of core formulas, numerical Jacobi closure checks (residuals ≤ 10⁻¹³), reproducible experimental overlay figures, mindmap visualizations of the logic flow, and comprehensive demonstration of algebraic self-consistency, naturalness, quantitative validation, discriminating signatures, and theoretical constraints.s
