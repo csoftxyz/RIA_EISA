@@ -124,7 +124,6 @@ This directory contains tools for exploring the geometric origins of PMNS mixing
 - **`Z3_Universe_Solver_output_analysis.py`**  
   Post-processing script that parses the solver log file (`Z3_Universe_Solver_output.txt`), extracts all reported 1/sin²θ₁₃ values, and generates the key diagnostic histogram showing dual peaks at ~44 (lattice anchor) and ~45 (vacuum singlet), with the experimental value (44.64) in the intermediate valley. Example output (from a full 768 GB run) is included in the repository as `Z3_Universe_Solver_output_analysis_1.png`:
 
-
 ### 6. Additional Phenomenological Alignments
 - **`z3_higgs.py`** — Tests geometric ratios for Higgs-to-top mass ratio proximity.
 - **`z3_cosmo_constant.py`** — Computes N⁴ combinatorial factor and demonstrates cosmological constant scale compensation.
@@ -151,6 +150,30 @@ This directory contains tools for exploring the geometric origins of PMNS mixing
 - **`z3_speculative_extensions_flowchart.py`** — Directed flowchart of formal algebraic extensions and analogies.
 - **`z3_show_6_b.py`**  
   Generates a 3D visualization of the Z₃-graded vacuum lattice produced by iterative triality rotations and graded bracket closures from the orthonormal basis and democratic vectors (±[1,1,1]/√3); the structure spontaneously saturates at exactly 44 unique vectors, forming a rigid, self-interlocking topology analogous to the classical Chinese Luban mortise-and-tenon lock, with vectors colour-coded by norm class (democratic core ≈√3 in vivid magenta #D81B60, root-like ≈√2 in deep blue #1E88E5, hybrid tenons in deep green #43A047, residual basis in dark grey #546E7A).  
+
+
+### 8. **Z3_IceCube_Time_Domain_Analyzer.py**
+Z3_IceCube_Time_Domain_Analyzer.py
+====================================
+Purpose:
+    Direct harmonic analysis of public IceCube IC86 Stokes Q/U polarization data
+    to search for 6-hour sidereal modulation predicted by the 44-vector Z3 lattice.
+Key Output:
+    - Power spectrum showing excess at 4th harmonic (6-hour period)
+    - SNR ≈ 5.2 at 6h (presented as numerical coincidence only)
+Data:
+    IceCube ic-cra2024 dataset (pre-processed Q/U maps)
+    DOI: 10.7910/DVN/DZI2F5
+    [http](https://dataverse.harvard.edu/dataset.xhtml?persistentId=doi:10.7910/DVN/DZI2F5)
+Note:
+    This is a suggestive numerical coincidence only.
+    Definitive confirmation requires raw event-level data with precise arrival times.
+    No physical mechanism or discovery claim is made.
+### Supporting Scripts
+- **`Z3_Isotropy_Proof.py`**  
+  Generates the strictly closed 44-vector lattice from triality operations and performs isotropy test (Rank-2 and Rank-4 tensor response). Used to demonstrate the lattice's geometric properties.
+- **`z3_lhaaso_prediction.py`**  
+  Computes the geometric factor η(n) = Σ (n·v)^4 over the 44-vector lattice and derives quantitative predictions for possible LIV signatures in LHAASO PeV photon data.
   
 
 # Vacuum Inertia in Nanoscale Transport
