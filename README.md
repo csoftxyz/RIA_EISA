@@ -86,7 +86,7 @@ All scripts are designed for immediate execution (Python 3 + NumPy/SymPy). They 
 - **`z3_algebra_5.py`** — High-precision numerical verification of graded Jacobi identity closure across the full 19-dimensional algebra (residuals ∼10⁻¹⁶ over millions of random tests). Establishes mathematical closure of the Z₃-graded superalgebra.
 - **`z3_grade_1.py`** — Exact symbolic verification (SymPy rational arithmetic) of Jacobi identities in critical mixing sectors, confirming residuals identically zero.
 - **`z3_algebra_verify_19D_short.py`** — the 19-dimensional $  \mathbb{Z}_3  $-graded Lie superalgebra verification code. Test cycles: 10,000 random Jacobi identity checks.
-- **`z3_algebra_verify_mini.py.py`** —  the 19-dimensional $  \mathbb{Z}_3  $-graded Lie superalgebra verification code. Test cycles: 10,000 random Jacobi identity checks.
+- **`z3_algebra_verify_mini.py`** —  the 19-dimensional $  \mathbb{Z}_3  $-graded Lie superalgebra verification code. Test cycles: 10,000,000 random Jacobi identity checks.
 - **`z3_entanglement.py`** — SVD decomposition proof that the cubic vacuum invariant corresponds to a maximally entangled GHZ-class state.
 
 ### 2. Core 44-Vector Lattice & Gauge Unification
