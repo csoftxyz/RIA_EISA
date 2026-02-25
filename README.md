@@ -85,6 +85,8 @@ All scripts are designed for immediate execution (Python 3 + NumPy/SymPy). They 
 ### 1. Foundational Algebra Verification
 - **`z3_algebra_5.py`** — High-precision numerical verification of graded Jacobi identity closure across the full 19-dimensional algebra (residuals ∼10⁻¹⁶ over millions of random tests). Establishes mathematical closure of the Z₃-graded superalgebra.
 - **`z3_grade_1.py`** — Exact symbolic verification (SymPy rational arithmetic) of Jacobi identities in critical mixing sectors, confirming residuals identically zero.
+- **`z3_algebra_verify_19D_short.py`** — the 19-dimensional $  \mathbb{Z}_3  $-graded Lie superalgebra verification code. Test cycles: 10,000 random Jacobi identity checks.
+- **`z3_algebra_verify_mini.py.py`** —  the 19-dimensional $  \mathbb{Z}_3  $-graded Lie superalgebra verification code. Test cycles: 10,000 random Jacobi identity checks.
 - **`z3_entanglement.py`** — SVD decomposition proof that the cubic vacuum invariant corresponds to a maximally entangled GHZ-class state.
 
 ### 2. Core 44-Vector Lattice & Gauge Unification
@@ -188,19 +190,26 @@ Why it matters:Even though presented strictly as a mathematical curiosity, the m
 
 # Vacuum Inertia in Nanoscale Transport
 This repository provides a complete, self-contained suite of reproducible Python scripts (using only NumPy, SymPy, Matplotlib, and Graphviz) for closed-loop symbolic and numerical validation of the Z₃ Vacuum Inertia framework. The scripts rigorously verify the full logic chain—from Z₃-graded Lie superalgebra construction and exact closure to ab initio quantitative predictions for THz skin depth saturation and nanoscale superconductivity enhancement—without external fitting parameters or unverified steps. Key features include symbolic derivations of core formulas, numerical Jacobi closure checks (residuals ≤ 10⁻¹³), reproducible experimental overlay figures, mindmap visualizations of the logic flow, and comprehensive demonstration of algebraic self-consistency, naturalness, quantitative validation, discriminating signatures, and theoretical constraints.s
-- **`z3_vacuum_theory_chain_verify_fixed.py`**  
-  Step-by-step symbolic verification of the full theoretical chain: graded brackets → effective coupling → in-medium renormalization → condensate → vacuum pairing → nanoscale Tc(d) enhancement. Generates closed-loop prediction plot from algebraic τ_vac.
-- **`z3_quantitative_logic_chain_verify.py`**  
-  Reproducible validation of the Quantitative Comparison section. Symbolically derives surface profile, skin depth saturation, and Tc thresholds. Prints manuscript tables and generates THz skin depth overlay plot.
-- **`z3_theoretical_consistency_verify_fixed.py`**  
-  Verification of the Theoretical Consistency section: RG flow/naturalness, ab initio timescale, phonon complementarity, discriminating signatures. Includes numerical Tc(d) illustration from τ_vac.
-- **`z3_nami_sensitivity_show.py`**  
-  Generates all three supplementary figures:  
-  - Tc enhancement vs nanowire diameter (with experimental data overlay)  
-  - THz skin depth saturation in high-purity copper  
-  - Sensitivity of ξ_vac to surface enhancement η (robustness demonstration)
-- **`z3_nanomaterials_chapter1_mindmap_vertical.py`**  
-  Generates a vertical Graphviz mindmap of the complete Chapter 1 logic chain (colored nodes for reviewer concerns: algebra, coupling, renormalization, naturalness, validation, discriminating features, constraints).
+
+Current Recommended Script
+-**`z3_exploratory_consistency_verification.py`** 
+Purpose: Lightweight symbolic verification of the logical chain (graded brackets → effective coupling → renormalization → surface criticality → emergent scale).
+Style: Fully aligned with the final exploratory and phenomenological tone of the paper.
+Key features: Purely symbolic (SymPy), no numerical predictions, no figure generation, uses cautious exploratory language.
+When to use: For current verification and manuscript preparation.
+Main difference from previous scripts: This is a simplified, tone-consistent version specifically designed for the current version of the paper. It avoids strong verification language (“fully verified”, “closed-loop”, “ab initio”) and focuses only on internal symbolic consistency.
+Previous Scripts (Kept for Historical Reproducibility)
+These scripts were used in earlier drafts when the paper still contained stronger claims. They are retained for completeness:
+-**`z3_vacuum_theory_chain_verify_fixed.py`** 
+Full symbolic derivation of the theoretical chain from graded brackets to nanoscale Tc(d) enhancement. Generates a closed-loop prediction plot from algebraic τ_vac. (Used in strong-claim versions.)
+-**`z3_quantitative_logic_chain_verify.py`** 
+Step-by-step symbolic derivation and validation of the Quantitative Comparison section. Generates tables and THz skin depth overlay plot.
+-**`z3_theoretical_consistency_verify_fixed.py`** 
+Verification of the Theoretical Consistency section (RG flow, naturalness, timescale, phonon complementarity, discriminating signatures).
+-**`z3_nami_sensitivity_show.py`** 
+Generates the three supplementary figures (Tc vs diameter, skin depth saturation, sensitivity of ξ_vac to η).
+-**`z3_nanomaterials_chapter1_mindmap_vertical.py`** 
+Generates a vertical Graphviz mindmap of the complete Chapter 1 logic chain (used internally during development).
   
 # Z₃-Graded Topological Quantum Computing Architecture
 ### Key Features
