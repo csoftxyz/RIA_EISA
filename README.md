@@ -52,8 +52,8 @@ Our Z₃-graded algebraic framework spans high-energy unification, particle phys
 
 3. **Low-Energy Application: Nanoscale Transport**  
    **Title**: Z₃ Vacuum Inertia in Nanoscale Transport  
-   **Preprint DOI**: https://doi.org/10.20944/preprints202601.0109.v2  
-   **PDF**: https://www.preprints.org/manuscript/202601.0109/v2/download
+   **Preprint DOI**: https://doi.org/10.20944/preprints202601.0109.v3 
+   **PDF**: [https://www.preprints.org/manuscript/202601.0109/v2/download](https://www.preprints.org/manuscript/202601.0109/v3)
 
 4. **Flavor Sector Application **  
    **Title**: Discrete Vacuum Geometry Predicts the Hierarchical Mass Spectrum of Standard Model Fermions  
