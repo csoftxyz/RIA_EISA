@@ -112,7 +112,7 @@ We predict that in the high-mass tail (M_tt > 1–2 TeV), the differential cross
 dσ_obs / dσ_SM ≃ 1 ± (8/63) (M_tt / Λ_alg)²
 with zero free parameters. Any deviation in future ATLAS/CMS global SMEFT fits of the high-energy tail must match this exact rational slope to be consistent with the Z₃ vacuum geometry; any other fractional coefficient would falsify the framework.
 Full details, code 
-- **`(z3_algebra_verify_mini_para.py)`** —, and verification are given in Z3_EFT_Prediction.md.
+- **`(z3_algebra_verify_mini_para.py)`** —, and verification are given in Z3_EFT_Prediction.md. and Z3_HighEnergy_Tail_Prediction.pdf.
 
 
 ### 5. Neutrino Mixing Parameters
