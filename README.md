@@ -104,6 +104,17 @@ All scripts are designed for immediate execution (Python 3 + NumPy/SymPy). They 
 - **`z3_ckm_angles.py`** — Derives CKM magnitudes (V_us, V_cb, V_ub) via integer vector misalignments to democratic direction.
 - **`z3_cp_phase.py`** — Explores triality rotations and projective phase difference (120° − magic angle) for CKM CP phase approximation.
 
+Z₃-Graded Vacuum Geometry: Rigid High-Energy EFT Prediction
+Timestamp: March 9, 2026
+We formally retract all previous phenomenological claims of a possible scalar resonance at ~355 GeV in the tt¯ threshold, which relied on an arbitrary coupling κ ≈ 0.1 and lacked algebraic justification. Current ATLAS-CONF-2025-008 data firmly anchor the peak at ~345 GeV (χ²/dof ≈ 1.05), consistent with NRQCD.
+We now restrict physical predictions of the Z₃ framework to the decoupled high-energy EFT regime (M_tt ≫ 2 m_t). In the exact 19-dimensional matrix representation, the relative strength of the vacuum-mediated dimension-6 operator versus standard QCD gluon exchange is uniquely fixed by the ratio of Super-Killing forms (invariant trace norms) between the vacuum generators ζ^k and gauge generators B^a. Direct computation yields the rigid algebraic constant C_Z3 = 8/63 ≈ 0.12698.
+We predict that in the high-mass tail (M_tt > 1–2 TeV), the differential cross-section ratio must asymptotically follow
+dσ_obs / dσ_SM ≃ 1 ± (8/63) (M_tt / Λ_alg)²
+with zero free parameters. Any deviation in future ATLAS/CMS global SMEFT fits of the high-energy tail must match this exact rational slope to be consistent with the Z₃ vacuum geometry; any other fractional coefficient would falsify the framework.
+Full details, code 
+- **`(z3_algebra_verify_mini_para.py)`** —, and verification are given in Z3_EFT_Prediction.md.
+
+
 ### 5. Neutrino Mixing Parameters
 
 This directory contains tools for exploring the geometric origins of PMNS mixing angles and neutrino mass ratios within the Z₃ vacuum framework. The scripts perform large-scale lattice searches for integer vectors that yield mixing parameters close to experimental values, with particular emphasis on the observed θ₁₃ (1/sin²θ₁₃ ≈ 44.64) emerging in the "valley" between the two natural geometric anchors at 44 (lattice-aligned) and 45 (vacuum singlet).
