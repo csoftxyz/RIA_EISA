@@ -191,6 +191,15 @@ Note:
 Performs refined phase alignment analysis on the IceCube IC86 public Stokes $  Q/U  $ polarization data after removing edge artifacts from filtering. It generates theoretical modulation curves from the 44-vector lattice and optimizes the lattice orientation to maximize correlation in the clean central region (4h–20h).
 Key result: The correlation coefficient in the central region reaches 0.8614, showing strong visual and quantitative alignment between the observed modulation and the Z3 theoretical prediction. Output: Z3_Phase_Locking_Clean.png — clean comparison plot of IceCube data versus Z3 prediction.The optimized Euler angles obtained from this analysis are approximately $  [32.12^\circ, 3.07^\circ, 376.45^\circ]  $. These angles represent a formal orientation of the 44-vector lattice relative to the celestial frame in the model. While they are derived purely from numerical optimization and carry no asserted physical meaning at present, they serve as a geometric parameter that could, in principle, be tested or compared with future analyses using independent datasets (e.g., from LHAASO or other observatories). This is presented strictly as a mathematical curiosity.
 
+
+### Z3_KM3NeT_3Year_Windows.py – 3-Year Transparent Sidereal Windows for KM3NeT >100 PeV Neutrinos
+
+This script generates the complete 3-year prediction table (2026–2029) of daily **Z3 Transparent Windows** for the KM3NeT detector. Based on the 44-vector discrete vacuum lattice geometry, it calculates the precise 1-hour sidereal-time interval (±30 min) during which >100 PeV neutrinos are allowed to reach Earth without being blocked by Rank-4 anisotropy.  
+
+The output CSV (`Z3_KM3NeT_3Year_Transparent_Windows.csv`) contains 1096 daily entries with UTC start/end/center times. Any future >100 PeV event detected **outside** these narrow windows immediately falsifies the Z3 geometric channeling model, while repeated detections confined exclusively to the predicted windows would rule out isotropic sterile-neutrino and Earth-matter resonance explanations at high statistical significance.  
+
+This provides a clean, model-independent, and highly falsifiable test for the discrete vacuum geometry hypothesis. The script uses Astropy for accurate LST computation and is fully reproducible.
+
 🌌 Z3 Hubble Skymap Generator
 - **`Z3_Hubble_Skymap_Generator.py + Z3_Hubble_Skymap.png `**
 This script takes the optimized orientation of the 44-vector Z3 lattice and generates a full-sky prediction map of the directional dependence of the cosmic expansion rate.
