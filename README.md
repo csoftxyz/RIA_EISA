@@ -212,6 +212,28 @@ Why it matters:Even though presented strictly as a mathematical curiosity, the m
 This repository provides a complete, self-contained suite of reproducible Python scripts (using only NumPy, SymPy, Matplotlib, and Graphviz) for closed-loop symbolic and numerical validation of the Z₃ Vacuum Inertia framework. The scripts rigorously verify the full logic chain—from Z₃-graded Lie superalgebra construction and exact closure to ab initio quantitative predictions for THz skin depth saturation and nanoscale superconductivity enhancement—without external fitting parameters or unverified steps. Key features include symbolic derivations of core formulas, numerical Jacobi closure checks (residuals ≤ 10⁻¹³), reproducible experimental overlay figures, mindmap visualizations of the logic flow, and comprehensive demonstration of algebraic self-consistency, naturalness, quantitative validation, discriminating signatures, and theoretical constraints.s
 
 Current Recommended Script
+#### 1. `Z3_Vacuum_Screening_Cloud_3D_English.py`  
+**Purpose**: Visual demonstration of the bare-to-dressed transition of the vacuum coherence length.
+- Computes the bare scale \(\xi_{\rm bare}\) from collective triality simulation of the 44-vector lattice.
+- Applies phenomenological screening \(\eta = 4\) (consistent with typical metallic surface enhancement).
+- Renders a high-resolution side-by-side 3D figure showing:
+  - Left: Bare vacuum lattice (\(\xi_{\rm bare} \approx 284.42\) nm)
+  - Right: Compressed by fermion cloud (\(\xi_{\rm eff} \approx 71.105\) nm)
+- Features: real-time calculated values, orange compression arrows, crystal-like point cloud, perfect English labels.
+**Output**: `Z3_Vacuum_Screening_Cloud_3D_Crystal_Final_Fixed_NoOverlap.png` (used in the paper)
+#### 2. `Z3_Pure_Geometric_Magic_Angle_Ultimate.py`  
+**Purpose**: Purely geometric prediction of the magic angle in twisted bilayer graphene (zero hopping parameters).
+- Uses 6000×6000 grid + multi-harmonic moiré density + full \(A_2\) projection of the 44-vector lattice.
+- No Fermi velocity, no interlayer hopping \(w\), no fitting constants.
+- Scans twist angle \(\theta\) and finds absolute maximum overlap at \(\theta = 1.090^\circ\).
+**Output**: `Z3_Pure_Geometric_Magic_Angle_Ultimate.png` + CSV data
+#### 3. `Z3_hBN_Superfluid_Resonance_Improved_3D.py`  
+**Purpose**: Quantitative simulation of vacuum-induced superfluid density suppression in hBN-cavity devices (Nature 2026 experiment).
+- Macroscopic overlap integral between hBN charge density and rotated \(A_2\) vacuum potential.
+- Predicts sharp \(C_6\) resonances at \(0^\circ, 60^\circ, 120^\circ\).
+- Includes 3D rendering of the vacuum potential surface and comparison with experimental range.
+**Output**: `Z3_hBN_Superfluid_Resonance_Final_3D.png` + `Z3_hBN_Suppression_Data.csv`
+
 -**`z3_exploratory_consistency_verification.py`** 
 Purpose: Lightweight symbolic verification of the logical chain (graded brackets → effective coupling → renormalization → surface criticality → emergent scale).
 Style: Fully aligned with the final exploratory and phenomenological tone of the paper.
