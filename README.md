@@ -234,6 +234,26 @@ Current Recommended Script
 - Includes 3D rendering of the vacuum potential surface and comparison with experimental range.
 **Output**: `Z3_hBN_Superfluid_Resonance_Final_3D.png` + `Z3_hBN_Suppression_Data.csv`
 
+# Z₃ Vacuum Inertia Simulation — Hg-1223 Pressure Quench
+**Purpose**  
+These two Python programs perform an **illustrative zero-parameter Monte Carlo simulation** of the Z₃ vacuum inertia locking mechanism in Hg-1223 under pressure quench. The simulation demonstrates how geometric resonance between the material lattice and the discrete Z₃ L₄₄ vacuum lattice can naturally produce a metastable superconducting phase near 151 K, qualitatively consistent with the 2026 PNAS experimental results by Chu, Deng et al.
+**Programs included**
+- `Z3_Hg1223_PressureQuench_TrueZeroParam_3D_Beautiful_Fixed_PDF.py`  
+  Generates clean 2D panels (Tc vs Pressure and lattice anchoring dynamics) together with a 3D vacuum potential landscape, exported as high-resolution PDF and PNG.
+- `Z3_Hg1223_TrueZeroParam_3D_Braid_Embedding_5Arrows.py`  
+  Produces a high-impact 3D visualization showing **five dynamic dashed trajectories with arrows**, clearly illustrating the “solder” (material lattice) being deeply locked into the “desoldering braid” (Z₃ vacuum lattice).
+**Core Principle**  
+The model relies on geometric resonance computed from the Z₃ L₄₄ lattice projection and a vacuum-inertia energy scale derived purely from dimensional analysis (δ_E = ħ v_F / ξ_vac k_B). The Metropolis Monte Carlo quench protocol then demonstrates robust lattice anchoring once the material enters the resonance window.
+**Key Input Parameters** (all taken from literature or algebraically fixed values, no fitting)  
+- ξ_vac ≈ 70 nm (Z₃ coherence length)  
+- v_F = 1.57×10⁵ m/s (Hg-1223 Fermi velocity)  
+- A₀ = 3.85 Å, B₀ = 90 GPa (material constants)  
+- T_c0 = 133 K, T_quench = 4.2 K, pressure window 15–25 GPa  
+**Output**  
+- Publication-ready PDF and PNG figures  
+- Tc(P) data file (`Z3_Tc_vs_P_TrueZeroParam_Final.csv`)  
+
+
 -**`z3_exploratory_consistency_verification.py`** 
 Purpose: Lightweight symbolic verification of the logical chain (graded brackets → effective coupling → renormalization → surface criticality → emergent scale).
 Style: Fully aligned with the final exploratory and phenomenological tone of the paper.
