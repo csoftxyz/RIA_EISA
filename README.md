@@ -114,6 +114,15 @@ with zero free parameters. Any deviation in future ATLAS/CMS global SMEFT fits o
 Full details, code 
 - **`(z3_algebra_verify_mini_para.py)`** —, and verification are given in Z3_EFT_Prediction.md. and Z3_HighEnergy_Tail_Prediction.pdf.
 
+### Z₃ vs SM Toponium: Spin Observables Comparison
+- `z3_c_hal.py` – Python script that generates the visualizations
+- `Z3_vs_SM_c_hel_full_derivation.pdf` – Final 2-page PDF output (curve + full mathematical derivation)
+**Key Theoretical Difference**:
+The Standard Model / NRQCD toponium prediction assumes **factorized two-body spin correlations** (purely real, symmetric spin-singlet matrix).  
+In contrast, the **Z₃ graded Lie superalgebra** introduces a **non-factorizable ternary vacuum interaction** through the cubic bracket  
+`{F^α, F^β, F^γ} = ε^k_{αβγ} ζ_k`,  
+producing a characteristic **order-3 cyclic phase** (`e^{i2π/3}`) and topological kinks in the helicity-angle (`c_hel`) distribution.
+This visualization directly compares the two frameworks and demonstrates how Z₃ naturally generates observable spin asymmetries that cannot be reproduced by any adjustment of NRQCD higher-order terms.
 
 ### 5. Neutrino Mixing Parameters
 
