@@ -172,6 +172,15 @@ This directory contains tools for exploring the geometric origins of PMNS mixing
 - **`z3_speculative_extensions_flowchart.py`** — Directed flowchart of formal algebraic extensions and analogies.
 - **`z3_show_6_b.py`**  
   Generates a 3D visualization of the Z₃-graded vacuum lattice produced by iterative triality rotations and graded bracket closures from the orthonormal basis and democratic vectors (±[1,1,1]/√3); the structure spontaneously saturates at exactly 44 unique vectors, forming a rigid, self-interlocking topology analogous to the classical Chinese Luban mortise-and-tenon lock, with vectors colour-coded by norm class (democratic core ≈√3 in vivid magenta #D81B60, root-like ≈√2 in deep blue #1E88E5, hybrid tenons in deep green #43A047, residual basis in dark grey #546E7A).  
+### Z₃ Section Visualization
+**Files**:
+- `z3_section_visualization.py` – Python script that generates the visualization
+- `Z3_Signature_Optical_Shadows.pdf` – 2-page PDF containing the full Section with embedded figure
+**Description**:
+This visualization summarizes the core idea of the \(\mathbb{Z}_3\)-graded vacuum triality in a single clear image. It shows how the same underlying cubic mechanism produces:
+- Superluminal optical shadows (lattice refresh kinks) in tabletop laser experiments
+- 120° cyclic kinks in \(c_{\rm hel}\) distributions and non-factorizable spin density matrix at the LHC
+The figure combines the geometric triality diagram, predicted shadow velocity curve, \(c_{\rm hel}\) comparison, and 4×4 spin matrix — providing an intuitive bridge between abstract \(\mathbb{Z}_3\) algebra and observable physics.
 
 
 ### 8. **Z3_IceCube_Time_Domain_Analyzer.py**
