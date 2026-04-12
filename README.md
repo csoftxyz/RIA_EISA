@@ -124,29 +124,8 @@ In contrast, the **Z₃ graded Lie superalgebra** introduces a **non-factorizabl
 producing a characteristic **order-3 cyclic phase** (`e^{i2π/3}`) and topological kinks in the helicity-angle (`c_hel`) distribution.
 This visualization directly compares the two frameworks and demonstrates how Z₃ naturally generates observable spin asymmetries that cannot be reproduced by any adjustment of NRQCD higher-order terms.
 
-### Z₃ 44-Vector Lattice Emergent Quantum Orbitals
-Hydrogen atom orbitals naturally emerging from Z₃ discrete topological lattice walks
-Z3_44_Lattice_Multi_Orbital.py + Z3_Emergent.pdf (7 high-resolution images)
-Project Overview
-This program simulates hydrogen atom electron orbitals purely from the Z₃ 44-vector lattice + topological phase barriers. Using only sparse soliton random walks (MCMC), it reproduces the classic quantum orbitals without solving the Schrödinger equation, spherical harmonics, or any continuous differential equations.
-Emergent orbitals:
-1s (spherical ground state)
-2s (radial node)
-2pₓ, 2pᵧ, 2p_z (dumbbell)
-3d_z² (double dumbbell)
-3d_xy (four-lobed)
-All 7 high-resolution images are collected in Z3_Emergent.pdf.
-Core Idea (Z₃ Philosophy)
-The electron is not a “wave function solution”, but a topological soliton undergoing continuous lattice refresh in the 44-vector Z₃ crystal.
-Orbital shapes emerge naturally from radial linear tension + triality phase barriers, without any hand-tuned magic numbers.
-This demonstrates the central Z₃ claim: continuous quantum mechanics is merely a macroscopic statistical shadow of an underlying discrete lattice dynamics.
-Parameters (Physically Meaningful)
-The simulation is controlled by the following physically meaningful parameters:
-CLOCK_CYCLES = 8,000,000: Total number of lattice refresh steps performed for each orbital.
-BETA = 2.5: Topological inverse temperature that controls the strength of quantum fluctuations (higher values correspond to lower effective temperature).
-LATTICE_STEP = 0.25: Maximum hop distance of the topological soliton per refresh step, in units of the Bohr radius $  a_0  $.
-orbital_type: Specifies the orbital to simulate (1s, 2s, 2pₓ, 2pᵧ, 2p_z, 3d_z², or 3d_xy).
-All phase barriers are naturally derived from the triality phase $  \omega = e^{2\pi i / 3}  $. No phenomenological tuning or magic numbers are used in the model.
+Z3_44_Lattice_Multi_Orbital.py (Updated April 10, 2026)
+This script uses a Z₃ 44-vector discrete lattice together with a Metropolis Monte Carlo random walk (8 million steps) to statistically generate probability distributions of hydrogen atomic orbitals (1s, 2s, 2pₓ/2pᵧ/2p_z, 3d etc.) without solving the Schrödinger equation or employing continuous wave functions. The energy function combines a radial linear tension term with orbit-specific topological barriers, motivated by triality phase considerations. It serves as a numerical demonstration of emergent quantum orbital shapes from discrete vacuum geometry. Outputs include 7 high-resolution orbital visualizations compiled in Z3_Emergent.pdf. This is a phenomenological numerical exploration within the Z₃ Cubic Vacuum Triality framework.
 
 ### 5. Neutrino Mixing Parameters
 
