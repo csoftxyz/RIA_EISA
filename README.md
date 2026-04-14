@@ -426,10 +426,7 @@ The current Z₃-graded framework evolved from earlier explorations of integrate
 - **Early EISA Preprint Series** (initial concepts of Extended Integrated Symmetry Algebra):  
   v1: https://www.preprints.org/manuscript/202507.2681/v4  
   v7 (major refinement): https://www.preprints.org/manuscript/202507.2681/v7  
-- **Foundational Proceedings Paper** (origin of transient quantum dynamics and graviton-cosmic phase transition ideas):  
-  **Title**: Towards a Unified Framework of Transient Quantum Dynamics Integrating Graviton Models with Cosmic Phase Transitions and Observational Verifications  
-  **Conference**: SPIE Proceedings of the International Conference on Quantum Optics and Photon Technology (QOFT 2024)  
-  **Link**: https://www.spiedigitallibrary.org/conference-proceedings-of-spie/13705/1370524/Towards-a-unified-framework-of-transient-quantum-dynamics--integrating/10.1117/12.3070369.short
+
 
 ### Contact
 - Issues tab for technical questions  
