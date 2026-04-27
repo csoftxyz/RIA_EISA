@@ -335,14 +335,6 @@ The model relies on geometric resonance computed from the Z₃ L₄₄ lattice p
 
 ---
 
-### z3_bsmumu_rigidity_test.py — Wilson C9 Zero-Parameter Rigidity Test
-- `z3_rigidity_test_beautiful_3d.png`  
-This script performs a purely geometric rigidity test of the Wilson coefficient C9^NP using the Z₃ 44-vector vacuum lattice. It demonstrates that the lattice geometry naturally locks C9 at approximately -1.0 without any free parameters, while simultaneously reproducing the A₂ projection linked to the magic angle ~1.090°.
-
-**Important Limitations**  
-This is a purely illustrative, zero-parameter geometric exploration derived solely from the algebraic structure of the Z₃-graded Lie superalgebra and the emergent L₄₄ lattice. It does **not** constitute a complete phenomenological prediction, nor does it include dynamical effects, renormalization group running, or experimental fitting. As with all other scripts in this repository, any apparent numerical agreement with Standard Model expectations or experimental data may be coincidental. The code is provided solely for transparency and reproducibility of the geometric reasoning.
-
-
 
 ### `z3_exploratory_consistency_verification.py`
 
