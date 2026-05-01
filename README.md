@@ -316,26 +316,31 @@ The value ξ_vac ≈ 70 nm is **not a free or fitted parameter**. It emerges dir
 
 ### Numerical Demonstration: Z₃ Geometric Resonance in Kagome Lattice
 
-This repository contains three key scripts that numerically demonstrate how the Z₃ vacuum geometry naturally induces a quantum anomalous Hall effect in the Kagome lattice — **purely from first-principles algebra, with no experimental fitting**.
+This repository contains three independent scripts that numerically demonstrate how the Z₃ vacuum geometry naturally induces a quantum anomalous Hall effect in the Kagome lattice — **purely from first-principles algebra, with no experimental fitting**.
 
 #### 1. 3D Geometric Resonance Visualization
-- **Script**: `z3_kagome_resonance_3d_zero_parameter_with_overlap.py`
+- **Script**: `z3_kagome_resonance_3d.py`
 - **Output**: [`z3_kagome_resonance_3d_zero_parameter_with_overlap.png`](z3_kagome_resonance_3d_zero_parameter_with_overlap.png)
 
-Visualizes the perfect geometric overlap between the Kagome lattice and the Z₃ A₂ vacuum projection. Computes the zero-parameter overlap integral, showing strong local resonance (max overlap = 0.9455) that spontaneously breaks time-reversal symmetry.
+Visualizes the perfect geometric overlap between the Kagome lattice and the Z₃ A₂ vacuum projection. Computes the zero-parameter overlap integral, showing strong local resonance (max local overlap = 0.9455) that can spontaneously break time-reversal symmetry.
 
 #### 2. Chern Number Calculation (Fukui-Hatsugai-Suzuki Algorithm)
-- **Script**: `z3_qah_berry_curvature_ultimate.py`
+- **Script**: `z3_kagome_berry_curvature.py`
 - **Output**: [`z3_qah_berry_curvature_ultimate.png`](z3_qah_berry_curvature_ultimate.png)
 
-Calculates the Berry curvature across the Brillouin zone using the standard FHS link-variable method. The lowest band yields an **exact Chern number of C = 1.0000**, confirming the emergence of a quantum anomalous Hall insulator purely from Z₃ triality phase \(\omega = e^{i2\pi/3}\).
+Calculates the Berry curvature across the Brillouin zone using the standard FHS link-variable method. The lowest band yields an **exact Chern number of C = 1.0000**, confirming the emergence of a quantum anomalous Hall insulator purely from the Z₃ triality phase \(\omega = e^{i2\pi/3}\).
 
 #### 3. Kubo Formula Transport Calculation (σ_xy and σ_xx)
-- **Script**: `z3_kagome_kubo_paper_figure.py`
+- **Script**: `z3_kagome_berry_curvature_6.py`
 - **Output**: [`z3_kagome_kubo_paper_figure.png`](z3_kagome_kubo_paper_figure.png)
 
-Performs full Kubo-Greenwood transport calculations directly from the Z₃ Hamiltonian. At T=0, the anomalous Hall conductivity is **strictly quantized** at \(\sigma_{xy} = 1.0000\, e^2/h\), while the longitudinal conductivity \(\sigma_{xx}\) remains negligibly small, consistent with a topological insulating state.
+Performs full Kubo-Greenwood transport calculations directly from the Z₃ Hamiltonian. At T = 0, the anomalous Hall conductivity is **strictly quantized** at \(\sigma_{xy} = 1.0000\, e^2/h\), while the longitudinal conductivity \(\sigma_{xx}\) remains negligibly small, consistent with a topological insulating state.
 
+---
+
+**Key Point**: All results are obtained from the bare Z₃ algebra and effective Hamiltonian **without any fitting to experimental data**. The quantized Hall conductivity and topological protection arise solely from the geometric resonance between the vacuum A₂ projection and the Kagome lattice.
+
+These calculations provide strong numerical support for the Z₃ framework's prediction of a magnetic-field-free quantum anomalous Hall effect in Kagome-type materials.
 ---
 
 **Key Point**: All results are obtained from the bare Z₃ algebra and effective Hamiltonian **without any fitting to experimental data**. The quantized Hall conductivity and topological protection arise solely from the geometric resonance between the vacuum A₂ projection and the Kagome lattice.
