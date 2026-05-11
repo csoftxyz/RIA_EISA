@@ -147,6 +147,44 @@ This visualization directly compares the two frameworks and demonstrates how Z�
 
 ---
 
+### Z₃ Vacuum 44-Vector Lattice Numerical Simulations
+To demonstrate two fundamental physical properties of the proposed **Z₃-graded vacuum lattice**, we performed high-precision numerical simulations using the fully reproducible Python script:
+> **`z3_lattice_full_test_english.py`**
+#### Simulation Files Included
+- `z3_lattice_full_test_english.py` → complete, self-contained test code (100% runnable, no warnings)
+- `z3_lorentz_highres.png` → high-resolution static plot (600 DPI)
+- `z3_lorentz_recovery.gif` → animated transition from UV to IR regime
+
+#### Simulation 1: Low-Energy Lorentz Symmetry Restoration
+On the discrete Z₃ vacuum lattice, the low-energy effective theory is obtained through the A₂ hexagonal projection of the 44-vector lattice.
+The tight-binding dispersion relation is:
+**E(k) = -t × Σ cos(k · v_i)   (i = 1 to 6)**
+where t = 1.0 is the hopping parameter, and v_i are the six nearest-neighbor vectors of the hexagonal lattice.
+**Key Result:**
+- In the ultraviolet (UV) region: the dispersion clearly shows hexagonal symmetry (discrete lattice signature).
+- In the infrared (IR) limit (small k): the dispersion converges to a **perfect circle**.
+This demonstrates that the discrete 44-vector lattice **dynamically restores continuous Lorentz invariance** at low energies.
+**Visual Evidence:**
+- High-resolution static plot: `z3_lorentz_highres.png`
+- Animated transition (UV hexagon → IR perfect circle): `z3_lorentz_recovery.gif`
+---
+#### Simulation 2: Exact Chiral Anomaly Cancellation for Three Fermion Generations
+The Z₃ vacuum lattice with cubic triality naturally embeds the Standard Model fermion content (quarks and leptons) across three generations.
+We computed the four critical anomaly coefficients:
+1. U(1)_Y³ anomaly  
+2. SU(2)² × U(1)_Y anomaly  
+3. SU(3)² × U(1)_Y anomaly  
+4. Gravitational × U(1)_Y anomaly
+**Numerical Result (machine precision):**
+- All four anomalies evaluate to **exactly zero** (within 10^{-15} numerical error).
+**Conclusion:**
+The combination of the 44-vector lattice structure and the Z₃ triality automorphism leads to exact cancellation of all gauge and gravitational anomalies for three generations.
+---
+#### Physical Significance
+Together, these results **provide preliminary numerical evidence** suggesting that the Z₃ vacuum lattice **may be more than a mathematical curiosity**, and could offer one possible geometric perspective toward understanding both relativistic quantum field theory and the Standard Model.
+---
+
+
 ### Z3_44_Lattice_Multi_Orbital.py (Updated April 10, 2026)
 
 This script uses a Z₃ 44-vector discrete lattice together with a Metropolis Monte Carlo random walk (8 million steps) to statistically generate probability distributions of hydrogen atomic orbitals (1s, 2s, 2pₓ/2pᵧ/2p_z, 3d etc.) without solving the Schrödinger equation or employing continuous wave functions. The energy function combines a radial linear tension term with orbit-specific topological barriers, motivated by triality phase considerations. It serves as a numerical demonstration of emergent quantum orbital shapes from discrete vacuum geometry. Outputs include 7 high-resolution orbital visualizations compiled in `Z3_Emergent.pdf`. This is a phenomenological numerical exploration within the Z₃ Cubic Vacuum Triality framework.
