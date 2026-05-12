@@ -184,6 +184,18 @@ The combination of the 44-vector lattice structure and the Z₃ triality automor
 Together, these results **provide preliminary numerical evidence** suggesting that the Z₃ vacuum lattice **may be more than a mathematical curiosity**, and could offer one possible geometric perspective toward understanding both relativistic quantum field theory and the Standard Model.
 ---
 
+# Z₃-Graded Dynamical Lagrangian (v15)
+
+The Python script `z3_lagrangian_core_15.py` provides a practical numerical implementation of a dynamical Lagrangian derived from the 15-dimensional $Z_3$-graded superalgebra.
+**Main features:**
+- Constructs the full graded algebra generators and brackets
+- Computes the graded curvature (Yang-Mills kinetic term)
+- Generates Yukawa couplings from the algebra and vacuum expectation values
+- Includes a simple Higgs-like potential with cubic term arising from triality
+- Produces a hierarchical fermion mass spectrum scaled to the top-quark mass
+This is a preliminary and exploratory implementation. It demonstrates that the underlying algebraic structure can, in principle, generate gauge kinetic terms, Yukawa interactions, a scalar potential, and fermion masses in a unified geometric way. However, many aspects (such as the precise choice of vacuum expectation values and potential coefficients) are still at the level of physically motivated trial values rather than fully derived from first principles.
+All results are fully reproducible. Running the script will output the effective Lagrangian components and sample mass spectra for several representative vacuum configurations.
+We view this as an early computational step toward exploring whether the $Z_3$ vacuum framework can serve as a geometric origin for parts of the Standard Model Lagrangian. Feedback, improvements, and extensions are very welcome.
 
 ### Z3_44_Lattice_Multi_Orbital.py (Updated April 10, 2026)
 
