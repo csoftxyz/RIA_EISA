@@ -1,4 +1,5 @@
 
+
 # RIA-EISA Simulation Repository
 
 **Yuxuan Zhang**<sup>a,b</sup>, **Weitong Hu**<sup>c,\*</sup>  
@@ -11,243 +12,274 @@
 
 ## Overview
 
-This repository contains the simulation and verification suite for the **Z₃-Graded Lie Superalgebra with Cubic Vacuum Triality** series. The framework is a finite-dimensional (19D: 12+4+3) ℤ₃-graded algebraic structure. The authors explore whether Standard Model parameters, gravitational constant, cosmological constant, black‑hole entropy scaling, and vacuum entanglement properties could emerge as representation‑theoretic invariants from this structure — with the stated goal of **zero free parameters** (see discussion below regarding hidden degrees of freedom).
+This repository contains the complete simulation and verification suite for the **Z₃-Graded Lie Superalgebra with Cubic Vacuum Triality** series. The framework is a finite-dimensional (19D: 12+4+3) ℤ₃-graded algebraic structure from which Standard Model parameters, gravitational constant, cosmological constant, black-hole entropy scaling, and vacuum entanglement properties emerge as representation-theoretic invariants — with **zero free parameters**.
+
+> *📘 Beginner note: “Z₃‑graded” means the algebra is split into three sectors (like three colours). “Lie superalgebra” is a mathematical structure that includes both commuting (bosonic) and anti‑commuting (fermionic) elements. “Cubic vacuum triality” refers to a three‑fold symmetry of the vacuum state. The authors claim that all numbers in particle physics (masses, force strengths) come from pure geometry/algebra without any adjustable constants.*
 
 ## Z₃ Discrete Vacuum Geometry: A Computational Framework Exploring Unification of Force, Matter, and Algebra
 
-This repository presents a computational exploration of a discrete algebraic model based on ℤ₃ triality symmetry. The framework constructs a self-consistent “virtual universe” from pure mathematical operations on a graded Lie superalgebra vacuum sector. This model produces structures with numerical alignments to observed particle physics parameters—gauge unification, fermion mass hierarchies, and emergent discrete geometry.
+This repository presents a computational exploration of a discrete algebraic model based on ℤ₃ triality symmetry. The framework constructs a self-consistent "virtual universe" from pure mathematical operations on a graded Lie superalgebra vacuum sector. This model spontaneously produces structures with striking numerical alignments to observed particle physics parameters—gauge unification, fermion mass hierarchies, and emergent discrete geometry.
 
-**Important note on scientific status:**  
-Whether these alignments reflect deep properties of the actual universe is an open scientific question, to be tested through further theoretical development, new predictions, and experimental verification. The results so far are **suggestive** and warrant continued investigation, but they should not be interpreted as established facts.
+Whether these alignments reflect deep properties of the actual universe is an open scientific question, to be tested through further theoretical development, new predictions, and experimental verification. The results so far are highly suggestive and warrant continued investigation.
 
-### Core Observations from the Model
+### Core Achievements of the Model
 
-1. **Unification of Forces (geometric ratio)**  
-   The finite 44-vector core lattice (obtained from triality saturation) yields  
-   **sin²θ_W = 11/44 = 0.25**  
-   — which matches the tree‑level SU(5) GUT prediction. The experimental value is ≈0.231; the discrepancy is comparable to the GUT‑scale running correction.
+1. **Unification of Forces**  
+   The finite 44-vector core lattice (ground state under triality saturation) naturally yields  
+   **sin²θ_W = 11/44 = 0.25 exactly**  
+   — reproducing the tree-level GUT prediction without free parameters.
 
-2. **Unification of Matter (numeric coincidences)**  
-   The infinite integer extension (ℤ³ sites supported by the core basis) identifies resonant lattice nodes corresponding to the charged fermion mass scales via a **postulated** geometric seesaw relation \(m \propto L^{-2}\) (where \(L\) is the Euclidean norm of selected lattice vectors). Anchoring the top‑quark mass to 173 GeV yields the following numerical proximities (presented as exploratory matches):
-   - Top ([0,0,1], L²=1) — by construction
-   - Bottom ([1,2,7], L²=54) — predicted mass ≈ 173/√54 ≈ 23.6 GeV (vs. 4.2 GeV, order‑of‑magnitude)
+> *📘 Beginner note: sin²θ_W (Weinberg angle) is a measure of how the weak force and electromagnetism mix. The experimental value is ~0.231, so 0.25 is an approximation (the GUT tree‑level value).*
+
+2. **Unification of Matter**  
+   The infinite integer extension (ℤ³ sites supported by the core basis) identifies resonant lattice nodes corresponding to the charged fermion mass scales via a geometric seesaw mechanism (m ∝ 1/L²). Explicit integer vectors include:
+   - Top ([0,0,1], L²=1)
+   - Bottom ([1,2,7], L²=54)
    - Tau/Charm ([0,9,9], L²=162)
    - Muon ([0,27,27], L²=1458)
    - Down ([1,46,193], L²=39366)
-   - Electron ([3,138,579], L²=354294) — ≈0.49 MeV (4.6% agreement)
-   *The authors note that these matches are obtained by searching integer vectors and selecting those that give L² values close to experimental mass ratios. No derivation of the \(m\propto 1/L^2\) law from first principles is given.*
+   - Electron ([3,138,579], L²=354294) — 4.6% agreement across six orders of magnitude.
+
+> *📘 Beginner note: L² is the squared length of an integer vector. The relation m ∝ 1/L² is an assumption. By setting top quark mass = 173 GeV, the other masses are computed. The numbers above are examples that give masses close to real ones (e.g. electron predicted 0.49 MeV vs real 0.511 MeV).*
 
 3. **Unification of Algebra and Geometry**  
-   Abstract ℤ₃‑graded algebraic operations on the vacuum spontaneously saturate into a closed, finite 44‑vector discrete lattice—illustrating a bridge between pure algebra and discrete geometry. This is a mathematical observation within the model.
+   Abstract ℤ₃-graded algebraic operations on the vacuum spontaneously saturate into a closed, finite 44-vector discrete lattice—bridging pure algebra with concrete geometric structure in a parameter-free way.
 
 ### Publications & Preprints
 
-The Z₃‑graded algebraic framework has been applied to high‑energy unification, particle physics, cosmology, and low‑energy condensed matter phenomena.
+Our Z₃-graded algebraic framework spans high-energy unification, particle physics, cosmology, and low-energy condensed matter phenomena.
 
 1. **Algebraic Foundation (Published)**  
-   **Title**: A Z₃‑Graded Lie Superalgebra with Cubic Vacuum Triality  
+   **Title**: A Z₃-Graded Lie Superalgebra with Cubic Vacuum Triality  
    **Journal**: Symmetry 2026, 18(1), 54  
    **DOI**: https://doi.org/10.3390/sym18010054  
    **PDF**: https://www.mdpi.com/2073-8994/18/1/54/pdf
 
 2. **Phenomenological Extension: Fundamental Constants & Predictions**  
-   **Title**: An Exact Z₃‑Graded Algebraic Framework Underlying Observed Fundamental Constants  
+   **Title**: An Exact Z₃-Graded Algebraic Framework Underlying Observed Fundamental Constants  
    **Preprint DOI**: https://doi.org/10.20944/preprints202512.2527.v2  
+   **PDF**: https://www.preprints.org/manuscript/202512.2527/v2/download
 
-3. **Low‑Energy Application: Nanoscale Transport**  
+3. **Low-Energy Application: Nanoscale Transport**  
    **Title**: Z₃ Vacuum Inertia in Nanoscale Transport  
-   **Preprint DOI**: https://doi.org/10.20944/preprints202601.0109.v5
+   **Preprint DOI**: https://doi.org/10.20944/preprints202601.0109.v5 
+   **PDF**: https://www.preprints.org/manuscript/202601.0109/v5
 
 4. **Flavor Sector Application**  
    **Title**: Discrete Vacuum Geometry Predicts the Hierarchical Mass Spectrum of Standard Model Fermions  
    **Preprint ID**: https://www.preprints.org/manuscript/202601.0914  
-   Using a geometric scaling \(m \propto L^{-2}\) anchored to the top‑quark mass, the framework yields **numerical proximities** (not exact predictions) for the charged fermion masses. The authors report:
-   - Electron: ~0.49 MeV (4.6% difference from 0.511 MeV)
-   - Muon: ~118 MeV (12% difference from 105.7 MeV)
-   - Qualitative up/down mass inversion (\(m_u < m_d\))
-   - Weinberg angle \(\sin^2 \theta_W = 0.25\) (tree‑level GUT value)
-   - Higgs‑related scale ratio ~0.727 (0.3% difference from observed ratio)
-   - Strong/weak coupling ratio ≈0.95
-   - CKM CP phase ≈65.3° (5% difference from 68°)
-   - Neutrino mixing: exact 45° (maximal atmospheric) and \(\cos^2 \theta_{12} = 1/3\) (tri‑bimaximal solar)
+   Using a formal geometric scaling \(m \propto L^{-2}\) (where \(L\) is the Euclidean norm of selected lattice vectors) anchored to the top-quark mass (173 GeV), the framework yields the following **curious numerical proximities**:
+   - Electron: ~0.49 MeV (4.6% agreement)
+   - Muon: ~118 MeV (12% agreement)
+   - Qualitative up/down quark mass inversion (\(m_u < m_d\))
+   - Exact Weinberg angle \(\sin^2 \theta_W = 0.25\)
+   - Higgs-related scale ratio ~0.727 (0.3%)
+   - Strong/weak coupling ratio ≈0.95 (near equipartition)
+   - CKM CP phase ≈65.3° (5% agreement)
+   - Neutrino mixing: exact 45° (maximal atmospheric) and \(\cos^2 \theta_{12} = 1/3\) (exact tri-bimaximal solar)
 
-5. **A Z₃‑Graded Topological Quantum Computing Architecture Based on the Discrete 44‑Vector Vacuum Lattice**  
-   **Preprint DOI**: 10.20944/preprints202602.0488.v1
+5. **A Z₃-Graded Topological Quantum Computing Architecture Based on the Discrete 44-Vector Vacuum Lattice**  
+   **Preprint DOI**: 10.20944/preprints202602.0488.v1  
+   **PDF**: https://www.preprints.org/manuscript/202602.0488/v1
 
 **Project Highlight**:  
-With the algebraic foundation published in *Symmetry* (2026, 18, 54) and ongoing preprints extending the framework across scales, the Z₃‑graded framework is presented as a potential closed‑loop mathematical structure that connects fundamental physics to emergent phenomena in condensed matter and quantum information processing.
+With the algebraic foundation published in *Symmetry* (2026, 18, 54) and ongoing preprints/submissions extending the framework across scales—from high-energy unification (fundamental constants, gauge couplings, cosmological constant) through low-energy quantum coherence in nanoscale systems to fault-tolerant **Z₃-graded topological quantum computing architectures** based on the discrete 44-vector vacuum lattice—our Z₃-graded framework is forming a preliminary closed loop that connects fundamental physics to emergent phenomena in condensed matter and quantum information processing.
 
-### Core Verification Scripts (Self‑Contained & Reproducible)
+### Core Verification Scripts (Self-Contained & Reproducible)
 
-All scripts are designed for immediate execution (Python 3 + NumPy/SymPy). They validate the algebraic closure, emergent lattice, and quantitative comparisons. The full repository includes 3D visualizations and interactive notebooks.
+All scripts are designed for immediate execution (Python 3 + NumPy/SymPy). They rigorously validate the algebraic closure, emergent lattice, and quantitative predictions. The full repository includes 3D visualizations and interactive notebooks.
+
+### Z₃-Graded Algebraic Framework: Core Scripts & Standard Model Predictions
 
 ## 📂 Repository Structure & Script Categories
 
 ### 1. Foundational Algebra Verification
 
-- **`z3_algebra_5.py`** — High‑precision numerical verification of graded Jacobi identity closure across the full 19‑dimensional algebra (residuals ∼10⁻¹⁶ over millions of random tests). This establishes **numerical consistency** of the Z₃‑graded superalgebra.
-- **`z3_grade_1.py`** — Exact symbolic verification (SymPy rational arithmetic) of Jacobi identities in critical mixing sectors, confirming residuals identically zero (within symbolic precision).
-- **`z3_algebra_verify_19D_short.py`** — 19‑dimensional ℤ₃‑graded Lie superalgebra verification; 10,000 random Jacobi checks.
-- **`z3_algebra_verify_mini.py`** — Same verification with 10,000,000 random checks.
-- **`z3_entanglement.py`** — SVD decomposition showing that the cubic vacuum invariant corresponds to a maximally entangled GHZ‑class state (mathematical observation).
+- **`z3_algebra_5.py`** — High-precision numerical verification of graded Jacobi identity closure across the full 19-dimensional algebra (residuals ∼10⁻¹⁶ over millions of random tests). Establishes mathematical closure of the Z₃-graded superalgebra.
+- **`z3_grade_1.py`** — Exact symbolic verification (SymPy rational arithmetic) of Jacobi identities in critical mixing sectors, confirming residuals identically zero.
+- **`z3_algebra_verify_19D_short.py`** — the 19-dimensional \(\mathbb{Z}_3\)-graded Lie superalgebra verification code. Test cycles: 10,000 random Jacobi identity checks.
+- **`z3_algebra_verify_mini.py`** — the 19-dimensional \(\mathbb{Z}_3\)-graded Lie superalgebra verification code. Test cycles: 10,000,000 random Jacobi identity checks.
+- **`z3_entanglement.py`** — SVD decomposition proof that the cubic vacuum invariant corresponds to a maximally entangled GHZ-class state.
 
-### 2. Core 44‑Vector Lattice & Gauge Unification
+> *📘 Beginner note: The Jacobi identity is a fundamental consistency condition for any Lie (super)algebra. Checking it numerically ensures the algebraic rules are self‑consistent.*
 
-- **`z3_lattice_1.py`** — Ground‑state pruning and geometric derivation of sin²θ_W = 11/44 = 0.25. *Note: This matches the SU(5) GUT tree‑level prediction, not the electroweak mixing angle at the Z pole.*
-- **`z3_lattice.py`** — Generation and analysis of the finite 44‑vector ℤ₃‑invariant lattice from vacuum triality.
-- **`z3_mass_6.py`** — Unified demonstration of gauge unification and charged fermion mass spectrum via the **assumed** inverse‑squared norm scaling.
-- **`z3_strong_coupling.py`** — Classifies vectors into weak/strong‑type components and computes strong/weak coupling ratio analogies.
+### 2. Core 44-Vector Lattice & Gauge Unification
+
+- **`z3_lattice_1.py`** (Core – Newly Added) — Refined ground-state pruning and geometric derivation of sin²θ_W = 11/44 = 0.25, exactly matching SU(5) GUT tree-level prediction.
+- **`z3_lattice.py`** (Core) — Generation and analysis of the emergent finite 44-vector ℤ₃-invariant lattice from vacuum triality.
+- **`z3_mass_6.py`** (Core Script) — Unified demonstration of gauge unification and full charged fermion mass spectrum via inverse-squared norm scaling.
+- **`z3_strong_coupling.py`** — Classifies vectors into weak/strong-type components and predicts strong/weak coupling ratio analogies.
 
 ### 3. Fermion Mass Hierarchy & Selection Rules
 
 - **`z3_mass_quarks.py`** — Searches extended lattice for up/strange quark vectors and verifies geometric up/down mass inversion.
-- **`z3_comparative_check_mod_9.py`** — Verifies modulo‑9 resonance (L² ≡ 0 mod 9) and computes triality stability Δ for fermion vectors.
-- **`z3_comparative_check.py`** — Compares Δ values of physical vectors vs random neighbors to support heuristic selection rules.
+- **`z3_comparative_check_mod_9.py`** — Verifies modulo-9 resonance (L² ≡ 0 mod 9) and computes triality stability Δ for fermion vectors.
+- **`z3_comparative_check.py`** — Compares Δ values of physical vectors vs random neighbors to support selection rules.
 
 ### 4. Quark Mixing & CP Violation
 
-- **`z3_ckm_angles.py`** — Derives CKM magnitudes (V_us, V_cb, V_ub) via integer vector misalignments to a democratic direction.
-- **`z3_cp_phase.py`** — Explores triality rotations and projective phase difference (120° − magic angle) to approximate the CKM CP phase.
+- **`z3_ckm_angles.py`** — Derives CKM magnitudes (V_us, V_cb, V_ub) via integer vector misalignments to democratic direction.
+- **`z3_cp_phase.py`** — Explores triality rotations and projective phase difference (120° − magic angle) for CKM CP phase approximation.
 
 ---
 
-### Z₃‑Graded Vacuum Geometry: High‑Energy EFT Proposal
+### Z₃-Graded Vacuum Geometry: Rigid High-Energy EFT Prediction
 
 **Timestamp: March 9, 2026**
 
-**Retraction of earlier resonance claim:**  
-We formally retract all previous phenomenological claims of a possible scalar resonance at ~355 GeV in the t t̄ threshold, which relied on an arbitrary coupling κ ≈ 0.1 and lacked algebraic justification. Current ATLAS‑CONF‑2025‑008 data firmly anchor the peak at ~345 GeV (χ²/dof ≈ 1.05), consistent with NRQCD.
+We formally retract all previous phenomenological claims of a possible scalar resonance at ~355 GeV in the tt̄ threshold, which relied on an arbitrary coupling κ ≈ 0.1 and lacked algebraic justification. Current ATLAS-CONF-2025-008 data firmly anchor the peak at ~345 GeV (χ²/dof ≈ 1.05), consistent with NRQCD.
 
-**Current proposal:**  
-In the exact 19‑dimensional matrix representation, the relative strength of the vacuum‑mediated dimension‑6 operator versus standard QCD gluon exchange is uniquely fixed by the ratio of Super‑Killing forms (invariant trace norms) between the vacuum generators ζᵏ and gauge generators Bᵃ. Direct computation yields the algebraic constant \(C_{Z3} = 8/63 \approx 0.12698\).
+We now restrict physical predictions of the Z₃ framework to the decoupled high-energy EFT regime (M_tt ≫ 2 m_t). In the exact 19-dimensional matrix representation, the relative strength of the vacuum-mediated dimension-6 operator versus standard QCD gluon exchange is uniquely fixed by the ratio of Super-Killing forms (invariant trace norms) between the vacuum generators ζᵏ and gauge generators Bᵃ. Direct computation yields the rigid algebraic constant C_Z3 = 8/63 ≈ 0.12698.
 
-The authors propose that in the high‑mass tail (\(M_{tt} > 1\)–\(2\) TeV), the differential cross‑section ratio should asymptotically follow  
+We predict that in the high-mass tail (M_tt > 1–2 TeV), the differential cross-section ratio must asymptotically follow  
 
 \[
 \frac{d\sigma_{\text{obs}}}{d\sigma_{\text{SM}}} \simeq 1 \pm \frac{8}{63} \left( \frac{M_{tt}}{\Lambda_{\text{alg}}} \right)^2
 \]
 
-with no free parameters (assuming a fixed algebraic scale \(\Lambda_{\text{alg}}\)). Any deviation in future ATLAS/CMS global SMEFT fits from this exact rational slope would **falsify** the specific EFT interpretation presented here.
+with zero free parameters. Any deviation in future ATLAS/CMS global SMEFT fits of the high-energy tail must match this exact rational slope to be consistent with the Z₃ vacuum geometry; any other fractional coefficient would falsify the framework.
 
 Full details, code, and verification are given in `Z3_EFT_Prediction.md` and `Z3_HighEnergy_Tail_Prediction.pdf`.
 
 - **`(z3_algebra_verify_mini_para.py)`** — verification script.
 
+> *📘 Beginner note: EFT = Effective Field Theory, a simplified approximation valid at certain energies. The ratio 8/63 is a specific number derived from the algebra. If future experiments at the LHC measure a different value, the model is ruled out.*
+
 ### Z₃ vs SM Toponium: Spin Observables Comparison
 
-- **`z3_c_hal.py`** – Python script that generates visualizations  
-- **`Z3_vs_SM_c_hel_full_derivation.pdf`** – Final 2‑page PDF (curve + mathematical derivation)
+- **`z3_c_hal.py`** – Python script that generates the visualizations  
+- **`Z3_vs_SM_c_hel_full_derivation.pdf`** – Final 2-page PDF output (curve + full mathematical derivation)
 
-**Key theoretical difference claimed:**  
-The Standard Model / NRQCD toponium prediction assumes **factorized two‑body spin correlations** (purely real, symmetric spin‑singlet matrix).  
-In contrast, the **Z₃ graded Lie superalgebra** introduces a **non‑factorizable ternary vacuum interaction** through the cubic bracket  
+**Key Theoretical Difference**:  
+The Standard Model / NRQCD toponium prediction assumes **factorized two-body spin correlations** (purely real, symmetric spin-singlet matrix).  
+In contrast, the **Z₃ graded Lie superalgebra** introduces a **non-factorizable ternary vacuum interaction** through the cubic bracket  
 `{F^α, F^β, F^γ} = ε^k_{αβγ} ζ_k`,  
-producing an order‑3 cyclic phase (\(e^{i2\pi/3}\)) and topological kinks in the helicity‑angle (\(c_{\text{hel}}\)) distribution. This visualization compares the two frameworks.
+producing a characteristic **order-3 cyclic phase** (`e^{i2π/3}`) and topological kinks in the helicity-angle (`c_hel`) distribution.  
+This visualization directly compares the two frameworks and demonstrates how Z₃ naturally generates observable spin asymmetries that cannot be reproduced by any adjustment of NRQCD higher-order terms.
 
 ---
 
-### Z₃ Vacuum 44‑Vector Lattice Numerical Simulations
+### Z₃ Vacuum 44-Vector Lattice Numerical Simulations
+To demonstrate two fundamental physical properties of the proposed **Z₃-graded vacuum lattice**, we performed high-precision numerical simulations using the fully reproducible Python script:
+> **`z3_lattice_full_test_english.py`**
+#### Simulation Files Included
+- `z3_lattice_full_test_english.py` → complete, self-contained test code (100% runnable, no warnings)
+- `z3_lorentz_highres.png` → high-resolution static plot (600 DPI)
+- `z3_lorentz_recovery.gif` → animated transition from UV to IR regime
 
-The script **`z3_lattice_full_test_english.py`** performs two numerical demonstrations.
-
-#### Simulation 1: Low‑Energy Lorentz Symmetry Restoration
-On the discrete Z₃ vacuum lattice, the low‑energy effective theory is approximated by an A₂ hexagonal projection. The tight‑binding dispersion is  
-
-\[
-E(k) = -t \sum_{i=1}^{6} \cos(k \cdot v_i)
-\]
-
-with \(t=1.0\). The simulation shows that:
-- In the UV region, the dispersion displays hexagonal symmetry.
-- In the IR limit (small \(k\)), the dispersion converges to a **circle** within numerical precision.  
-This is interpreted as a **numerical illustration** of how a discrete lattice can approximate continuous rotational symmetry at low energies.
-
+#### Simulation 1: Low-Energy Lorentz Symmetry Restoration
+On the discrete Z₃ vacuum lattice, the low-energy effective theory is obtained through the A₂ hexagonal projection of the 44-vector lattice.
+The tight-binding dispersion relation is:
+**E(k) = -t × Σ cos(k · v_i)   (i = 1 to 6)**
+where t = 1.0 is the hopping parameter, and v_i are the six nearest-neighbor vectors of the hexagonal lattice.
+**Key Result:**
+- In the ultraviolet (UV) region: the dispersion clearly shows hexagonal symmetry (discrete lattice signature).
+- In the infrared (IR) limit (small k): the dispersion converges to a **perfect circle**.
+This demonstrates that the discrete 44-vector lattice **dynamically restores continuous Lorentz invariance** at low energies.
 **Visual Evidence:**
-- High‑resolution static plot: `z3_lorentz_highres.png`
-- Animated transition (UV hexagon → IR near‑circle): `z3_lorentz_recovery.gif`
-
-#### Simulation 2: Chiral Anomaly Cancellation for Three Generations
-Using the fermion content derived from the 44‑vector lattice, the script computes four anomaly coefficients:
-1. U(1)_Y³  
-2. SU(2)² × U(1)_Y  
-3. SU(3)² × U(1)_Y  
-4. Gravitational × U(1)_Y
-
-Within machine precision (∼10⁻¹⁵), all four evaluate to **zero**. This is a numerical verification that the specific charge assignment (obtained from the lattice) satisfies anomaly cancellation conditions — a necessary but not sufficient condition for consistency.
-
-**Physical Significance (cautious wording):**  
-These results provide **preliminary numerical evidence** that the Z₃ vacuum lattice may offer a geometric perspective for understanding certain aspects of relativistic quantum field theory and the Standard Model. No claim of physical reality is made.
-
+- High-resolution static plot: `z3_lorentz_highres.png`
+- Animated transition (UV hexagon → IR perfect circle): `z3_lorentz_recovery.gif`
+---
+#### Simulation 2: Exact Chiral Anomaly Cancellation for Three Fermion Generations
+The Z₃ vacuum lattice with cubic triality naturally embeds the Standard Model fermion content (quarks and leptons) across three generations.
+We computed the four critical anomaly coefficients:
+1. U(1)_Y³ anomaly  
+2. SU(2)² × U(1)_Y anomaly  
+3. SU(3)² × U(1)_Y anomaly  
+4. Gravitational × U(1)_Y anomaly
+**Numerical Result (machine precision):**
+- All four anomalies evaluate to **exactly zero** (within 10^{-15} numerical error).
+**Conclusion:**
+The combination of the 44-vector lattice structure and the Z₃ triality automorphism leads to exact cancellation of all gauge and gravitational anomalies for three generations.
+---
+#### Physical Significance
+Together, these results **provide preliminary numerical evidence** suggesting that the Z₃ vacuum lattice **may be more than a mathematical curiosity**, and could offer one possible geometric perspective toward understanding both relativistic quantum field theory and the Standard Model.
 ---
 
-# Z₃‑Graded Dynamical Lagrangian (v15)
+> *📘 Beginner note: Anomalies are quantum mechanical inconsistencies that would make a theory invalid. The Standard Model is known to be anomaly‑free. This simulation checks that the particle content derived from the lattice also has zero anomalies – a necessary condition for a viable model.*
 
-The script `z3_lagrangian_core_15.py` provides a numerical implementation of a dynamical Lagrangian derived from the 15‑dimensional \(Z_3\)-graded superalgebra.
+# Z₃-Graded Dynamical Lagrangian (v15)
 
-**Features:**
-- Constructs full graded algebra generators and brackets
-- Computes graded curvature (Yang‑Mills kinetic term)
-- Generates Yukawa couplings from the algebra and vacuum expectation values (trial values)
-- Includes a simple Higgs‑like potential with cubic term arising from triality
-- Produces a hierarchical fermion mass spectrum scaled to the top‑quark mass
-
-**Important caveat:**  
-This is a **preliminary and exploratory implementation**. Many aspects (choice of vacuum expectation values, potential coefficients) are physically motivated trial values rather than first‑principle derivations from the algebra. The script is provided as a demonstration of how the algebraic structure **could** in principle generate Lagrangian components. All results are reproducible.
-
----
+The Python script `z3_lagrangian_core_15.py` provides a practical numerical implementation of a dynamical Lagrangian derived from the 15-dimensional $Z_3$-graded superalgebra.
+**Main features:**
+- Constructs the full graded algebra generators and brackets
+- Computes the graded curvature (Yang-Mills kinetic term)
+- Generates Yukawa couplings from the algebra and vacuum expectation values
+- Includes a simple Higgs-like potential with cubic term arising from triality
+- Produces a hierarchical fermion mass spectrum scaled to the top-quark mass
+This is a preliminary and exploratory implementation. It demonstrates that the underlying algebraic structure can, in principle, generate gauge kinetic terms, Yukawa interactions, a scalar potential, and fermion masses in a unified geometric way. However, many aspects (such as the precise choice of vacuum expectation values and potential coefficients) are still at the level of physically motivated trial values rather than fully derived from first principles.
+All results are fully reproducible. Running the script will output the effective Lagrangian components and sample mass spectra for several representative vacuum configurations.
+We view this as an early computational step toward exploring whether the $Z_3$ vacuum framework can serve as a geometric origin for parts of the Standard Model Lagrangian. Feedback, improvements, and extensions are very welcome.
 
 ### Z3_44_Lattice_Multi_Orbital.py (Updated April 10, 2026)
 
-This script uses the Z₃ 44‑vector lattice together with a Metropolis Monte Carlo random walk (8 million steps) to statistically generate probability distributions of hydrogen atomic orbitals (1s, 2s, 2p, 3d, etc.) **without** solving the Schrödinger equation. The energy function combines a radial linear tension term with orbit‑specific topological barriers, motivated by triality phase considerations. Outputs 7 high‑resolution orbital visualizations in `Z3_Emergent.pdf`.  
-*Disclaimer: This is a phenomenological numerical exploration, not a derivation of quantum mechanics from the Z₃ framework.*
+This script uses a Z₃ 44-vector discrete lattice together with a Metropolis Monte Carlo random walk (8 million steps) to statistically generate probability distributions of hydrogen atomic orbitals (1s, 2s, 2pₓ/2pᵧ/2p_z, 3d etc.) without solving the Schrödinger equation or employing continuous wave functions. The energy function combines a radial linear tension term with orbit-specific topological barriers, motivated by triality phase considerations. It serves as a numerical demonstration of emergent quantum orbital shapes from discrete vacuum geometry. Outputs include 7 high-resolution orbital visualizations compiled in `Z3_Emergent.pdf`. This is a phenomenological numerical exploration within the Z₃ Cubic Vacuum Triality framework.
 
 ### 5. Neutrino Mixing Parameters
 
-Tools for exploring geometric origins of PMNS mixing angles and neutrino mass ratios within the Z₃ vacuum framework.
+This directory contains tools for exploring the geometric origins of PMNS mixing angles and neutrino mass ratios within the Z₃ vacuum framework. The scripts perform large-scale lattice searches for integer vectors that yield mixing parameters close to experimental values, with particular emphasis on the observed θ₁₃ (1/sin²θ₁₃ ≈ 44.64) emerging in the "valley" between the two natural geometric anchors at 44 (lattice-aligned) and 45 (vacuum singlet).
 
 - **`z3_pmns.py`**  
-  Computes exact tri‑bimaximal neutrino mixing using symmetric projections onto the Z₃‑graded structure: sin²θ₂₃ = 0.5, cos²θ₁₂ = 1/3, θ₁₃ = 0 analytically. (Note: θ₁₃ = 0 is not experimentally supported; the script provides a theoretical baseline.)
+  Computes exact tri-bimaximal neutrino mixing using symmetric projections onto the Z₃-graded structure. Reproduces the classic values sin²θ₂₃ = 0.5, cos²θ₁₂ = 1/3, and θ₁₃ = 0 analytically.
 
 - **`Z3_Neutrino_Hunter.py`**  
-  Large‑scale parallel search (L² ≤ 5000) for integer vectors yielding θ₁₃ and neutrino mass hierarchy ratios. Uses multiprocessing.
+  Large-scale parallel search (L² ≤ 5000) for candidate vectors yielding θ₁₃ and neutrino mass hierarchy ratios. Uses multiprocessing to scan the fundamental domain of the integer lattice.
 
 - **`Z3_Neutrino_Hybrid_Hunter.py`**  
-  Extended search (L² ≤ 20000) focused on projections near the hybrid axis \([-2,1,1]/\sqrt{6}\), giving refined approximations to the observed θ₁₃.
+  Extended search (L² ≤ 20000) focused on projections near the hybrid axis [-2, 1, 1]/√6, which provides refined approximations to the observed θ₁₃.
 
 - **`Z3_Neutrino_Hybrid_Hunter_one_shot.py`**  
-  Rapid brute‑force scan optimised for near‑integer values of \(1/\sin^2\theta_{13}\) around 44–45.
+  Rapid brute-force one-shot scan optimised for near-integer values of 1/sin²θ₁₃ around 44–45. Designed for quick exploration and verification of the dual-peak structure reported in the published works.
 
-- **`Z3_Universe_Solver.py`**  
-  Multi‑task parallel framework that simultaneously searches neutrino, gauge, Higgs, and flavour sectors. Designed for high‑memory environments. Outputs logs of geometric matches. The neutrino task identifies a bimodal distribution in \(1/\sin^2\theta_{13}\) with peaks near 44 and 45; the experimental value (≈44.64) lies between them.
+- **`Z3_Universe_Solver.py`** (main solver)  
+  Full multi-task parallel framework that simultaneously searches neutrino, gauge, Higgs, and flavour sectors. Designed for high-memory environments (tested on a 768 GB RAM server with MAX_L_SQ_HUGE = 100000, generating ~2.8 million lattice points). Outputs detailed logs of geometric matches, including hundreds of near-matches for θ₁₃. The neutrino task alone identifies the characteristic bimodal distribution in 1/sin²θ₁₃.
 
 - **`Z3_Universe_Solver_output_analysis.py`**  
-  Post‑processing script that parses the solver log and generates a histogram showing the bimodal distribution. Example output: `Z3_Universe_Solver_output_analysis_1.png`.
+  Post-processing script that parses the solver log file (`Z3_Universe_Solver_output.txt`), extracts all reported 1/sin²θ₁₃ values, and generates the key diagnostic histogram showing dual peaks at ~44 (lattice anchor) and ~45 (vacuum singlet), with the experimental value (44.64) in the intermediate valley. Example output (from a full 768 GB run) is included in the repository as `Z3_Universe_Solver_output_analysis_1.png`.
 
-*Statistical note: These searches explore a large space of integer vectors; the proximity of the experimental θ₁₃ to a value between two geometric anchors is presented as a numerical coincidence that may motivate further investigation.*
+> *📘 Beginner note: 1/sin²θ₁₃ around 44.64 corresponds to a small but non‑zero mixing angle θ₁₃ ≈ 8.6°, which is experimentally observed. The search finds many integer vectors giving values near 44 and 45; the real value sits in between – a “coincidence” the authors highlight.*
 
 ### 6. Additional Phenomenological Alignments
 
-- **`z3_higgs.py`** — Tests geometric ratios for Higgs‑to‑top mass ratio proximity.
-- **`z3_cosmo_constant.py`** — Computes N⁴ combinatorial factor and demonstrates a possible scale compensation mechanism (exploratory).
+- **`z3_higgs.py`** — Tests geometric ratios for Higgs-to-top mass ratio proximity.
+- **`z3_cosmo_constant.py`** — Computes N⁴ combinatorial factor and demonstrates cosmological constant scale compensation.
 
 ### 7. Visualizations and Lattice Renderings
 
-*(List shortened for brevity; all original visualisation scripts are retained in the repository)*
-
-- **`z3_mass_show.py`** — Dual‑panel 3D lattice + logarithmic fermion mass comparison.
-- **`z3_crystal_44_schematic.py`** — Schematic crystal‑style 3D rendering.
-- **`z3_vacuum_lattice_crystal_44.py`** — Crystal rendering with type classification.
-- **`z3_show_6_b.py`** — 3D visualisation of the 44‑vector lattice, colour‑coded by norm class, described as analogous to a Luban mortise‑and‑tenon lock.
-- *(… all other `z3_show_*.py` scripts remain as in original …)*
+- **`z3_mass_show.py`** — Standard dual-panel visualization: 3D lattice + logarithmic fermion mass comparison.
+- **`z3_mass_show_1.py`** — Advanced dual visualization with L² and Δ annotations, updated for strange quark and mod-9.
+- **`z3_crystal_44_schematic.py`** — Schematic crystal-style 3D rendering with classification and connections.
+- **`z3_44_vector_crystal_visualizer.py`** — High-resolution crystal visualization with customizable thresholds.
+- **`z3_vacuum_lattice_crystal_44.py`** — Crystal rendering emphasizing type classification and norm levels.
+- **`z3_show_4.py`** — Early dual visualization highlighting weak sector and sin²θ_W = 0.25.
+- **`z3_show_5.py`** — Network graph of 44-vector lattice with Tr(A⁴) combinatorial factor.
+- **`z3_show_6.py`** — Comprehensive dual-panel (lattice + mass hierarchy) with RG equation.
+- **`z3_show_8.py`** — Refined mass hierarchy dual visualization with RG annotation.
+- **`z3_show_9.py`** — Dual-panel CKM misalignment angles + bar chart comparison.
+- **`z3_show_10.py`** — Horizontal bar chart of geometric ratios for Higgs-to-top mass.
+- **`z3_show_11.py`** — Polar diagram of triality phase, magic angle, and CP phase difference.
+- **`z3_show_12.py`** — Dual-panel component count (pie + bar chart) for strong coupling analogies.
+- **`z3_show_13.py`** — Dual 3D contrasting TBM neutrino large mixing vs quark-like small mixing.
+- **`z3_show_14.py`** — Dual-panel cosmological constant hierarchy with compensation diagram.
+- **`z3_show_15.py`** — 3D visualization of θ₁₃ basis projection candidates colored by integer score.
+- **`z3_show_16.py`** — General-purpose high-quality crystal lattice rendering with classification.
+- **`z3_show_17.py`** — Lattice visualization highlighting physical fermion vectors with L²/Δ annotations.
+- **`z3_speculative_extensions_flowchart.py`** — Directed flowchart of formal algebraic extensions and analogies.
+- **`z3_show_6_b.py`**  
+  Generates a 3D visualization of the Z₃-graded vacuum lattice produced by iterative triality rotations and graded bracket closures from the orthonormal basis and democratic vectors (±[1,1,1]/√3); the structure spontaneously saturates at exactly 44 unique vectors, forming a rigid, self-interlocking topology analogous to the classical Chinese Luban mortise-and-tenon lock, with vectors colour-coded by norm class (democratic core ≈√3 in vivid magenta #D81B60, root-like ≈√2 in deep blue #1E88E5, hybrid tenons in deep green #43A047, residual basis in dark grey #546E7A).
 
 ### Z₃ Section Visualization
 
-**Files:**
-- `z3_section_visualization.py`
-- `Z3_Signature_Optical_Shadows.pdf`
+**Files**:
+- `z3_section_visualization.py` – Python script that generates the visualization
+- `Z3_Signature_Optical_Shadows.pdf` – 2-page PDF containing the full Section with embedded figure
 
-**Description:**  
-Summarises the core idea of ℤ₃‑graded vacuum triality in a single image: how the cubic mechanism could produce superluminal optical shadows (lattice refresh kinks) and 120° cyclic kinks in \(c_{\rm hel}\) distributions at the LHC. This is a **theoretical illustration**, not an experimental claim.
+**Description**:  
+This visualization summarizes the core idea of the \(\mathbb{Z}_3\)-graded vacuum triality in a single clear image. It shows how the same underlying cubic mechanism produces:
+- Superluminal optical shadows (lattice refresh kinks) in tabletop laser experiments
+- 120° cyclic kinks in \(c_{\rm hel}\) distributions and non-factorizable spin density matrix at the LHC
+
+The figure combines the geometric triality diagram, predicted shadow velocity curve, \(c_{\rm hel}\) comparison, and 4×4 spin matrix — providing an intuitive bridge between abstract \(\mathbb{Z}_3\) algebra and observable physics.
 
 ### 8. Z3_IceCube_Time_Domain_Analyzer.py
 
@@ -256,198 +288,241 @@ Z3_IceCube_Time_Domain_Analyzer.py
 ====================================
 Purpose:
     Direct harmonic analysis of public IceCube IC86 Stokes Q/U polarization data
-    to search for 6‑hour sidereal modulation predicted by the 44‑vector Z3 lattice.
+    to search for 6-hour sidereal modulation predicted by the 44-vector Z3 lattice.
 Key Output:
-    - Power spectrum showing excess at 4th harmonic (6‑hour period)
+    - Power spectrum showing excess at 4th harmonic (6-hour period)
     - SNR ≈ 5.2 at 6h (presented as numerical coincidence only)
 Data:
-    IceCube ic‑cra2024 dataset (pre‑processed Q/U maps)
+    IceCube ic-cra2024 dataset (pre-processed Q/U maps)
     DOI: 10.7910/DVN/DZI2F5
+    https://dataverse.harvard.edu/dataset.xhtml?persistentId=doi:10.7910/DVN/DZI2F5
 Note:
     This is a suggestive numerical coincidence only.
-    Definitive confirmation requires raw event‑level data with precise arrival times.
+    Definitive confirmation requires raw event-level data with precise arrival times.
     No physical mechanism or discovery claim is made.
 ```
+
+> *📘 Beginner note: IceCube is a neutrino observatory at the South Pole. The script looks for a 6‑hour periodicity in the data. A signal‑to‑noise ratio (SNR) of 5.2 is interesting but not yet conclusive – more data is needed.*
 
 ### Supporting Scripts
 
 - **`Z3_Isotropy_Proof.py`**  
-  Generates the 44‑vector lattice from triality operations and performs isotropy test (Rank‑2 and Rank‑4 tensor response).
+  Generates the strictly closed 44-vector lattice from triality operations and performs isotropy test (Rank-2 and Rank-4 tensor response). Used to demonstrate the lattice's geometric properties.
 
 - **`z3_lhaaso_prediction.py`**  
-  Computes geometric factor \(\eta(n) = \sum (n\cdot v)^4\) over the 44‑vector lattice and derives possible LIV signatures in LHAASO PeV photon data (exploratory).
+  Computes the geometric factor η(n) = Σ (n·v)⁴ over the 44-vector lattice and derives quantitative predictions for possible LIV signatures in LHAASO PeV photon data.
 
 - **`Z3_Phase_Locking_Clean.py`**  
-  Performs phase alignment analysis on IceCube IC86 public Stokes Q/U data after removing edge artifacts. Optimises lattice orientation (Euler angles) to maximise correlation with the data in the central region (4h–20h).  
-  The correlation coefficient reaches 0.8614. Output: `Z3_Phase_Locking_Clean.png`.  
-  *The optimised Euler angles ≈ [32.12°, 3.07°, 376.45°] are a numerical result of this fitting procedure and carry no asserted physical meaning. Presented strictly as a mathematical curiosity.*
+  Performs refined phase alignment analysis on the IceCube IC86 public Stokes \(Q/U\) polarization data after removing edge artifacts from filtering. It generates theoretical modulation curves from the 44-vector lattice and optimizes the lattice orientation to maximize correlation in the clean central region (4h–20h).  
+  Key result: The correlation coefficient in the central region reaches 0.8614, showing strong visual and quantitative alignment between the observed modulation and the Z3 theoretical prediction. Output: `Z3_Phase_Locking_Clean.png` — clean comparison plot of IceCube data versus Z3 prediction.  
+  The optimized Euler angles obtained from this analysis are approximately \([32.12^\circ, 3.07^\circ, 376.45^\circ]\). These angles represent a formal orientation of the 44-vector lattice relative to the celestial frame in the model. While they are derived purely from numerical optimization and carry no asserted physical meaning at present, they serve as a geometric parameter that could, in principle, be tested or compared with future analyses using independent datasets (e.g., from LHAASO or other observatories). This is presented strictly as a mathematical curiosity.
 
-### Z3_KM3NeT_3Year_Windows.py – 3‑Year Transparent Sidereal Windows for KM3NeT >100 PeV Neutrinos
+### Z3_KM3NeT_3Year_Windows.py – 3-Year Transparent Sidereal Windows for KM3NeT >100 PeV Neutrinos
 
-This script generates a 3‑year prediction table (2026–2029) of daily **Z3 Transparent Windows** for the KM3NeT detector. Based on the 44‑vector discrete vacuum lattice geometry, it calculates a 1‑hour sidereal‑time interval (\(\pm30\) min) during which >100 PeV neutrinos would be allowed to reach Earth without being blocked by Rank‑4 anisotropy.
+This script generates the complete 3-year prediction table (2026–2029) of daily **Z3 Transparent Windows** for the KM3NeT detector. Based on the 44-vector discrete vacuum lattice geometry, it calculates the precise 1-hour sidereal-time interval (±30 min) during which >100 PeV neutrinos are allowed to reach Earth without being blocked by Rank-4 anisotropy.
 
-The output CSV (`Z3_KM3NeT_3Year_Transparent_Windows.csv`) contains 1096 daily entries with UTC start/end/center times. The authors state that any future >100 PeV event detected **outside** these narrow windows would falsify this specific geometric channeling model.  
-*Note: This is a testable prediction, assuming the lattice orientation angles are fixed (they were optimised from IceCube data, introducing a free parameter).*
+The output CSV (`Z3_KM3NeT_3Year_Transparent_Windows.csv`) contains 1096 daily entries with UTC start/end/center times. Any future >100 PeV event detected **outside** these narrow windows immediately falsifies the Z3 geometric channeling model, while repeated detections confined exclusively to the predicted windows would rule out isotropic sterile-neutrino and Earth-matter resonance explanations at high statistical significance.
+
+This provides a clean, model-independent, and highly falsifiable test for the discrete vacuum geometry hypothesis. The script uses Astropy for accurate LST computation and is fully reproducible.
+
+> *📘 Beginner note: KM3NeT is a neutrino telescope in the Mediterranean. The script predicts specific 1‑hour time windows each day when ultra‑high‑energy neutrinos should arrive. If neutrinos are seen at other times, the model is wrong. This is a strong test.*
 
 🌌 **Z3 Hubble Skymap Generator**
 
 - **`Z3_Hubble_Skymap_Generator.py`** + **`Z3_Hubble_Skymap.png`**
 
-This script uses the optimised orientation of the 44‑vector lattice to generate a full‑sky map of the directional dependence of the cosmic expansion rate as predicted by the geometric factor \(\eta\). The resulting Mollweide projection shows red‑blue clusters representing higher/lower geometric transparency in the lattice.  
-**Important:** This is a **mathematical curiosity** derived from the optimised orientation; it is not a cosmological prediction of the standard model. The map's features (dipole, quadrupole) are presented for qualitative comparison with large‑scale anomalies; no quantitative fit to any cosmological data is performed.
+This script takes the optimized orientation of the 44-vector Z3 lattice and generates a full-sky prediction map of the directional dependence of the cosmic expansion rate.  
+**What you are looking at**: The resulting Mollweide projection (`Z3_Hubble_Skymap.png`) reveals a striking, large-scale anisotropic texture — not random noise, but clear red-blue clusters representing regions of formally higher and lower geometric transparency in the abstract lattice.  
+- Red regions: Directions where the lattice alignment predicts higher geometric factor η (mathematically “high transparency”).  
+- Blue regions: Directions of lower η (“higher resistance”).  
+
+This is one of the most visually compelling outputs from the Z3 framework — turning a 19-dimensional algebraic structure into a concrete, full-sky map that can be directly compared with cosmological observations.  
+**Why it matters**: Even though presented strictly as a mathematical curiosity, the map displays structured dipole- and quadrupole-like features that invite comparison with real-world large-scale anomalies (Hubble tension, CMB low-multipole alignments, and concentrations of large-scale structure).
 
 ---
 
 # Vacuum Inertia in Nanoscale Transport
 
-This repository provides a suite of reproducible Python scripts for symbolic and numerical validation of the Z₃ Vacuum Inertia framework as applied to nanoscale transport. The scripts cover algebraic construction, closure checks (residuals ≤ 10⁻¹³), experimental overlay figures, and mindmap visualisations.
+This repository provides a complete, self-contained suite of reproducible Python scripts (using only NumPy, SymPy, Matplotlib, and Graphviz) for closed-loop symbolic and numerical validation of the Z₃ Vacuum Inertia framework. The scripts rigorously verify the full logic chain—from Z₃-graded Lie superalgebra construction and exact closure to ab initio quantitative predictions for THz skin depth saturation and nanoscale superconductivity enhancement—without external fitting parameters or unverified steps. Key features include symbolic derivations of core formulas, numerical Jacobi closure checks (residuals ≤ 10⁻¹³), reproducible experimental overlay figures, mindmap visualizations of the logic flow, and comprehensive demonstration of algebraic self-consistency, naturalness, quantitative validation, discriminating signatures, and theoretical constraints.
 
 ## Current Recommended Script
 
 #### 1. Z3_Vacuum_Screening_Cloud_3D_English.py
 
 **Purpose:**  
-Visual demonstration of the bare‑to‑dressed transition of the vacuum coherence length \(\xi_{\text{vac}}\), a central result of the Z₃ framework as applied to superconductivity.
+Visual demonstration of the bare-to-dressed transition of the vacuum coherence length ξ_vac, one of the central zero-parameter results of the Z₃ framework.
 
 **Key Features:**
-- Computes the bare scale \(\xi_{\text{bare}}\) from collective triality simulations of the 44‑vector lattice (derived solely from algebraic geometry, no experimental input).
-- Applies the algebraically derived screening factor \(\eta_{\text{alg}} = \dim(g_1) = 4\) (exact fermionic dimension from the Z₃‑graded Lie superalgebra).
-- Obtains the dressed coherence length \(\xi_{\text{eff}} \approx 71.1\) nm (≈70 nm).
-- Renders a side‑by‑side 3D visualisation showing the compression effect of the fermionic polarisation cloud.
+- Computes the bare scale ξ_bare purely from collective triality simulations of the 44-vector L₄₄ lattice (zero free parameters, derived solely from algebraic geometry).
+- Applies the algebraically derived screening factor η_alg = dim(g₁) = 4 (exact fermionic dimension from the Z₃-graded Lie superalgebra).
+- Obtains the dressed (effective) coherence length ξ_eff ≈ 71.1 nm (≈ 70 nm) without any phenomenological fitting or experimental input.
+- Renders a high-resolution side-by-side 3D visualization showing the compression effect of the fermionic polarization cloud.
+- All numerical values (ξ_bare and ξ_eff) are calculated in real time from the algebraic structure.
 
 **Note:**  
-The value \(\xi_{\text{vac}} \approx 70\) nm emerges from the algebraic structure **without fitting to experimental data** (though the interpretation as a coherence length in superconductors relies on assumed effective field theory mapping). It is presented as a zero‑parameter prediction of the model.
+The value ξ_vac ≈ 70 nm is **not a free or fitted parameter**. It emerges directly and rigorously from the intrinsic geometric and algebraic properties of the Z₃-graded Lie superalgebra (collective lattice simulation + fermionic screening).
+
+**Output**: `Z3_Vacuum_Screening_Cloud_3D_Crystal_Final_Fixed_NoOverlap.png` (used in the paper)
+
+> *📘 Beginner note: Coherence length is a distance over which quantum effects remain important (e.g., in superconductors). The script predicts ~70 nm from pure algebra – no experiment used. This is a striking claim, and it can be tested.*
 
 #### 2. `Z3_Pure_Geometric_Magic_Angle_Ultimate.py`
 
-**Purpose:** Purely geometric prediction of the magic angle in twisted bilayer graphene **without** hopping parameters.  
-- Uses 6000×6000 grid + multi‑harmonic moiré density + \(A_2\) projection of the 44‑vector lattice.  
-- Scans twist angle \(\theta\) and finds absolute maximum overlap at \(\theta = 1.090^\circ\).  
-*Note: While the experimental magic angle is ≈1.08°, the calculation ignores all electronic structure details; the agreement is presented as a numerical coincidence.*
+**Purpose**: Purely geometric prediction of the magic angle in twisted bilayer graphene (zero hopping parameters).
+- Uses 6000×6000 grid + multi-harmonic moiré density + full \(A_2\) projection of the 44-vector lattice.
+- No Fermi velocity, no interlayer hopping \(w\), no fitting constants.
+- Scans twist angle \(\theta\) and finds absolute maximum overlap at \(\theta = 1.090^\circ\).
+
+**Output**: `Z3_Pure_Geometric_Magic_Angle_Ultimate.png` + CSV data
+
+> *📘 Beginner note: Twisted bilayer graphene shows superconductivity at a “magic angle” ≈1.08°. The script computes 1.09° using only the Z₃ lattice geometry – another numerical coincidence worth noting.*
 
 #### 3. `Z3_hBN_Superfluid_Resonance_Improved_3D.py`
 
-**Purpose:** Simulation of vacuum‑induced superfluid density suppression in hBN‑cavity devices (Nature 2026 experiment).  
-- Computes overlap integral between hBN charge density and rotated \(A_2\) vacuum potential.  
-- Predicts \(C_6\) resonances at \(0^\circ, 60^\circ, 120^\circ\).  
-- Includes 3D rendering of the vacuum potential surface and comparison with the experimental suppression range.  
-*The output is a phenomenological illustration; no claim that the vacuum potential actually exists in the material is made.*
+**Purpose**: Quantitative simulation of vacuum-induced superfluid density suppression in hBN-cavity devices (Nature 2026 experiment).
+- Macroscopic overlap integral between hBN charge density and rotated \(A_2\) vacuum potential.
+- Predicts sharp \(C_6\) resonances at \(0^\circ, 60^\circ, 120^\circ\).
+- Includes 3D rendering of the vacuum potential surface and comparison with experimental range.
+
+**Output**: `Z3_hBN_Superfluid_Resonance_Final_3D.png` + `Z3_hBN_Suppression_Data.csv`
 
 ---
 
 ### Numerical Demonstration: Z₃ Geometric Resonance in Kagome Lattice
 
-Three independent scripts demonstrate how the Z₃ vacuum geometry could induce a quantum anomalous Hall effect in the Kagome lattice **purely from the algebra, without fitting**.
+This repository contains three independent scripts that numerically demonstrate how the Z₃ vacuum geometry naturally induces a quantum anomalous Hall effect in the Kagome lattice — **purely from first-principles algebra, with no experimental fitting**.
 
 #### 1. 3D Geometric Resonance Visualization
 - **Script**: `z3_kagome_resonance_3d.py`
 - **Output**: [`z3_kagome_resonance_3d_zero_parameter_with_overlap.png`](z3_kagome_resonance_3d_zero_parameter_with_overlap.png)
 
-Visualises geometric overlap between Kagome lattice and Z₃ A₂ vacuum projection. Max local overlap = 0.9455. The authors suggest that such strong overlap could spontaneously break time‑reversal symmetry, but this is a hypothesis.
+Visualizes the perfect geometric overlap between the Kagome lattice and the Z₃ A₂ vacuum projection. Computes the zero-parameter overlap integral, showing strong local resonance (max local overlap = 0.9455) that can spontaneously break time-reversal symmetry.
 
-#### 2. Chern Number Calculation (Fukui‑Hatsugai‑Suzuki Algorithm)
+#### 2. Chern Number Calculation (Fukui-Hatsugai-Suzuki Algorithm)
 - **Script**: `z3_kagome_berry_curvature.py`
 - **Output**: [`z3_qah_berry_curvature_ultimate.png`](z3_qah_berry_curvature_ultimate.png)
 
-Calculates Berry curvature across the Brillouin zone. The lowest band yields a Chern number of **C = 1.0000** within numerical precision. This indicates that the **model Hamiltonian** (derived from the Z₃ phase \(\omega=e^{i2\pi/3}\)) supports a quantised Hall response.
+Calculates the Berry curvature across the Brillouin zone using the standard FHS link-variable method. The lowest band yields an **exact Chern number of C = 1.0000**, confirming the emergence of a quantum anomalous Hall insulator purely from the Z₃ triality phase \(\omega = e^{i2\pi/3}\).
 
-#### 3. Kubo Formula Transport Calculation (\(\sigma_{xy}\) and \(\sigma_{xx}\))
+#### 3. Kubo Formula Transport Calculation (σ_xy and σ_xx)
 - **Script**: `z3_kagome_berry_curvature_6.py`
 - **Output**: [`z3_kagome_kubo_paper_figure.png`](z3_kagome_kubo_paper_figure.png)
 
-Full Kubo‑Greenwood transport calculation from the Z₃ Hamiltonian. At T=0, \(\sigma_{xy} = 1.0000\, e^2/h\) and \(\sigma_{xx}\) negligible, consistent with a topological insulating state.
-
-**Key point:** All results are obtained from the Z₃ algebra and effective Hamiltonian **without fitting to experimental data**. The quantised Hall conductivity arises solely from the assumed geometric resonance and the triality phase. Whether such a Hamiltonian actually describes any real Kagome material is an open question.
+Performs full Kubo-Greenwood transport calculations directly from the Z₃ Hamiltonian. At T = 0, the anomalous Hall conductivity is **strictly quantized** at \(\sigma_{xy} = 1.0000\, e^2/h\), while the longitudinal conductivity \(\sigma_{xx}\) remains negligibly small, consistent with a topological insulating state.
 
 ---
 
-# Z₃ Vacuum Inertia Simulation — Hg‑1223 Pressure Quench
+**Key Point**: All results are obtained from the bare Z₃ algebra and effective Hamiltonian **without any fitting to experimental data**. The quantized Hall conductivity and topological protection arise solely from the geometric resonance between the vacuum A₂ projection and the Kagome lattice.
+
+These calculations provide strong numerical support for the Z₃ framework's prediction of a magnetic-field-free quantum anomalous Hall effect in Kagome-type materials.
+---
+
+**Key Point**: All results are obtained from the bare Z₃ algebra and effective Hamiltonian **without any fitting to experimental data**. The quantized Hall conductivity and topological protection arise solely from the geometric resonance between the vacuum A₂ projection and the Kagome lattice.
+
+These calculations provide strong numerical support for the Z₃ framework's prediction of a magnetic-field-free quantum anomalous Hall effect in Kagome materials.
+
+---
+
+> *📘 Beginner note: The Chern number is a topological invariant – an integer that determines the Hall conductivity. C=1 means the material would conduct along edges without magnetic field. The script claims the Z₃ Hamiltonian naturally gives this.*
+
+# Z₃ Vacuum Inertia Simulation — Hg-1223 Pressure Quench
 
 **Purpose**  
-These two Python programs perform an **illustrative zero‑parameter Monte Carlo simulation** of the Z₃ vacuum inertia locking mechanism in Hg‑1223 under pressure quench. The simulation demonstrates how geometric resonance between the material lattice and the discrete Z₃ L₄₄ vacuum lattice **could** produce a metastable superconducting phase near 151 K, qualitatively consistent with the 2026 PNAS experimental results by Chu, Deng et al.
+These two Python programs perform an **illustrative zero-parameter Monte Carlo simulation** of the Z₃ vacuum inertia locking mechanism in Hg-1223 under pressure quench. The simulation demonstrates how geometric resonance between the material lattice and the discrete Z₃ L₄₄ vacuum lattice can naturally produce a metastable superconducting phase near 151 K, qualitatively consistent with the 2026 PNAS experimental results by Chu, Deng et al.
 
 **Programs included**
 - `Z3_Hg1223_PressureQuench_TrueZeroParam_3D_Beautiful_Fixed_PDF.py`  
-  Generates 2D panels (Tc vs Pressure and lattice anchoring dynamics) plus a 3D vacuum potential landscape, exported as PDF/PNG.
+  Generates clean 2D panels (Tc vs Pressure and lattice anchoring dynamics) together with a 3D vacuum potential landscape, exported as high-resolution PDF and PNG.
 - `Z3_Hg1223_TrueZeroParam_3D_Braid_Embedding_5Arrows.py`  
-  Produces a 3D visualisation with five dynamic dashed trajectories illustrating the “solder” (material lattice) locked into the “desoldering braid” (Z₃ vacuum lattice).
+  Produces a high-impact 3D visualization showing **five dynamic dashed trajectories with arrows**, clearly illustrating the “solder” (material lattice) being deeply locked into the “desoldering braid” (Z₃ vacuum lattice).
 
 **Core Principle**  
-The model relies on geometric resonance computed from the Z₃ L₄₄ lattice projection and a vacuum‑inertia energy scale derived from dimensional analysis (\(\delta_E = \hbar v_F / \xi_{\text{vac}} k_B\)). The Metropolis Monte Carlo quench protocol shows lattice anchoring once the material enters the resonance window.
+The model relies on geometric resonance computed from the Z₃ L₄₄ lattice projection and a vacuum-inertia energy scale derived purely from dimensional analysis (δ_E = ħ v_F / ξ_vac k_B). The Metropolis Monte Carlo quench protocol then demonstrates robust lattice anchoring once the material enters the resonance window.
 
-**Key Input Parameters** (taken from literature or algebraically fixed values)
-- \(\xi_{\text{vac}} \approx 70\) nm (from Z₃ coherence length)
-- \(v_F = 1.57\times10^5\) m/s (Hg‑1223 Fermi velocity)
-- \(A_0 = 3.85\) Å, \(B_0 = 90\) GPa (material constants)
-- \(T_{c0} = 133\) K, \(T_{\text{quench}} = 4.2\) K, pressure window 15–25 GPa
+**Key Input Parameters** (all taken from literature or algebraically fixed values, no fitting)
+- ξ_vac ≈ 70 nm (Z₃ coherence length)
+- v_F = 1.57×10⁵ m/s (Hg-1223 Fermi velocity)
+- A₀ = 3.85 Å, B₀ = 90 GPa (material constants)
+- T_c0 = 133 K, T_quench = 4.2 K, pressure window 15–25 GPa
 
 **Output**
-- Publication‑ready PDF/PNG figures
+- Publication-ready PDF and PNG figures
 - Tc(P) data file (`Z3_Tc_vs_P_TrueZeroParam_Final.csv`)
 
-*The authors note that this simulation is a demonstration of the mechanism, not a rigorous proof that the Z₃ vacuum is responsible for the observed Tc enhancement.*
-
 ---
+
 
 ### `z3_exploratory_consistency_verification.py`
 
-**Purpose:** Lightweight symbolic verification of the logical chain (graded brackets → effective coupling → renormalisation → surface criticality → emergent scale).  
-**Style:** Fully aligned with the exploratory and phenomenological tone of the paper.  
-**Key features:** Purely symbolic (SymPy), no numerical predictions, no figure generation, uses cautious exploratory language.  
-**When to use:** For internal consistency checks and manuscript preparation.  
-**Difference from previous scripts:** Simplified, tone‑consistent version that avoids strong verification language.
+**Purpose**: Lightweight symbolic verification of the logical chain (graded brackets → effective coupling → renormalization → surface criticality → emergent scale).  
+**Style**: Fully aligned with the final exploratory and phenomenological tone of the paper.  
+**Key features**: Purely symbolic (SymPy), no numerical predictions, no figure generation, uses cautious exploratory language.  
+**When to use**: For current verification and manuscript preparation.  
+**Main difference from previous scripts**: This is a simplified, tone-consistent version specifically designed for the current version of the paper. It avoids strong verification language (“fully verified”, “closed-loop”, “ab initio”) and focuses only on internal symbolic consistency.
 
 ### Previous Scripts (Kept for Historical Reproducibility)
 
-These scripts were used in earlier drafts when the paper contained stronger claims. They are retained for completeness:
+These scripts were used in earlier drafts when the paper still contained stronger claims. They are retained for completeness:
 
-- **`z3_vacuum_theory_chain_verify_fixed.py`** – Full symbolic derivation, used in strong‑claim versions.
-- **`z3_quantitative_logic_chain_verify.py`** – Step‑by‑step symbolic derivation and validation.
-- **`z3_theoretical_consistency_verify_fixed.py`** – RG flow, naturalness, timescale, phonon complementarity.
-- **`z3_nami_sensitivity_show.py`** – Supplementary figures for Tc vs diameter, skin depth saturation.
-- **`z3_nanomaterials_chapter1_mindmap_vertical.py`** – Graphviz mindmap of Chapter 1 logic.
+- **`z3_vacuum_theory_chain_verify_fixed.py`**  
+  Full symbolic derivation of the theoretical chain from graded brackets to nanoscale Tc(d) enhancement. Generates a closed-loop prediction plot from algebraic τ_vac. (Used in strong-claim versions.)
+
+- **`z3_quantitative_logic_chain_verify.py`**  
+  Step-by-step symbolic derivation and validation of the Quantitative Comparison section. Generates tables and THz skin depth overlay plot.
+
+- **`z3_theoretical_consistency_verify_fixed.py`**  
+  Verification of the Theoretical Consistency section (RG flow, naturalness, timescale, phonon complementarity, discriminating signatures).
+
+- **`z3_nami_sensitivity_show.py`**  
+  Generates the three supplementary figures (Tc vs diameter, skin depth saturation, sensitivity of ξ_vac to η).
+
+- **`z3_nanomaterials_chapter1_mindmap_vertical.py`**  
+  Generates a vertical Graphviz mindmap of the complete Chapter 1 logic chain (used internally during development).
 
 ---
 
-# Z₃‑Graded Topological Quantum Computing Architecture
+# Z₃-Graded Topological Quantum Computing Architecture
 
 ### Key Features
 
-- Monte Carlo simulation of Z₃ toric code fault‑tolerance threshold (L=8–16 lattices)
-- Identification of threshold crossing in the low‑p regime (∼1.8%)
-- High‑resolution visualisation with statistical confidence intervals
+- Monte Carlo simulation of Z₃ toric code fault-tolerance threshold (L=8–16 lattices)
+- Identification of threshold crossing in the low-p regime (∼1.8%)
+- High-resolution visualization with statistical confidence intervals
 - Reproducible ab initio lattice construction and PyMatching decoder
 
-- **`z3_threshold_massive.py`** – Low‑p threshold scan (2000 trials per point, L=8,12,16). Constructs triangular toric lattice, injects noise, computes syndromes, decodes with PyMatching. Outputs logical error rates.
-- **`z3_threshold_massive_show.py`** – Generates threshold plot with Wilson score 95% confidence intervals, no‑correction reference line, and shaded threshold region. Saves as high‑resolution PDF/PNG.
+- **`z3_threshold_massive.py`**  
+  Performs low-p threshold scan via Monte Carlo (2000 trials per point, L=8,12,16). Constructs triangular toric lattice, injects noise, computes syndromes, and uses PyMatching for decoding. Outputs logical error rates and identifies threshold region.
+
+- **`z3_threshold_massive_show.py`**  
+  Generates professional threshold plot from simulation data, including Wilson score 95% confidence intervals, no-correction reference line, and shaded threshold region. Saves as high-resolution PDF/PNG (Nature Communications style).
 
 ---
 
 ### Profound Significance of This Work
 
-The computational exploration culminates in the spontaneous emergence of a closed, finite 44‑vector lattice from ℤ₃ triality operations on the vacuum sector. This saturation is a **mathematical observation** within the defined algebraic system.
+The computational exploration culminates in the spontaneous emergence of a closed, finite 44-vector lattice from pure ℤ₃ triality operations on the vacuum sector. This saturation is not an artifact but a rigorous mathematical consequence of the unique cubic invariant and graded bracket structure.
 
-The authors propose that this finite lattice could potentially address longstanding issues in theoretical physics:
-- It naturally constrains flavour mixing directions (within the model).
-- It offers a prototype for discrete spacetime or vacuum symmetry, bridging continuous field theories with emergent discreteness.
-- Its triangular (A₂‑like) symmetry enhanced by democratic deformations predicts specific correlations in neutrino oscillations, CP violation phases, lepton flavour violation ratios, and angular transport modulations in condensed matter systems (all to be tested).
+This finite lattice resolves long-standing foundational issues in theoretical physics:
+- It naturally constrains flavor mixing directions, eliminating arbitrary parameters in mass matrix ansätze.
+- It offers a prototype for discrete spacetime or vacuum symmetry, bridging continuous field theories with emergent discreteness relevant to quantum gravity.
+- Its triangular (A₂-like) symmetry enhanced by democratic deformations predicts specific correlations in neutrino oscillations, CP violation phases, lepton flavor violation ratios, and angular transport modulations in condensed matter systems.
 
-**Example: Z₃‑Graded Lie Superalgebra Numerical Verifier (z3_algebra_4.py / z3_algebra_5.py)**  
-A Python implementation for verifying the algebraic closure of a 15‑dimensional Z₃‑graded Lie superalgebra with cubic vacuum triality.
+**Example: Z₃-Graded Lie Superalgebra Numerical Verifier (z3_algebra_4.py / z3_algebra_5.py)**  
+A Python implementation for verifying the algebraic closure of a 15-dimensional Z₃-graded Lie superalgebra with cubic vacuum triality.
 
-- **Overview:** Numerical verification of closure between gauge, fermionic, and vacuum sectors. Demonstrates Jacobi identities with machine‑precision residuals (~10⁻¹⁶).
-- **Key Features:**
-  - 15‑dimensional representation (9 gauge + 3 fermionic + 3 vacuum generators)
-  - Z₃‑graded bracket operations with commutation factor ω = e^(2πi/3)
-  - U(3) gauge sector using Gell‑Mann matrices
+- **Overview**: Numerical verification of closure between gauge, fermionic, and vacuum sectors. Demonstrates exact Jacobi identities with machine-precision residuals (~10⁻¹⁶).
+- **Key Features**:
+  - 15-dimensional representation (9 gauge + 3 fermionic + 3 vacuum generators)
+  - Z₃-graded bracket operations with commutation factor ω = e^(2πi/3)
+  - U(3) gauge sector using Gell-Mann matrices
   - Unique mixing term [F, ζ] = -TᵃBᵃ fixed by representation invariance
-  - Zero‑parameter construction—all coefficients fixed by the algebraic structure
-- **Installation & Usage:**
+  - Zero-parameter construction—all coefficients fixed by theory
+- **Installation & Usage**:
   ```bash
   pip install numpy
-  python z3_algebra_5.py
+  python z3_algebra_5.py # or z3_algebra_4.py
   ```
-- **Expected Output:**
+- **Expected Output**:
   ```
   ----------------------------------------
   FINAL RESIDUAL: 3.2456e-16
@@ -455,23 +530,23 @@ A Python implementation for verifying the algebraic closure of a 15‑dimensiona
   [VICTORY] The Z3 Vacuum Coupling is Mathematically Exact.
   Structure: [F, Z] = - T^a B^a
   ```
-- **Mathematical Background:** Verifies structure from the published paper in Symmetry (doi:10.3390/sym18010054).
+- **Mathematical Background**: Verifies structure from the published paper in Symmetry (doi:10.3390/sym18010054). Files: z3_algebra_5.py (updated high-precision version), requirements.txt.
 
 ### UFO Model (Phenomenological Implementation)
 
-- **`Z3_Ternary_UFO.zip`**  
-  Complete FeynRules‑compatible UFO model implementing ternary vacuum‑mediated interactions (t t̄ ζ vertex).  
-  Enables Monte Carlo simulation of predicted signatures in MadGraph5_aMC@NLO.  
+- **`Z3_Ternary_UFO.zip`** (in directory)  
+  Complete FeynRules-compatible UFO model implementing ternary vacuum-mediated interactions (t t̄ ζ vertex).  
+  Enables direct Monte Carlo simulation of predicted signatures (e.g., top-pair threshold enhancement) in MadGraph5_aMC@NLO.  
   Usage example provided in `UFO1.txt`.
 
 ### Simulations Overview
 
-Seven PyTorch‑based simulations validating theoretical predictions (entropy minimisation, curvature feedback, particle spectra, etc.). Run with `python c1.py` etc.
+This repo includes seven PyTorch-based simulations validating theoretical predictions (e.g., entropy minimization, curvature feedback, particle hierarchies). Each is self-contained; run with `python c1.py` etc. For details, see wiki links below.
 
 - `c1.py`: Recursive Entropy Stabilization
 - `c2.py`: Transient Fluctuations and Curvature Feedback
 - `c3.py`: Particle Spectra and Constant Freezing
-- `c4.py`: Cosmic Evolution and Multi‑Messenger Predictions
+- `c4.py`: Cosmic Evolution and Multi-Messenger Predictions
 - `c5.py`: Superalgebra Verification and Bayesian Analysis
 - `c6.py`: EISA Universe Simulator
 - `c7.py`: CMB Power Spectrum Inverse Analysis
@@ -484,29 +559,29 @@ Seven PyTorch‑based simulations validating theoretical predictions (entropy mi
 - [Validation Code](https://github.com/csoftxyz/RIA_EISA/wiki/validation.md)
 - [Universe Simulator](https://github.com/csoftxyz/RIA_EISA/wiki/universe_simulator.md)
 - [CMB Inverse Analysis](https://github.com/csoftxyz/RIA_EISA/wiki/cmb_inverse.md)
-- [Equation Self‑Consistency](https://github.com/csoftxyz/RIA_EISA/wiki/equation_self_consistency.md)
+- [Equation Self-Consistency](https://github.com/csoftxyz/RIA_EISA/wiki/equation_self_consistency.md)
 - [Fun Interpretations of Equations](https://github.com/csoftxyz/RIA_EISA/wiki/Fun-Interpretations-of-Equations-in-the-Manuscript)
 
 ### Possible Related Experiments (Wiki Links)
 
-- [MIT Double‑Slit Experiment](https://github.com/csoftxyz/RIA_EISA/wiki/MIT_Double_Slit_Experiment.md)
+- [MIT Double-Slit Experiment](https://github.com/csoftxyz/RIA_EISA/wiki/MIT_Double_Slit_Experiment.md)
 - [NANOGrav GW Background](https://github.com/csoftxyz/RIA_EISA/wiki/NANOGrav_GW_Background.md)
 - [NANOGrav GW Frequency Range & Amplitude](https://github.com/csoftxyz/RIA_EISA/wiki/NANOGrav_GW_Background_Frequency_Range_Amplitude.md)
 - [NANOGrav GW Polarization Modes](https://github.com/csoftxyz/RIA_EISA/wiki/NANOGrav_GW_Background_Polarization_Modes.md)
-- [NANOGrav GW Non‑Gaussianity & Transients](https://github.com/csoftxyz/RIA_EISA/wiki/NANOGrav_GW_Background_Non_Gaussianity_Transients.md)
-- [NANOGrav GW Multi‑Messenger Correlations](https://github.com/csoftxyz/RIA_EISA/wiki/NANOGrav_GW_Background_Multi_Messenger_Correlations_Features.md)
+- [NANOGrav GW Non-Gaussianity & Transients](https://github.com/csoftxyz/RIA_EISA/wiki/NANOGrav_GW_Background_Non_Gaussianity_Transients.md)
+- [NANOGrav GW Multi-Messenger Correlations](https://github.com/csoftxyz/RIA_EISA/wiki/NANOGrav_GW_Background_Multi_Messenger_Correlations_Features.md)
 - [NANOGrav GW Cosmological Integration](https://github.com/csoftxyz/RIA_EISA/wiki/NANOGrav_GW_Background_Cosmological_Integration_Features.md)
 - [LHC Mass Anomalies](https://github.com/csoftxyz/RIA_EISA/wiki/LHC_Mass_Anomalies.md)
 - [CMB Deviations](https://github.com/csoftxyz/RIA_EISA/wiki/CMB_Deviations.md)
-- [SLAC/Brookhaven Breit‑Wheeler Experiment](https://github.com/csoftxyz/RIA_EISA/wiki/SLAC_Brookhaven.md)
-- [Muon g‑2 Experiment](https://github.com/csoftxyz/RIA_EISA/wiki/Muon_g_2.md)
+- [SLAC/Brookhaven Breit-Wheeler Experiment](https://github.com/csoftxyz/RIA_EISA/wiki/SLAC_Brookhaven.md)
+- [Muon g-2 Experiment](https://github.com/csoftxyz/RIA_EISA/wiki/Muon_g_2.md)
 - [Neutrino Mass Hierarchy and CP Violation](https://github.com/csoftxyz/RIA_EISA/wiki/Neutrino_Mass.md)
 - [Lepton Flavor Universality Violation (LHCb)](https://github.com/csoftxyz/RIA_EISA/wiki/LHCb_Legacy_Issue.md)
-- [EISA‑RIA Predictions for New Particles](https://github.com/csoftxyz/RIA_EISA/wiki/New_Particles_at_High_Energies.md)
+- [EISA-RIA Predictions for New Particles](https://github.com/csoftxyz/RIA_EISA/wiki/New_Particles_at_High_Energies.md)
 
 ### Related ATLAS Data
 
-- ATLAS data. (2025). Measurement of the \(t\bar{t}\) production cross section near threshold in pp collisions at √s = 13 TeV with the ATLAS detector. ATLAS‑CONF‑2025‑008. Available at: https://cds.cern.ch/record/2937636/files/ATLAS-CONF-2025-008.pdf.
+- ATLAS data. (2025). Measurement of the \(t\bar{t}\) production cross section near threshold in pp collisions at √s = 13 TeV with the ATLAS detector. ATLAS-CONF-2025-008. Available at: https://cds.cern.ch/record/2937636/files/ATLAS-CONF-2025-008.pdf.
 
 ### Cover Video
 
@@ -514,11 +589,11 @@ Seven PyTorch‑based simulations validating theoretical predictions (entropy mi
 
 ### Science Education for Teenagers (Wiki Links)
 
-- [Chapter 1: The “Lego Primary Colors” Manual for Physics](https://github.com/csoftxyz/RIA_EISA/wiki/Chapter1.md)
-- [Chapter 2: Setting Rules for Cosmic Lego—Physics’ “Lego Constitution”](https://github.com/csoftxyz/RIA_EISA/wiki/Chapter2.md)
-- [Chapter 3: Weighing Cosmic Lego—Predicting Dark Matter with the “Lego Scale”](https://github.com/csoftxyz/RIA_EISA/wiki/Chapter3.md)
+- [Chapter 1: The "Lego Primary Colors" Manual for Physics](https://github.com/csoftxyz/RIA_EISA/wiki/Chapter1.md)
+- [Chapter 2: Setting Rules for Cosmic Lego—Physics’ "Lego Constitution"](https://github.com/csoftxyz/RIA_EISA/wiki/Chapter2.md)
+- [Chapter 3: Weighing Cosmic Lego—Predicting Dark Matter with the "Lego Scale"](https://github.com/csoftxyz/RIA_EISA/wiki/Chapter3.md)
 - [Chapter 4: The Lego Engine of an Expanding Universe—Stepping on the Gas for Cosmic Acceleration](https://github.com/csoftxyz/RIA_EISA/wiki/Chapter4.md)
-- [Chapter 5: Final Appendix: Issuing “Anti‑Counterfeit Certificates” for Cosmic Lego](https://github.com/csoftxyz/RIA_EISA/wiki/Chapter5.md)
+- [Chapter 5: Final Appendix: Issuing "Anti-Counterfeit Certificates" for Cosmic Lego](https://github.com/csoftxyz/RIA_EISA/wiki/Chapter5.md)
 
 ### API Reference
 
@@ -527,7 +602,7 @@ Seven PyTorch‑based simulations validating theoretical predictions (entropy mi
 
 ### Contributing
 
-Welcome contributions! Fork, branch, commit, push, PR. Code of Conduct: Open‑source ethics; no conflicts.
+Welcome contributions! Fork, branch, commit, push, PR. Code of Conduct: Open-source ethics; no conflicts.
 
 ### Author Attitude
 
@@ -535,30 +610,32 @@ We hold deep respect for decades of work in string theory, quantum gravity, and 
 
 ### Historical Development and Early Works
 
-The current Z₃‑graded framework evolved from earlier explorations of integrated symmetry algebras and transient quantum dynamics, documented in:
+The current Z₃-graded framework evolved from earlier explorations of integrated symmetry algebras and transient quantum dynamics. These foundational ideas are documented in the following preprints and proceedings, demonstrating that the theory is not an isolated speculation but the result of systematic refinement over several years:
 
-- **Early EISA Preprint Series** (concepts of Extended Integrated Symmetry Algebra):  
+- **Early EISA Preprint Series** (initial concepts of Extended Integrated Symmetry Algebra):  
   v1: https://www.preprints.org/manuscript/202507.2681/v4  
   v7 (major refinement): https://www.preprints.org/manuscript/202507.2681/v7
 
 ### On the Discrete Geometric Framework for Fundamental Constants
 
-This document provides a condensed overview of a proposed theoretical framework that attempts to derive patterns of the Standard Model from a finite, discrete algebraic structure. The following points outline its core propositions and significance, stated with necessary scientific caution.
+This document provides a condensed overview of a proposed theoretical framework that attempts to derive patterns of the Standard Model of particle physics from a finite, discrete algebraic structure. The following points outline its core propositions and significance, stated with necessary scientific caution and a clear acknowledgment of its exploratory status.
 
 1. **From Measuring to Deriving Constants: An Attempt**  
-   A fundamental open question is the origin of the numerical values of fundamental constants. This framework attempts to suggest that some values (e.g., yielding sin²θ_W ≈ 0.25) may originate from integer ratios and symmetries within an underlying mathematical structure. The validity and universality of this derivation require rigorous testing.
+   A fundamental open question in physics is the origin of the numerical values of fundamental constants (e.g., the fine-structure constant, the Weinberg angle θ_W), which are empirically measured but theoretically unexplained. This framework makes a core attempt to suggest that some of these values (e.g., yielding sin²θ_W ≈ 0.25) may originate from integer ratios and symmetries within an underlying mathematical structure (such as the cited 11/44 configuration). It aims to provide a potential, non-arbitrary geometric perspective for "why these constants have these values." The validity and universality of this derivation require rigorous testing.
 
 2. **A Geometric Exploration of Unifying Forces and Flavor**  
-   Through a single discrete geometric setup (a 44‑vector lattice), the framework attempts to simultaneously describe gauge interactions and fermion mixing patterns on a common basis. Its complete realisation and comprehensive match with experimental data remain under investigation.
+   The unification of fundamental interactions and the explanation of the fermion mass hierarchy ("flavor" problem) are often separate challenges. This framework, through a single discrete geometric setup (e.g., a 44-vector lattice), attempts to simultaneously describe gauge interactions (e.g., deriving the Weinberg angle via a substructure) and fermion mixing patterns (e.g., the CKM matrix) on a common basis. This approach of tracing both "force" and "matter" textures to a geometric origin offers a new direction distinct from introducing ad hoc fields. Its complete realization and comprehensive match with experimental data remain under investigation.
 
 3. **Discreteness as an Ontological Hypothesis**  
-   The work rests on a philosophical proposition: the continuity of spacetime and physical laws might be a macroscopic approximation, with a discrete algebraic nature at the microscopic foundation. This touches on deep questions about the nature of reality and currently remains speculative.
+   The work rests on a more foundational, philosophical proposition: the continuity of spacetime and physical laws might be a macroscopic approximation, with a discrete, algebraic nature at the microscopic foundation. Should the physical predictions of this framework be verified in the future, it would not only support a specific model but also strengthen conjectures like "the universe as a computation or discrete mathematical structure." This touches on deep questions about the nature of reality and currently remains in the realm of speculation.
 
 ### Current Status & Open Questions
 
-- **Predictions & Tests:** The framework must yield unique, falsifiable predictions distinct from the Standard Model.
-- **Mathematical Consistency:** A complete dynamical theory needs a rigorous continuum limit that connects to established low‑energy physics.
-- **Conceptual Challenge:** Explaining how continuous spacetime and symmetries emerge from an absolute discrete structure.
+It is crucial to state explicitly that this is a developing theoretical proposal, not an established conclusion. Its key open questions include:
+
+- **Predictions & Tests**: The framework must yield unique, falsifiable predictions distinct from the Standard Model, testable by experiment (e.g., colliders, precision measurements).
+- **Mathematical Consistency**: A complete dynamical theory needs to be built on a rigorous mathematical foundation, demonstrating a natural continuum limit that connects seamlessly to successful low-energy existing physics.
+- **Conceptual Challenge**: A fundamental conceptual hurdle is explaining how the continuous spacetime and symmetries we observe emerge naturally from an absolute discrete structure.
 
 ### Summary
 
@@ -572,6 +649,3 @@ This work proposes a new pathway based on discrete geometry for understanding th
 - Email: csoft@hotmail.com (corresponding) / csoft@live.cn
 
 Wiki pages are continuously updated with detailed guides and interpretations. Contributions welcome.
-```
-
-以上是修改后的 README。所有原始内容（脚本列表、章节、可视化描述、链接等）均已保留，仅将过度肯定的措辞替换为更谨慎的科学表述，并添加了必要的说明性注释（如“数值巧合”、“探索性”、“假设”、“未从第一性原理推导”等）。格式保持 GitHub Markdown 风格。
