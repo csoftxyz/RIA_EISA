@@ -24,12 +24,58 @@ Whether these alignments reflect deep properties of the actual universe is an op
 
 ### Core Achievements of the Model
 
-1. **Unification of Forces**  
-   The finite 44-vector core lattice (ground state under triality saturation) naturally yields  
-   **sin²θ_W = 11/44 = 0.25 exactly**  
-   — reproducing the tree-level GUT prediction without free parameters.
+## 1. Unification of Forces
 
-> *📘 Beginner note: sin²θ_W (Weinberg angle) is a measure of how the weak force and electromagnetism mix. The experimental value is ~0.231, so 0.25 is an approximation (the GUT tree‑level value).*
+The finite 44-vector core lattice (ground state under triality saturation) naturally yields
+
+**sin²θ_W = 11/44 = 0.25 exactly**
+
+— reproducing the tree-level GUT prediction without free parameters.
+
+> *📘 Beginner note: sin²θ_W (Weinberg angle) is a measure of how the weak force and electromagnetism mix. The experimental value is ~0.231, so 0.25 is a tree-level approximation (the classic GUT prediction).*
+
+---
+
+## 2. JUNO 2026 Result and Z₃ Geometric Correction for Neutrino Mixing
+
+**June 10, 2026** — The Jiangmen Underground Neutrino Observatory (JUNO) published its first physics result as a *Nature* cover article, precisely measuring the solar neutrino mixing angle:
+
+**sin²θ₁₂ = 0.3092 ± 0.0087**
+
+The Z₃ Vacuum Framework provides a **zero-free-parameter** analytic prediction that matches this high-precision experimental result with remarkable accuracy:
+
+### Core Formula (Z₃ Geometric Correction)
+$$
+\sin^2\theta_{12} = \frac{1}{3} - \frac{\sin\theta_C}{9}
+$$
+
+where θ_C is the Cabibbo angle (PDG value 13.02°, λ = sin θ_C ≈ 0.2253).
+
+**Numerical Results**:
+- Z₃ prediction: **0.308301**
+- JUNO measurement: **0.3092**
+- **Absolute deviation**: 0.0009
+- **Relative error**: **0.29%**
+
+### Derivation Outline
+1. Z₃ symmetry yields the zeroth-order Tribimaximal mixing: sin²θ₁₂⁰ = 1/3  
+2. Charged lepton sector introduces a Cabibbo-like rotation θ_l ≈ θ_C  
+3. **Z₃ Filtering Mechanism**: Due to the discrete triality (eigenstates at 0, 2π/3, 4π/3), the continuous rotation is coarse-grained when projected onto the Z₃ vacuum lattice, giving an effective correction factor of 1/|Z₃| = 1/3.  
+4. Small-angle expansion leads to the multiplicative correction term λ/9 (where 1/9 originates from the square of the Z₃ group order).
+
+This formula contains **no free parameters**. It takes only the experimental quark-sector input θ_C and directly predicts the neutrino mixing angle. It exemplifies the Z₃ philosophy that “geometry determines physics.”
+
+**Demonstration Visualization**:
+- Python script: [`z3_juno_visualization.py`](./z3_juno_visualization.py)
+- Output image: [`z3_juno_visualization.png`](./z3_juno_visualization.png)
+
+The visualization shows:
+- Left: 3D projection of the Z₃ L₄₄ vacuum lattice vectors with the effective filtering axis.
+- Right: Parameter surface of the correction formula, highlighting the Z₃ prediction (red dot) and JUNO measurement (orange cross) nearly overlapping.
+
+**Note**: This derivation is internally consistent within the Z₃ lattice projection framework and demonstrates significant numerical agreement with the latest high-precision JUNO data. Future improvements in JUNO precision will provide a crucial test of this formula.
+
+(See also: `z3_pmns.py`, `Z3_Neutrino_Hunter.py`, `Z3_Universe_Solver.py` and related derivation notes)
 
 2. **Unification of Matter**  
    The infinite integer extension (ℤ³ sites supported by the core basis) identifies resonant lattice nodes corresponding to the charged fermion mass scales via a geometric seesaw mechanism (m ∝ 1/L²). Explicit integer vectors include:
