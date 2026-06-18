@@ -307,6 +307,8 @@ Together, these results **provide preliminary numerical evidence** suggesting th
 
 # Z₃-Graded Dynamical Lagrangian (v15)
 
+> **⚠️ Historical version**: This is an early exploratory implementation (15D, pre-rigorous). The current rigorous EFT dynamics verification is provided by **`z3_dynamics_verification.py`** (see "⭐ NEW: Condensed-Matter & Dynamics Verification Scripts" section above), which validates the full 19D graded Yang–Mills → Yukawa → one-loop matching → surface solution chain used in the submitted paper. This v15 script is retained for historical reproducibility.
+
 The Python script `z3_lagrangian_core_15.py` provides a practical numerical implementation of a dynamical Lagrangian derived from the 15-dimensional $Z_3$-graded superalgebra.
 **Main features:**
 - Constructs the full graded algebra generators and brackets
