@@ -155,7 +155,7 @@ With the algebraic foundation published in *Symmetry* (2026, 18, 54) and ongoing
 
 6. **Condensed-Matter Geometric Selection Rules (Submitted June 2026)**  
    **Title**: A₂ Lattice Geometry and Condensed-Matter Selection Rules from a Z₃-Graded Vacuum Sector  
-   **Journal**: *Annals of Physics* (Elsevier) — under review  
+   **Status**: Submitted (June 2026)  
    **Manuscript**: `z3_geometric_selection_rules_annphys.tex`  
    **Key results**: The A₂ projection of L₄₄ yields zero-parameter predictions for: TBG magic angle θ₀ = 1.090° (< 1% from exp), interlayer hopping w = 126 meV (15% from exp), Kagomé Chern number C = 1 (exact), magic angle series θ_n = θ₀·3^{−n/2}, h-BN C₆ resonance. Includes complete EFT derivation (graded Yang–Mills → Yukawa → 1-loop matching → surface solution → overlap integral), counterfactual test refuting circularity, and Wilson–Fisher derivation of ν = 0.614.
 
@@ -178,9 +178,9 @@ All scripts are designed for immediate execution (Python 3 + NumPy/SymPy). They 
 
 - **`z3_dynamics_verification.py`** ★ (Master Verification — 11 Sections)  
   Complete end-to-end numerical verification of the full dynamical EFT chain. Verifies: energy-independence theorem (θ₀ = 2·arcsin(1/108)), BM equivalence (w = 126 meV), NDA coupling estimate (g̃ ~ 10⁻² GeV⁻¹), surface solution, magic angle series, Wilson-Fisher one-loop (β(u*) = 0 → ν = 0.614), Kagomé eigenvalues (C = 1), and counterfactual test summary.  
-  **Run**: `python3 z3_dynamics_verification.py` → "ALL VERIFICATIONS PASSED ✓"
+  **Run**: `python3 z3_dynamics_verification.py` → "ALL VERIFICATIONS PASSED ✓"  
 
-  > *📘 Beginner note: This single script checks EVERY formula in the Annals of Physics paper. If it prints "ALL VERIFICATIONS PASSED", every equation is numerically confirmed. Think of it as a unit test for theoretical physics.*
+  > *📘 Beginner note: This single script checks EVERY formula in the condensed-matter selection rules paper. If it prints "ALL VERIFICATIONS PASSED", every equation is numerically confirmed. Think of it as a unit test for theoretical physics.*
 
 - **`counterfactual_L54_test.py`** ★ (Circularity Refutation)  
   Removes each shell from L₄₄ and recomputes S(k). Key result: removing L²=54 shifts the peak by only 3%, while removing L²=162 or 486 shifts it 38–91%. Proves L²=54 is a **passive bystander** — not circular.  
