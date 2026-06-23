@@ -188,8 +188,6 @@ With the algebraic foundation published in *Symmetry* (2026, 18, 54) and ongoing
 
 ### `README_PLB_github.md` — Repository Homepage
 
-A complete project overview — the first thing anyone sees when they open the GitHub repo. Contents:
-
 - **Headline Results table**: 8 predictions vs. experiment, with precision ranging from "exact match" to 0.26σ, all from zero free parameters
 - **Zero-Parameter Derivation Chain flowchart**: traces the full logical path from Z₃ superalgebra to mass ordering IO. Every step is labeled as [Theorem], [Derived], or [Prediction — awaiting experiment], so the reader knows exactly which parts are proven and which are bets
 - **FAQ**: preemptively answers the four most common questions — "Haven't we already measured all this?", "Why trust a zero-parameter theory?", "How is this different from other flavor models?", "Has this been peer-reviewed?"
