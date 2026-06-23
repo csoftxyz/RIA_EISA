@@ -197,7 +197,7 @@ With the algebraic foundation published in *Symmetry* (2026, 18, 54) and ongoing
 ---
 
 ### `z3_plb_3d.html` — Interactive 3D Visualization
-
+Open [`z3_plb_3d.html`](z3_plb_3d.html) in any browser (no installation needed).
 A standalone HTML file. **Double-click to open — no software installation needed.** Four 3D panels that show the paper's geometric structure visually:
 
 | Panel | What You See | Plain-English Explanation |
