@@ -179,7 +179,7 @@ With the algebraic foundation published in *Symmetry* (2026, 18, 54) and ongoing
    **Title**: Derivation of Standard Model Mixing Angles from a 44-Vector Discrete Vacuum Lattice  
    **Preprint DOI**: https://doi.org/10.20944/preprints202606.1401.v1  
    **PDF**: https://www.preprints.org/manuscript/202606.1401/v1  
-   **Journal**: *Physics Letters B* (PLB-S-26-02213)  
+   **Journal**: Submitted to *Physics Letters B* (PLB-S-26-02213)  
    **Key results**: Cabibbo angle λ = 73/324 = 0.22531 (8 ppm from experiment, +0.01σ); sin²θ₁₂ = 1/3 − λ/9 = 0.3083 (confirmed by JUNO 2026 at 0.10σ); sin²θ₂₃ = 0.54609; δ_CP = 240°. All perturbation strengths (ε_ν2 = 1/36, ε_ν3 = 1/12, ε_q = 1/6) derived from Frobenius norms and orbit dimensions. Rigorous proof that dim_NF(Hybrid) = 24.
 
   > *📘 Beginner note: The Cabibbo angle has been measured for 60 years but never explained. This paper derives it as the exact fraction 73/324 from counting vectors in the lattice — matching the measured value to 6 significant figures. The neutrino mixing prediction was made BEFORE the JUNO 2026 measurement and confirmed at 0.10σ.*
