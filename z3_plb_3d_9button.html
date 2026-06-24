@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Z₃ 44-Vector Lattice — Interactive 3D</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:#0a0a14;color:#c8d6e5;font-family:system-ui,sans-serif;overflow:hidden}
+#ui{position:fixed;bottom:16px;left:50%;transform:translateX(-50%);display:flex;gap:6px;flex-wrap:wrap;justify-content:center;z-index:10;max-width:95vw}
+.btn{padding:8px 13px;border:1px solid rgba(255,255,255,0.2);border-radius:8px;background:rgba(20,20,40,0.9);color:#c8d6e5;cursor:pointer;font-size:12px;backdrop-filter:blur(8px);transition:all 0.2s}
+.btn:hover{background:rgba(80,80,180,0.5);border-color:rgba(255,255,255,0.5)}
+.btn.active{background:rgba(100,120,240,0.7);border-color:#99aaff;color:#fff}
+#info{position:fixed;top:12px;left:50%;transform:translateX(-50%);background:rgba(10,10,30,0.9);backdrop-filter:blur(12px);padding:8px 20px;border-radius:10px;border:1px solid rgba(255,255,255,0.15);text-align:center;z-index:10;max-width:90vw}
+#info h2{font-size:16px;color:#aaccff;margin:0}
+#info p{font-size:11px;color:#8899bb;margin:2px 0 0}
+#legend{position:fixed;top:100px;right:12px;background:rgba(10,10,30,0.85);backdrop-filter:blur(8px);padding:8px 12px;border-radius:8px;border:1px solid rgba(255,255,255,0.1);z-index:10;font-size:10px}
+.leg-item{display:flex;align-items:center;gap:6px;margin:3px 0}
+.leg-dot{width:8px;height:8px;border-radius:50%;flex-shrink:0}
+</style>
+</head>
+<body>
+<div id="info"><h2>Z₃ 44-Vector Discrete Vacuum Lattice</h2><p>Drag to rotate · Scroll zoom · Click scenes below</p></div>
+<div id="legend"></div>
+<div id="ui">
+  <button class="btn active" data-scene="0">🏛️ 44 Lattice</button>
+  <button class="btn" data-scene="1">🌱 5 Seeds</button>
+  <button class="btn" data-scene="2">🔄 Triality T</button>
+  <button class="btn" data-scene="3">🗳️ Democratic d</button>
+  <button class="btn" data-scene="4">🎴 Orbits</button>
+  <button class="btn" data-scene="5">⬡ Root K₆\3K₂</button>
+  <button class="btn" data-scene="6">🔺 TBM</button>
+  <button class="btn" data-scene="7">📐 vₚ₁</button>
+  <button class="btn" data-scene="8">△ Plaquettes</button>
+</div>
+
+<script type="importmap">
+{"imports":{"three":"https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js","three/addons/":"https://cdn.jsdelivr.net/npm/three@0.160.0/examples/jsm/"}}
+</script>
+<script type="module">
+import * as THREE from 'three';
+import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
+
+// ======== MATH HELPERS ========
+const s3=Math.sqrt(3), s2=Math.sqrt(2);
+const d=[1/s3,1/s3,1/s3], md=[-1/s3,-1/s3,-1/s3];
+function vn(v){const n=Math.sqrt(v[0]*v[0]+v[1]*v[1]+v[2]*v[2]);return n>1e-12?[v[0]/n,v[1]/n,v[2]/n]:v}
+function vs(v,s){return[v[0]*s,v[1]*s,v[2]*s]}
+function va(a,b){return[a[0]+b[0],a[1]+b[1],a[2]+b[2]]}
+function vsub(a,b){return[a[0]-b[0],a[1]-b[1],a[2]-b[2]]}
+function vdot(a,b){return a[0]*b[0]+a[1]*b[1]+a[2]*b[2]}
+function vcross(a,b){return[a[1]*b[2]-a[2]*b[1],a[2]*b[0]-a[0]*b[2],a[0]*b[1]-a[1]*b[0]]}
+function veq(a,b){return Math.abs(a[0]-b[0])<1e-8&&Math.abs(a[1]-b[1])<1e-8&&Math.abs(a[2]-b[2])<1e-8}
+function hsl(h){return new THREE.Color().setHSL(h%360/360,0.8,0.55)}
+
+// ======== SPRITE LABEL (no CSS2D dependency) ========
+function makeLabel(text,color='#ffffff'){
+  const c=document.createElement('canvas');c.width=256;c.height=64;
+  const ctx=c.getContext('2d');
+  ctx.font='bold 28px system-ui,sans-serif';ctx.fillStyle=color;
+  ctx.textAlign='center';ctx.textBaseline='middle';
+  ctx.fillText(text,128,32);
+  const tex=new THREE.CanvasTexture(c);tex.minFilter=THREE.LinearFilter;
+  const mat=new THREE.SpriteMaterial({map:tex,transparent:true,depthTest:false,depthWrite:false});
+  const sp=new THREE.Sprite(mat);sp.scale.set(1.2,0.3,1);return sp;
+}
+
+// ======== PRECOMPUTED LATTICE VECTORS ========
+const L=[
+  [1,0,0],[0,1,0],[0,0,1], d, md,
+  vn([0,1,-1]),vn([0,-1,1]),vn([1,0,-1]),vn([-1,0,1]),vn([1,-1,0]),vn([-1,1,0]),
+  vn([-2,1,1]),vn([2,-1,-1]),vn([1,-2,1]),vn([-1,2,-1]),vn([1,1,-2]),vn([-1,-1,2]),
+  vn([2,-1,-1]),vn([-2,1,1]),vn([-1,2,-1]),vn([1,-2,1]),vn([-1,-1,2]),vn([1,1,-2]),
+  vn([0,3,-3]),vn([3,0,-3]),vn([3,-3,0]),vn([0,-3,3]),vn([-3,0,3]),vn([-3,3,0]),
+  vn([1,1,0]),vn([-1,-1,0]),vn([1,0,1]),vn([-1,0,-1]),vn([0,1,1]),vn([0,-1,-1]),
+  vn([2,1,0]),vn([-2,-1,0]),vn([2,0,1]),vn([-2,0,-1]),vn([0,2,1]),vn([0,-2,-1]),
+  vn([1,2,0]),vn([-1,-2,0]),vn([1,0,2]),vn([-1,0,-2]),vn([0,1,2]),vn([0,-1,-2]),
+];
+const seen={};const U=[];for(const v of L){const k=v.map(x=>x.toFixed(8)).join(',');if(!seen[k]){seen[k]=1;U.push(v)}}
+
+function classify(v){
+  const ax=[Math.abs(v[0]),Math.abs(v[1]),Math.abs(v[2])].sort((a,b)=>b-a);
+  if(Math.abs(ax[0]-ax[1])<0.03&&Math.abs(ax[1]-ax[2])<0.03)return'Democratic';
+  if(ax[0]>0.97&&ax[1]<0.03&&ax[2]<0.03)return'Flavor';
+  if(ax[2]<0.03)return'Root';return'Hybrid';
+}
+const OC={Democratic:'#ffd700',Root:'#00cc88',Hybrid:'#ff4477',Flavor:'#44aaff'};
+
+// ======== THREE.JS ========
+const scene=new THREE.Scene();scene.background=new THREE.Color(0x0a0a18);
+const cam=new THREE.PerspectiveCamera(50,innerWidth/innerHeight,0.05,50);
+cam.position.set(3.5,2.8,5);
+const rdr=new THREE.WebGLRenderer({antialias:true});
+rdr.setSize(innerWidth,innerHeight);rdr.setPixelRatio(Math.min(devicePixelRatio,2));
+document.body.appendChild(rdr.domElement);
+const ctrl=new OrbitControls(cam,rdr.domElement);ctrl.enableDamping=true;ctrl.dampingFactor=0.08;
+scene.add(new THREE.AmbientLight(0x445566,2.5));
+const dl=new THREE.DirectionalLight(0xffffff,2);dl.position.set(5,8,5);scene.add(dl);
+scene.add(new THREE.PolarGridHelper(3,32,24,64,0x222244,0x111133));
+function axis(dir,len,col){const g=new THREE.BufferGeometry().setFromPoints([new THREE.Vector3(0,0,0),new THREE.Vector3(...vs(dir,len))]);scene.add(new THREE.Line(g,new THREE.LineBasicMaterial({color:col,transparent:true,opacity:0.35})))}
+axis([1,0,0],3,0xff4444);axis([0,1,0],3,0x44ff44);axis([0,0,1],3,0x4444ff);
+
+const grp=new THREE.Group();scene.add(grp);
+function clr(){while(grp.children.length)grp.remove(grp.children[0])}
+function sph(pos,col,sz=0.04,op=1){const m=new THREE.Mesh(new THREE.SphereGeometry(sz,12,12),new THREE.MeshPhongMaterial({color:col,emissive:col,emissiveIntensity:0.4,transparent:op<1,opacity:op}));m.position.set(...pos);grp.add(m);return m}
+function ln(a,b,col,w=0.5){const g=new THREE.BufferGeometry().setFromPoints([new THREE.Vector3(...a),new THREE.Vector3(...b)]);grp.add(new THREE.Line(g,new THREE.LineBasicMaterial({color:col,transparent:true,opacity:w})))}
+function arr(from,to,col,hl=0.12){const dir=vn(vsub(to,from)),tip=vsub(to,vs(dir,hl));ln(from,to,col,0.8);const perp=Math.abs(dir[0])<0.9?vn(vcross(dir,[1,0,0])):vn(vcross(dir,[0,1,0]));ln(to,va(tip,vs(perp,hl*0.5)),col,0.8);ln(to,vsub(tip,vs(perp,hl*0.5)),col,0.8)}
+function plane(ctr,nrm,col,sz=1.5,op=0.12){const g=new THREE.PlaneGeometry(sz,sz);const m=new THREE.Mesh(g,new THREE.MeshPhongMaterial({color:col,side:THREE.DoubleSide,transparent:true,opacity:op,depthWrite:false}));m.position.set(...ctr);m.quaternion.setFromUnitVectors(new THREE.Vector3(0,0,1),new THREE.Vector3(...nrm));grp.add(m)}
+function lbl(pos,txt,col='#fff',sc=0.9){const s=makeLabel(txt,col);s.position.set(...pos);s.scale.set(sc*1.5,sc*0.38,1);grp.add(s)}
+function ring(ctr,nrm,r,col,op=0.3){const pts=[];for(let i=0;i<=64;i++){const a=i*2*Math.PI/64;pts.push(new THREE.Vector3(Math.cos(a)*r,Math.sin(a)*r,0))}const g=new THREE.BufferGeometry().setFromPoints(pts);const ln2=new THREE.Line(g,new THREE.LineBasicMaterial({color:col,transparent:true,opacity:op}));ln2.position.set(...ctr);ln2.quaternion.setFromUnitVectors(new THREE.Vector3(0,0,1),new THREE.Vector3(...nrm));grp.add(ln2)}
+function info(t){document.getElementById('info').querySelector('p').textContent=t}
+function leg(items){document.getElementById('legend').innerHTML=Object.entries(items).map(([k,v])=>`<div class="leg-item"><div class="leg-dot" style="background:${OC[k]||'#fff'}"></div>${k}: ${v}</div>`).join('')}
+
+// ======== SCENES ========
+const SC=[];
+
+SC[0]=()=>{plane([0,0,0],d,0xffffff,4,0.05);U.forEach(v=>{sph(v,OC[classify(v)],0.04)});arr([0,0,0],d,'#ffd700',0.18);lbl(vs(d,1.15),'d','#ffd700');leg({'Democratic':'Gold','Root':'Green','Hybrid':'Pink','Flavor':'Blue'});info('43 unique directions · 44 total (incl. 0) · sin²θ_W=11/44=0.25')};
+
+SC[1]=()=>{const ss=[[1,0,0],[0,1,0],[0,0,1],d,md],ns=['e₁','e₂','e₃','+d','−d'],cs=['#ff4444','#44ff44','#4444ff','#ffd700','#ff8800'];ss.forEach((s,i)=>{sph(s,cs[i],0.07);arr([0,0,0],s,cs[i],0.1);lbl(s,ns[i],cs[i],0.8)});info('S₀={e₁,e₂,e₃,+d,−d} · generates all 44 vectors via T, Δ, ×')};
+
+SC[2]=()=>{arr([0,0,0],d,'#ffd700',0.15);lbl(vs(d,1.2),'axis [111]','#ffd700',0.8);const bs=[[1,0,0],[0,1,0],[0,0,1]],ns=['e₁','e₂','e₃'];bs.forEach((b,i)=>{const nx=bs[(i+1)%3];const col='#'+[['ff4444'],['44ff44'],['4444ff']][i];sph(b,col,0.07);lbl(b,ns[i],col,0.7);arr(b,nx,col,0.06)});ring([0,0,0],d,0.75,'#888888',0.25);info('T: 120° cyclic perm · T³=I · ω=e^{2πi/3}')};
+
+SC[3]=()=>{arr([0,0,0],d,'#ffd700',0.2);lbl(vs(d,1.18),'d=[1,1,1]/√3','#ffd700',0.8);sph([1,0,0],'#ff4444',0.07);lbl([1.1,0,0],'e₁','#ff4444',0.7);const e1=[1,0,0],mid=vn(va(e1,d)),ang=Math.acos(1/s3),pts=[];for(let i=0;i<=40;i++){const t=i/40,a=t*ang;pts.push(new THREE.Vector3(...vn(va(vs(e1,Math.cos(a)),vs(vn(vcross(d,vcross(e1,d))),Math.sin(a))))))}grp.add(new THREE.Line(new THREE.BufferGeometry().setFromPoints(pts),new THREE.LineBasicMaterial({color:0xffaa00})));lbl(vs(mid,0.65),'θ≈54.7°','#ffaa00',0.7);info('θ_magic=arccos(1/√3)≈54.7356° · also in TBG θ₀=1.090°')};
+
+SC[4]=()=>{plane([0,0,0],d,0xffffff,4,0.05);const s2={};U.forEach(v=>{const k=v.map(x=>x.toFixed(4)).join(',');if(s2[k])return;s2[k]=1;sph(v,OC[classify(v)],0.04)});sph(d,'#ffd700',0.08);lbl(vs(d,1.12),'Dem: d','#ffd700',0.7);const vp1=vn([-2,1,1]);sph(vp1,'#ff4477',0.08);lbl(vs(vp1,1.15),'Hyb: vₚ₁','#ff4477',0.7);sph(vn([0,1,-1]),'#00cc88',0.08);lbl(vs(vn([0,1,-1]),1.15),'Root','#00cc88',0.7);sph([1,0,0],'#44aaff',0.08);lbl([1.1,0,0],'Flv: e₁','#44aaff',0.7);leg({'Democratic':'2 dirs, 4 NF','Hybrid':'6 dirs, 24 NF*','Root':'6 dirs, 6 NF','Flavor':'3 dirs, 3 NF'});info('|O|=S₃×Z₂ · *dim_NF(Hyb)=24 (Theorem 1) · εq=4/24=1/6')};
+
+SC[5]=()=>{const rt=[vn([0,1,-1]),vn([0,-1,1]),vn([1,0,-1]),vn([-1,0,1]),vn([1,-1,0]),vn([-1,1,0])];for(let i=0;i<6;i++)for(let j=i+1;j<6;j++){if(veq(rt[i],vs(rt[j],-1)))ln(rt[i],rt[j],'#ff4444',0.25);else ln(rt[i],rt[j],'#6688aa',0.35)}rt.forEach((r,i)=>{sph(r,'#00cc88',0.07);lbl(vs(r,1.1),''+(i+1),'#aaddff',0.6)});plane([0,0,0],d,0xffffff,3,0.06);arr([0,0,0],d,'#ffd700',0.15);info('K₆\\3K₂ · Laplacian {0,4,4,4,6,6} · 6=1⊕3⊕2 → SU(3)×SU(2)×U(1)')};
+
+SC[6]=()=>{const n1=vn([2,-1,-1]),n2=d,n3=vn([0,1,-1]);arr([0,0,0],n1,'#ff4477',0.15);lbl(vs(n1,1.15),'ν₁ᵀᴮᴹ','#ff4477',0.7);arr([0,0,0],n2,'#ffd700',0.15);lbl(vs(n2,1.15),'ν₂ᵀᴮᴹ=d','#ffd700',0.7);arr([0,0,0],n3,'#00cc88',0.15);lbl(vs(n3,1.15),'ν₃ᵀᴮᴹ','#00cc88',0.7);plane([0,0,0],n1,0xff4477,1.8,0.05);plane([0,0,0],n2,0xffd700,1.8,0.05);plane([0,0,0],n3,0x00cc88,1.8,0.05);info('TBM = S₃ orbit representatives · ⟨νᵢ|νⱼ⟩=δᵢⱼ')};
+
+SC[7]=()=>{const vp1=vn([-2,1,1]),v3t=vn([0,1,-1]);arr([0,0,0],vp1,'#ff4477',0.18);lbl(vs(vp1,1.22),'vₚ₁=(-2,1,1)/√6','#ff4477',0.7);arr([0,0,0],d,'#ffd700',0.15);lbl(vs(d,1.2),'d','#ffd700',0.7);arr([0,0,0],v3t,'#00cc88',0.15);lbl(vs(v3t,1.2),'ν₃ᵀᴮᴹ','#00cc88',0.7);plane([0,0,0],vp1,0xff4477,2,0.06);const v2=vn([1,-2,1]),v3=vn([1,1,-2]);sph(v2,'#ff8888',0.05);lbl(vs(v2,1.08),'vₚ₂','#ff8888',0.5);sph(v3,'#ff8888',0.05);lbl(vs(v3,1.08),'vₚ₃','#ff8888',0.5);ln([0,0,0],v2,'#ff6666',0.15);ln([0,0,0],v3,'#ff6666',0.15);info('⟨d|vₚ₁⟩=0 · ⟨ν₃|vₚ₁⟩=0 → unique · ⟨ν₃|vₚ₂,₃⟩=±√3/2≠0')};
+
+SC[8]=()=>{const rt=[vn([0,1,-1]),vn([0,-1,1]),vn([1,0,-1]),vn([-1,0,1]),vn([1,-1,0]),vn([-1,1,0])];const tris=[];for(let i=0;i<6;i++)for(let j=i+1;j<6;j++)for(let k=j+1;k<6;k++){if(veq(rt[i],vs(rt[j],-1))||veq(rt[j],vs(rt[k],-1))||veq(rt[k],vs(rt[i],-1)))continue;const d1=vsub(rt[j],rt[i]),d2=vsub(rt[k],rt[i]),l1=Math.sqrt(vdot(d1,d1)),l2=Math.sqrt(vdot(d2,d2));if(Math.abs(vdot(vs(d1,1/l1),vs(d2,1/l2)))<0.02&&Math.abs(l1-l2)<0.3)tris.push([rt[i],rt[j],rt[k]])}const tc=[0xff6644,0xff8844,0xffaa44,0xffcc44,0x44ff66,0x44ff88,0x44ffaa,0x44ffcc];tris.forEach((t,i)=>{const g=new THREE.BufferGeometry();g.setAttribute('position',new THREE.BufferAttribute(new Float32Array(t.flat().flat()),3));g.computeVertexNormals();grp.add(new THREE.Mesh(g,new THREE.MeshPhongMaterial({color:tc[i%8],side:THREE.DoubleSide,transparent:true,opacity:0.35,depthWrite:false})))});for(let i=0;i<6;i++)for(let j=i+1;j<6;j++){if(veq(rt[i],vs(rt[j],-1)))continue;ln(rt[i],rt[j],'#446688',0.25)}rt.forEach((r,i)=>{sph(r,'#00cc88',0.06);lbl(vs(r,1.1),''+(i+1),'#aaddff',0.6)});plane([0,0,0],d,0xffffff,3,0.05);arr([0,0,0],d,'#ffd700',0.12);info('8 triangular plaquettes · all ⊥[111] → F∧F≡0 → θ_QCD=0 (Tier I)')};
+
+// ======== INIT ========
+document.querySelectorAll('.btn').forEach(b=>{b.addEventListener('click',()=>{document.querySelectorAll('.btn').forEach(x=>x.classList.remove('active'));b.classList.add('active');clr();document.getElementById('legend').innerHTML='';SC[+b.dataset.scene]()})});
+SC[0]();
+(function anim(){requestAnimationFrame(anim);ctrl.update();rdr.render(scene,cam)})();
+addEventListener('resize',()=>{cam.aspect=innerWidth/innerHeight;cam.updateProjectionMatrix();rdr.setSize(innerWidth,innerHeight)});
+</script>
+</body>
+</html>
