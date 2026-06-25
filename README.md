@@ -236,6 +236,11 @@ Press any of the 9 buttons at the bottom to switch scenes. Each scene visualizes
 **Controls**: Drag = rotate · Scroll = zoom · Right-drag = pan · Click buttons to switch scenes  
 **Tech**: Standalone HTML, ~14KB · Three.js loaded from CDN (needs internet on first open) · Works in Chrome/Firefox/Edge/Safari
 
+### 🔬 Z₃ Rigidity Theorem: Inverted Ordering (IO) is Forced
+---
+[`z3_io_rigidity_proof.py`](z3_io_rigidity_proof.py) proves, through four independent pathways, that the Z₃ algebra rigidly predicts Inverted Ordering for neutrino masses: (i) algebraic Killing form, (ii) Z₃ lattice geometry, (iii) representation-theoretic character assignments, and (iv) a contradiction scan showing Normal Ordering breaks the algebra. Zero free parameters — directly falsifiable by JUNO/DUNE. Running the script generates [`z3_io_rigidity_viz.png`](z3_io_rigidity_viz.png), a 3D visualization of the proof. Full logic in [`z3_io_rigidity_README.md`](z3_io_rigidity_README.md).
+
+
 
 ### Core Verification Scripts (Self-Contained & Reproducible)
 
