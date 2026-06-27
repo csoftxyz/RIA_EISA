@@ -1,0 +1,27 @@
+python Z3_Orbital_Glow.py
+Z3 Glow Orbital Visualisation
+=============================================
+1/α=137.035999, a₀=137.0
+
+--- 4-Angle Glow Montages ---
+  1s Orbital...
+    [OK] /mnt/f/BaiduNetdiskDownload/浩博项目/准备正高的文章/文章5/new2/李代数/final/超导/审稿人意见/第七次/牛顿投稿/C13/NEW260626/output/Z3_Glow_1s.png
+  2s Orbital...
+    [OK] /mnt/f/BaiduNetdiskDownload/浩博项目/准备正高的文章/文章5/new2/李代数/final/超导/审稿人意见/第七次/牛顿投稿/C13/NEW260626/output/Z3_Glow_2s.png
+  2p_z Orbital...
+    [OK] /mnt/f/BaiduNetdiskDownload/浩博项目/准备正高的文章/文章5/new2/李代数/final/超导/审稿人意见/第七次/牛顿投稿/C13/NEW260626/output/Z3_Glow_2pz.png
+  2p_x Orbital...
+    [OK] /mnt/f/BaiduNetdiskDownload/浩博项目/准备正高的文章/文章5/new2/李代数/final/超导/审稿人意见/第七次/牛顿投稿/C13/NEW260626/output/Z3_Glow_2px.png
+  2p_y Orbital...
+    [OK] /mnt/f/BaiduNetdiskDownload/浩博项目/准备正高的文章/文章5/new2/李代数/final/超导/审稿人意见/第七次/牛顿投稿/C13/NEW260626/output/Z3_Glow_2py.png
+  3d_{z^2} Orbital...
+    [OK] /mnt/f/BaiduNetdiskDownload/浩博项目/准备正高的文章/文章5/new2/李代数/final/超导/审稿人意见/第七次/牛顿投稿/C13/NEW260626/output/Z3_Glow_3dz2.png
+  3d_{xy} Orbital...
+    [OK] /mnt/f/BaiduNetdiskDownload/浩博项目/准备正高的文章/文章5/new2/李代数/final/超导/审稿人意见/第七次/牛顿投稿/C13/NEW260626/output/Z3_Glow_3dxy.png
+  3d_{x^2-y^2} Orbital...
+    [OK] /mnt/f/BaiduNetdiskDownload/浩博项目/准备正高的文章/文章5/new2/李代数/final/超导/审稿人意见/第七次/牛顿投稿/C13/NEW260626/output/Z3_Glow_3dx2y2.png
+
+--- Radial Curves ---
+  [OK] /mnt/f/BaiduNetdiskDownload/浩博项目/准备正高的文章/文章5/new2/李代数/final/超导/审稿人意见/第七次/牛顿投稿/C13/NEW260626/output/Z3_Radial_Curves.png
+
+Done.

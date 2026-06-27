@@ -1,0 +1,20 @@
+python Z3_Nature_Orbitals.py
+Z3 Nature-Quality Orbital Visualisation
+==================================================
+alpha = 0.00729735, alpha^-1 = 137.035999, a0 = 137.0
+
+Individual orbitals:
+  [OK] /mnt/f/BaiduNetdiskDownload/浩博项目/准备正高的文章/文章5/new2/李代数/final/超导/审稿人意见/第七次/牛顿投稿/C13/NEW260626/output/Z3_Orbital_1s.png
+  [OK] /mnt/f/BaiduNetdiskDownload/浩博项目/准备正高的文章/文章5/new2/李代数/final/超导/审稿人意见/第七次/牛顿投稿/C13/NEW260626/output/Z3_Orbital_2s.png
+  [OK] /mnt/f/BaiduNetdiskDownload/浩博项目/准备正高的文章/文章5/new2/李代数/final/超导/审稿人意见/第七次/牛顿投稿/C13/NEW260626/output/Z3_Orbital_2p_z.png
+  [OK] /mnt/f/BaiduNetdiskDownload/浩博项目/准备正高的文章/文章5/new2/李代数/final/超导/审稿人意见/第七次/牛顿投稿/C13/NEW260626/output/Z3_Orbital_2p_x.png
+  [OK] /mnt/f/BaiduNetdiskDownload/浩博项目/准备正高的文章/文章5/new2/李代数/final/超导/审稿人意见/第七次/牛顿投稿/C13/NEW260626/output/Z3_Orbital_2p_y.png
+  [OK] /mnt/f/BaiduNetdiskDownload/浩博项目/准备正高的文章/文章5/new2/李代数/final/超导/审稿人意见/第七次/牛顿投稿/C13/NEW260626/output/Z3_Orbital_3d_{z^2}.png
+  [OK] /mnt/f/BaiduNetdiskDownload/浩博项目/准备正高的文章/文章5/new2/李代数/final/超导/审稿人意见/第七次/牛顿投稿/C13/NEW260626/output/Z3_Orbital_3d_{xy}.png
+  [OK] /mnt/f/BaiduNetdiskDownload/浩博项目/准备正高的文章/文章5/new2/李代数/final/超导/审稿人意见/第七次/牛顿投稿/C13/NEW260626/output/Z3_Orbital_3d_{x^2-y^2}.png
+
+Composite figure:
+[OK] /mnt/f/BaiduNetdiskDownload/浩博项目/准备正高的文章/文章5/new2/李代数/final/超导/审稿人意见/第七次/牛顿投稿/C13/NEW260626/output/Z3_Orbitals_Nature_Composite.png
+
+Done.
+(base) 
