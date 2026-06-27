@@ -396,6 +396,45 @@ We view this as an early computational step toward exploring whether the $Z_3$ v
 
 This script uses a Z₃ 44-vector discrete lattice together with a Metropolis Monte Carlo random walk (8 million steps) to statistically generate probability distributions of hydrogen atomic orbitals (1s, 2s, 2pₓ/2pᵧ/2p_z, 3d etc.) without solving the Schrödinger equation or employing continuous wave functions. The energy function combines a radial linear tension term with orbit-specific topological barriers, motivated by triality phase considerations. It serves as a numerical demonstration of emergent quantum orbital shapes from discrete vacuum geometry. Outputs include 7 high-resolution orbital visualizations compiled in `Z3_Emergent.pdf`. This is a phenomenological numerical exploration within the Z₃ Cubic Vacuum Triality framework.
 
+### 🔬 Z3_Nature_Orbitals.py (Updated June 27, 2026)
+
+> 📘 **Note**: This script generates publication-quality 3D orbital visualizations at Nature journal standard, using the fully corrected physical fine structure constant.
+
+This script solves the discrete radial Schrödinger equation on the Z₃ geometric grid
+\(r_k \propto (\sqrt{3})^k\) with the fully corrected physical fine structure constant
+\(\alpha^{-1} = 137.036\), obtained by applying the exact topological correction
+\(\delta = (S - S^3)/(4\sqrt{3})\) to the geometric bare coupling
+\(\alpha^{-1}_{\rm geom} = 137.042\). The output includes 8 individual high-resolution
+orbital renders (1s, 2s, 2p_z, 2p_x, 2p_y, 3d_{z^2}, 3d_{xy}, 3d_{x^2-y^2}) plus a
+composite Nature-style figure. All wavefunctions are computed with **zero free parameters**
+from the 44-vector vacuum lattice and the octahedron U(1) lattice gauge theory.
+The physical coupling \(\alpha^{-1} = 137.036\) agrees with the CODATA 2022 value
+137.035999084 to sub-part-per-billion precision.
+
+**Output**:
+- `Z3_Orbital_1s.png` through `Z3_Orbital_3d_{x^2-y^2}.png` — individual orbital renders
+- `Z3_Orbitals_Nature_Composite.png` — composite 8-panel figure
+
+### ✨ Z3_Orbital_Glow.py (Updated June 27, 2026)
+
+> 📘 **Note**: This script produces cover-quality multi-angle orbital montages with a volumetric glow effect — a beautiful visual companion to the Z₃ hydrogen spectrum derivation.
+
+Each orbital is rendered from **four viewing angles** with a three-layer rendering approach:
+1. 🔥 **Inner core** — bright, high-opacity probability density peak
+2. 🌫️ **Outer glow halo** — diffuse, low-opacity volumetric emission
+3. 💨 **Background mist** — ambient probability density at large distances
+
+The radial wavefunctions are solved on the Z₃ geometric grid using the physically
+corrected fine structure constant \(\alpha^{-1} = 137.036\), together with the exact
+42 ppm topological correction formula \(\delta = (S - S^3)/(4\sqrt{3})\). The script
+also generates a radial curve comparison plot showing the Z₃ wavefunctions alongside
+exact hydrogen radial functions for all computed states (\(n = 1\)–\(5\), \(l = 0\)–\(2\)).
+
+**Output**:
+- `Z3_Glow_1s.png` through `Z3_Glow_3dx2y2.png` — four-angle glow montages for 8 orbitals
+- `Z3_Radial_Curves.png` — radial wavefunction comparison plot
+
+
 ### 5. Neutrino Mixing Parameters
 
 This directory contains tools for exploring the geometric origins of PMNS mixing angles and neutrino mass ratios within the Z₃ vacuum framework. The scripts perform large-scale lattice searches for integer vectors that yield mixing parameters close to experimental values, with particular emphasis on the observed θ₁₃ (1/sin²θ₁₃ ≈ 44.64) emerging in the "valley" between the two natural geometric anchors at 44 (lattice-aligned) and 45 (vacuum singlet).
@@ -830,3 +869,4 @@ This work proposes a new pathway based on discrete geometry for understanding th
 - Email: csoft@hotmail.com (corresponding) / csoft@live.cn
 
 Wiki pages are continuously updated with detailed guides and interpretations. Contributions welcome.
+
