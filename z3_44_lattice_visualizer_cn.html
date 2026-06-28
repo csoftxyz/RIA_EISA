@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-CN">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Z₃ 44-Vector Lattice — The Octahedron is Not a Choice, It's Unique</title>
+<title>Z₃ 44晶格 — 八面体不是选择，是唯一解</title>
 <style>
   * { margin:0; padding:0; box-sizing:border-box; }
   body { background:#080812; font-family:'Segoe UI','PingFang SC','Microsoft YaHei',sans-serif; overflow:hidden; color:#bbb; }
@@ -21,7 +21,7 @@
     position:fixed; top:120px; right:14px; z-index:10;
     background:rgba(14,14,30,0.92); border:1px solid rgba(255,255,255,0.1);
     border-radius:10px; padding:12px 14px; font-size:11px; line-height:1.65;
-    backdrop-filter:blur(12px); min-width:185px;
+    backdrop-filter:blur(12px); min-width:175px;
   }
   #legend .t { font-size:12px; font-weight:700; color:#fff; margin-bottom:3px; }
   #legend .row { display:flex; align-items:center; gap:7px; margin:2px 0; }
@@ -51,6 +51,7 @@
   #controls button:hover { background:rgba(50,50,90,0.7); color:#fff; border-color:rgba(255,255,255,0.35); }
   #controls button.on { background:rgba(100,80,200,0.55); color:#fff; border-color:#8af; }
 
+  /* Step annotation callout */
   #step-text {
     position:fixed; left:20px; top:50%; transform:translateY(-50%); z-index:10;
     font-size:12px; line-height:1.7; pointer-events:none; max-width:200px;
@@ -75,49 +76,49 @@
 <div id="c"></div>
 
 <div id="titlebar">
-  <h1>Z₃ 44-Vector Vacuum Lattice: Why the Octahedron is Unique</h1>
-  <h2>5 seeds → Z₃ triality closure → 44 vectors. The octahedron (K₂,₂,₂) is algebraically determined, not hand-picked.</h2>
+  <h1>Z₃ 44-矢量真空晶格：为什么八面体是唯一的</h1>
+  <h2>5种子 → Z₃三元闭包 → 44矢量。八面体（K₂,₂,₂）是代数决定的，不是挑出来的。</h2>
 </div>
 
 <div id="legend">
-  <div class="t">Legend</div>
-  <div class="row"><span class="dot" style="background:#ff4466;"></span> Octahedron K₂,₂,₂ (L²=2 root shell)</div>
-  <div class="row"><span class="dash" style="border-color:#ff8866;"></span> Octahedron L²=6 (scaled ×√3)</div>
-  <div class="row"><span class="dash" style="border-color:#4dc9f6;"></span> A₂ hexagon (⊥[111] projection)</div>
-  <div class="row"><span class="dot" style="background:#ffd700;"></span> Democratic axis [111]</div>
-  <div class="row"><span class="dot" style="background:rgba(130,160,220,0.6);"></span> Other lattice vectors</div>
-  <div class="row"><span class="dot" style="background:#fff; width:5px; height:5px;"></span> 5 seed vectors</div>
+  <div class="t">图例</div>
+  <div class="row"><span class="dot" style="background:#ff4466;"></span> 八面体 K₂,₂,₂（6顶点 = L²=2 root shell）</div>
+  <div class="row"><span class="dash" style="border-color:#ff8866;"></span> 八面体 L²=6（等比缩放√3倍）</div>
+  <div class="row"><span class="dash" style="border-color:#4dc9f6;"></span> A₂六边形（八面体⊥[111]投影）</div>
+  <div class="row"><span class="dot" style="background:#ffd700;"></span> Democratic 方向 [111]</div>
+  <div class="row"><span class="dot" style="background:rgba(130,160,220,0.6);"></span> 其他44晶格矢量</div>
+  <div class="row"><span class="dot" style="background:#fff; width:5px; height:5px;"></span> 5个种子矢量</div>
 </div>
 
 <div id="step-text">
   <span class="big r">K₂,₂,₂</span>
-  <span class="sub">Complete tripartite graph<br>= octahedron skeleton<br>6 vertices 12 edges 8 faces<br>Laplacian: {0,4,4,4,6,6}<br>→ 6 = 1⊕3⊕2<br>= U(1)⊕SU(2)⊕SU(3)</span>
+  <span class="sub">完全三部图 = 八面体骨架<br>6顶点 12棱 8三角面<br>Laplacian: {0,4,4,4,6,6}<br>→ 6 = 1⊕3⊕2<br>= U(1)⊕SU(2)⊕SU(3)</span>
   <br>
   <span class="big g">[111]</span>
-  <span class="sub">Democratic direction<br>= 3-generation hierarchy<br>1-dimensional → no gauge group<br>All root vectors ⟂ this axis</span>
+  <span class="sub">民主方向 = 三代标度<br>只有1维 → 不承载规范群<br>所有root矢量 ⊥ 此方向</span>
   <br>
   <span class="big" style="color:#4dc9f6;">A₂</span>
-  <span class="sub">Hexagon = octahedron projection<br>Same structure, different dimension</span>
+  <span class="sub">六边形 = 八面体投影<br>同一结构, 不同维度看</span>
 </div>
 
 <div id="controls">
-  <button id="b1" class="on" onclick="t('L2')">Octahedron L²=2</button>
-  <button id="b2" onclick="t('L6')">Octahedron L²=6</button>
+  <button id="b1" class="on" onclick="t('L2')">八面体 L²=2</button>
+  <button id="b2" onclick="t('L6')">八面体 L²=6</button>
   <button id="b3" onclick="t('dem')">Democratic [111]</button>
-  <button id="b4" onclick="t('hex')">A₂ Hexagon</button>
-  <button id="b5" onclick="t('all')">All 44 Vectors</button>
-  <button id="b6" onclick="t('auto')">Auto-Rotate</button>
-  <button onclick="resetView()">Reset View</button>
+  <button id="b4" onclick="t('hex')">A₂ 六边形</button>
+  <button id="b5" onclick="t('all')">全部44矢量</button>
+  <button id="b6" onclick="t('auto')">自动旋转</button>
+  <button onclick="resetView()">重置视角</button>
 </div>
 
 <div id="infopanel">
-  <b>Why only the octahedron?</b>&nbsp;
-  <span class="r">① L²=2 is the first non-trivial root shell</span> →
-  6 vectors form <span class="r">K₂,₂,₂ = octahedron topology</span> →
-  Laplacian decomposition <span class="r">6=1⊕3⊕2 = SM gauge group</span>&nbsp;|&nbsp;
-  <span class="g">Democratic along [111] (1D, degenerate)</span>&nbsp;|&nbsp;
-  All higher root shells are <span class="c">√3-scaled copies of the same octahedron</span>&nbsp;|&nbsp;
-  <span class="c">A₂ hexagon = 2D projection of the octahedron</span>
+  <b>为什么只有八面体？</b>&nbsp;
+  <span class="r">① L²=2 是第一个非平凡 root shell</span> →
+  6矢量构成 <span class="r">K₂,₂,₂ 图 = 八面体拓扑</span> →
+  Laplacian 谱分解 <span class="r">6=1⊕3⊕2 = SM规范群</span>&nbsp;|&nbsp;
+  <span class="g">Democratic 沿[111]（1维退化）</span>&nbsp;|&nbsp;
+  所有更高 root shells 是 <span class="c">同一八面体的等比缩放</span>&nbsp;|&nbsp;
+  <span class="c">A₂六边形 = 八面体 2D 投影</span>
 </div>
 
 <script type="importmap">
@@ -129,24 +130,9 @@ import * as T from 'three';
 import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
 
 // ============================================================
-// DATA: Corrected 44-lattice from Z₃ closure (z3_lattice_A.py)
-// 10 shells: 1 basis + 6 root + 3 democratic = 44 vectors
+// DATA: 44-lattice from Z₃ closure
 // ============================================================
-const LD = {
-  "shells": {
-    "1.0": {"L2":1.0,"count":5,"vectors":[[0,1,0],[0,0,1],[1,0,0],[-0.57735,-0.57735,-0.57735],[0.57735,0.57735,0.57735]]},
-    "2.0": {"L2":2.0,"count":6,"vectors":[[0,1,-1],[0,-1,1],[1,0,-1],[1,-1,0],[-1,0,1],[-1,1,0]]},
-    "3.0": {"L2":3.0,"count":1,"vectors":[[1,1,1]]},
-    "6.0": {"L2":6.0,"count":6,"vectors":[[1,-2,1],[-1,-1,2],[-2,1,1],[2,-1,-1],[-1,2,-1],[1,1,-2]]},
-    "18.0":{"L2":18.0,"count":6,"vectors":[[3,-3,0],[0,-3,3],[-3,3,0],[-3,0,3],[0,3,-3],[3,0,-3]]},
-    "27.0":{"L2":27.0,"count":1,"vectors":[[3,3,3]]},
-    "54.0":{"L2":54.0,"count":6,"vectors":[[-3,6,-3],[3,3,-6],[3,-6,3],[6,-3,-3],[-3,-3,6],[-6,3,3]]},
-    "162.0":{"L2":162.0,"count":6,"vectors":[[0,9,-9],[-9,9,0],[-9,0,9],[9,-9,0],[9,0,-9],[0,-9,9]]},
-    "243.0":{"L2":243.0,"count":1,"vectors":[[9,9,9]]},
-    "486.0":{"L2":486.0,"count":6,"vectors":[[-9,-9,18],[9,-18,9],[-9,18,-9],[-18,9,9],[18,-9,-9],[9,9,-18]]}
-  },
-  "all_vectors": [[0,1,0],[0,0,1],[1,0,0],[-0.57735,-0.57735,-0.57735],[0.57735,0.57735,0.57735],[0,1,-1],[0,-1,1],[1,0,-1],[1,-1,0],[-1,0,1],[-1,1,0],[1,1,1],[1,-2,1],[-1,-1,2],[-2,1,1],[2,-1,-1],[-1,2,-1],[1,1,-2],[3,-3,0],[0,-3,3],[-3,3,0],[-3,0,3],[0,3,-3],[3,0,-3],[3,3,3],[-3,6,-3],[3,3,-6],[3,-6,3],[6,-3,-3],[-3,-3,6],[-6,3,3],[0,9,-9],[-9,9,0],[-9,0,9],[9,-9,0],[9,0,-9],[0,-9,9],[9,9,9],[-9,-9,18],[9,-18,9],[-9,18,-9],[-18,9,9],[18,-9,-9],[9,9,-18]]
-};
+const LD = {"total":44,"shells":{"0.75":{"L2":0.75,"count":1,"vectors":[[0.5,0.5,0.5]]},"1.0":{"L2":1.0,"count":17,"vectors":[[1,0,0],[0,1,0],[0,0,1],[-0.7071,0.7071,0],[-0.7071,0,0.7071],[0,-0.7071,0.7071],[0.7071,-0.7071,0],[0.7071,0,-0.7071],[0,0.7071,-0.7071],[0.4082,-0.8165,0.4082],[0.8165,-0.4082,-0.4082],[0.4082,0.4082,-0.8165],[-0.4082,0.8165,-0.4082],[-0.8165,0.4082,0.4082],[-0.4082,-0.4082,0.8165],[0.5774,0.5774,0.5774],[-0.5774,-0.5774,-0.5774]]},"2.0":{"L2":2.0,"count":6,"vectors":[[-1,1,0],[-1,0,1],[0,-1,1],[1,-1,0],[1,0,-1],[0,1,-1]]},"3.0":{"L2":3.0,"count":13,"vectors":[[0,1.2247,-1.2247],[-1.2247,1.2247,0],[-1.2247,0,1.2247],[0,-1.2247,1.2247],[1.2247,-1.2247,0],[1.2247,0,-1.2247],[0.7071,-1.4142,0.7071],[1.4142,-0.7071,-0.7071],[0.7071,0.7071,-1.4142],[-0.7071,1.4142,-0.7071],[-1.4142,0.7071,0.7071],[-0.7071,-0.7071,1.4142],[1,1,1]]},"6.0":{"L2":6.0,"count":6,"vectors":[[1,-2,1],[2,-1,-1],[1,1,-2],[-1,2,-1],[-2,1,1],[-1,-1,2]]},"6.75":{"L2":6.75,"count":1,"vectors":[[1.5,1.5,1.5]]}},"all_vectors":[[0.5,0.5,0.5],[1,0,0],[0,1,0],[0,0,1],[-0.7071,0.7071,0],[-0.7071,0,0.7071],[0,-0.7071,0.7071],[0.7071,-0.7071,0],[0.7071,0,-0.7071],[0,0.7071,-0.7071],[0.4082,-0.8165,0.4082],[0.8165,-0.4082,-0.4082],[0.4082,0.4082,-0.8165],[-0.4082,0.8165,-0.4082],[-0.8165,0.4082,0.4082],[-0.4082,-0.4082,0.8165],[0.5774,0.5774,0.5774],[-0.5774,-0.5774,-0.5774],[-1,1,0],[-1,0,1],[0,-1,1],[1,-1,0],[1,0,-1],[0,1,-1],[0,1.2247,-1.2247],[-1.2247,1.2247,0],[-1.2247,0,1.2247],[0,-1.2247,1.2247],[1.2247,-1.2247,0],[1.2247,0,-1.2247],[0.7071,-1.4142,0.7071],[1.4142,-0.7071,-0.7071],[0.7071,0.7071,-1.4142],[-0.7071,1.4142,-0.7071],[-1.4142,0.7071,0.7071],[-0.7071,-0.7071,1.4142],[1,1,1],[1,-2,1],[2,-1,-1],[1,1,-2],[-1,2,-1],[-2,1,1],[-1,-1,2],[1.5,1.5,1.5]]};
 
 // ============================================================
 // THREE.js Setup
@@ -186,29 +172,32 @@ scene.add(new T.PolarGridHelper(5.5,48,24,64,0x1a1a33,0x0f0f22));
 // ============================================================
 // Build: Geometric Octahedron (K₂,₂,₂ 1-skeleton realized in 3D)
 // ============================================================
+// Standard octahedron vertices: (±1,0,0),(0,±1,0),(0,0,±1) — rotated to align symmetry
 const OCTA_V = [
   [1,0,0], [-1,0,0], [0,1,0], [0,-1,0], [0,0,1], [0,0,-1]
 ];
-// K₂,₂,₂ edges: antipodal pairs (0,1),(2,3),(4,5) excluded
+// K₂,₂,₂ edges: connect across the 3 antipodal pairs
+// Pairs: (0,1),(2,3),(4,5) are antipodal — don't connect
+// All other pairs are edges
 const OCTA_EDGES = [];
 for(let i=0;i<6;i++) for(let j=i+1;j<6;j++) {
   if((i===0&&j===1)||(i===2&&j===3)||(i===4&&j===5)) continue;
   OCTA_EDGES.push([i,j]);
 }
-// 8 triangular faces (the octahedron triangulation of S²)
+// 8 triangular faces
 const OCTA_FACES = [
   [0,2,4],[0,2,5],[0,3,4],[0,3,5],
   [1,2,4],[1,2,5],[1,3,4],[1,3,5]
 ];
 
-// Groups
+// Groups (all added to scene)
 const G = {
-  octa: new T.Group(),
-  octa_l6: new T.Group(),
-  dem: new T.Group(),
-  hex: new T.Group(),
-  all: new T.Group(),
-  seeds: new T.Group()
+  octa: new T.Group(),    // Geometric octahedron (K₂,₂,₂)
+  octa_l6: new T.Group(), // Scaled octahedron for L²=6
+  dem: new T.Group(),     // Democratic [111]
+  hex: new T.Group(),     // A2 hexagon in ⊥[111] plane
+  all: new T.Group(),     // All 44 vectors
+  seeds: new T.Group()    // Seed vectors
 };
 Object.values(G).forEach(g=>scene.add(g));
 const vis = { octa:true, octa_l6:false, dem:false, hex:false, all:false };
@@ -227,6 +216,11 @@ function glowSphere(p,r,c,gs=0.06) {
   const gl = new T.Mesh(new T.SphereGeometry(r+gs,16,16),
     new T.MeshBasicMaterial({color:c,transparent:true,opacity:0.22,depthWrite:false}));
   gl.position.set(p[0],p[1],p[2]); g.add(gl); return g;
+}
+function line3d(a,b,c,op=0.8,lw=1) {
+  const pts=[new T.Vector3(a[0],a[1],a[2]),new T.Vector3(b[0],b[1],b[2])];
+  return new T.Line(new T.BufferGeometry().setFromPoints(pts),
+    new T.LineBasicMaterial({color:c,transparent:true,opacity:op}));
 }
 function tubeLine(a,b,c,op=0.7,r=0.025) {
   const dir=new T.Vector3(b[0]-a[0],b[1]-a[1],b[2]-a[2]);
@@ -261,19 +255,10 @@ G.octa.add(new T.Mesh(fg,new T.MeshStandardMaterial({
 
 // ---- BUILD: Scaled Octahedron L²=6 (orange) ----
 const Oc6 = 0xff8866;
-const s6 = Math.sqrt(6);
+const s6 = Math.sqrt(6); // radius of L²=6 octahedron vertices
 const OCTA_V6 = OCTA_V.map(v=>[v[0]*s6,v[1]*s6,v[2]*s6]);
 OCTA_V6.forEach(v=>G.octa_l6.add(glowSphere(v,0.12,Oc6,0.05)));
 OCTA_EDGES.forEach(([i,j])=>G.octa_l6.add(tubeLine(OCTA_V6[i],OCTA_V6[j],Oc6,0.4,0.028)));
-
-// ---- Also add all actual root-shell vectors as colored dots ----
-// Root shells (6 vectors each): L²=2,6,18,54,162,486
-const rootShellColors = [0xff4466,0xff8866,0xffaa88,0xffccaa,0xcc8866,0x996644];
-["2.0","6.0","18.0","54.0","162.0","486.0"].forEach((k,i)=>{
-  LD.shells[k].vectors.forEach(v=>{
-    G.octa.add(glowSphere(v,0.06,rootShellColors[i],0.03));
-  });
-});
 
 // ---- BUILD: Democratic [111] line ----
 const Dc = 0xffd700;
@@ -286,8 +271,9 @@ G.dem.add(new T.Line(
 const ac = new T.Mesh(new T.ConeGeometry(0.13,0.4,8,8),
   new T.MeshStandardMaterial({color:Dc,roughness:0.3,emissive:Dc,emissiveIntensity:0.5}));
 ac.position.set(3.5,3.5,3.5); ac.lookAt(new T.Vector3(4.3,4.3,4.3)); G.dem.add(ac);
-// Democratic points (L²=3,27,243 = [1,1,1], [3,3,3], [9,9,9])
-const demPts = [[0.57735,0.57735,0.57735],[-0.57735,-0.57735,-0.57735],[1,1,1],[-1,-1,-1],[3,3,3],[-3,-3,-3],[9,9,9],[-9,-9,-9]];
+// Democratic points
+const demPts = [[0.5,0.5,0.5],[-0.5,-0.5,-0.5],[1,1,1],[-1,-1,-1],[1.5,1.5,1.5],[-1.5,-1.5,-1.5],
+  [0.5774,0.5774,0.5774],[-0.5774,-0.5774,-0.5774]];
 demPts.forEach(v=>G.dem.add(glowSphere(v,0.09,Dc,0.06)));
 
 // ---- BUILD: A₂ Hexagon in ⊥[111] plane ----
@@ -313,20 +299,31 @@ const hproj = vL2.map(v=>{
   const d = v[0]*m111.x+v[1]*m111.y+v[2]*m111.z;
   return [v[0]-d*m111.x, v[1]-d*m111.y, v[2]-d*m111.z];
 });
-// Draw hexagon edges
+// Draw hexagon edges on the plane
 for(let i=0;i<hproj.length;i++){
   const a=hproj[i], b=hproj[(i+1)%6];
   G.hex.add(tubeLine(a,b,Hc,0.7,0.025));
   G.hex.add(glowSphere(a,0.06,Hc,0.04));
 }
-// Also show the actual L²=2 vectors in 3D
+
+// Also show the actual L²=2 vectors (3D) with small cyan dots
 vL2.forEach(v=>G.hex.add(glowSphere(v,0.07,Hc,0.04)));
 
-// ---- BUILD: All 44 vectors (un-highlighted remainder) ----
+// Dashed vertical connectors from hexagon to octahedron vertices
+// (showing the relationship between 2D hexagon and 3D octahedron)
+// The L²=2 vectors ARE in the ⊥[111] plane, so they're the same as their projections
+// The octahedron vertices are a different embedding
+
+// ---- BUILD: All 44 vectors ----
 const highlighted = new Set();
-["2.0","6.0","18.0","54.0","162.0","486.0","3.0","27.0","243.0"].forEach(k=>{
-  LD.shells[k].vectors.forEach(v=>highlighted.add(v.map(x=>x.toFixed(4)).join(',')));
+const hiShells = ["2.0","6.0","0.75","6.75"];
+hiShells.forEach(k=>LD.shells[k].vectors.forEach(v=>highlighted.add(v.map(x=>x.toFixed(4)).join(','))));
+LD.shells["3.0"].vectors.forEach(v=>{
+  if(Math.abs(v[0]-v[1])<0.02&&Math.abs(v[1]-v[2])<0.02) highlighted.add(v.map(x=>x.toFixed(4)).join(','));
 });
+// Add L²=2 vectors (shown in octahedron group)
+LD.shells["2.0"].vectors.forEach(v=>highlighted.add(v.map(x=>x.toFixed(4)).join(',')));
+
 LD.all_vectors.forEach(v=>{
   const key=v.map(x=>x.toFixed(4)).join(',');
   if(highlighted.has(key)) return;
@@ -334,7 +331,7 @@ LD.all_vectors.forEach(v=>{
 });
 
 // ---- BUILD: Seeds ----
-[[1,0,0],[0,1,0],[0,0,1],[0.57735,0.57735,0.57735],[-0.57735,-0.57735,-0.57735]].forEach(v=>{
+[[1,0,0],[0,1,0],[0,0,1],[0.5774,0.5774,0.5774],[-0.5774,-0.5774,-0.5774]].forEach(v=>{
   G.seeds.add(glowSphere(v,0.065,0xffffff,0.04));
 });
 
@@ -393,7 +390,7 @@ window.addEventListener('resize',()=>{
   renderer.setSize(container.clientWidth,container.clientHeight);
 });
 
-console.log('✅ Z₃ 44-Lattice Visualizer Ready — the octahedron is the unique K_{2,2,2} graph');
+console.log('✅ Z₃ 44-Lattice Visualizer Ready — Octahedron is the unique K_{2,2,2} graph');
 </script>
 </body>
 </html>
