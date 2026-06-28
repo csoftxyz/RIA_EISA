@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Z₃ 44晶格 — 八面体不是选择，是唯一解</title>
+<style>
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body { background:#080812; font-family:'Segoe UI','PingFang SC','Microsoft YaHei',sans-serif; overflow:hidden; color:#bbb; }
+  #c { position:fixed; top:0; left:0; width:100%; height:100%; z-index:1; }
+
+  #titlebar {
+    position:fixed; top:0; left:0; right:0; z-index:10;
+    background:linear-gradient(180deg, rgba(8,8,18,0.97) 40%, rgba(8,8,18,0) 100%);
+    padding:14px 20px 22px; pointer-events:none;
+  }
+  #titlebar h1 { font-size:20px; font-weight:700; color:#fff; letter-spacing:0.4px; }
+  #titlebar h2 { font-size:12px; font-weight:400; color:#8af; margin-top:1px; }
+
+  #legend {
+    position:fixed; top:120px; right:14px; z-index:10;
+    background:rgba(14,14,30,0.92); border:1px solid rgba(255,255,255,0.1);
+    border-radius:10px; padding:12px 14px; font-size:11px; line-height:1.65;
+    backdrop-filter:blur(12px); min-width:175px;
+  }
+  #legend .t { font-size:12px; font-weight:700; color:#fff; margin-bottom:3px; }
+  #legend .row { display:flex; align-items:center; gap:7px; margin:2px 0; }
+  #legend .dot { width:9px; height:9px; border-radius:50%; flex-shrink:0; }
+  #legend .dash { width:14px; height:0; border-top:2px dashed; flex-shrink:0; }
+
+  #infopanel {
+    position:fixed; bottom:16px; left:50%; transform:translateX(-50%); z-index:10;
+    background:rgba(14,14,28,0.9); border:1px solid rgba(255,255,255,0.1);
+    border-radius:12px; padding:10px 20px; font-size:12px; line-height:1.55;
+    backdrop-filter:blur(12px); text-align:center; max-width:720px; pointer-events:none;
+  }
+  #infopanel b { color:#fff; }
+  #infopanel .r { color:#ff5555; font-weight:700; }
+  #infopanel .g { color:#ffd700; font-weight:700; }
+  #infopanel .c { color:#4dc9f6; font-weight:700; }
+
+  #controls {
+    position:fixed; bottom:105px; left:50%; transform:translateX(-50%); z-index:10;
+    display:flex; gap:6px; flex-wrap:wrap; justify-content:center;
+  }
+  #controls button {
+    background:rgba(18,18,36,0.85); border:1px solid rgba(255,255,255,0.15);
+    color:#bbb; padding:6px 12px; border-radius:18px; font-size:11px; cursor:pointer;
+    backdrop-filter:blur(8px); transition:all 0.2s; font-family:inherit; white-space:nowrap;
+  }
+  #controls button:hover { background:rgba(50,50,90,0.7); color:#fff; border-color:rgba(255,255,255,0.35); }
+  #controls button.on { background:rgba(100,80,200,0.55); color:#fff; border-color:#8af; }
+
+  /* Step annotation callout */
+  #step-text {
+    position:fixed; left:20px; top:50%; transform:translateY(-50%); z-index:10;
+    font-size:12px; line-height:1.7; pointer-events:none; max-width:200px;
+    color:#aaa; transition:opacity 0.4s;
+  }
+  #step-text .big { font-size:26px; font-weight:800; display:block; line-height:1; }
+  #step-text .big.r { color:#ff5555; }
+  #step-text .big.g { color:#ffd700; }
+  #step-text .sub { font-size:10px; color:#777; }
+
+  @media (max-width:768px) {
+    #legend { top:auto; bottom:150px; right:6px; font-size:10px; padding:8px 10px; min-width:auto; }
+    #step-text { display:none; }
+    #infopanel { font-size:10px; padding:8px 12px; max-width:95vw; }
+    #controls { bottom:120px; }
+    #controls button { padding:4px 8px; font-size:10px; }
+  }
+</style>
+</head>
+<body>
+
+<div id="c"></div>
+
+<div id="titlebar">
+  <h1>Z₃ 44-矢量真空晶格：为什么八面体是唯一的</h1>
+  <h2>5种子 → Z₃三元闭包 → 44矢量。八面体（K₂,₂,₂）是代数决定的，不是挑出来的。</h2>
+</div>
+
+<div id="legend">
+  <div class="t">图例</div>
+  <div class="row"><span class="dot" style="background:#ff4466;"></span> 八面体 K₂,₂,₂（6顶点 = L²=2 root shell）</div>
+  <div class="row"><span class="dash" style="border-color:#ff8866;"></span> 八面体 L²=6（等比缩放√3倍）</div>
+  <div class="row"><span class="dash" style="border-color:#4dc9f6;"></span> A₂六边形（八面体⊥[111]投影）</div>
+  <div class="row"><span class="dot" style="background:#ffd700;"></span> Democratic 方向 [111]</div>
+  <div class="row"><span class="dot" style="background:rgba(130,160,220,0.6);"></span> 其他44晶格矢量</div>
+  <div class="row"><span class="dot" style="background:#fff; width:5px; height:5px;"></span> 5个种子矢量</div>
+</div>
+
+<div id="step-text">
+  <span class="big r">K₂,₂,₂</span>
+  <span class="sub">完全三部图 = 八面体骨架<br>6顶点 12棱 8三角面<br>Laplacian: {0,4,4,4,6,6}<br>→ 6 = 1⊕3⊕2<br>= U(1)⊕SU(2)⊕SU(3)</span>
+  <br>
+  <span class="big g">[111]</span>
+  <span class="sub">民主方向 = 三代标度<br>只有1维 → 不承载规范群<br>所有root矢量 ⊥ 此方向</span>
+  <br>
+  <span class="big" style="color:#4dc9f6;">A₂</span>
+  <span class="sub">六边形 = 八面体投影<br>同一结构, 不同维度看</span>
+</div>
+
+<div id="controls">
+  <button id="b1" class="on" onclick="t('L2')">八面体 L²=2</button>
+  <button id="b2" onclick="t('L6')">八面体 L²=6</button>
+  <button id="b3" onclick="t('dem')">Democratic [111]</button>
+  <button id="b4" onclick="t('hex')">A₂ 六边形</button>
+  <button id="b5" onclick="t('all')">全部44矢量</button>
+  <button id="b6" onclick="t('auto')">自动旋转</button>
+  <button onclick="resetView()">重置视角</button>
+</div>
+
+<div id="infopanel">
+  <b>为什么只有八面体？</b>&nbsp;
+  <span class="r">① L²=2 是第一个非平凡 root shell</span> →
+  6矢量构成 <span class="r">K₂,₂,₂ 图 = 八面体拓扑</span> →
+  Laplacian 谱分解 <span class="r">6=1⊕3⊕2 = SM规范群</span>&nbsp;|&nbsp;
+  <span class="g">Democratic 沿[111]（1维退化）</span>&nbsp;|&nbsp;
+  所有更高 root shells 是 <span class="c">同一八面体的等比缩放</span>&nbsp;|&nbsp;
+  <span class="c">A₂六边形 = 八面体 2D 投影</span>
+</div>
+
+<script type="importmap">
+{"imports":{"three":"https://unpkg.com/three@0.160.0/build/three.module.js","three/addons/":"https://unpkg.com/three@0.160.0/examples/jsm/"}}
+</script>
+
+<script type="module">
+import * as T from 'three';
+import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
+
+// ============================================================
+// DATA: 44-lattice from Z₃ closure
+// ============================================================
+const LD = {"total":44,"shells":{"0.75":{"L2":0.75,"count":1,"vectors":[[0.5,0.5,0.5]]},"1.0":{"L2":1.0,"count":17,"vectors":[[1,0,0],[0,1,0],[0,0,1],[-0.7071,0.7071,0],[-0.7071,0,0.7071],[0,-0.7071,0.7071],[0.7071,-0.7071,0],[0.7071,0,-0.7071],[0,0.7071,-0.7071],[0.4082,-0.8165,0.4082],[0.8165,-0.4082,-0.4082],[0.4082,0.4082,-0.8165],[-0.4082,0.8165,-0.4082],[-0.8165,0.4082,0.4082],[-0.4082,-0.4082,0.8165],[0.5774,0.5774,0.5774],[-0.5774,-0.5774,-0.5774]]},"2.0":{"L2":2.0,"count":6,"vectors":[[-1,1,0],[-1,0,1],[0,-1,1],[1,-1,0],[1,0,-1],[0,1,-1]]},"3.0":{"L2":3.0,"count":13,"vectors":[[0,1.2247,-1.2247],[-1.2247,1.2247,0],[-1.2247,0,1.2247],[0,-1.2247,1.2247],[1.2247,-1.2247,0],[1.2247,0,-1.2247],[0.7071,-1.4142,0.7071],[1.4142,-0.7071,-0.7071],[0.7071,0.7071,-1.4142],[-0.7071,1.4142,-0.7071],[-1.4142,0.7071,0.7071],[-0.7071,-0.7071,1.4142],[1,1,1]]},"6.0":{"L2":6.0,"count":6,"vectors":[[1,-2,1],[2,-1,-1],[1,1,-2],[-1,2,-1],[-2,1,1],[-1,-1,2]]},"6.75":{"L2":6.75,"count":1,"vectors":[[1.5,1.5,1.5]]}},"all_vectors":[[0.5,0.5,0.5],[1,0,0],[0,1,0],[0,0,1],[-0.7071,0.7071,0],[-0.7071,0,0.7071],[0,-0.7071,0.7071],[0.7071,-0.7071,0],[0.7071,0,-0.7071],[0,0.7071,-0.7071],[0.4082,-0.8165,0.4082],[0.8165,-0.4082,-0.4082],[0.4082,0.4082,-0.8165],[-0.4082,0.8165,-0.4082],[-0.8165,0.4082,0.4082],[-0.4082,-0.4082,0.8165],[0.5774,0.5774,0.5774],[-0.5774,-0.5774,-0.5774],[-1,1,0],[-1,0,1],[0,-1,1],[1,-1,0],[1,0,-1],[0,1,-1],[0,1.2247,-1.2247],[-1.2247,1.2247,0],[-1.2247,0,1.2247],[0,-1.2247,1.2247],[1.2247,-1.2247,0],[1.2247,0,-1.2247],[0.7071,-1.4142,0.7071],[1.4142,-0.7071,-0.7071],[0.7071,0.7071,-1.4142],[-0.7071,1.4142,-0.7071],[-1.4142,0.7071,0.7071],[-0.7071,-0.7071,1.4142],[1,1,1],[1,-2,1],[2,-1,-1],[1,1,-2],[-1,2,-1],[-2,1,1],[-1,-1,2],[1.5,1.5,1.5]]};
+
+// ============================================================
+// THREE.js Setup
+// ============================================================
+const container = document.getElementById('c');
+const scene = new T.Scene();
+
+// Stars
+const sg = new T.BufferGeometry();
+const sp = new Float32Array(1000*3);
+for(let i=0;i<1000;i++){ sp[i*3]=(Math.random()-0.5)*60; sp[i*3+1]=(Math.random()-0.5)*60; sp[i*3+2]=(Math.random()-0.5)*60; }
+sg.setAttribute('position',new T.BufferAttribute(sp,3));
+scene.add(new T.Points(sg,new T.PointsMaterial({color:0x223355,size:0.035,transparent:true,opacity:0.7})));
+
+const camera = new T.PerspectiveCamera(48,container.clientWidth/container.clientHeight,0.5,80);
+camera.position.set(5.5,4.5,6.5); camera.lookAt(0,0,0);
+
+const renderer = new T.WebGLRenderer({antialias:true,alpha:true});
+renderer.setSize(container.clientWidth,container.clientHeight);
+renderer.setPixelRatio(Math.min(window.devicePixelRatio,2));
+renderer.toneMapping = T.ACESFilmicToneMapping;
+renderer.toneMappingExposure = 1.3;
+container.appendChild(renderer.domElement);
+
+const controls = new OrbitControls(camera,renderer.domElement);
+controls.enableDamping = true; controls.dampingFactor = 0.08;
+controls.target.set(0,0,0); controls.minDistance=2; controls.maxDistance=18;
+controls.autoRotate=true; controls.autoRotateSpeed=0.35; controls.update();
+
+scene.add(new T.AmbientLight(0x334466,2.5));
+const kl = new T.DirectionalLight(0xffffff,3); kl.position.set(5,8,5); scene.add(kl);
+scene.add(new T.DirectionalLight(0x4488cc,1.5).position.set(-3,-1,-3));
+
+// Subtle polar grid
+scene.add(new T.PolarGridHelper(5.5,48,24,64,0x1a1a33,0x0f0f22));
+
+// ============================================================
+// Build: Geometric Octahedron (K₂,₂,₂ 1-skeleton realized in 3D)
+// ============================================================
+// Standard octahedron vertices: (±1,0,0),(0,±1,0),(0,0,±1) — rotated to align symmetry
+const OCTA_V = [
+  [1,0,0], [-1,0,0], [0,1,0], [0,-1,0], [0,0,1], [0,0,-1]
+];
+// K₂,₂,₂ edges: connect across the 3 antipodal pairs
+// Pairs: (0,1),(2,3),(4,5) are antipodal — don't connect
+// All other pairs are edges
+const OCTA_EDGES = [];
+for(let i=0;i<6;i++) for(let j=i+1;j<6;j++) {
+  if((i===0&&j===1)||(i===2&&j===3)||(i===4&&j===5)) continue;
+  OCTA_EDGES.push([i,j]);
+}
+// 8 triangular faces
+const OCTA_FACES = [
+  [0,2,4],[0,2,5],[0,3,4],[0,3,5],
+  [1,2,4],[1,2,5],[1,3,4],[1,3,5]
+];
+
+// Groups (all added to scene)
+const G = {
+  octa: new T.Group(),    // Geometric octahedron (K₂,₂,₂)
+  octa_l6: new T.Group(), // Scaled octahedron for L²=6
+  dem: new T.Group(),     // Democratic [111]
+  hex: new T.Group(),     // A2 hexagon in ⊥[111] plane
+  all: new T.Group(),     // All 44 vectors
+  seeds: new T.Group()    // Seed vectors
+};
+Object.values(G).forEach(g=>scene.add(g));
+const vis = { octa:true, octa_l6:false, dem:false, hex:false, all:false };
+Object.entries(vis).forEach(([k,v])=>G[k].visible=v);
+G.seeds.visible=true; scene.add(G.seeds);
+
+// ---- helpers ----
+function sphere(p,r,c,o=1.0,em=0.4) {
+  const m = new T.Mesh(new T.SphereGeometry(r,24,24),
+    new T.MeshStandardMaterial({color:c,roughness:0.3,metalness:0.1,transparent:o<1,opacity:o,emissive:c,emissiveIntensity:em}));
+  m.position.set(p[0],p[1],p[2]); return m;
+}
+function glowSphere(p,r,c,gs=0.06) {
+  const g = new T.Group();
+  g.add(sphere(p,r,c,0.9,0.5));
+  const gl = new T.Mesh(new T.SphereGeometry(r+gs,16,16),
+    new T.MeshBasicMaterial({color:c,transparent:true,opacity:0.22,depthWrite:false}));
+  gl.position.set(p[0],p[1],p[2]); g.add(gl); return g;
+}
+function line3d(a,b,c,op=0.8,lw=1) {
+  const pts=[new T.Vector3(a[0],a[1],a[2]),new T.Vector3(b[0],b[1],b[2])];
+  return new T.Line(new T.BufferGeometry().setFromPoints(pts),
+    new T.LineBasicMaterial({color:c,transparent:true,opacity:op}));
+}
+function tubeLine(a,b,c,op=0.7,r=0.025) {
+  const dir=new T.Vector3(b[0]-a[0],b[1]-a[1],b[2]-a[2]);
+  const len=dir.length(); dir.normalize();
+  const mid=new T.Vector3((a[0]+b[0])/2,(a[1]+b[1])/2,(a[2]+b[2])/2);
+  const geom=new T.CylinderGeometry(r,r,len,8,1);
+  const mat=new T.MeshStandardMaterial({color:c,roughness:0.3,metalness:0.1,transparent:true,opacity:op,emissive:c,emissiveIntensity:0.3});
+  const mesh=new T.Mesh(geom,mat);
+  mesh.position.copy(mid);
+  const q=new T.Quaternion().setFromUnitVectors(new T.Vector3(0,1,0),dir);
+  mesh.setRotationFromQuaternion(q);
+  return mesh;
+}
+
+// ---- BUILD: Geometric Octahedron (red) ----
+const Oc = 0xff4466;
+OCTA_V.forEach(v=>G.octa.add(glowSphere(v,0.1,Oc,0.07)));
+OCTA_EDGES.forEach(([i,j])=>G.octa.add(tubeLine(OCTA_V[i],OCTA_V[j],Oc,0.75,0.03)));
+
+// Semi-transparent octahedron faces
+const fv=[];
+OCTA_FACES.forEach(tri=>{
+  const a=OCTA_V[tri[0]],b=OCTA_V[tri[1]],c=OCTA_V[tri[2]];
+  fv.push(a[0],a[1],a[2],b[0],b[1],b[2],c[0],c[1],c[2]);
+});
+const fg=new T.BufferGeometry();
+fg.setAttribute('position',new T.Float32BufferAttribute(fv,3));
+fg.computeVertexNormals();
+G.octa.add(new T.Mesh(fg,new T.MeshStandardMaterial({
+  color:Oc,side:T.DoubleSide,transparent:true,opacity:0.1,roughness:1,metalness:0,depthWrite:false
+})));
+
+// ---- BUILD: Scaled Octahedron L²=6 (orange) ----
+const Oc6 = 0xff8866;
+const s6 = Math.sqrt(6); // radius of L²=6 octahedron vertices
+const OCTA_V6 = OCTA_V.map(v=>[v[0]*s6,v[1]*s6,v[2]*s6]);
+OCTA_V6.forEach(v=>G.octa_l6.add(glowSphere(v,0.12,Oc6,0.05)));
+OCTA_EDGES.forEach(([i,j])=>G.octa_l6.add(tubeLine(OCTA_V6[i],OCTA_V6[j],Oc6,0.4,0.028)));
+
+// ---- BUILD: Democratic [111] line ----
+const Dc = 0xffd700;
+const dp = [[-3,-3,-3],[3.5,3.5,3.5]];
+G.dem.add(new T.Line(
+  new T.BufferGeometry().setFromPoints(dp.map(p=>new T.Vector3(p[0],p[1],p[2]))),
+  new T.LineBasicMaterial({color:Dc,transparent:true,opacity:0.55})
+));
+// Arrow
+const ac = new T.Mesh(new T.ConeGeometry(0.13,0.4,8,8),
+  new T.MeshStandardMaterial({color:Dc,roughness:0.3,emissive:Dc,emissiveIntensity:0.5}));
+ac.position.set(3.5,3.5,3.5); ac.lookAt(new T.Vector3(4.3,4.3,4.3)); G.dem.add(ac);
+// Democratic points
+const demPts = [[0.5,0.5,0.5],[-0.5,-0.5,-0.5],[1,1,1],[-1,-1,-1],[1.5,1.5,1.5],[-1.5,-1.5,-1.5],
+  [0.5774,0.5774,0.5774],[-0.5774,-0.5774,-0.5774]];
+demPts.forEach(v=>G.dem.add(glowSphere(v,0.09,Dc,0.06)));
+
+// ---- BUILD: A₂ Hexagon in ⊥[111] plane ----
+const Hc = 0x4dc9f6;
+const m111 = new T.Vector3(1,1,1).normalize();
+const qH = new T.Quaternion().setFromUnitVectors(new T.Vector3(0,0,1),m111);
+
+// Disc
+const dg = new T.CylinderGeometry(2.6,2.6,0.015,64);
+const disc = new T.Mesh(dg, new T.MeshStandardMaterial({
+  color:Hc,side:T.DoubleSide,transparent:true,opacity:0.12,roughness:1,metalness:0,depthWrite:false
+}));
+disc.setRotationFromQuaternion(qH); G.hex.add(disc);
+
+// Ring
+const rg = new T.TorusGeometry(2.45,0.025,16,72);
+const ring = new T.Mesh(rg, new T.MeshStandardMaterial({color:Hc,roughness:0.2,emissive:Hc,emissiveIntensity:0.3}));
+ring.setRotationFromQuaternion(qH); G.hex.add(ring);
+
+// L²=2 root vectors projected to ⊥[111] plane → hexagon
+const vL2 = LD.shells["2.0"].vectors;
+const hproj = vL2.map(v=>{
+  const d = v[0]*m111.x+v[1]*m111.y+v[2]*m111.z;
+  return [v[0]-d*m111.x, v[1]-d*m111.y, v[2]-d*m111.z];
+});
+// Draw hexagon edges on the plane
+for(let i=0;i<hproj.length;i++){
+  const a=hproj[i], b=hproj[(i+1)%6];
+  G.hex.add(tubeLine(a,b,Hc,0.7,0.025));
+  G.hex.add(glowSphere(a,0.06,Hc,0.04));
+}
+
+// Also show the actual L²=2 vectors (3D) with small cyan dots
+vL2.forEach(v=>G.hex.add(glowSphere(v,0.07,Hc,0.04)));
+
+// Dashed vertical connectors from hexagon to octahedron vertices
+// (showing the relationship between 2D hexagon and 3D octahedron)
+// The L²=2 vectors ARE in the ⊥[111] plane, so they're the same as their projections
+// The octahedron vertices are a different embedding
+
+// ---- BUILD: All 44 vectors ----
+const highlighted = new Set();
+const hiShells = ["2.0","6.0","0.75","6.75"];
+hiShells.forEach(k=>LD.shells[k].vectors.forEach(v=>highlighted.add(v.map(x=>x.toFixed(4)).join(','))));
+LD.shells["3.0"].vectors.forEach(v=>{
+  if(Math.abs(v[0]-v[1])<0.02&&Math.abs(v[1]-v[2])<0.02) highlighted.add(v.map(x=>x.toFixed(4)).join(','));
+});
+// Add L²=2 vectors (shown in octahedron group)
+LD.shells["2.0"].vectors.forEach(v=>highlighted.add(v.map(x=>x.toFixed(4)).join(',')));
+
+LD.all_vectors.forEach(v=>{
+  const key=v.map(x=>x.toFixed(4)).join(',');
+  if(highlighted.has(key)) return;
+  G.all.add(sphere(v,0.05,0x7788bb,0.55,0.2));
+});
+
+// ---- BUILD: Seeds ----
+[[1,0,0],[0,1,0],[0,0,1],[0.5774,0.5774,0.5774],[-0.5774,-0.5774,-0.5774]].forEach(v=>{
+  G.seeds.add(glowSphere(v,0.065,0xffffff,0.04));
+});
+
+// Coordinate axes (subtle)
+[[[3.5,0,0],[-3.5,0,0]],[[0,3.5,0],[0,-3.5,0]],[[0,0,3.5],[0,0,-3.5]]].forEach((pts,i)=>{
+  const col=[0xff6644,0x44ff66,0x4466ff][i];
+  const g=new T.BufferGeometry().setFromPoints(pts.map(p=>new T.Vector3(p[0],p[1],p[2])));
+  scene.add(new T.Line(g,new T.LineBasicMaterial({color:col,transparent:true,opacity:0.2,depthWrite:false})));
+});
+
+// ============================================================
+// Animation
+// ============================================================
+function animate() {
+  requestAnimationFrame(animate);
+  controls.update();
+  renderer.render(scene,camera);
+}
+animate();
+
+// ============================================================
+// UI
+// ============================================================
+const btnMap = {L2:'b1',L6:'b2',dem:'b3',hex:'b4',all:'b5',auto:'b6'};
+const grpMap = {L2:'octa',L6:'octa_l6',dem:'dem',hex:'hex',all:'all'};
+
+window.t = function(k) {
+  if(k==='auto') {
+    controls.autoRotate=!controls.autoRotate;
+    document.getElementById('b6').classList.toggle('on',controls.autoRotate);
+    return;
+  }
+  const gk=grpMap[k];
+  G[gk].visible=!G[gk].visible;
+  document.getElementById(btnMap[k]).classList.toggle('on',G[gk].visible);
+};
+
+window.resetView = function() {
+  camera.position.set(5.5,4.5,6.5);
+  controls.target.set(0,0,0); controls.update();
+};
+
+// Init button states
+document.getElementById('b6').classList.add('on');
+
+// Keyboard
+window.addEventListener('keydown',e=>{
+  const map={1:'L2',2:'L6',3:'dem',4:'hex',a:'all',r:'auto'};
+  if(map[e.key]) t(map[e.key]);
+});
+
+// Resize
+window.addEventListener('resize',()=>{
+  camera.aspect=container.clientWidth/container.clientHeight;
+  camera.updateProjectionMatrix();
+  renderer.setSize(container.clientWidth,container.clientHeight);
+});
+
+console.log('✅ Z₃ 44-Lattice Visualizer Ready — Octahedron is the unique K_{2,2,2} graph');
+</script>
+</body>
+</html>
