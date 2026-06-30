@@ -183,7 +183,7 @@ With the algebraic foundation published in *Symmetry* (2026, 18, 54) and ongoing
    **Title**: Atomic Orbital Quantum Numbers, Hydrogen Spectrum, and Coulomb-Like Emergence from a Z₃-Triality Lattice  
    **Preprint DOI**: https://doi.org/10.20944/preprints202606.2217.v1  
    **PDF**: https://www.preprints.org/manuscript/202606.2217/v1  
-   **Journal**: Submitted to *Newton* → transferred to *iScience* (Cell Press)  
+   **Journal**: Submitted to ???
    **Key results**: The K₂,₂,₂ octahedron graph Laplacian decomposes as 6 = 1⊕3⊕2 = s⊕p⊕d — atomic orbital quantum numbers from pure geometry. Gauss's law on the geometric grid rₖ ∝ (√3)ᵏ yields V(r) = −√3/(4πr). The fine structure constant emerges from octahedral U(1) lattice gauge theory: α⁻¹ = 137.042 (42 ppm from CODATA), closed to sub-ppb by a topological instanton correction. The full hydrogen spectrum follows with zero free parameters.
 
   > *📘 Beginner note: This paper asks whether the hydrogen atom — the simplest atom in nature — can be derived from pure geometry without any experimental input. The answer appears to be yes: the s/p/d orbital labels, the Coulomb force law, and the fine structure constant (which governs the strength of electromagnetism) all drop out of the same octahedral lattice that underlies the mixing angle paper above.*
