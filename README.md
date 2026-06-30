@@ -103,11 +103,6 @@ Experiment (PDG 2024): λ = 0.22530 ± 0.00070 → **+0.01σ agreement (8 ppm pr
 
 **Demonstration Visualization**:
 - Python script: [`z3_juno_visualization.py`](./z3_juno_visualization.py)
-- Output image: [`z3_juno_visualization.png`](./z3_juno_visualization.png)
-
-The visualization shows:
-- Left: 3D projection of the Z₃ L₄₄ vacuum lattice vectors with the effective filtering axis.
-- Right: Parameter surface of the correction formula, highlighting the Z₃ prediction (red dot) and JUNO measurement (orange cross) nearly overlapping.
 
 **Decisive future test**: JUNO will reach ~0.3% precision on sin²θ₁₂ by 2030. At that precision, the Z₃ prediction 0.30830 and current central value 0.3092 would be distinguishable at ~3σ, providing a sharp pass/fail test.
 
