@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Quaternions as Quantization · 44-Vector Lattice · 3D Explorer</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { background: #050510; font-family: 'Segoe UI', 'PingFang SC', sans-serif; overflow: hidden; }
+  #canvas { position: fixed; inset: 0; z-index: 1; }
+  #panel {
+    position: fixed; top: 20px; right: 20px; width: 380px; max-height: calc(100vh - 40px);
+    background: rgba(6,8,20,0.93); border: 1px solid rgba(100,130,220,0.25);
+    border-radius: 14px; padding: 20px; color: #c8d6e5; overflow-y: auto;
+    backdrop-filter: blur(16px); z-index: 10; font-size: 13px; line-height: 1.6;
+  }
+  #panel h1 { font-size: 17px; background: linear-gradient(135deg, #7b9fff, #a78bfa); -webkit-background-clip: text; -webkit-text-fill-color: transparent; margin-bottom: 4px; }
+  #panel .subtitle { font-size: 11px; color: #6b7d99; margin-bottom: 14px; }
+  #panel h3 { font-size: 12px; color: #8899cc; margin: 14px 0 6px; text-transform: uppercase; letter-spacing: 1px; border-top: 1px solid rgba(100,130,220,0.15); padding-top: 10px; }
+  .legend { display: flex; flex-wrap: wrap; gap: 8px; margin: 8px 0; }
+  .leg { display: flex; align-items: center; gap: 6px; font-size: 11px; }
+  .leg-dot { width: 10px; height: 10px; border-radius: 50%; flex-shrink: 0; }
+  .btn {
+    display: block; width: 100%; margin: 4px 0; padding: 9px 14px;
+    background: rgba(60,80,160,0.2); border: 1px solid rgba(100,130,220,0.25);
+    border-radius: 8px; color: #bcc8e0; cursor: pointer; text-align: left;
+    font-size: 12px; transition: all 0.25s; font-family: inherit;
+  }
+  .btn:hover { background: rgba(60,80,160,0.4); border-color: rgba(130,160,240,0.5); }
+  .btn.on { background: rgba(80,110,220,0.35); border-color: #7b9fff; color: #fff; }
+  .btn .n { display: inline-block; width: 20px; height: 20px; line-height: 20px; text-align: center; background: rgba(100,130,220,0.3); border-radius: 50%; margin-right: 8px; font-size: 10px; font-weight: 700; }
+  .formula { font-family: 'Fira Code', 'Consolas', monospace; font-size: 11px; color: #88b8ff; background: rgba(255,255,255,0.04); border-radius: 6px; padding: 8px 10px; margin: 6px 0; }
+  .tag {
+    display: inline-block; padding: 2px 7px; border-radius: 4px; font-size: 10px; font-weight: 600; margin-right: 4px;
+  }
+  .tag-thm { background: rgba(80,220,120,0.2); color: #66dd88; }
+  .tag-der { background: rgba(120,160,255,0.2); color: #88aaff; }
+  .tag-int { background: rgba(200,160,80,0.2); color: #ddaa66; }
+  #status {
+    position: fixed; bottom: 18px; left: 50%; transform: translateX(-50%);
+    background: rgba(6,8,20,0.85); border: 1px solid rgba(100,130,220,0.2);
+    border-radius: 20px; padding: 6px 18px; color: #6b7d99; font-size: 11px;
+    z-index: 5; pointer-events: none;
+  }
+</style>
+</head>
+<body>
+<div id="canvas"></div>
+<div id="panel">
+  <h1>ℍ → Quantization</h1>
+  <div class="subtitle">The 44-Vector Z₃ Lattice as Quaternion Orbit Closure</div>
+
+  <h3>🎨 Legend</h3>
+  <div class="legend">
+    <div class="leg"><div class="leg-dot" style="background:#ff6644;"></div> Seeds (L²=1, 5)</div>
+    <div class="leg"><div class="leg-dot" style="background:#44ccff;"></div> V₁ Root shells (6×6=36)</div>
+    <div class="leg"><div class="leg-dot" style="background:#ffdd44;"></div> V₀ Democratic (3×1=3)</div>
+    <div class="leg"><div class="leg-dot" style="background:#fff;"></div> d-axis / V₁ plane</div>
+  </div>
+
+  <h3>🔬 View Modes</h3>
+  <button class="btn on" id="btn-all" onclick="setView('all')"><span class="n">1</span> Full Lattice (44 vectors)</button>
+  <button class="btn" id="btn-shells" onclick="setView('shells')"><span class="n">2</span> Shell Explosion (by L²)</button>
+  <button class="btn" id="btn-orbit" onclick="setView('orbit')"><span class="n">3</span> Z₃ Orbit Animation</button>
+  <button class="btn" id="btn-decomp" onclick="setView('decomp')"><span class="n">4</span> V₀⊕V₁ Decomposition</button>
+  <button class="btn" id="btn-roots" onclick="setView('roots')"><span class="n">5</span> A₂ Hexagonal Root Lattice</button>
+
+  <h3>📐 Key Formula</h3>
+  <div class="formula">q_T = ½(1+i+j+k)
+T(v) = q_T·v·q_T⁻¹
+Δ(v) = T(v) − v
+κ(v) = v × T(v) / ‖v×T(v)‖</div>
+  <div class="formula">|L₄₄| = dim(ℍ) × dim(g₀^eff)
+       = 4 × 11 = 44</div>
+
+  <h3>📊 Rigor Tiers</h3>
+  <div style="font-size:11px;line-height:1.8;">
+    <span class="tag tag-thm">Theorem</span> |L₄₄| = 44 (A₂ closure)<br>
+    <span class="tag tag-thm">Theorem</span> Pauli = quaternion algebra<br>
+    <span class="tag tag-der">Derived</span> [x̂,p̂] = iℏ ← ℍ → Fock<br>
+    <span class="tag tag-int">Interp.</span> Spin-statistics<br>
+  </div>
+
+  <h3>💡 Core Idea</h3>
+  <div style="font-size:11px;color:#8899aa;">
+    Hamilton (1843) discovered the first non-commutative algebra.
+    Heisenberg (1925) discovered observables don't commute.
+    They are the same discovery: <b>ij = −ji = k</b> is why [x̂,p̂] = iℏ.
+    The 44-vector lattice is the discrete geometric realization.
+  </div>
+</div>
+<div id="status">🖱 Drag rotate · Scroll zoom · Right-drag pan · Click buttons to change view</div>
+
+<script type="importmap">
+{ "imports": { "three": "https://unpkg.com/three@0.160.0/build/three.module.js", "three/addons/": "https://unpkg.com/three@0.160.0/examples/jsm/" } }
+</script>
+
+<script type="module">
+import * as THREE from 'three';
+import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
+import { CSS2DRenderer, CSS2DObject } from 'three/addons/renderers/CSS2DRenderer.js';
+
+// ── Scene Setup ──────────────────────────────────────────
+const scene = new THREE.Scene();
+
+// Starfield background
+const starGeo = new THREE.BufferGeometry();
+const stars = new Float32Array(2000 * 3);
+for (let i = 0; i < stars.length; i += 3) {
+  const r = 40 + Math.random() * 60;
+  const th = Math.random() * Math.PI * 2;
+  const ph = Math.acos(2 * Math.random() - 1);
+  stars[i] = r * Math.sin(ph) * Math.cos(th);
+  stars[i+1] = r * Math.sin(ph) * Math.sin(th);
+  stars[i+2] = r * Math.cos(ph);
+}
+starGeo.setAttribute('position', new THREE.BufferAttribute(stars, 3));
+scene.add(new THREE.Points(starGeo, new THREE.PointsMaterial({ color: 0x334466, size: 0.08 })));
+
+const renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true });
+renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
+renderer.setSize(window.innerWidth, window.innerHeight);
+renderer.toneMapping = THREE.ACESFilmicToneMapping;
+renderer.toneMappingExposure = 1.2;
+document.getElementById('canvas').appendChild(renderer.domElement);
+
+const labelRenderer = new CSS2DRenderer();
+labelRenderer.setSize(window.innerWidth, window.innerHeight);
+labelRenderer.domElement.style.position = 'fixed';
+labelRenderer.domElement.style.top = '0';
+labelRenderer.domElement.style.pointerEvents = 'none';
+labelRenderer.domElement.style.zIndex = '2';
+document.body.appendChild(labelRenderer.domElement);
+
+const camera = new THREE.PerspectiveCamera(50, window.innerWidth / window.innerHeight, 0.5, 200);
+camera.position.set(16, 10, 18);
+camera.lookAt(0, 0, 0);
+
+const controls = new OrbitControls(camera, renderer.domElement);
+controls.enableDamping = true;
+controls.dampingFactor = 0.08;
+controls.target.set(0, 0, 0);
+controls.autoRotate = true;
+controls.autoRotateSpeed = 0.3;
+controls.update();
+
+// ── Lighting ─────────────────────────────────────────────
+scene.add(new THREE.AmbientLight(0x223355, 1.8));
+const sun = new THREE.DirectionalLight(0x8899cc, 4);
+sun.position.set(30, 40, 30);
+scene.add(sun);
+const fill = new THREE.DirectionalLight(0x334466, 2);
+fill.position.set(-20, -10, -20);
+scene.add(fill);
+
+// ── Grid ─────────────────────────────────────────────────
+const gridHelper = new THREE.PolarGridHelper(14, 32, 24, 128, 0x223344, 0x112233);
+scene.add(gridHelper);
+
+// ── CONSTANTS ────────────────────────────────────────────
+const d = new THREE.Vector3(1, 1, 1).normalize();
+const e1 = new THREE.Vector3(1, 0, 0);
+const e2 = new THREE.Vector3(0, 1, 0);
+const e3 = new THREE.Vector3(0, 0, 1);
+
+function T(v) { return new THREE.Vector3(v.z, v.x, v.y); }
+function Delta(v) { return T(v).clone().sub(v); }
+
+// ── Build V₁ shell (6 hexagon points at given L²) ────────
+function hexagonV1(L2) {
+  // Generate one representative: start from e1_perp and apply Δ^k
+  const e1p = new THREE.Vector3(2/3, -1/3, -1/3);
+  let v = e1p.clone();
+  let norm2 = v.lengthSq();
+  while (Math.abs(norm2 - L2) > 0.01 && norm2 < 1000) {
+    v = Delta(v);
+    norm2 = v.lengthSq();
+  }
+  if (Math.abs(norm2 - L2) > 0.01) return [];
+  // D₃ orbit: ±v, ±T(v), ±T²(v)
+  const pts = [];
+  for (let s of [1, -1]) {
+    for (let p = 0; p < 3; p++) {
+      let w = v.clone().multiplyScalar(s);
+      for (let _ = 0; _ < p; _++) w = T(w);
+      pts.push(w);
+    }
+  }
+  return pts;
+}
+
+// ── Sphere factory ───────────────────────────────────────
+function makeSphere(pos, color, radius = 0.2, emissive = null) {
+  const geo = new THREE.SphereGeometry(radius, 24, 24);
+  const mat = new THREE.MeshStandardMaterial({
+    color, roughness: 0.3, metalness: 0.1,
+    emissive: emissive || new THREE.Color(color).multiplyScalar(0.3),
+  });
+  const mesh = new THREE.Mesh(geo, mat);
+  mesh.position.copy(pos);
+  return mesh;
+}
+
+// ── Glow halo ────────────────────────────────────────────
+function makeGlow(pos, color, radius = 0.35) {
+  const geo = new THREE.SphereGeometry(radius, 16, 16);
+  const mat = new THREE.MeshBasicMaterial({ color, transparent: true, opacity: 0.15, depthWrite: false });
+  const mesh = new THREE.Mesh(geo, mat);
+  mesh.position.copy(pos);
+  return mesh;
+}
+
+// ── Label ────────────────────────────────────────────────
+function makeLabel(text, pos, color = '#8899cc', size = '11px') {
+  const div = document.createElement('div');
+  div.textContent = text;
+  div.style.cssText = `color:${color};font-size:${size};font-weight:600;text-shadow:0 0 8px rgba(0,0,0,0.8);pointer-events:none;`;
+  const label = new CSS2DObject(div);
+  label.position.copy(pos);
+  return label;
+}
+
+// ── Build ALL lattice objects ────────────────────────────
+const latticeGroup = new THREE.Group();
+const shellGroups = {}; // L² → group
+const allSpheres = [];
+
+// Seeds (5)
+const seeds = [e1, e2, e3, d.clone(), d.clone().multiplyScalar(-1)];
+const seedGroup = new THREE.Group();
+seeds.forEach(s => {
+  seedGroup.add(makeSphere(s, 0xff5533, 0.24, 0xff3311));
+  seedGroup.add(makeGlow(s, 0xff5533, 0.40));
+});
+latticeGroup.add(seedGroup);
+
+// V₁ root shells (6 each at L² = 2, 6, 18, 54, 162, 486)
+const v1Shells = [2, 6, 18, 54, 162, 486];
+const v1Colors = [0x33bbff, 0x3399ee, 0x3377dd, 0x3355cc, 0x3344bb, 0x3333aa];
+v1Shells.forEach((L2, i) => {
+  const pts = hexagonV1(L2);
+  const grp = new THREE.Group();
+  const col = v1Colors[i];
+  pts.forEach(p => {
+    grp.add(makeSphere(p, col, 0.16, col));
+    grp.add(makeGlow(p, col, 0.28));
+    allSpheres.push({ mesh: null, pos: p.clone(), L2, type: 'V1' });
+  });
+  shellGroups[L2] = grp;
+  latticeGroup.add(grp);
+});
+
+// V₀ democratic shells (1 each at L² = 3, 27, 243)
+const v0Group = new THREE.Group();
+[3, 27, 243].forEach(L2 => {
+  const s = Math.sqrt(L2);
+  const pos = d.clone().multiplyScalar(s);
+  v0Group.add(makeSphere(pos, 0xffcc33, 0.20, 0xff9900));
+  v0Group.add(makeGlow(pos, 0xffcc33, 0.34));
+  shellGroups[L2] = new THREE.Group();
+  shellGroups[L2].add(makeSphere(pos, 0xffcc33, 0.20, 0xff9900));
+  shellGroups[L2].add(makeGlow(pos, 0xffcc33, 0.34));
+  allSpheres.push({ mesh: null, pos: pos.clone(), L2, type: 'V0' });
+
+  const neg = d.clone().multiplyScalar(-s);
+  v0Group.add(makeSphere(neg, 0xdd9922, 0.18, 0xcc7700));
+  v0Group.add(makeGlow(neg, 0xdd9922, 0.30));
+  allSpheres.push({ mesh: null, pos: neg.clone(), L2, type: 'V0' });
+});
+latticeGroup.add(v0Group);
+scene.add(latticeGroup);
+
+// ── Democratic axis line ─────────────────────────────────
+const axisLen = 23;
+const axisGeo = new THREE.BufferGeometry().setFromPoints([
+  d.clone().multiplyScalar(-axisLen), d.clone().multiplyScalar(axisLen)
+]);
+const axisMat = new THREE.LineBasicMaterial({ color: 0x556688, transparent: true, opacity: 0.5, depthTest: true });
+const axisLine = new THREE.Line(axisGeo, axisMat);
+scene.add(axisLine);
+
+// d-axis arrow tips
+[1, -1].forEach(sgn => {
+  const cone = new THREE.ConeGeometry(0.3, 0.9, 8);
+  const cMat = new THREE.MeshStandardMaterial({ color: 0x8899bb, emissive: 0x334466, roughness: 0.4 });
+  const cMesh = new THREE.Mesh(cone, cMat);
+  cMesh.position.copy(d.clone().multiplyScalar(sgn * axisLen));
+  cMesh.lookAt(d.clone().multiplyScalar(sgn * (axisLen + 1)));
+  scene.add(cMesh);
+});
+
+// V₁ plane disc
+const planeGeo = new THREE.RingGeometry(0.5, 13, 64);
+const planeMat = new THREE.MeshBasicMaterial({ color: 0x334466, side: THREE.DoubleSide, transparent: true, opacity: 0.12, depthWrite: false });
+const planeDisc = new THREE.Mesh(planeGeo, planeMat);
+const qLook = new THREE.Quaternion().setFromUnitVectors(new THREE.Vector3(0, 0, 1), d);
+planeDisc.setRotationFromQuaternion(qLook);
+scene.add(planeDisc);
+
+// V₁ plane wireframe ring
+const ringGeo = new THREE.TorusGeometry(13, 0.04, 8, 72);
+const ringMat = new THREE.MeshBasicMaterial({ color: 0x445577, transparent: true, opacity: 0.35, depthTest: true });
+const ring = new THREE.Mesh(ringGeo, ringMat);
+ring.setRotationFromQuaternion(qLook);
+scene.add(ring);
+
+// ── Quaternion basis axes (i, j, k) ──────────────────────
+function addBasisAxis(dir, color, label) {
+  const pts = [new THREE.Vector3(0,0,0), dir.clone().multiplyScalar(15)];
+  const geo = new THREE.BufferGeometry().setFromPoints(pts);
+  const mat = new THREE.LineBasicMaterial({ color, transparent: true, opacity: 0.3, depthTest: true });
+  scene.add(new THREE.Line(geo, mat));
+  scene.add(makeLabel(label, dir.clone().multiplyScalar(15.8), '#667799', '10px'));
+  // Fade at origin
+  const cone2 = new THREE.ConeGeometry(0.25, 0.7, 8);
+  const c2 = new THREE.Mesh(cone2, new THREE.MeshStandardMaterial({ color, emissive: new THREE.Color(color).multiplyScalar(0.3), roughness: 0.5 }));
+  c2.position.copy(dir.clone().multiplyScalar(15.3));
+  c2.lookAt(dir.clone().multiplyScalar(16));
+  scene.add(c2);
+}
+addBasisAxis(e1, 0x664444, 'i');
+addBasisAxis(e2, 0x446644, 'j');
+addBasisAxis(e3, 0x444466, 'k');
+scene.add(makeLabel('ℍ = span{1,i,j,k}', new THREE.Vector3(1.5,1.5,1.5), '#556688', '10px'));
+
+// d label
+scene.add(makeLabel('d = (1,1,1)/√3  [V₀]', d.clone().multiplyScalar(axisLen + 1.2), '#8899bb', '11px'));
+
+// ── Golden dodecahedral wireframe (symmetry hint) ────────
+const icoGeo = new THREE.IcosahedronGeometry(12, 0);
+const icoMat = new THREE.MeshBasicMaterial({ color: 0x334466, wireframe: true, transparent: true, opacity: 0.12, depthTest: true });
+const icoWire = new THREE.Mesh(icoGeo, icoMat);
+scene.add(icoWire);
+
+// ── Animation state ──────────────────────────────────────
+let viewMode = 'all';
+let animTime = 0;
+let orbitAngle = 0;
+
+// Shell rings for explosion view
+const shellRings = {};
+const shellLabels = [];
+
+function buildShellExplosion() {
+  // Clear existing
+  Object.values(shellRings).forEach(r => r.visible = false);
+  shellLabels.forEach(l => scene.remove(l));
+  shellLabels.length = 0;
+
+  const allL2 = [1, 2, 6, 18, 54, 162, 486, 3, 27, 243];
+  allL2.forEach((L2, idx) => {
+    const r = 3 + idx * 2.0;
+    const ringG = new THREE.TorusGeometry(r, 0.06, 16, 80);
+    const ringM = new THREE.MeshBasicMaterial({ color: 0x445577, transparent: true, opacity: 0.5, depthTest: true });
+    const ringMesh = new THREE.Mesh(ringG, ringM);
+    ringMesh.rotation.x = Math.PI / 2;
+    ringMesh.position.y = (idx - 5) * 1.8;
+    ringMesh.visible = false;
+    scene.add(ringMesh);
+    shellRings[L2] = ringMesh;
+
+    const lbl = makeLabel(`L²=${L2}`, new THREE.Vector3(0, (idx - 5) * 1.8, r + 1.2), '#778899', '10px');
+    lbl.visible = false;
+    scene.add(lbl);
+    shellLabels.push(lbl);
+  });
+}
+buildShellExplosion();
+
+// ── View switching ───────────────────────────────────────
+window.setView = function(mode) {
+  viewMode = mode;
+  document.querySelectorAll('.btn').forEach(b => b.classList.remove('on'));
+  const btnId = 'btn-' + mode;
+  const btn = document.getElementById(btnId);
+  if (btn) btn.classList.add('on');
+
+  // Reset visibility
+  latticeGroup.children.forEach(g => { if (g.visible !== undefined) g.visible = true; });
+  seedGroup.children.forEach(c => { if (c.visible !== undefined) c.visible = true; });
+  v0Group.visible = true;
+  Object.values(shellRings).forEach(r => r.visible = false);
+  shellLabels.forEach(l => l.visible = false);
+  axisLine.visible = true;
+  planeDisc.visible = true;
+  ring.visible = true;
+  icoWire.visible = true;
+
+  if (mode === 'shells') {
+    // Spread shells into rings
+    seedGroup.visible = false;
+    v0Group.visible = false;
+    Object.values(shellRings).forEach(r => r.visible = true);
+    shellLabels.forEach(l => l.visible = true);
+    axisLine.visible = false;
+    planeDisc.visible = false;
+    ring.visible = false;
+    icoWire.visible = false;
+  }
+  if (mode === 'decomp') {
+    planeDisc.material.opacity = 0.25;
+    axisLine.material.opacity = 0.8;
+  }
+  if (mode === 'roots') {
+    // Hide everything except V₁ shells
+    seedGroup.visible = false;
+    v0Group.visible = false;
+    axisLine.visible = false;
+    planeDisc.material.opacity = 0.3;
+    icoWire.visible = false;
+  }
+};
+
+// ── Render loop ──────────────────────────────────────────
+function animate(t) {
+  requestAnimationFrame(animate);
+  animTime = t * 0.001;
+  controls.update();
+
+  // Orbit animation mode
+  if (viewMode === 'orbit') {
+    orbitAngle += 0.004;
+    const r = 12;
+    const px = r * Math.cos(orbitAngle);
+    const pz = r * Math.sin(orbitAngle);
+    camera.position.set(px, 6, pz);
+    camera.lookAt(0, 0, 0);
+    controls.target.set(0, 0, 0);
+  }
+
+  // Pulse glow on V₁ plane
+  const pulse = 0.12 + 0.04 * Math.sin(animTime * 1.5);
+  if (viewMode === 'decomp') planeDisc.material.opacity = Math.max(pulse, planeDisc.material.opacity);
+  else if (viewMode !== 'decomp') planeDisc.material.opacity = 0.12;
+
+  // Shell explosion: arrange spheres on rings
+  if (viewMode === 'shells') {
+    // This is complex to animate position; we simply show/hide
+    // and rely on the pre-positioned ring structure
+  }
+
+  renderer.render(scene, camera);
+  labelRenderer.render(scene, camera);
+}
+
+// ── Resize ───────────────────────────────────────────────
+window.addEventListener('resize', () => {
+  camera.aspect = window.innerWidth / window.innerHeight;
+  camera.updateProjectionMatrix();
+  renderer.setSize(window.innerWidth, window.innerHeight);
+  labelRenderer.setSize(window.innerWidth, window.innerHeight);
+});
+
+// ── Keyboard shortcuts ───────────────────────────────────
+window.addEventListener('keydown', (e) => {
+  const keys = { '1': 'all', '2': 'shells', '3': 'orbit', '4': 'decomp', '5': 'roots' };
+  if (keys[e.key]) setView(keys[e.key]);
+  if (e.key === 'r') { controls.autoRotate = !controls.autoRotate; }
+  if (e.key === '0') { controls.target.set(0,0,0); camera.position.set(16,10,18); camera.lookAt(0,0,0); }
+});
+
+// ── Start ────────────────────────────────────────────────
+animate(0);
+console.log('🪐 Quaternions as Quantization · 44-Vector Lattice Explorer ready');
+console.log('  Keys: 1-5 view modes | R auto-rotate | 0 reset camera');
+</script>
+</body>
+</html>
