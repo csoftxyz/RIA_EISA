@@ -1,0 +1,123 @@
+ python Z3codeadd2en.py
+
+===== A. Core chain =====
+[PASS] A | I0(1): computed=1.266065878  target=1.266065878  tol=1e-12
+[PASS] A | I1(1): computed=0.565159104  target=0.565159104  tol=1e-12
+[PASS] A | I1/I0: computed=0.4463899659  target=0.4463899659  tol=1e-13
+[PASS] A | S=[I1/I0]^4: computed=0.03970614235  target=0.0397061  tol=5e-08
+[PASS] A | 1/alpha_geom: computed=137.0417213  target=137.0417213  tol=2e-06
+[PASS] A | residual: computed=0.005722171085  target=0.005722171  tol=2e-08
+[PASS] A | residual (ppm): computed=41.75669987  target=41.75  tol=0.02
+[PASS] A | eta_obs: computed=4.175669987e-05  target=4.1756e-05  tol=1e-08
+
+===== B. delta conjecture & channel selection =====
+[PASS] B | delta=(S-S^3)/(4sqrt3): computed=0.005722052488  target=0.005722052  tol=2e-08
+[PASS] B | |delta-residual|<=1.2e-7: computed=1.185967996e-07  target=0  tol=1.3e-07
+[PASS] B | w1=I1^8/I0^8: computed=0.001576577741  target=0.0015766  tol=1e-07
+[PASS] B | eta_closed == delta*alpha_geom (identity): computed=4.175409092e-05  target=4.175409092e-05  tol=1e-16
+[PASS] B | |eta_closed-eta_obs| = 0.06 ppm (conjecture): computed=2.608955703e-09  target=0  tol=3e-09
+   NOTE: agreement level = 62.4799 ppm
+[PASS] B | channel l=0 (ppm): computed=125.2622727  target=125.26  tol=0.05
+[PASS] B | channel l=1 (ppm): computed=41.75409092  target=41.75  tol=0.05
+[PASS] B | channel l=2 (ppm): computed=25.05245455  target=25.05  tol=0.05
+
+===== C. Two-sector ledger =====
+[PASS] C | n=0 fraction (%): computed=99.68567209  target=99.69  tol=0.01
+[PASS] C | <W>_full: computed=0.079173132  target=0.07917  tol=2e-05
+[PASS] C | <W>_{<=1}=2S/(1+2S^2): computed=0.07916267249  target=0.0791626  tol=5e-07
+[PASS] C | normalisation (ppm): computed=-3143.244343  target=-3143  tol=1.5
+[PASS] C | n=±2 interpolation (ppm): computed=131.7458846  target=132  tol=1.5
+[PASS] C | net ledger (ppm): computed=-3011.532861  target=-3011  tol=2.5
+
+===== D. Continued fraction & beta exclusion =====
+[PASS] D | CF(1)=I1/I0: computed=0.4463899659  target=0.4463899659  tol=1e-12
+[PASS] D | integer beta in 1..8 with all a_k integer: [1, 2] (expect [1,2])
+   NOTE: integrality alone also holds for beta=2/m (m in N), e.g. beta=2/3 -> [3,6,9,...];
+         the theorem needs the premise beta in N_{>=1}. beta=2/3 is excluded experimentally:
+[PASS] D | 1/alpha(2/3) outside [130,145]: computed=1  target=1  tol=0
+[PASS] D | convergents C4=(204, 457), C6=(24984, 55969)
+[PASS] D | C4 abs err (ppm): computed=0.4691788102  target=0.47  tol=0.01
+[PASS] D | C6 abs err (ppb): computed=0.02256855813  target=0.02  tol=0.03
+   NOTE: relative errors are 1.05 ppm / 0.05 ppb (reviewer's convention)
+[PASS] D | 1/alpha(beta=2): computed=22.95354296  target=23  tol=0.1
+[PASS] D | beta=2 exclusion (ppm): computed=832499.9043  target=830000  tol=10000
+[PASS] D | 1/alpha(beta=0.5) (sensitivity table): computed=1573.498393  target=1573  tol=2
+
+===== E. K_{2,2,2} invariants =====
+[PASS] E | spec = {0,4,4,4,6,6}: computed=1.776356839e-15  target=0  tol=1e-10
+[PASS] E | G_xx=13/72: computed=0.1805555556  target=0.1805555556  tol=1e-10
+[PASS] E | G_adj=-1/36: computed=-0.02777777778  target=-0.02777777778  tol=1e-10
+[PASS] E | G_antipodal=-5/72: computed=-0.06944444444  target=-0.06944444444  tol=1e-10
+[PASS] E | R_edge=5/12: computed=0.4166666667  target=0.4166666667  tol=1e-10
+[PASS] E | R_antipodal=1/2: computed=0.5  target=0.5  tol=1e-10
+[PASS] E | sum_edges R = V-1 = 5: computed=5  target=5  tol=1e-10
+[PASS] E | Kirchhoff index = 13/2: computed=6.5  target=6.5  tol=1e-10
+[PASS] E | zeta_L(1)=TrL+=13/12: computed=1.083333333  target=1.083333333  tol=1e-12
+[PASS] E | det L = 2304: computed=2304  target=2304  tol=0
+[PASS] E | spanning trees = 384: computed=384  target=384  tol=0
+[PASS] E | heat K(1;x,x): computed=0.1766507368  target=0.1766507368  tol=1e-13
+[PASS] E | heat K(1;adjacent): computed=0.1662535413  target=0.1662535413  tol=1e-13
+[PASS] E | heat K(1;antipodal): computed=0.1583350979  target=0.1583350979  tol=1e-13
+
+===== F. Geometric identities =====
+[PASS] F | 3F=2E=24: computed=24  target=24  tol=0
+[PASS] F | G=2F/E=4/3: computed=1.333333333  target=1.333333333  tol=1e-15
+[PASS] F | 4piV/chi=12pi: computed=37.69911184  target=37.69911184  tol=1e-12
+[PASS] F | 3piF/chi=12pi: computed=37.69911184  target=37.69911184  tol=1e-12
+[PASS] F | 1/(4pi(2l+1))|l=1 = 1/12pi: computed=0.02652582385  target=0.02652582385  tol=1e-18
+[PASS] F | chi/V=1/(2l+1)=1/|Z3|: computed=0.3333333333  target=0.3333333333  tol=1e-16
+[PASS] F | delta forms identical: computed=4.175409092e-05  target=4.175409092e-05  tol=1e-16
+[PASS] F | 4sqrt3=4V/(chi*sqrt3): computed=6.92820323  target=6.92820323  tol=1e-14
+
+===== G. Langer identity + FD hydrogen =====
+[PASS] G | (2l+1)^2/8 = l(l+1)/2 + 1/8 exact, l=0..7
+[PASS] G | E1s/EH k=6 (paper 0.9832, N=94): computed=0.9832265513  target=0.9832  tol=0.008
+[PASS] G | E1s/EH k=8 (paper 0.9827, N=125): computed=0.9826582163  target=0.9827  tol=0.008
+[PASS] G | E1s/EH k=10 (paper 0.9823, N=156): computed=0.9823394826  target=0.9823  tol=0.008
+[PASS] G | E1s/EH k=12 (paper 0.9821, N=187): computed=0.9821362374  target=0.9821  tol=0.008
+[PASS] G | E1s/EH k=14 (paper 0.982, N=218): computed=0.98199558  target=0.982  tol=0.008
+[PASS] G | overlap k=12 > 0.995: computed=0.9998615916  target=1  tol=0.005
+[PASS] G | monotone convergence in k
+[PASS] G | err(rmin=a0/200) in [1%,3%]: computed=0.01786376257  target=0.018  tol=0.008
+[PASS] G | O(r_min): err(1/1000)=0.0037 < 0.6*err(1/200)=0.0107
+
+===== H. No-Go benchmarks =====
+[PASS] H | (alpha/pi)h^2 k=6: computed=1.946892042e-05  target=1.95e-05  tol=3.9e-07
+[PASS] H |   xF=8 k=6 (ppm): computed=155.7513634  target=156  tol=3.12
+[PASS] H | (alpha/pi)h^2 k=12: computed=4.867230105e-06  target=4.88e-06  tol=9.76e-08
+[PASS] H |   xF=8 k=12 (ppm): computed=38.93784084  target=39.04  tol=0.7808
+[PASS] H | (alpha/pi)h^2 k=14: computed=3.575924159e-06  target=3.58e-06  tol=7.16e-08
+[PASS] H |   xF=8 k=14 (ppm): computed=28.60739327  target=28.64  tol=0.5728
+[PASS] H | matter-loop formula @k=6 = 1905 ppm (NOT 42!): computed=1904.806291  target=1905  tol=3
+[PASS] H | k needed for 42 ppm: computed=273.7006943  target=274  tol=3
+[PASS] H | Uehling at rN ~ 8.0e-3: computed=0.00802538712  target=0.008  tol=0.0006
+[PASS] H | Uehling/eta ~ 190: computed=192.1939987  target=192  tol=15
+[PASS] H | electronic suppression exponent 2/alpha: computed=274.0719982  target=274.07  tol=0.01
+
+===== I. Muonic atoms =====
+[PASS] I | mu4He+ 2S (GHz): computed=8.982683421  target=8.99  tol=0.06
+[PASS] I | isotope ratio: computed=1.349865392  target=1.35  tol=0.003
+[PASS] I | mu3He+ 2S (GHz): computed=12.12541347  target=12.13  tol=0.12
+[PASS] I | eH 2S (Hz): computed=17.32014623  target=17.3  tol=0.6
+[PASS] I | muH 2S (GHz): computed=0.1113484983  target=0.111  tol=0.004
+[PASS] I | e4He+ 1S-2S (kHz): computed=7.732007622  target=7.74  tol=0.12
+[PASS] I | (me/mmu)^3: computed=1.131223056e-07  target=1.131e-07  tol=2e-09
+[PASS] I | -3eta: computed=-0.0001252700996  target=-0.00012527  tol=2e-07
+[PASS] I | radius shift (ppm): computed=-62.63504981  target=-62.6  tol=0.15
+[PASS] I | P-state suppression (rN/a_mu)^2: computed=4.065092991e-05  target=4.07e-05  tol=3e-07
+
+===== J. Zero-mode bubble =====
+[PASS] J | Delta1(N^2=2): computed=1  target=1  tol=1e-12
+[PASS] J | eta(N^2=2) (ppm): computed=41.75409092  target=41.75  tol=0.02
+[PASS] J | eta(N^2=1) (ppm): computed=20.87704546  target=20.88  tol=0.02
+[PASS] J | selection rule: rank-1 vertex couples j=0 only to j=1 (j=2 block identically 0)
+
+===== K. SU(2) running =====
+[PASS] K | alpha2^-1(MZ): computed=28.8596035  target=28.86  tol=0.01
+[PASS] K | deviation from 29.6 (%): computed=2.501339537  target=2.5  tol=0.1
+
+============================================================
+TOTAL: 90 checks, 90 PASS, 0 FAIL
+NOTE: the 350-point rank[Y0|...|Yl]=(l+1)^2 (l<=15) test needs the 350-point
+      coordinate set and is NOT included in this program.
+============================================================
