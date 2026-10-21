@@ -1,0 +1,132 @@
+{
+ "checks": [
+  {
+   "name": "Takagi residual max|U^T M U - diag(m)|",
+   "paper": 0.0,
+   "calc": 4.885025661874571e-16,
+   "ok": true
+  },
+  {
+   "name": "unitarity max|U^dag U - 1|",
+   "paper": 0.0,
+   "calc": 4.440892098500626e-16,
+   "ok": true
+  },
+  {
+   "name": "sin^2 theta12",
+   "paper": 0.3029,
+   "calc": 0.3029204370930409,
+   "ok": true
+  },
+  {
+   "name": "sin^2 theta23",
+   "paper": 0.4497,
+   "calc": 0.44973556850141744,
+   "ok": true
+  },
+  {
+   "name": "sin^2 theta13",
+   "paper": 0.02228,
+   "calc": 0.022278865779401164,
+   "ok": true
+  },
+  {
+   "name": "delta_CP [deg]",
+   "paper": -83.4,
+   "calc": -83.39965974400097,
+   "ok": true
+  },
+  {
+   "name": "dm21 [1e-5 eV^2]",
+   "paper": 7.45,
+   "calc": 7.430658006671905,
+   "ok": true
+  },
+  {
+   "name": "dm31 [1e-3 eV^2]",
+   "paper": 2.497,
+   "calc": 2.4974412479092556,
+   "ok": true
+  },
+  {
+   "name": "J_PMNS",
+   "paper": -0.0331,
+   "calc": -0.03313929716944298,
+   "ok": true
+  },
+  {
+   "name": "sum m_nu [eV]",
+   "paper": 0.0698,
+   "calc": 0.06964947048995532,
+   "ok": true
+  },
+  {
+   "name": "m_beta_beta [eV]",
+   "paper": 0.005,
+   "calc": 0.0049883684210526415,
+   "ok": true
+  },
+  {
+   "name": "chi2_block reference",
+   "paper": 1.44,
+   "calc": 1.4364564623368368,
+   "ok": true
+  },
+  {
+   "name": "chi2_block 6-param",
+   "paper": 1.34,
+   "calc": 1.3372309947200163,
+   "ok": true
+  },
+  {
+   "name": "chi2_block 3-param",
+   "paper": 1.34,
+   "calc": 1.3414613594143703,
+   "ok": true
+  },
+  {
+   "name": "a12/d3 (3-param best fit)",
+   "paper": 0.3161,
+   "calc": 0.3161064349178728,
+   "ok": true
+  },
+  {
+   "name": "phase (0, 90, 180)",
+   "paper": 7.98,
+   "calc": 7.9770919229299855,
+   "ok": true
+  },
+  {
+   "name": "phase (0, 120, 180)",
+   "paper": 1.32,
+   "calc": 1.3227940937290448,
+   "ok": true
+  },
+  {
+   "name": "phase (240, 0, 180)",
+   "paper": 0.27,
+   "calc": 0.2718274951660182,
+   "ok": true
+  },
+  {
+   "name": "phase (0, 120, 90)",
+   "paper": 130.0,
+   "calc": 130.01233923187075,
+   "ok": true
+  },
+  {
+   "name": "phase (240, 240, 180)",
+   "paper": 94.3,
+   "calc": 94.28866622572805,
+   "ok": true
+  }
+ ],
+ "phase_scan": {
+  "(0, 90, 180)": 7.9770919229299855,
+  "(0, 120, 180)": 1.3227940937290448,
+  "(240, 0, 180)": 0.2718274951660182,
+  "(0, 120, 90)": 130.01233923187075,
+  "(240, 240, 180)": 94.28866622572805
+ },
+ "chi_ref": 1.4360403458693014
+}
