@@ -1,0 +1,3 @@
+gl(4): svals=[162.6292   0.    ]  null-dim=1  dirs=[[0.707107, -0.707107]]
+sl(4) B-elements: svals=[162.6292   0.    ]  null-dim=1  dirs=[[0.707107, -0.707107]]
+image condition tr[F,z] = (p+4q) z^T F -> sl(4) requires p+4q=0; with q=-p -> -3p=0 -> p=q=0

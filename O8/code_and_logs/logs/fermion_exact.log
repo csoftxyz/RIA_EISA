@@ -1,0 +1,10 @@
+octahedron: V=6 E=12 F=8; |det Gamma| = 0.000000
+free Dirac spectrum at flat config (m=0): eigenvalues of Gamma: [0.+0.j       0.+3.464102j 0.-3.464102j 0.+0.j       0.+0.j
+ 0.+0.j      ]
+  |lambda|: [0.       3.464102 3.464102 0.       0.       0.      ]
+
+beta=1, m=0, |det|^2 weight:
+  Z_g = 6.622435  (check sum I_n^8 = 6.622435)
+  Z_ferm = 352.186435   <|det|^2> = 53.180808
+  sectors frac: f0=3.933875 f1=-1.466938 f2=-1.466938
+  PURE gauge sectors (known): f0=0.996857 f1=f2=0.001572

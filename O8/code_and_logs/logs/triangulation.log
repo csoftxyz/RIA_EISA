@@ -1,0 +1,8 @@
+4-regular labelled graphs on 6 vertices: 15
+isomorphism classes: 1
+triangles per 4-regular graph: 8
+edge triangle counts (should be all 2): [2] on 12 edges
+all vertex links 4-cycles: True
+Euler characteristic V-E+F = 2
+distinct triangulations up to relabelling: 1
+VERDICT: PASS

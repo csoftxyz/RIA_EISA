@@ -1,0 +1,23 @@
+== 1. anti-Hermiticity and conjugation ==
+  (Gamma U)^dagger = -Gamma U for 200 random U: True
+  det(m+D)^* = det(m-D): True
+  det(m+D) complex for generic U: True
+
+== 2. no Z2 grading ==
+  diagonal sign matrix anticommuting with Gamma: False
+  graph bipartite: False
+
+== 3. flat connection ==
+  singular values: [3.46410162 3.46410162 0.         0.         0.         0.        ]
+  rank: 2
+  det(Gamma): 0.0
+  det(0.0 1 + Gamma) = 0.000000000000   m^4(m^2+12) = 0.000000000000
+  det(0.3 1 + Gamma) = 0.097929000000   m^4(m^2+12) = 0.097929000000
+  det(1.0 1 + Gamma) = 13.000000000000   m^4(m^2+12) = 13.000000000000
+  det(2.0 1 + Gamma) = 256.000000000000   m^4(m^2+12) = 256.000000000000
+
+== 4. spectrum away from the flat connection ==
+  min |eigenvalue| of Gamma U: min/q5/median/q95/max = [8.50000e-04 3.18800e-02 3.33790e-01 8.92840e-01 1.43073e+00]
+  fraction below 1e-6: 0.0
+
+VERDICT: PASS

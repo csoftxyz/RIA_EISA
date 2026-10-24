@@ -1,0 +1,22 @@
+== Villain partition function, F = 8, beta = 1 ==
+Z_V(1)      = 0.0006651275383051535
+theta3 form = 0.0006651275383051535
+
+== self-dual coupling beta_* = F/(2 pi) ==
+F= 4  beta_*=0.6366197724  Z_V(1)/Z_V(beta_*^2)=0.2058640111  C=0.2058640111
+F= 6  beta_*=0.9549296586  Z_V(1)/Z_V(beta_*^2)=0.7759658368  C=0.7759658368
+F= 8  beta_*= 1.273239545  Z_V(1)/Z_V(beta_*^2)= 6.121049474  C= 6.121049474
+F=12  beta_*= 1.909859317  Z_V(1)/Z_V(beta_*^2)= 1704.181488  C= 1704.181488
+F=20  beta_*= 3.183098862  Z_V(1)/Z_V(beta_*^2)=6391127513.0  C=6391127513.0
+identity beta=0.7: Z_V(beta)/[C(beta) Z_V(beta_*^2/beta)] - 1 = 2.29589e-41
+identity beta=1.0: Z_V(beta)/[C(beta) Z_V(beta_*^2/beta)] - 1 = -1.14794e-41
+identity beta=2.3: Z_V(beta)/[C(beta) Z_V(beta_*^2/beta)] - 1 = 0.0
+
+== Wilson -> Villain dictionaries at beta_W = 1 ==
+ratio match:        beta_V = 0.61991488  (4/pi = 1.2732395 )
+curvature match:    beta_V = 1.0
+amplitude match:    max Fourier coeff = 0.24197072 at beta_V = 1.0 vs I_1(1) = 0.44638997
+Wilson beta_W that maps onto beta_* = 4/pi under ratio matching: 1.8700248
+
+== Villain vs Wilson at beta = 1 (F=8) ==
+Z_W(1) = 6.62243480465  Z_V(1) = 0.000665127538305  ratio = 9956.639025

@@ -1,0 +1,34 @@
+terms: |det|^2 merged = 1591, det merged = 73
+elapsed 55.3s for 47 beta points
+
+ beta      <det>    <det^2>   f0(ferm)   f0(pure)          R     DeltaF
+ 0.50   6.692931 104.736155   1.493017   0.999976  -0.330215        nan
+ 0.75   5.473285  77.641360   2.328726   0.999541  -0.570581        nan
+ 0.90   4.730788  62.359334   3.173096   0.998411  -0.684850        nan
+ 0.95   4.491329  57.655839   3.531165   0.997736  -0.716807        nan
+ 0.99   4.303917  54.056939   3.849567   0.997051  -0.740231        nan
+ 1.00   4.257698  53.180808   3.933875   0.996857  -0.745798        nan
+ 1.01   4.211743  52.314266   4.020133   0.996653  -0.751252        nan
+ 1.05   4.030686  48.945106   4.385335   0.995734  -0.771967        nan
+ 1.10   3.810925  44.954619   4.889832   0.994330  -0.795494        nan
+ 1.25   3.199370  34.454475   6.766860   0.988063  -0.852221        nan
+ 1.50   2.349631  21.483667  11.396159   0.969081  -0.912251        nan
+ 2.00   1.240555   7.861077  28.446997   0.898848  -0.964847        nan
+
+fine-grid diagnostics at beta=1 (h=0.010000000000000009):
+  DeltaF(1)    = nan
+  dDeltaF/db   = nan   (smooth across? check sides: nan | nan)
+  d2DeltaF/db2 = nan   (sides: nan | nan)
+  <det> slopes : d/db at 1^-/1^+ : -4.621963 | -4.595428
+  <det^2>      : d/db at 1^-/1^+ : -87.613093 | -86.654183
+  max |jump of d2DeltaF/db2| on fine grid = nan  (analytic -> ~h^2 noise, no kink)
+
+pure-gauge sector fractions at b=1: f0=0.99685672 f1=f2=0.00157164 (paper Z3 char <T> = 0.995285)
+
+zero-mode probe: |lambda_min| of D at uniform-flux configs (all 8 faces = phi):
+  phi=0.000pi : min|lambda| = 0.000000   det = +0.00000
+  phi=0.25pi : unattainable by link phases
+  phi=0.50pi : unattainable by link phases
+  phi=0.75pi : unattainable by link phases
+  phi=1.00pi : unattainable by link phases
+  random configs: min|lambda| quantiles q0/q50/q90 = [0.0025 0.371  0.7831]  (no exact zero encountered: 2.53e-03)

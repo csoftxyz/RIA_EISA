@@ -1,0 +1,14 @@
+octahedron: V=6, E=12, F=8
+eigenvalues of Gamma: [0.+0.j         0.+3.46410162j 0.-3.46410162j 0.+0.j
+ 0.+0.j         0.+0.j        ]
+singular values      : [3.46410162 3.46410162 0.         0.         0.         0.        ]
+rank(Gamma) = 2  det(Gamma) = 0.0
+kernel basis (e_a^+ - e_a^-, sum_a e_a^+):
+[[ 1. -1.  0.  0.  0.  0.]
+ [ 0.  0.  1. -1.  0.  0.]
+ [ 0.  0.  0.  0.  1. -1.]
+ [ 1.  0.  1.  0.  1.  0.]]
+max |Gamma . basis| = 0.0  rank of basis = 4
+det(m 1 + Gamma) at m=0.0: 0.0000000000  (m^4(m^2+12) = 0.0000000000)
+det(m 1 + Gamma) at m=0.3: 0.0979290000  (m^4(m^2+12) = 0.0979290000)
+det(m 1 + Gamma) at m=1.0: 13.0000000000  (m^4(m^2+12) = 13.0000000000)

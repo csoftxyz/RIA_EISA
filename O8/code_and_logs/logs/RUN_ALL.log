@@ -1,0 +1,42 @@
+== exact_gauge ==
+   exit=0  time=19s  log=logs/exact_gauge.log
+== finite_size ==
+   exit=0  time=31s  log=logs/finite_size.log
+== wilson_loops ==
+   exit=0  time=40s  log=logs/wilson_loops.log
+== villain_general ==
+   exit=0  time=2s  log=logs/villain_general.log
+== triangulation ==
+   exit=0  time=0s  log=logs/triangulation.log
+== dirac_checks ==
+   exit=0  time=0s  log=logs/dirac_checks.log
+== fermion_spectrum ==
+   exit=0  time=0s  log=logs/fermion_spectrum.log
+== fermion_exact ==
+   exit=0  time=6s  log=logs/fermion_exact.log
+== fermion_scan ==
+   exit=0  time=55s  log=logs/fermion_scan.log
+== algebra_census ==
+   exit=0  time=1s  log=logs/algebra_census.log
+== verify_jacobi ==
+   exit=0  time=0s  log=logs/verify_jacobi.log
+== figures ==
+   exit=0  time=12s  log=logs/figures.log
+== guide_figures ==
+   exit=0  time=22s  log=logs/guide_figures.log
+== verify_all ==
+   exit=0  time=19s  log=logs/verify_all.log
+== latex_paper1 ==
+   exit=0  time=0s  log=logs/latex_paper1.log
+== latex_paper2 ==
+   exit=0  time=1s  log=logs/latex_paper2.log
+== latex_guide_zh1 ==
+   exit=0  time=1s  log=logs/latex_guide_zh1.log
+== latex_guide_zh2 ==
+   exit=0  time=1s  log=logs/latex_guide_zh2.log
+== latex_guide_en1 ==
+   exit=0  time=0s  log=logs/latex_guide_en1.log
+== latex_guide_en2 ==
+   exit=0  time=0s  log=logs/latex_guide_en2.log
+
+ALL STEPS PASSED

@@ -1,0 +1,13 @@
+{
+ "labelled": 15,
+ "classes": 1,
+ "triangles": 8,
+ "edges": 12,
+ "edge_multiplicities": [
+  2
+ ],
+ "links_ok": true,
+ "euler": 2,
+ "orbits": 1,
+ "pass_": true
+}

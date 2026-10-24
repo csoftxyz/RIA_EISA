@@ -1,0 +1,33 @@
+=====================================================================
+check                                           value  status
+---------------------------------------------------------------------
+Z(1) = sum I_n^8                          6.622434805  PASS
+<e^{i theta_f}>(1)                       0.4488851448  PASS
+sigma_oct(1)                             0.8009882263  PASS
+sigma_inf(1)                              0.806562346  PASS
+deficit / sigma_inf                    0.006910959543  PASS
+W(A=1)                                   0.4488851448  PASS
+W(A=2)                                   0.2066157684  PASS
+W(A=3)                                    0.106361604  PASS
+W(A=4)                                    0.079173132  PASS
+sigma_F(F=4)                             0.6828077378  PASS
+sigma_F(F=6)                             0.7792268789  PASS
+sigma_F(F=8)                             0.8009882263  PASS
+sigma_F(F=12)                            0.8063397593  PASS
+sigma_F(F=20)                             0.806561995  PASS
+c(1)                                      2.932655576  PASS
+c(2.05) peak                              5.745222222  PASS
+beta_* = 4/pi                             1.273239545  PASS
+Villain duality residual               1.75162308e-46  PASS
+rank Gamma                                          2  PASS
+det Gamma                                           0  PASS
+det(m=1 + Gamma)                                   13  PASS
+det(m=0.3 + Gamma)                           0.097929  PASS
+asymptotic prefactor                      3.556548393  PASS
+asym vs exact at F=8 (rel)             4.12681324e-05  PASS
+asym vs exact at F=12 (rel)           6.526698482e-08  PASS
+<|det D0|^2>                              53.18080819  PASS
+dirac_operator_checks.py verdict                    1  PASS
+triangulation_uniqueness.py verdict                 1  PASS
+---------------------------------------------------------------------
+28/28 checks passed
