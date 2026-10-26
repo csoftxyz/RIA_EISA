@@ -1,0 +1,68 @@
+========================================================================
+SYMBOLIC GRADED JACOBI  (entries in {-2..2}, 8 random triples)
+========================================================================
+n=2  alpha=0  c=  -1 :  max|Jacobi| =   28
+n=2  alpha=0  c=-2/3 :  max|Jacobi| =   23
+n=2  alpha=0  c=   0 :  max|Jacobi| =   14
+n=2  alpha=0  c= 1/2 :  max|Jacobi| =    7
+n=2  alpha=0  c=   1 :  max|Jacobi| =    0
+n=2  alpha=1  c=  -1 :  max|Jacobi| =   42
+n=2  alpha=1  c=-2/3 :  max|Jacobi| =   28
+n=2  alpha=1  c=   0 :  max|Jacobi| =    0
+n=2  alpha=1  c= 1/2 :  max|Jacobi| =   21
+n=2  alpha=1  c=   1 :  max|Jacobi| =   42
+n=3  alpha=0  c=  -1 :  max|Jacobi| =   56
+n=3  alpha=0  c=-2/3 :  max|Jacobi| =   46
+n=3  alpha=0  c=   0 :  max|Jacobi| =   28
+n=3  alpha=0  c= 1/2 :  max|Jacobi| =   14
+n=3  alpha=0  c=   1 :  max|Jacobi| =    0
+n=3  alpha=1  c=  -1 :  max|Jacobi| =  112
+n=3  alpha=1  c=-2/3 :  max|Jacobi| =   74
+n=3  alpha=1  c=   0 :  max|Jacobi| =    0
+n=3  alpha=1  c= 1/2 :  max|Jacobi| =   56
+n=3  alpha=1  c=   1 :  max|Jacobi| =  112
+n=4  alpha=0  c=  -1 :  max|Jacobi| =   68
+n=4  alpha=0  c=-2/3 :  max|Jacobi| =   56
+n=4  alpha=0  c=   0 :  max|Jacobi| =   34
+n=4  alpha=0  c= 1/2 :  max|Jacobi| =   17
+n=4  alpha=0  c=   1 :  max|Jacobi| =    0
+n=4  alpha=1  c=  -1 :  max|Jacobi| =  170
+n=4  alpha=1  c=-2/3 :  max|Jacobi| =  113
+n=4  alpha=1  c=   0 :  max|Jacobi| =    0
+n=4  alpha=1  c= 1/2 :  max|Jacobi| =   85
+n=4  alpha=1  c=   1 :  max|Jacobi| =  170
+
+=> Jacobi holds iff c(1 + n alpha) = 1 - alpha.
+   alpha=0 (fundamental u(n) action): c = 1
+   alpha=1 (sl_{n+1} action):          c = 0
+   c = 1/2 (with alpha = 0) is NOT a Lie bracket.
+
+check of the general solution c = (1-alpha)/(1+n alpha):
+   n=2 alpha=1/2 c=1/4 : max|Jacobi| = 0
+   n=2 alpha=3/2 c=-1/8 : max|Jacobi| = 0
+   n=3 alpha=1/2 c=1/5 : max|Jacobi| = 0
+   n=3 alpha=3/2 c=-1/11 : max|Jacobi| = 0
+   n=4 alpha=1/2 c=1/6 : max|Jacobi| = 0
+   n=4 alpha=3/2 c=-1/14 : max|Jacobi| = 0
+
+========================================================================
+EXPLICIT ISOMORPHISM g_n = sl_{n+1}  (alpha=1, c=0)
+========================================================================
+n=3: max |[X,Y] - Phi([x,y])| = 1.332e-15;  dim g = 15, dim sl_4 = 15
+n=4: max |[X,Y] - Phi([x,y])| = 1.776e-15;  dim g = 24, dim sl_5 = 24
+19 = 12+4+3 is not of the form n^2+2n (n^2+2n=19 has no integer root); the nearest are 15 (n=3) and 24 (n=4).
+
+========================================================================
+ONE-LOOP OPERATOR Pi ON g_0  (n=4, alpha=1, c=0)
+========================================================================
+alpha = 0.0
+  Gram matrix of the u(4) basis: max|G-1| = 2.22e-16
+  Pi - 1_16: max = 2.22e-16
+  eigenvalues of Pi: [1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1.]
+  (u(1) entry = 1.000000; expected 1 + n(n+2) = 25 for alpha=1)
+alpha = 1.0
+  Gram matrix of the u(4) basis: max|G-1| = 2.22e-16
+  Pi - 1_16: max = 2.40e+01
+  eigenvalues of Pi: [ 1.  1.  1.  1.  1.  1.  1.  1.  1.  1.  1.  1.  1.  1.  1. 25.]
+  (u(1) entry = 25.000000; expected 1 + n(n+2) = 25 for alpha=1)
+
