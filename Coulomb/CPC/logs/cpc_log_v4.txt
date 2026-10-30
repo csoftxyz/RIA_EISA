@@ -1,0 +1,160 @@
+==============================================================================
+A. Closed-form bias of the standard estimators (d = 3)
+==============================================================================
+       q       left      right      arith    arith dev
+ 1.01000   1.010000   0.990099   0.999975   -2.475e-05
+ 1.05000   1.050000   0.952381   0.999405   -5.949e-04
+ 1.10000   1.100000   0.909091   0.997732   -2.268e-03
+ 1.20000   1.200000   0.833333   0.991736   -8.264e-03
+ 1.50000   1.500000   0.666667   0.960000   -4.000e-02
+ 1.73205   1.732051   0.577350   0.928203   -7.180e-02
+ 2.00000   2.000000   0.500000   0.888889   -1.111e-01
+ 3.00000   3.000000   0.333333   0.750000   -2.500e-01
+ 5.00000   5.000000   0.200000   0.555556   -4.444e-01
+arithmetic-mean bias is strictly second order: -(q-1)^2/(1+q)^2
+
+A2. Deep-mesh telescoping sweep of the geometric rule (d = 3)
+    r_n = q^n, exact increment (r_{n+1}-r_n)/(4 pi r_n r_{n+1}),
+    compared with 1/(4 pi r_0) - 1/(4 pi r_N).
+         q    shells   max|rel.err|
+  1.000100    200000      0.000e+00
+  1.001000     27644      0.000e+00
+  1.010000      2776      2.220e-16
+  1.050000       566      2.220e-16
+  1.100000       289      2.220e-16
+  1.200000       151      2.220e-16
+  1.732051        50      2.220e-16
+  2.000000        39      4.441e-16
+  3.000000        25      0.000e+00
+  5.000000        17      2.220e-16
+worst relative error 4.441e-16 over up to 200000 shells, q in [1.0001, 5]
+
+==============================================================================
+B. Exact sampling radius in d dimensions
+==============================================================================
+correct:  rho^(d-1) = (d-2)(r_{n+1}-r_n)/(r_n^(2-d) - r_{n+1}^(2-d))
+ d       q   rho_exact  in shell   rho_naive  in shell
+ 3   1.050    1.024695      True    1.024695      True
+ 3   1.100    1.048809      True    1.048809      True
+ 3   1.200    1.095445      True    1.095445      True
+ 3   1.500    1.224745      True    1.224745      True
+ 3   2.000    1.414214      True    1.414214      True
+ 4   1.050    1.024593      True    0.813220     False
+ 4   1.100    1.048412      True    0.832125     False
+ 4   1.200    1.093931      True    0.868254     False
+ 4   1.500    1.216440      True    0.965489     False
+ 4   2.000    1.386723      True    1.100642      True
+ 5   1.050    1.024492      True    0.778445     False
+ 5   1.100    1.048016      True    0.796320     False
+ 5   1.200    1.092423      True    0.830062     False
+ 5   1.500    1.208302      True    0.918111     False
+ 5   2.000    1.360750      True    1.033946      True
+ 6   1.050    1.024390      True    0.776343     False
+ 6   1.100    1.047620      True    0.793948     False
+ 6   1.200    1.090924      True    0.826766     False
+ 6   1.500    1.200384      True    0.909721     False
+ 6   2.000    1.336650      True    1.012991      True
+
+naive formula returns a point inside the shell only above a threshold q*:
+  d=3: q* = 1.000000
+  d=4: q* = 1.618034
+  d=5: q* = 1.839287
+  d=6: q* = 1.927562
+=> for d >= 4 the naive radius leaves the shell for every q below q*, i.e.
+   throughout the refinement limit q -> 1 that the criterion is meant to describe.
+d=4 check, r0=1, q=1.1: exact dV = 0.004396167059; with rho_exact: 0.004396167059; with rho_naive: 0.008792334118
+
+==============================================================================
+C. Shell scaling: log-log slope of A_n versus r_n (Table 3)
+==============================================================================
+   d    p   fitted slope   predicted     |diff|
+   3  0.5  -0.5000000000        -0.5   0.00e+00
+   3  1.0   0.0000000000         0.0   2.56e-17
+   3  1.5   0.5000000000         0.5   2.22e-16
+   3  2.0   1.0000000000         1.0   0.00e+00
+   4  1.0  -1.0000000000        -1.0   4.44e-16
+   4  2.0   0.0000000000         0.0   2.04e-16
+   5  1.0  -2.0000000000        -2.0   0.00e+00
+   5  3.0   0.0000000000         0.0   5.11e-17
+the fitted slope agrees with p-d+2; the amplitude is unity only at p=d-2
+
+==============================================================================
+D. 96^3 lattice: flux, endpoint estimator, exact-radius estimator
+==============================================================================
+(a) enclosed charge from the discrete flux through d{|x| <= n}
+   n   sites              raw       +|S|/L^3             charge
+   2      33   0.999962700738    0.000037299     1.000000000000
+   3     123   0.999860975477    0.000139025     1.000000000000
+   5     515   0.999417905454    0.000582095     1.000000000000
+   8    2109   0.997616238064    0.002383762     1.000000000000
+  12    7153   0.991915102358    0.008084898     1.000000000000
+=> the discrete charge is exact by the divergence theorem; no refinement involved.
+
+(b) continuum-style estimators  Q = 4 pi rho^2 [Vbar(R) - Vbar(R+1)]
+  R      Vbar(R)     Q_left    Q_exact   R/(R+1)
+  6  0.010678127    0.79186    0.92384   0.85714
+  7  0.008927732    0.82457    0.94237   0.87500
+  8  0.007588605    0.90714    1.02054   0.88889
+  9  0.006460665    0.91780    1.01978   0.90000
+ 10  0.005558979    0.86466    0.95113   0.90909
+ 11  0.004870903    0.87510    0.95465   0.91667
+ 12  0.004295380    0.92395    1.00095   0.92308
+ 13  0.003784786    0.92067    0.99149   0.92857
+ 14  0.003351269    0.88320    0.94629   0.93333
+ 15  0.002992682    0.90872    0.96931   0.93750
+ 16  0.002671287    0.94468    1.00372   0.94118
+ 17  0.002377634    0.93571    0.99075   0.94444
+ 18  0.002119981    0.90097    0.95103   0.94737
+ 19  0.001898693    0.89806    0.94533   0.95000
+ 20  0.001700728    0.92403    0.97023   0.95238
+ 21  0.001516897    0.91009    0.95343   0.95455
+ 22  0.001352674    0.89093    0.93142   0.95652
+ 23  0.001206191    0.88704    0.92561   0.95833
+ 24  0.001072754    0.89710    0.93447   0.96000
+R=8..15: left 0.9002 +- 0.0212 | exact 0.9818 +- 0.0285 | mean factor 0.9171 | factor x exact mean = 0.9004
+R=8..24: left 0.9053 +- 0.0208 | exact 0.9682 +- 0.0298 | mean factor 0.9354 | factor x exact mean = 0.9057
+per shell the factorisation is exact: Q_left(R) = [R/(R+1)] Q_exact(R).
+For the window average the mean of the product is not the product of the means;
+the two differ by 2.5e-4 here, which is the residual of the rounded means.
+
+==============================================================================
+E. Stability of the radius formula near q -> 1 (reference: 30 digits)
+==============================================================================
+difference form: rho^(d-1) = (d-2)(r1-r0)/(r0^(2-d)-r1^(2-d))
+factored form  : rho = r0 [ (d-2) q^(d-2) (q-1) / (q^(d-2)-1) ]^(1/(d-1))
+     q-1     difference       factored
+   1e-02      7.238e-16      6.100e-17
+   1e-03      3.837e-15      6.429e-17
+   1e-04      6.448e-14      8.862e-17
+   1e-06      8.110e-12      2.211e-17
+   1e-08      5.511e-10      1.667e-17
+the difference form loses roughly one digit per decade of q-1;
+the factored form stays at round-off. In d = 3 both reduce to rho^2 = r_n r_{n+1}.
+
+==============================================================================
+F. Extrapolation window sensitivity, alpha_eff = alpha (1 + c/k)
+==============================================================================
+  k       q_k     q_k-1   arith bias
+  1  2.000000  1.000000   -1.111e-01
+  2  1.414214  0.414214   -2.944e-02
+  3  1.259921  0.259921   -1.323e-02
+  4  1.189207  0.189207   -7.470e-03
+  6  1.122462  0.122462   -3.329e-03
+  8  1.090508  0.090508   -1.874e-03
+  window k=(1, 2, 3, 4): alpha_inferred = 0.8957, c = 1.0946
+  window k=(1, 2, 3, 4, 6, 8): alpha_inferred = 0.9322, c = 1.0455
+  window k=(3, 4, 6, 8): alpha_inferred = 0.9876, c = 0.8135
+  window k=(4, 6, 8): alpha_inferred = 0.9912, c = 0.7912
+the k=1 point is q=2, a 100% bias; including it moves the intercept by 10%.
+in the variable (q_k-1) the left-endpoint data are exactly linear with slope 1.
+
+==============================================================================
+G. Arbitrary refinement sequences (d = 3, geometric-mean radius)
+==============================================================================
+  r_n = n^1.5                relative residual 1.744e-16
+  r_n = n^0.6                relative residual 0.000e+00
+  r_n = exp(sqrt n)          relative residual 1.185e-16
+  r_n = n^(1+0.3 sin n)      relative residual 0.000e+00
+  random monotone            relative residual -0.000e+00
+
+total runtime 0.24 s (single core)
