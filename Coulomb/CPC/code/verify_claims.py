@@ -81,9 +81,9 @@ check("factored form error at q-1=1e-8", E["1e-08"]["factored"], 1.7e-17, 5e-17)
 print("tab:window -- extrapolation windows")
 F = D["F_windows"]
 check("alpha_inferred, k<=4", F["window_(1, 2, 3, 4)"]["alpha"], 0.8957, 1e-3)
-check("alpha_inferred, k=1..8", F["window_(1, 2, 3, 4, 6, 8)"]["alpha"], 0.9322, 1e-3)
-check("alpha_inferred, k=3..8", F["window_(3, 4, 6, 8)"]["alpha"], 0.9876, 1e-3)
-check("alpha_inferred, k=4..8", F["window_(4, 6, 8)"]["alpha"], 0.9912, 1e-3)
+check("alpha_inferred, k=1,2,3,4,6,8", F["window_(1, 2, 3, 4, 6, 8)"]["alpha"], 0.9322, 1e-3)
+check("alpha_inferred, k=3,4,6,8", F["window_(3, 4, 6, 8)"]["alpha"], 0.9876, 1e-3)
+check("alpha_inferred, k=4,6,8", F["window_(4, 6, 8)"]["alpha"], 0.9912, 1e-3)
 check("closed-form bias q_k-1 at k=4", F["qk"]["4"]["left_bias"], 0.189207, 1e-6)
 
 print("Sec. 6.5 -- arbitrary refinement sequences")
