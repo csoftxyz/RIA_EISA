@@ -1,0 +1,50 @@
+﻿============================================================================================
+CENSUS WITH PHENOMENOLOGICAL VIABILITY DIAGNOSIS
+============================================================================================
+content                n_sym   mode   viable  renorm  reason
+10                         1     F1       no     yes  M_d = M_e exactly: no down/lepton splitting
+120                        0     F1       no     yes  antisymmetric only: rank 2, two massless families
+126                        1     F1       no     yes  M_d proportional to M_e, rank 1
+16                         1    F1*       no      no  single effective symmetric structure: proportional or diagon
+144                        1    F1*       no      no  single effective symmetric structure: proportional or diagon
+10+120                     1     F1       no     yes  M_d = M_e exactly: no down/lepton splitting
+10+126                     2     OK      YES     yes  2 independent symmetric structures: diagonal lock relaxed, M
+10+16                      2     OK      YES      no  2 independent symmetric structures: diagonal lock relaxed, M
+10+144                     2     OK      YES      no  2 independent symmetric structures: diagonal lock relaxed, M
+120+126                    1     F2       no     yes  single symmetric f from 126 plus antisymmetric 120: (M_e)_ii
+120+16                     1    F1*       no      no  single effective symmetric structure: proportional or diagon
+120+144                    1    F1*       no      no  single effective symmetric structure: proportional or diagon
+126+16                     2     OK      YES      no  2 independent symmetric structures: diagonal lock relaxed, M
+126+144                    2     OK      YES      no  2 independent symmetric structures: diagonal lock relaxed, M
+16+144                     2     OK      YES      no  2 independent symmetric structures: diagonal lock relaxed, M
+10+120+126                 2     OK      YES     yes  2 independent symmetric structures: diagonal lock relaxed, M
+10+120+16                  2     OK      YES      no  2 independent symmetric structures: diagonal lock relaxed, M
+10+120+144                 2     OK      YES      no  2 independent symmetric structures: diagonal lock relaxed, M
+10+126+16                  3     OK      YES      no  3 independent symmetric structures: diagonal lock relaxed, M
+10+126+144                 3     OK      YES      no  3 independent symmetric structures: diagonal lock relaxed, M
+10+16+144                  3     OK      YES      no  3 independent symmetric structures: diagonal lock relaxed, M
+120+126+16                 2     OK      YES      no  2 independent symmetric structures: diagonal lock relaxed, M
+120+126+144                2     OK      YES      no  2 independent symmetric structures: diagonal lock relaxed, M
+120+16+144                 2     OK      YES      no  2 independent symmetric structures: diagonal lock relaxed, M
+126+16+144                 3     OK      YES      no  3 independent symmetric structures: diagonal lock relaxed, M
+10+120+126+16              3     OK      YES      no  3 independent symmetric structures: diagonal lock relaxed, M
+10+120+126+144             3     OK      YES      no  3 independent symmetric structures: diagonal lock relaxed, M
+10+120+16+144              3     OK      YES      no  3 independent symmetric structures: diagonal lock relaxed, M
+10+126+16+144              4     OK      YES      no  4 independent symmetric structures: diagonal lock relaxed, M
+120+126+16+144             3     OK      YES      no  3 independent symmetric structures: diagonal lock relaxed, M
+10+120+126+16+144          4     OK      YES      no  4 independent symmetric structures: diagonal lock relaxed, M
+
+viable contents: 22 / 31
+viable AND renormalizable: 2
+minimal viable renormalizable contents:
+    10+126
+
+F2 (diagonal-locked, structurally splitting but EXCLUDED):
+    120+126 | single symmetric f from 126 plus antisymmetric 120: (M_e)_ii = -3(M_d)_ii forces m_tau/m_b ~ 3
+
+IMPLICATION FOR THE ALIGNMENT THEOREM:
+  the theorem assumes a single symmetric Yukawa.  Every content with
+  n_sym = 1 fails (F1 or F2); every viable content has n_sym >= 2 and
+  therefore does NOT satisfy the theorem's hypothesis.  The theorem is
+  thus a statement that ONE symmetric structure is insufficient, which
+  explains why the standard viable model contains two.

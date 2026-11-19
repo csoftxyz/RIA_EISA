@@ -1,0 +1,133 @@
+{
+  "priors": {
+    "gaussian": {
+      "m2/m1": {
+        "ks": 0.15,
+        "p": 6.087833788159569e-25,
+        "single_mean": 0.45895037030736874,
+        "broken_mean": 0.3908486069390085,
+        "preference_holds": true
+      },
+      "m3/m1": {
+        "ks": 0.2876,
+        "p": 1.712197232198078e-91,
+        "single_mean": 0.17880081141813572,
+        "broken_mean": 0.0961035884711795,
+        "preference_holds": true
+      }
+    },
+    "uniform": {
+      "m2/m1": {
+        "ks": 0.2288,
+        "p": 9.298937816906184e-58,
+        "single_mean": 0.46016445249108384,
+        "broken_mean": 0.354603662013616,
+        "preference_holds": true
+      },
+      "m3/m1": {
+        "ks": 0.4044,
+        "p": 3.908388568666402e-183,
+        "single_mean": 0.19356995881762815,
+        "broken_mean": 0.07952383764781275,
+        "preference_holds": true
+      }
+    },
+    "loguniform": {
+      "m2/m1": {
+        "ks": 0.0524,
+        "p": 0.0020849236907932445,
+        "single_mean": 0.36048831785253904,
+        "broken_mean": 0.3384543488992224,
+        "preference_holds": false
+      },
+      "m3/m1": {
+        "ks": 0.0624,
+        "p": 0.0001179052177414351,
+        "single_mean": 0.07958538988414841,
+        "broken_mean": 0.06228543632590851,
+        "preference_holds": false
+      }
+    },
+    "heavytail": {
+      "m2/m1": {
+        "ks": 0.0864,
+        "p": 1.5401584218962872e-08,
+        "single_mean": 0.4370554492481381,
+        "broken_mean": 0.39267155331359344,
+        "preference_holds": true
+      },
+      "m3/m1": {
+        "ks": 0.1664,
+        "p": 1.2703557323768062e-30,
+        "single_mean": 0.13579868532801076,
+        "broken_mean": 0.09016817516573818,
+        "preference_holds": true
+      }
+    },
+    "real": {
+      "m2/m1": {
+        "ks": 0.196,
+        "p": 2.1313269658397418e-42,
+        "single_mean": 0.4677913157193527,
+        "broken_mean": 0.3774806637545794,
+        "preference_holds": true
+      },
+      "m3/m1": {
+        "ks": 0.2944,
+        "p": 6.452272069105673e-96,
+        "single_mean": 0.16454603611266067,
+        "broken_mean": 0.08274532940511556,
+        "preference_holds": true
+      }
+    },
+    "hierarchical": {
+      "m2/m1": {
+        "ks": 0.0804,
+        "p": 1.890099033546049e-07,
+        "single_mean": 0.2861864918809005,
+        "broken_mean": 0.27734347326061926,
+        "preference_holds": true
+      },
+      "m3/m1": {
+        "ks": 0.0736,
+        "p": 2.6031446861402164e-06,
+        "single_mean": 0.04879221518993899,
+        "broken_mean": 0.03216710013883694,
+        "preference_holds": false
+      }
+    }
+  },
+  "breaking_sweep": {
+    "eps=0.3": {
+      "ks_m3m1": 0.1212,
+      "p_m3m1": 2.070657544577234e-16,
+      "single_mean": 0.17766583801406027,
+      "broken_mean": 0.14276609385078715,
+      "preference_holds": true
+    },
+    "eps=1.0": {
+      "ks_m3m1": 0.2756,
+      "p_m3m1": 5.938121989940869e-84,
+      "single_mean": 0.17766583801406027,
+      "broken_mean": 0.09349300635557081,
+      "preference_holds": true
+    },
+    "eps=3.0": {
+      "ks_m3m1": 0.3608,
+      "p_m3m1": 5.695697499515095e-145,
+      "single_mean": 0.17766583801406027,
+      "broken_mean": 0.07464648708073769,
+      "preference_holds": true
+    }
+  },
+  "n_per_prior": 2500,
+  "summary": {
+    "m3m1_direction_across_priors": "6/6",
+    "m2m1_direction_across_priors": "6/6",
+    "m3m1_strong_priors": "4/6",
+    "m2m1_strong_priors": "5/6",
+    "breaking_sweep_holds": "3/3",
+    "direction_prior_robust": true,
+    "note": "direction (weaker hierarchy for single-S) is prior-robust; magnitude is prior-dependent (weakens for log-uniform / hierarchical priors)"
+  }
+}

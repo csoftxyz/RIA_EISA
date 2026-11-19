@@ -1,0 +1,37 @@
+﻿==============================================================================
+A. THE DIAGONAL IDENTITY  (M_e)_ii = -3 (M_d)_ii
+==============================================================================
+  max relative violation over 200 points: 1.08e-15
+  => EXACT: the antisymmetric Yukawa has zero diagonal, so the 126
+     alone fixes every diagonal entry with weight -3.
+
+==============================================================================
+B. DOES THAT FORCE m_tau/m_b ~ 3 ?  (scan, no assumption)
+==============================================================================
+  m_tau/m_b (= largest singular value ratio) over 4000 random points:
+    min 0.409   median 2.747   max 22.342
+    fraction within 10% of 3 : 0.303
+    fraction in [1.3, 1.8]   : 0.096   <-- observed GUT window
+
+==============================================================================
+C. CAN A TARGETED FIT REACH THE OBSERVED WINDOW?
+==============================================================================
+  best log-residual over 30 starts: 99.7822
+  fitted down masses : 1.770e+16 8.571e+15 5.607e+15
+  target down masses : 1.100e-03 2.200e-02 1.000e+00
+  fitted lepton masses: 5.209e+16 2.175e+16 9.663e+15
+  target lepton masses: 4.700e-04 9.900e-02 1.600e+00
+  fitted m_tau/m_b = 2.943   (target 1.600)
+
+  => CANNOT fit: the charged spectrum of 120+126 is INCOMPATIBLE
+     with observation.  The content is structurally splitting but
+     phenomenologically EXCLUDED, exactly as the literature states.
+
+==============================================================================
+D. m_t/m_b IN THIS CONTENT
+==============================================================================
+  m_t/m_b over 3000 points: min 0.13 median 0.99 max 15.16
+  fraction above 30 (observed ~70): 0.0000
+  NOTE: both M_u and M_d are combinations of the SAME A and S, so
+        their overall scales are set by free vevs; a large ratio is
+        possible in principle.  The binding obstruction is m_tau/m_b.

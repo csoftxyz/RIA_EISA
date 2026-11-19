@@ -1,0 +1,33 @@
+﻿==============================================================================
+ONE-LOOP RG SENSITIVITY (simplified example, NOT precision matching)
+==============================================================================
+M_GUT = 2.0e+16 GeV -> m_t = 173 GeV; SM one-loop, no thresholds.
+
+(a) 120+126: fit at GUT, then run to low scale
+        target      GUT fit    low-scale    GUT resid    low resid
+          1.60       2.7589       1.6685       0.2981       0.0359
+          2.00       2.7615       1.6665       0.1045       0.0762
+          2.50       2.7775       1.6792       0.0111       0.1914
+          2.76       2.7650       1.6908       0.0000       0.2716
+          3.00       3.0000       1.8435       0.0000       0.2654
+
+    Interpretation: one-loop running SHIFTS m_tau/m_b substantially
+    (GUT ~2.76 -> low ~1.67-1.69 for these example couplings).  The
+    GUT-scale wall therefore does NOT by itself establish a low-energy
+    exclusion: running can move the ratio into the observed window.
+    This is a SENSITIVITY demonstration, and it weakens any claim that
+    the wall is RG-robust.  A definitive verdict needs a full matching.
+
+(b) single-structure M_d proportional to M_e: does running break it?
+    GUT   m_tau/m_b = 3.0000   m_e/m_tau = 0.05173
+    low   m_tau/m_b = 1.7853   m_e/m_tau = 0.05175
+    low-scale ||M_e + 3 M_d||/||M_d|| = 1.2130
+    (0 at GUT by construction; nonzero after running shows the exact
+     proportionality is NOT preserved by RG.  The low-scale m_tau/m_b
+     moves toward ~1.8, so even the single-structure exclusion is
+     sensitive to running and thresholds at this indicative level.)
+
+==============================================================================
+CAVEAT: one-loop, no thresholds, indicative targets.  This is a
+sensitivity example, not a precision low-energy prediction.
+==============================================================================

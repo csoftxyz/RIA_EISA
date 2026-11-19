@@ -1,0 +1,109 @@
+{
+  "universality": {
+    "120+126": {
+      "median_rel_resid": 2.8198130090842116e-15,
+      "max_rel_resid": 7.237363017584809e-14,
+      "n": 300,
+      "identity_holds": true
+    },
+    "10+126": {
+      "median_rel_resid": 0.02359723431317727,
+      "max_rel_resid": 7.1417387849987515,
+      "n": 300,
+      "identity_holds": false
+    },
+    "10+120+126": {
+      "median_rel_resid": 0.05873826565357301,
+      "max_rel_resid": 8.247642415847208,
+      "n": 300,
+      "identity_holds": false
+    },
+    "double-126 (broken)": {
+      "median_rel_resid": 0.1378274655025437,
+      "max_rel_resid": 7.057592902337625,
+      "n": 300,
+      "identity_holds": false
+    }
+  },
+  "breaking_scale": {
+    "rows": [
+      {
+        "eps": 0.0001,
+        "median_rel_resid": 1.228080376183511e-08
+      },
+      {
+        "eps": 0.001,
+        "median_rel_resid": 1.2295255671978332e-06
+      },
+      {
+        "eps": 0.01,
+        "median_rel_resid": 0.00011119085290995571
+      },
+      {
+        "eps": 0.1,
+        "median_rel_resid": 0.010351316073161108
+      },
+      {
+        "eps": 1.0,
+        "median_rel_resid": 0.1516379069404808
+      }
+    ],
+    "power_law_exponent": 1.973363783175826,
+    "interpretation": "residual ~ eps^1.97 at small eps"
+  },
+  "pmns_stats": {
+    "n_single": 4000,
+    "n_broken": 4000,
+    "comparison": [
+      {
+        "observable": "|Ue2|",
+        "single_mean": 0.5369499442257408,
+        "single_std": 0.21729766435922637,
+        "broken_mean": 0.5390084277450053,
+        "broken_std": 0.21880368950842552,
+        "mean_shift_in_std": 0.00940790131962219
+      },
+      {
+        "observable": "|Ue3|",
+        "single_mean": 0.48167229040003495,
+        "single_std": 0.2169079547265554,
+        "broken_mean": 0.4914998568018306,
+        "broken_std": 0.22144814873584504,
+        "mean_shift_in_std": 0.04437863426674431
+      },
+      {
+        "observable": "|Umu3|",
+        "single_mean": 0.5165558641304727,
+        "single_std": 0.22209813911088255,
+        "broken_mean": 0.5223354894874269,
+        "broken_std": 0.21978857953791503,
+        "mean_shift_in_std": 0.026296295144658206
+      },
+      {
+        "observable": "J_PMNS",
+        "single_mean": 0.0009023359843589942,
+        "single_std": 0.036973809021964496,
+        "broken_mean": 3.874929041993952e-05,
+        "broken_std": 0.03663674356992957,
+        "mean_shift_in_std": 0.023571600797180643
+      },
+      {
+        "observable": "m2/m1",
+        "single_mean": 0.4595516356023472,
+        "single_std": 0.21983134677391353,
+        "broken_mean": 0.3855498361739068,
+        "broken_std": 0.21148851902153848,
+        "mean_shift_in_std": 0.3499092989577551
+      },
+      {
+        "observable": "m3/m1",
+        "single_mean": 0.1750851944564394,
+        "single_std": 0.14568252963405798,
+        "broken_mean": 0.09429993674151096,
+        "broken_std": 0.09923491898552667,
+        "mean_shift_in_std": 0.8140809559859762
+      }
+    ],
+    "note": "single-S vs broken-S at the SAME Yukawas/vevs (paired); shift measured in units of the broken-sample std"
+  }
+}

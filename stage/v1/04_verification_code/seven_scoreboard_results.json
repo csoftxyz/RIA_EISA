@@ -1,0 +1,56 @@
+{
+  "rows": [
+    {
+      "content": "SU(5) 5+45",
+      "npar": 82,
+      "best_sq_resid": 7.190751075780298e-20,
+      "fitted_mtau_mb": 1.599999999636903,
+      "declaration_cost_lower_bound": 0
+    },
+    {
+      "content": "SU(5) 5+45+50",
+      "npar": 98,
+      "best_sq_resid": 9.466722081040773e-23,
+      "fitted_mtau_mb": 1.599999999996119,
+      "declaration_cost_lower_bound": 0
+    },
+    {
+      "content": "SO(10) 10+120",
+      "npar": 30,
+      "best_sq_resid": 0.14749633737253096,
+      "fitted_mtau_mb": 1.090815647852173,
+      "declaration_cost_lower_bound": 1
+    },
+    {
+      "content": "SO(10) 10+126",
+      "npar": 32,
+      "best_sq_resid": 2.146207815074069e-23,
+      "fitted_mtau_mb": 1.6000000000001153,
+      "declaration_cost_lower_bound": 0
+    },
+    {
+      "content": "SO(10) 120+126",
+      "npar": 30,
+      "best_sq_resid": 0.29807504003761753,
+      "fitted_mtau_mb": 2.758918684366585,
+      "declaration_cost_lower_bound": 1
+    },
+    {
+      "content": "SO(10) 10+120+126",
+      "npar": 46,
+      "best_sq_resid": 1.2961457124068954e-21,
+      "fitted_mtau_mb": 1.6000000000001537,
+      "declaration_cost_lower_bound": 0
+    },
+    {
+      "content": "PS (1,2,2)+(15,2,2)",
+      "npar": 56,
+      "best_sq_resid": 9.328827630579367e-22,
+      "fitted_mtau_mb": 1.6000000000190717,
+      "declaration_cost_lower_bound": 0
+    }
+  ],
+  "n_zero": 5,
+  "n_ge1": 2,
+  "n_starts": 60
+}

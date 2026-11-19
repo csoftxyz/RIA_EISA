@@ -1,0 +1,40 @@
+﻿==============================================================================
+ITEM 2: SEESAW-TYPE ROBUSTNESS OF THE ALIGNMENT OBSTRUCTION
+==============================================================================
+  max relative deviation from M_nu proportional to f  [I    ]: 2.35e-15
+  max relative deviation from M_nu proportional to f  [II   ]: 2.01e-16
+  max relative deviation from M_nu proportional to f  [mixed]: 3.29e-15
+
+  => In 120+126 ALL seesaw types give M_nu proportional to f, because
+     M_D and M_R are both proportional to the single symmetric f.
+     The obstruction is therefore INDEPENDENT of the seesaw mechanism.
+     (This strengthens the paper: no type-I escape in the minimal content.)
+
+==============================================================================
+ITEM 3: DOES ADDING A 10 REMOVE THE m_tau/m_b OBSTRUCTION?
+==============================================================================
+  targets: m_s/m_b=0.022, m_d/m_b=0.0011, m_mu/m_tau=0.062, m_e/m_tau=0.00029, m_tau/m_b=1.6
+
+  10+126           best |log resid| =   4.8853   m_tau/m_b =   1.601
+  10+120+126       best |log resid| =   3.2465   m_tau/m_b =   1.531
+
+  10+126 fitted ratios:
+    m_s/m_b      target      0.022   fitted   0.041805
+    m_d/m_b      target     0.0011   fitted  0.0048559
+    m_mu/m_tau   target      0.062   fitted   0.067072
+    m_e/m_tau    target    0.00029   fitted   0.029111
+    m_tau/m_b    target        1.6   fitted     1.6011
+
+  10+120+126 fitted ratios:
+    m_s/m_b      target      0.022   fitted    0.12499
+    m_d/m_b      target     0.0011   fitted  0.0033624
+    m_mu/m_tau   target      0.062   fitted    0.27062
+    m_e/m_tau    target    0.00029   fitted  0.0021968
+    m_tau/m_b    target        1.6   fitted     1.5307
+
+  Interpretation:
+   - with a 10 present the diagonal identity is relaxed, so m_tau/m_b
+     is no longer pinned near 3;
+   - a small residual means the content CAN reproduce the observed
+     charged ratios, i.e. it is phenomenologically viable, not merely
+     structurally splitting.

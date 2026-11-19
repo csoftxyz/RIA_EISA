@@ -1,0 +1,22 @@
+﻿==============================================================================
+BASIC STRUCTURAL CHECKS  (seed 20261118, 20000 points each)
+==============================================================================
+
+(1) complex antisymmetric 3x3 has rank <= 2
+    exceptions (smallest singular value > 1e-10 relative): 0 / 20000
+    worst relative smallest singular value : 1.816e-16
+    worst relative |det|                   : 3.812e-17
+    => at least one massless family, as required by even rank.
+
+(2) one symmetric structure => M_d proportional to M_e
+    exceptions: 0 / 20000
+    worst relative ||M_e + 3 M_d|| : 1.021e-15
+    => the pair spans a one-dimensional subspace (rank one).
+
+(3) one 10 => M_d = M_e exactly
+    worst relative ||M_e - M_d|| : 0.000e+00
+    => no down/lepton splitting at all.
+
+==============================================================================
+ALL BASIC CHECKS: PASS
+==============================================================================

@@ -1,0 +1,96 @@
+﻿==============================================================================
+DECISIVE VIABILITY FIT  (Levenberg-Marquardt, 120 starts, seed 20261118)
+==============================================================================
+Targets are INDICATIVE GUT-scale ratios; no RG evolution is performed.
+
+------------------------------------------------------------------------------
+120+126   fitting 5 ratios
+------------------------------------------------------------------------------
+  best squared residual : 0.298075   (|log resid| = 0.5460)
+  starts below 0.01     : 0 / 120
+  starts below 0.10     : 0 / 120
+  median best-of-start  : 0.7266
+  ratio              target       fitted    log dev
+  m_s/m_b             0.022     0.022274      0.012
+  m_d/m_b            0.0011    0.0010993     -0.001
+  m_mu/m_tau          0.062     0.064067      0.033
+  m_e/m_tau         0.00029   0.00029004      0.000
+  m_tau/m_b             1.6       2.7589      0.545
+  VERDICT: close but not converged
+
+------------------------------------------------------------------------------
+120+126   fitting 6 ratios
+------------------------------------------------------------------------------
+  best squared residual : 0.298075   (|log resid| = 0.5460)
+  starts below 0.01     : 0 / 120
+  starts below 0.10     : 0 / 120
+  median best-of-start  : 0.8970
+  ratio              target       fitted    log dev
+  m_s/m_b             0.022     0.022274      0.012
+  m_d/m_b            0.0011    0.0010993     -0.001
+  m_mu/m_tau          0.062     0.064067      0.033
+  m_e/m_tau         0.00029   0.00029004      0.000
+  m_tau/m_b             1.6       2.7589      0.545
+  m_t/m_b                70           70     -0.000
+  VERDICT: close but not converged
+
+------------------------------------------------------------------------------
+10+126   fitting 5 ratios
+------------------------------------------------------------------------------
+  best squared residual : 0.000000   (|log resid| = 0.0000)
+  starts below 0.01     : 69 / 120
+  starts below 0.10     : 71 / 120
+  median best-of-start  : 0.0000
+  ratio              target       fitted    log dev
+  m_s/m_b             0.022        0.022      0.000
+  m_d/m_b            0.0011       0.0011      0.000
+  m_mu/m_tau          0.062        0.062     -0.000
+  m_e/m_tau         0.00029      0.00029     -0.000
+  m_tau/m_b             1.6          1.6      0.000
+  VERDICT: VIABLE POINT FOUND
+
+------------------------------------------------------------------------------
+10+126   fitting 6 ratios
+------------------------------------------------------------------------------
+  best squared residual : 0.000000   (|log resid| = 0.0000)
+  starts below 0.01     : 39 / 120
+  starts below 0.10     : 44 / 120
+  median best-of-start  : 0.9225
+  ratio              target       fitted    log dev
+  m_s/m_b             0.022        0.022     -0.000
+  m_d/m_b            0.0011       0.0011     -0.000
+  m_mu/m_tau          0.062        0.062      0.000
+  m_e/m_tau         0.00029      0.00029      0.000
+  m_tau/m_b             1.6          1.6      0.000
+  m_t/m_b                70           70     -0.000
+  VERDICT: VIABLE POINT FOUND
+
+==============================================================================
+SENSITIVITY OF THE OBSTRUCTION TO THE ASSUMED m_tau/m_b WINDOW
+==============================================================================
+GUT-scale m_tau/m_b is scheme dependent; the literature quotes values
+from roughly 1.4 to 2.5.  We refit 120+126 for several targets, always
+fitting the four hierarchies at the same time.
+      target  best sq.resid         fitted      log dev
+        1.40       0.461335         2.7573        0.678
+        1.60       0.298075         2.7589        0.545
+        1.80       0.183545         2.7603        0.428
+        2.00       0.104506         2.7615        0.323
+        2.20       0.052055         2.7626        0.228
+        2.50       0.010115         2.7640        0.100
+        2.76       0.000003         2.7650        0.002
+        3.00       0.000000         3.0000        0.000
+
+==============================================================================
+SUMMARY
+==============================================================================
+  120+126_5        squared residual   0.298075   close but not converged
+  120+126_6        squared residual   0.298075   close but not converged
+  10+126_5         squared residual   0.000000   VIABLE POINT FOUND
+  10+126_6         squared residual   0.000000   VIABLE POINT FOUND
+
+Interpretation:
+  A small residual is an existence proof of a point reproducing those
+  ratios.  A large residual after many starts is evidence against, not
+  a proof of exclusion.  Neither statement includes CKM, PMNS or RG.
+==============================================================================

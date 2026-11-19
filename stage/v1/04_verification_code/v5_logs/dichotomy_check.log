@@ -1,0 +1,23 @@
+﻿==============================================================================
+RANK-ALIGNMENT DICHOTOMY  (seed 602719, 50000 points)
+==============================================================================
+
+BRANCH 1  (a = b = 0): expect M_d proportional to M_e
+  points                                : 10000
+  exceptions (deviation > 1e-09)           : 0
+  worst relative deviation              : 6.647e-16
+
+BRANCH 2  (a or b nonzero): expect a NONZERO commutator
+  points                                : 50000
+  exceptions (commutator <= 1e-09)         : 0
+  relative commutator  min              : 0.0004
+  relative commutator  median           : 0.1587
+  relative commutator  max              : 0.5786
+  smallest antisymmetric fraction of Me : 0.0007
+
+==============================================================================
+TOTAL EXCEPTIONS TO THE DICHOTOMY: 0 / 60000
+VERDICT: PASS
+NOTE: genericity evidence over a fixed-seed sample, not a proof
+      that no special texture can evade the obstruction.
+==============================================================================
