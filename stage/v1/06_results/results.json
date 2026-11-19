@@ -1,0 +1,1586 @@
+{
+  "seed": 20261118,
+  "census": [
+    {
+      "group": "SU(5)",
+      "model": "5",
+      "n_ops": 2,
+      "n_bido": 2,
+      "rankC": 2,
+      "fed": true,
+      "single": false,
+      "free_de": false,
+      "direct": true,
+      "trans": true,
+      "all_anti": false,
+      "splitting": false,
+      "mass": 3,
+      "ckm": 0,
+      "gauge": 2,
+      "charge": 1,
+      "baseline": 3,
+      "P": 6,
+      "p_add": 0
+    },
+    {
+      "group": "SU(5)",
+      "model": "45",
+      "n_ops": 2,
+      "n_bido": 2,
+      "rankC": 2,
+      "fed": true,
+      "single": false,
+      "free_de": false,
+      "direct": true,
+      "trans": true,
+      "all_anti": false,
+      "splitting": false,
+      "mass": 3,
+      "ckm": 0,
+      "gauge": 2,
+      "charge": 1,
+      "baseline": 3,
+      "P": 6,
+      "p_add": 0
+    },
+    {
+      "group": "SU(5)",
+      "model": "50",
+      "n_ops": 1,
+      "n_bido": 1,
+      "rankC": 1,
+      "fed": false,
+      "single": true,
+      "free_de": false,
+      "direct": false,
+      "trans": false,
+      "all_anti": false,
+      "splitting": false,
+      "mass": 0,
+      "ckm": 0,
+      "gauge": 2,
+      "charge": 1,
+      "baseline": 3,
+      "P": 3,
+      "p_add": 0
+    },
+    {
+      "group": "SU(5)",
+      "model": "5+45",
+      "n_ops": 4,
+      "n_bido": 4,
+      "rankC": 3,
+      "fed": true,
+      "single": false,
+      "free_de": false,
+      "direct": false,
+      "trans": false,
+      "all_anti": false,
+      "splitting": true,
+      "mass": 0,
+      "ckm": 0,
+      "gauge": 2,
+      "charge": 1,
+      "baseline": 3,
+      "P": 3,
+      "p_add": 0
+    },
+    {
+      "group": "SU(5)",
+      "model": "5+50",
+      "n_ops": 3,
+      "n_bido": 3,
+      "rankC": 2,
+      "fed": true,
+      "single": false,
+      "free_de": false,
+      "direct": true,
+      "trans": true,
+      "all_anti": false,
+      "splitting": false,
+      "mass": 3,
+      "ckm": 0,
+      "gauge": 2,
+      "charge": 1,
+      "baseline": 3,
+      "P": 6,
+      "p_add": 0
+    },
+    {
+      "group": "SU(5)",
+      "model": "45+50",
+      "n_ops": 3,
+      "n_bido": 3,
+      "rankC": 2,
+      "fed": true,
+      "single": false,
+      "free_de": false,
+      "direct": true,
+      "trans": true,
+      "all_anti": false,
+      "splitting": false,
+      "mass": 3,
+      "ckm": 0,
+      "gauge": 2,
+      "charge": 1,
+      "baseline": 3,
+      "P": 6,
+      "p_add": 0
+    },
+    {
+      "group": "SU(5)",
+      "model": "5+45+50",
+      "n_ops": 5,
+      "n_bido": 5,
+      "rankC": 3,
+      "fed": true,
+      "single": false,
+      "free_de": false,
+      "direct": false,
+      "trans": false,
+      "all_anti": false,
+      "splitting": true,
+      "mass": 0,
+      "ckm": 0,
+      "gauge": 2,
+      "charge": 1,
+      "baseline": 3,
+      "P": 3,
+      "p_add": 0
+    },
+    {
+      "group": "SO(10)",
+      "model": "10",
+      "n_ops": 1,
+      "n_bido": 1,
+      "rankC": 1,
+      "fed": true,
+      "single": true,
+      "free_de": false,
+      "direct": true,
+      "trans": true,
+      "all_anti": false,
+      "splitting": false,
+      "mass": 5,
+      "ckm": 4,
+      "gauge": 2,
+      "charge": 1,
+      "baseline": 3,
+      "P": 12,
+      "p_add": 0
+    },
+    {
+      "group": "SO(10)",
+      "model": "120",
+      "n_ops": 1,
+      "n_bido": 2,
+      "rankC": 2,
+      "fed": true,
+      "single": true,
+      "free_de": true,
+      "direct": false,
+      "trans": false,
+      "all_anti": true,
+      "splitting": false,
+      "mass": 5,
+      "ckm": 4,
+      "gauge": 2,
+      "charge": 1,
+      "baseline": 3,
+      "P": 12,
+      "p_add": 0
+    },
+    {
+      "group": "SO(10)",
+      "model": "126",
+      "n_ops": 1,
+      "n_bido": 1,
+      "rankC": 1,
+      "fed": true,
+      "single": true,
+      "free_de": false,
+      "direct": true,
+      "trans": true,
+      "all_anti": false,
+      "splitting": false,
+      "mass": 5,
+      "ckm": 4,
+      "gauge": 2,
+      "charge": 1,
+      "baseline": 3,
+      "P": 12,
+      "p_add": 0
+    },
+    {
+      "group": "SO(10)",
+      "model": "10+120",
+      "n_ops": 2,
+      "n_bido": 3,
+      "rankC": 2,
+      "fed": true,
+      "single": false,
+      "free_de": true,
+      "direct": false,
+      "trans": false,
+      "all_anti": false,
+      "splitting": true,
+      "mass": 0,
+      "ckm": 0,
+      "gauge": 2,
+      "charge": 1,
+      "baseline": 3,
+      "P": 3,
+      "p_add": 0
+    },
+    {
+      "group": "SO(10)",
+      "model": "10+126",
+      "n_ops": 2,
+      "n_bido": 2,
+      "rankC": 2,
+      "fed": true,
+      "single": false,
+      "free_de": false,
+      "direct": false,
+      "trans": false,
+      "all_anti": false,
+      "splitting": true,
+      "mass": 0,
+      "ckm": 0,
+      "gauge": 2,
+      "charge": 1,
+      "baseline": 3,
+      "P": 3,
+      "p_add": 0
+    },
+    {
+      "group": "SO(10)",
+      "model": "120+126",
+      "n_ops": 2,
+      "n_bido": 3,
+      "rankC": 2,
+      "fed": true,
+      "single": false,
+      "free_de": true,
+      "direct": false,
+      "trans": false,
+      "all_anti": false,
+      "splitting": true,
+      "mass": 0,
+      "ckm": 0,
+      "gauge": 2,
+      "charge": 1,
+      "baseline": 3,
+      "P": 3,
+      "p_add": 0
+    },
+    {
+      "group": "SO(10)",
+      "model": "10+120+126",
+      "n_ops": 3,
+      "n_bido": 4,
+      "rankC": 2,
+      "fed": true,
+      "single": false,
+      "free_de": true,
+      "direct": false,
+      "trans": false,
+      "all_anti": false,
+      "splitting": true,
+      "mass": 0,
+      "ckm": 0,
+      "gauge": 2,
+      "charge": 1,
+      "baseline": 3,
+      "P": 3,
+      "p_add": 0
+    },
+    {
+      "group": "E6",
+      "model": "27",
+      "n_ops": 1,
+      "n_bido": 1,
+      "rankC": 1,
+      "fed": true,
+      "single": true,
+      "free_de": false,
+      "direct": true,
+      "trans": true,
+      "all_anti": false,
+      "splitting": false,
+      "mass": 5,
+      "ckm": 4,
+      "gauge": 2,
+      "charge": 1,
+      "baseline": 3,
+      "P": 12,
+      "p_add": 0
+    },
+    {
+      "group": "PS",
+      "model": "(1,2,2)",
+      "n_ops": 1,
+      "n_bido": 1,
+      "rankC": 1,
+      "fed": true,
+      "single": true,
+      "free_de": false,
+      "direct": true,
+      "trans": true,
+      "all_anti": false,
+      "splitting": false,
+      "mass": 5,
+      "ckm": 4,
+      "gauge": 0,
+      "charge": 1,
+      "baseline": 1,
+      "P": 10,
+      "p_add": 0
+    },
+    {
+      "group": "PS",
+      "model": "(15,2,2)",
+      "n_ops": 1,
+      "n_bido": 1,
+      "rankC": 1,
+      "fed": true,
+      "single": true,
+      "free_de": false,
+      "direct": true,
+      "trans": true,
+      "all_anti": false,
+      "splitting": false,
+      "mass": 5,
+      "ckm": 4,
+      "gauge": 0,
+      "charge": 1,
+      "baseline": 1,
+      "P": 10,
+      "p_add": 0
+    },
+    {
+      "group": "PS",
+      "model": "(1,2,2)+(15,2,2)",
+      "n_ops": 2,
+      "n_bido": 2,
+      "rankC": 2,
+      "fed": true,
+      "single": false,
+      "free_de": false,
+      "direct": false,
+      "trans": false,
+      "all_anti": false,
+      "splitting": true,
+      "mass": 0,
+      "ckm": 0,
+      "gauge": 0,
+      "charge": 1,
+      "baseline": 1,
+      "P": 1,
+      "p_add": 0
+    }
+  ],
+  "ranks": [
+    {
+      "model": "SU(5) 5+45",
+      "n_params": 62,
+      "rank": 13,
+      "rank_set": [
+        13
+      ],
+      "s_ratio": 0.004789047155103102,
+      "min_gap": 0.05340443735239009,
+      "p_add": 0
+    },
+    {
+      "model": "SU(5) 5+45+50",
+      "n_params": 76,
+      "rank": 13,
+      "rank_set": [
+        13
+      ],
+      "s_ratio": 0.005342085271335326,
+      "min_gap": 0.08209558015808788,
+      "p_add": 0
+    },
+    {
+      "model": "SO(10) 10+120",
+      "n_params": 30,
+      "rank": 13,
+      "rank_set": [
+        13
+      ],
+      "s_ratio": 0.0022027443284542867,
+      "min_gap": 0.06331714787245324,
+      "p_add": 0
+    },
+    {
+      "model": "SO(10) 10+126",
+      "n_params": 32,
+      "rank": 13,
+      "rank_set": [
+        13
+      ],
+      "s_ratio": 0.0022612211513924965,
+      "min_gap": 0.06921771034252441,
+      "p_add": 0
+    },
+    {
+      "model": "SO(10) 120+126",
+      "n_params": 30,
+      "rank": 13,
+      "rank_set": [
+        13
+      ],
+      "s_ratio": 0.0006047307808700214,
+      "min_gap": 0.10708745794576495,
+      "p_add": 0
+    },
+    {
+      "model": "SO(10) 10+120+126",
+      "n_params": 46,
+      "rank": 13,
+      "rank_set": [
+        13
+      ],
+      "s_ratio": 0.003875320933541539,
+      "min_gap": 0.1473569006342839,
+      "p_add": 0
+    },
+    {
+      "model": "PS (1,2,2)+(15,2,2)",
+      "n_params": 44,
+      "rank": 13,
+      "rank_set": [
+        13
+      ],
+      "s_ratio": 0.006632982196761707,
+      "min_gap": 0.1359329314770653,
+      "p_add": 0
+    }
+  ],
+  "parameterisation_comparison": {
+    "correct": {
+      "n_params": 30,
+      "identity_err_median": 1.2546963563628042,
+      "identity_err_max": 21.99145025498729,
+      "sym_err_max": 2.026422434811139e-14,
+      "ratio_min": 0.12904756995188443,
+      "ratio_median": 7.410613445236461,
+      "ratio_max": 478.9522333266114,
+      "viol_lower": 71,
+      "viol_upper": 1342,
+      "n_points": 4000
+    },
+    "collapsed": {
+      "n_params": 26,
+      "identity_err_median": 3.1660293425135283e-16,
+      "identity_err_max": 1.13512639129752e-15,
+      "sym_err_max": 3.04388764398103e-14,
+      "ratio_min": 1.0005223248465813,
+      "ratio_median": 5.932725839880527,
+      "ratio_max": 8.998719760157652,
+      "viol_lower": 0,
+      "viol_upper": 0,
+      "n_points": 4000
+    }
+  },
+  "seesaw": {
+    "n_points": 500,
+    "hit_err_max": 6.177519193620588e-13,
+    "sym_err_max": 7.105463613551866e-16
+  },
+  "typeII": {
+    "ckm_offdiag_max": 9.589591542374155e-15,
+    "proportional_points": 0,
+    "n_points": 300
+  },
+  "constrained_image": {
+    "n_params": 22,
+    "n_target": 12,
+    "rank": 12,
+    "rank_set": [
+      12
+    ],
+    "surjective": true,
+    "s_ratio": 0.13715619484125804,
+    "term_symmetry_err": 4.0537270269687387e-16,
+    "term_rank": [
+      2
+    ]
+  },
+  "exact_relations": {
+    "trB_zero": true,
+    "detB_zero": true,
+    "discB2_zero": true,
+    "discPencil_zero": true,
+    "E1_E2_vanish": true,
+    "explicit_codimension": 4,
+    "explicit_ambient_dim": 30,
+    "explicit_all_vanish": true,
+    "rank_matrices_120_126": 28,
+    "phys_dim_source": "strict_obs.run(); orbit method withdrawn (audit 9)",
+    "phys_120_126": 22,
+    "relations_120_126": 0,
+    "phys_10_126": 22,
+    "relations_10_126": 0,
+    "phys_10_120_126": 22,
+    "relations_10_120_126": 0,
+    "charged_phys_120_126": 13,
+    "charged_ranks": [
+      13,
+      13,
+      13,
+      12,
+      13
+    ],
+    "observable_ranks_strict": [
+      22,
+      22,
+      22,
+      21,
+      22
+    ],
+    "generic_rank_stable": true,
+    "phys_dim_evidence": "strict_takagi_basis_independent",
+    "exact_invariant_lower_bound": 17,
+    "withdrawn_19_three": "19/three came from non-basis-independent neutrino observables; strict Takagi gives 22/zero (audit 9)",
+    "counting_no_double": true,
+    "rg_proportionality_broken": true,
+    "rg_ratio_shifts": true,
+    "rg_low_mtau_mb": 1.7853211270656095,
+    "vev_constraint_dim": 22,
+    "vev_ranks": [
+      22,
+      22,
+      22,
+      21,
+      22
+    ],
+    "two_copies_dim": 22,
+    "two_copies_ranks": [
+      22,
+      22,
+      22,
+      22,
+      22
+    ],
+    "vL_free_dim": 22,
+    "vL_free_ranks": [
+      22,
+      22,
+      22,
+      21,
+      22
+    ],
+    "vL_constraint_dim": 22,
+    "vL_constraint_ranks": [
+      22,
+      22,
+      22,
+      21,
+      22
+    ],
+    "vL_constraint_robust": true,
+    "charged_grade_a_all": {
+      "120+126": [
+        13,
+        13,
+        13
+      ],
+      "10+126": [
+        13,
+        13,
+        13
+      ],
+      "10+120+126": [
+        13,
+        13,
+        13
+      ],
+      "10+120": [
+        13,
+        13,
+        13
+      ]
+    },
+    "charged_grade_a": true,
+    "rg_lowenergy": {
+      "r_low": [
+        0.0222488038277512,
+        0.0011172248803827751,
+        0.05948227349465392,
+        0.0002875633089476646,
+        0.42511961722488034,
+        38.995215311004785
+      ],
+      "r_gut": [
+        0.025069577298179876,
+        0.0012588782472658002,
+        0.05948033579760681,
+        0.00028755390801376955,
+        1.0661717420607058,
+        47.925901629405395
+      ],
+      "gut_mtau_mb": 1.0661717420607058,
+      "roundtrip_dev": 1.021405182655144e-14
+    },
+    "rational_route": {
+      "n_candidates": 40,
+      "n_fibre_constant": 20,
+      "survivor_exact_ranks": [
+        16,
+        16
+      ],
+      "max_survivor_rank": 16,
+      "fraction_field_ranks": [
+        17,
+        17
+      ],
+      "conclusion": "rational Mnu words and fraction-field/resultant combos add no direction beyond 17"
+    },
+    "neutrino_grade_a_certs": {
+      "2": {
+        "certified": true,
+        "seed": 2,
+        "cols": [
+          0,
+          1,
+          2,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          11,
+          13,
+          15,
+          17,
+          20,
+          21,
+          22,
+          23,
+          24,
+          25,
+          26,
+          29,
+          30
+        ],
+        "rho": 0.2841406627398163,
+        "margin": 0.7158593372601837,
+        "residual": 6.912979264865074e-12,
+        "norm_Ainv_rig": 327.2183217549495,
+        "norm_E": 0.0008683519346224334,
+        "float_det": -2939.9383326960033,
+        "cond": 234217.4026115172,
+        "eig_enclosure_verified": true,
+        "fd_containment_verified": true,
+        "fd_max_dev": 1.7052823387192378e-07,
+        "fd_radius_bound": 3.34549273060013e-05,
+        "parameterisation": "tied v_L=kappa*su*sd/vR (identical to strict_obs.build)"
+      },
+      "7": {
+        "certified": true,
+        "seed": 7,
+        "cols": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          13,
+          14,
+          16,
+          20,
+          21,
+          22,
+          24,
+          25,
+          27,
+          28,
+          29,
+          30
+        ],
+        "rho": 0.4100800248961463,
+        "margin": 0.5899199751038537,
+        "residual": 2.4832480823015015e-12,
+        "norm_Ainv_rig": 880.2141633882608,
+        "norm_E": 0.00046588664662881683,
+        "float_det": 8.370243197319944,
+        "cond": 237205.11569239455,
+        "eig_enclosure_verified": true,
+        "fd_containment_verified": true,
+        "fd_max_dev": 5.7201003045292964e-08,
+        "fd_radius_bound": 1.892530975483487e-05,
+        "parameterisation": "tied v_L=kappa*su*sd/vR (identical to strict_obs.build)"
+      },
+      "11": {
+        "certified": true,
+        "seed": 11,
+        "cols": [
+          0,
+          1,
+          4,
+          6,
+          7,
+          8,
+          9,
+          13,
+          14,
+          15,
+          16,
+          19,
+          20,
+          21,
+          22,
+          24,
+          25,
+          26,
+          27,
+          28,
+          29,
+          31
+        ],
+        "rho": 0.09531791390352666,
+        "margin": 0.9046820860964734,
+        "residual": 1.5267942528561044e-12,
+        "norm_Ainv_rig": 453.5766943636516,
+        "norm_E": 0.00021014729171050896,
+        "float_det": 38.7804288700147,
+        "cond": 66097.27910432489,
+        "eig_enclosure_verified": true,
+        "fd_containment_verified": true,
+        "fd_max_dev": 3.928659420004976e-08,
+        "fd_radius_bound": 8.54257822951473e-06,
+        "parameterisation": "tied v_L=kappa*su*sd/vR (identical to strict_obs.build)"
+      }
+    },
+    "neutrino_grade_a": true,
+    "fiber": {
+      "rank": 22,
+      "fibre_dim": 12,
+      "max_dobs": 2.1316282072803006e-06,
+      "n_sigma_changing": 12,
+      "obs_2nd_over_t2": 6.984631511386397,
+      "sigma_rate": 1.4464347933375987
+    },
+    "pencil_mining": {
+      "universality": {
+        "120+126": {
+          "median_rel_resid": 3.1882371214528144e-15,
+          "max_rel_resid": 7.237363017584809e-14,
+          "n": 150,
+          "identity_holds": true
+        },
+        "10+126": {
+          "median_rel_resid": 0.024953294445343933,
+          "max_rel_resid": 5.089619560128038,
+          "n": 150,
+          "identity_holds": false
+        },
+        "10+120+126": {
+          "median_rel_resid": 0.057939651455899854,
+          "max_rel_resid": 3.8910454564091803,
+          "n": 150,
+          "identity_holds": false
+        },
+        "double-126 (broken)": {
+          "median_rel_resid": 0.1805769895713646,
+          "max_rel_resid": 5.785988053906371,
+          "n": 150,
+          "identity_holds": false
+        }
+      },
+      "breaking_scale": {
+        "rows": [
+          {
+            "eps": 0.0001,
+            "median_rel_resid": 8.37163187874842e-09
+          },
+          {
+            "eps": 0.001,
+            "median_rel_resid": 8.408539708012559e-07
+          },
+          {
+            "eps": 0.01,
+            "median_rel_resid": 8.13907829851484e-05
+          },
+          {
+            "eps": 0.1,
+            "median_rel_resid": 0.007235152229799506
+          },
+          {
+            "eps": 1.0,
+            "median_rel_resid": 0.12904560081515287
+          }
+        ],
+        "power_law_exponent": 1.9795767297482936,
+        "interpretation": "residual ~ eps^1.98 at small eps"
+      }
+    },
+    "declaration_scoreboard": {
+      "rows": [
+        {
+          "content": "120+126",
+          "best_sq_resid": 0.29807504007470037,
+          "sqrt_abs_log_resid": 0.5459624896224102,
+          "fitted_mtau_mb": 2.75891842648983,
+          "target_mtau_mb": 1.6,
+          "declaration_cost_lower_bound": 1,
+          "verdict": ">=1 declaration (generic fit blocked)"
+        },
+        {
+          "content": "10+126",
+          "best_sq_resid": 1.8100802293645153e-21,
+          "sqrt_abs_log_resid": 4.254503765851566e-11,
+          "fitted_mtau_mb": 1.5999999999588301,
+          "target_mtau_mb": 1.6,
+          "declaration_cost_lower_bound": 0,
+          "verdict": "0 declarations (generic fit)"
+        }
+      ],
+      "tie_break": "census P_add=0 for both; declaration cost breaks the tie (10+126=0, 120+126>=1)",
+      "scope": "tree-level matching, indicative GUT ratios, no RG; lower bound"
+    },
+    "pencil_prior_sensitivity": {
+      "priors": {
+        "gaussian": {
+          "m2/m1": {
+            "ks": 0.15583333333333332,
+            "p": 3.971345238401763e-13,
+            "single_mean": 0.4610946382985912,
+            "broken_mean": 0.39101283941857207,
+            "preference_holds": true
+          },
+          "m3/m1": {
+            "ks": 0.2841666666666667,
+            "p": 4.469969501611689e-43,
+            "single_mean": 0.1812816208540039,
+            "broken_mean": 0.09955094445022766,
+            "preference_holds": true
+          }
+        },
+        "uniform": {
+          "m2/m1": {
+            "ks": 0.2325,
+            "p": 7.621415770105277e-29,
+            "single_mean": 0.45833244375052196,
+            "broken_mean": 0.35297066605525945,
+            "preference_holds": true
+          },
+          "m3/m1": {
+            "ks": 0.425,
+            "p": 1.4126822206274776e-97,
+            "single_mean": 0.19213023114469033,
+            "broken_mean": 0.07851482393751771,
+            "preference_holds": true
+          }
+        },
+        "loguniform": {
+          "m2/m1": {
+            "ks": 0.0525,
+            "p": 0.07320127903902315,
+            "single_mean": 0.3597410013888548,
+            "broken_mean": 0.33755153110859076,
+            "preference_holds": false
+          },
+          "m3/m1": {
+            "ks": 0.06666666666666667,
+            "p": 0.009639198068449636,
+            "single_mean": 0.08215616209656176,
+            "broken_mean": 0.06518981973632651,
+            "preference_holds": false
+          }
+        },
+        "heavytail": {
+          "m2/m1": {
+            "ks": 0.08583333333333333,
+            "p": 0.00028733045707851954,
+            "single_mean": 0.432254034865705,
+            "broken_mean": 0.3894675601962332,
+            "preference_holds": false
+          },
+          "m3/m1": {
+            "ks": 0.16916666666666666,
+            "p": 2.0957442091697243e-15,
+            "single_mean": 0.13697940295273675,
+            "broken_mean": 0.09122841366339376,
+            "preference_holds": true
+          }
+        },
+        "real": {
+          "m2/m1": {
+            "ks": 0.1875,
+            "p": 7.552797156427454e-19,
+            "single_mean": 0.45918498000945873,
+            "broken_mean": 0.3706528789200773,
+            "preference_holds": true
+          },
+          "m3/m1": {
+            "ks": 0.2991666666666667,
+            "p": 9.03334767873398e-48,
+            "single_mean": 0.16530708568298702,
+            "broken_mean": 0.08271024660377464,
+            "preference_holds": true
+          }
+        },
+        "hierarchical": {
+          "m2/m1": {
+            "ks": 0.07333333333333333,
+            "p": 0.003140769833308496,
+            "single_mean": 0.2916252791869901,
+            "broken_mean": 0.2818816008314438,
+            "preference_holds": false
+          },
+          "m3/m1": {
+            "ks": 0.08083333333333333,
+            "p": 0.0007825361555855586,
+            "single_mean": 0.052703121961838066,
+            "broken_mean": 0.03398337924296025,
+            "preference_holds": false
+          }
+        }
+      },
+      "breaking_sweep": {
+        "eps=0.3": {
+          "ks_m3m1": 0.13833333333333334,
+          "p_m3m1": 1.9967448754535656e-10,
+          "single_mean": 0.1772684585758362,
+          "broken_mean": 0.1398683839881078,
+          "preference_holds": true
+        },
+        "eps=1.0": {
+          "ks_m3m1": 0.2975,
+          "p_m3m1": 3.0911681375651797e-47,
+          "single_mean": 0.1772684585758362,
+          "broken_mean": 0.08984769952058372,
+          "preference_holds": true
+        },
+        "eps=3.0": {
+          "ks_m3m1": 0.3675,
+          "p_m3m1": 1.86563957772332e-72,
+          "single_mean": 0.1772684585758362,
+          "broken_mean": 0.07399754253677936,
+          "preference_holds": true
+        }
+      },
+      "n_per_prior": 1200,
+      "summary": {
+        "m3m1_direction_across_priors": "6/6",
+        "m2m1_direction_across_priors": "6/6",
+        "m3m1_strong_priors": "4/6",
+        "m2m1_strong_priors": "3/6",
+        "breaking_sweep_holds": "3/3",
+        "direction_prior_robust": true,
+        "note": "direction (weaker hierarchy for single-S) is prior-robust; magnitude is prior-dependent (weakens for log-uniform / hierarchical priors)"
+      }
+    },
+    "exclusion_taxonomy": {
+      "n_excluded": 11,
+      "n_viable": 7,
+      "excluded_rows": [
+        {
+          "group": "SU(5)",
+          "model": "5",
+          "rankC": 2,
+          "n_ops": 2,
+          "mechanisms": [
+            "CKM=I"
+          ],
+          "primary": "CKM-lock"
+        },
+        {
+          "group": "SU(5)",
+          "model": "45",
+          "rankC": 2,
+          "n_ops": 2,
+          "mechanisms": [
+            "CKM=I"
+          ],
+          "primary": "CKM-lock"
+        },
+        {
+          "group": "SU(5)",
+          "model": "50",
+          "rankC": 1,
+          "n_ops": 1,
+          "mechanisms": [
+            "unfed"
+          ],
+          "primary": "unfed"
+        },
+        {
+          "group": "SU(5)",
+          "model": "5+50",
+          "rankC": 2,
+          "n_ops": 3,
+          "mechanisms": [
+            "CKM=I"
+          ],
+          "primary": "CKM-lock"
+        },
+        {
+          "group": "SU(5)",
+          "model": "45+50",
+          "rankC": 2,
+          "n_ops": 3,
+          "mechanisms": [
+            "CKM=I"
+          ],
+          "primary": "CKM-lock"
+        },
+        {
+          "group": "SO(10)",
+          "model": "10",
+          "rankC": 1,
+          "n_ops": 1,
+          "mechanisms": [
+            "CKM=I"
+          ],
+          "primary": "CKM-lock"
+        },
+        {
+          "group": "SO(10)",
+          "model": "120",
+          "rankC": 2,
+          "n_ops": 1,
+          "mechanisms": [
+            "md=me",
+            "massless"
+          ],
+          "primary": "other"
+        },
+        {
+          "group": "SO(10)",
+          "model": "126",
+          "rankC": 1,
+          "n_ops": 1,
+          "mechanisms": [
+            "CKM=I"
+          ],
+          "primary": "CKM-lock"
+        },
+        {
+          "group": "E6",
+          "model": "27",
+          "rankC": 1,
+          "n_ops": 1,
+          "mechanisms": [
+            "CKM=I"
+          ],
+          "primary": "CKM-lock"
+        },
+        {
+          "group": "PS",
+          "model": "(1,2,2)",
+          "rankC": 1,
+          "n_ops": 1,
+          "mechanisms": [
+            "CKM=I"
+          ],
+          "primary": "CKM-lock"
+        },
+        {
+          "group": "PS",
+          "model": "(15,2,2)",
+          "rankC": 1,
+          "n_ops": 1,
+          "mechanisms": [
+            "CKM=I"
+          ],
+          "primary": "CKM-lock"
+        }
+      ],
+      "mechanism_counts": {
+        "CKM-lock (trans)": 9,
+        "unfed": 1,
+        "md=me (free_de)": 1,
+        "massless (all_anti)": 1
+      },
+      "ckm_lock_fraction": "9/11",
+      "statement": "exclusion is concentrated: 9/11 excluded contents are CKM-locked (V_CKM=I) by group theory alone",
+      "viable_p_add": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "rg_robust": {
+        "gut_mtau_mb": 1.0661717420607058,
+        "wall": 2.76,
+        "exclusion_survives_running": true
+      }
+    },
+    "pencil_attribution_control": {
+      "content": "10+126 (NO pencil identity)",
+      "m3m1": {
+        "ks": 0.2733333333333333,
+        "p": 1.0545092519310554e-49,
+        "single_mean": 0.21887137046506883,
+        "broken_mean": 0.13625210798824577,
+        "preference_present": true
+      },
+      "m2m1": {
+        "ks": 0.27466666666666667,
+        "p": 3.425754186658506e-50,
+        "single_mean": 0.5501674418142906,
+        "broken_mean": 0.4171134999634084,
+        "preference_present": true
+      },
+      "conclusion": "preference present WITHOUT pencil => it is a single-S seesaw-structure effect, NOT a pencil-identity consequence; pencil attribution is incorrect"
+    },
+    "pure_typeI_control": {
+      "pure_typeI_m3m1": {
+        "ks": 0.28,
+        "p": 8.108925970718262e-42,
+        "single_mean": 0.2015431314610483,
+        "broken_mean": 0.1210126228542849,
+        "preference_present": true
+      },
+      "conclusion": "preference persists in pure type-I (no type-II, no repeated root for 10+126) => caused by single-S M_R structure, not the pencil repeated root"
+    },
+    "ten126_eigcount": {
+      "mean_distinct": 3.0,
+      "frac_three": 1.0,
+      "no_repeated_root": true
+    },
+    "pencil_analytic_origin": {
+      "n": 150,
+      "cross_term_max": 7.229248575812844e-15,
+      "reduction_max": 9.831778063105468e-13,
+      "B2_identity_max": 4.618527782440651e-14,
+      "trB_max": 1.9860273225978185e-15,
+      "rankB_max": 2,
+      "B2_repeat_gap_max": 7.53644380168212e-14,
+      "disc_rel_max": 4.153203829750665e-14,
+      "chain_verified": true,
+      "chain": "disc(Mnu S^-1)=0 follows from antisymmetry of A: B=A S^-1 traceless rank-2 => B^2 has a repeated eigenvalue => pencil. The repeated root is forced by det A=0 (Pfaffian), not by parameters. Analytic chain, grade (b): derived algebraically and confirmed numerically."
+    },
+    "singleS_spectral": {
+      "n": 300,
+      "singleS_distinct_mean": 2.0,
+      "singleS_always_two": true,
+      "brokenS_distinct_mean": 3.0,
+      "brokenS_generic_three": true,
+      "A2_has_zero_frac": 1.0,
+      "A2_has_repeat_frac": 1.0,
+      "observation": "single-S 120+126 Mnu always has 2 distinct eigenvalues (pencil repeated root, from A^2 eigs {0,lambda,lambda}); broken-S has 3. NOTE: this 3->2 reduction is NOT the mechanism of the weaker-hierarchy preference -- 10+126 has 3 distinct eigenvalues (no repeated root) yet the same preference, which persists in pure type-I. The preference is caused by single-S M_R structure, not antisymmetry."
+    },
+    "seven_scoreboard": {
+      "rows": [
+        {
+          "content": "SU(5) 5+45",
+          "npar": 70,
+          "best_sq_resid": 5.0278926231438784e-20,
+          "fitted_mtau_mb": 1.5999999997021692,
+          "declaration_cost_lower_bound": 0
+        },
+        {
+          "content": "SU(5) 5+45+50",
+          "npar": 86,
+          "best_sq_resid": 1.4751805139031407e-19,
+          "fitted_mtau_mb": 1.5999999993963536,
+          "declaration_cost_lower_bound": 0
+        },
+        {
+          "content": "SO(10) 10+120",
+          "npar": 30,
+          "best_sq_resid": 0.14749633737281492,
+          "fitted_mtau_mb": 1.090815646882935,
+          "declaration_cost_lower_bound": 1
+        },
+        {
+          "content": "SO(10) 10+126",
+          "npar": 32,
+          "best_sq_resid": 1.5648587626220457e-20,
+          "fitted_mtau_mb": 1.5999999998760106,
+          "declaration_cost_lower_bound": 0
+        },
+        {
+          "content": "SO(10) 120+126",
+          "npar": 30,
+          "best_sq_resid": 0.29807504003761753,
+          "fitted_mtau_mb": 2.758918684366585,
+          "declaration_cost_lower_bound": 1
+        },
+        {
+          "content": "SO(10) 10+120+126",
+          "npar": 46,
+          "best_sq_resid": 2.085868245352292e-19,
+          "fitted_mtau_mb": 1.5999999994598175,
+          "declaration_cost_lower_bound": 0
+        },
+        {
+          "content": "PS (1,2,2)+(15,2,2)",
+          "npar": 44,
+          "best_sq_resid": 2.4356856055925076e-21,
+          "fitted_mtau_mb": 1.600000000049538,
+          "declaration_cost_lower_bound": 0
+        }
+      ],
+      "n_zero": 5,
+      "n_ge1": 2
+    },
+    "pfaffian_scope": {
+      "SO(10) 120+126": {
+        "antisym_A": true,
+        "MD_in_span_A_S": true,
+        "MR_prop_S": true,
+        "pencil": true
+      },
+      "SO(10) 10+126": {
+        "antisym_A": false,
+        "MD_in_span_A_S": false,
+        "MR_prop_S": true,
+        "pencil": false
+      },
+      "SO(10) 10+120+126": {
+        "antisym_A": true,
+        "MD_in_span_A_S": false,
+        "MR_prop_S": true,
+        "pencil": false
+      },
+      "SU(5) 45": {
+        "antisym_A": true,
+        "MD_in_span_A_S": false,
+        "MR_prop_S": false,
+        "pencil": false,
+        "note": "45 has antisym up Yukawa but no renormalisable type-I seesaw singlet; down/lepton 45 is general, not the same S. Pfaffian does not generalise."
+      },
+      "SU(5) 5+45": {
+        "antisym_A": true,
+        "MD_in_span_A_S": false,
+        "MR_prop_S": false,
+        "pencil": false,
+        "note": "45 has antisym up Yukawa but no renormalisable type-I seesaw singlet; down/lepton 45 is general, not the same S. Pfaffian does not generalise."
+      }
+    },
+    "seed42": {
+      "s21_over_s0": 1.2173256102902352e-09,
+      "null_weight_obs12": -0.9999999380786156,
+      "J": -4.5686884321525264e-07,
+      "d2J": 3.400082407463423e-06,
+      "finite_dJ": 1.1828115780332556e-08,
+      "min_eig_gap": 0.05422314256396971
+    }
+  },
+  "counting_trap": [
+    {
+      "model": "SO(10) 120+126",
+      "n_collapsed": 26,
+      "n_correct": 30,
+      "rank_collapsed": 12,
+      "rank_correct": 13,
+      "p_add_collapsed": 1,
+      "p_add_correct": 0,
+      "overcount": 1,
+      "transpose_err_median": 3.1349870972767713,
+      "spectral_sep_median": 1.6652550945817555
+    },
+    {
+      "model": "SO(10) 10+120",
+      "n_collapsed": 26,
+      "n_correct": 30,
+      "rank_collapsed": 10,
+      "rank_correct": 13,
+      "p_add_collapsed": 3,
+      "p_add_correct": 0,
+      "overcount": 3,
+      "transpose_err_median": 1.3684504420506687,
+      "spectral_sep_median": 0.537529518891317
+    }
+  ],
+  "checks": [
+    {
+      "name": "eighteen contents enumerated",
+      "passed": true
+    },
+    {
+      "name": "seven contents are spectrum-splitting",
+      "passed": true
+    },
+    {
+      "name": "eleven contents are excluded",
+      "passed": true
+    },
+    {
+      "name": "P_add = 0 for EVERY viable content",
+      "passed": true
+    },
+    {
+      "name": "every viable content has rank 13",
+      "passed": true
+    },
+    {
+      "name": "P_ex in {1,3} on the viable set",
+      "passed": true
+    },
+    {
+      "name": "P = baseline + P_add identically",
+      "passed": true
+    },
+    {
+      "name": "120 alone excluded by masslessness",
+      "passed": true
+    },
+    {
+      "name": "120 carries free d/e coefficients",
+      "passed": true
+    },
+    {
+      "name": "126 does NOT split (one bidoublet)",
+      "passed": true
+    },
+    {
+      "name": "10+120 is viable after the correction",
+      "passed": true
+    },
+    {
+      "name": "collapsed identity holds to 1e-13",
+      "passed": true
+    },
+    {
+      "name": "correct identity FAILS (median > 0.1)",
+      "passed": true
+    },
+    {
+      "name": "surviving identity sym Me = -3 sym Md holds",
+      "passed": true
+    },
+    {
+      "name": "withdrawn bound: lower edge breached",
+      "passed": true
+    },
+    {
+      "name": "withdrawn bound: upper edge breached",
+      "passed": true
+    },
+    {
+      "name": "collapsed bound never breached",
+      "passed": true
+    },
+    {
+      "name": "seesaw surjectivity verified to 1e-9",
+      "passed": true
+    },
+    {
+      "name": "constructed M_R is symmetric",
+      "passed": true
+    },
+    {
+      "name": "Y10=0 forces V_CKM diagonal",
+      "passed": true
+    },
+    {
+      "name": "no generic Me proportional to M_nu (type-II)",
+      "passed": true
+    },
+    {
+      "name": "reduced neutrino map is dominant",
+      "passed": true
+    },
+    {
+      "name": "A S^-1 A is symmetric",
+      "passed": true
+    },
+    {
+      "name": "A S^-1 A has rank at most two",
+      "passed": true
+    },
+    {
+      "name": "EXACT: tr(A S^-1) = 0",
+      "passed": true
+    },
+    {
+      "name": "EXACT: det(A S^-1) = 0",
+      "passed": true
+    },
+    {
+      "name": "EXACT: B^2 has a repeated eigenvalue",
+      "passed": true
+    },
+    {
+      "name": "EXACT: pencil (M_nu, S) has a repeated eigenvalue",
+      "passed": true
+    },
+    {
+      "name": "EXACT: explicit (E1) and (E2) vanish identically",
+      "passed": true
+    },
+    {
+      "name": "EXACT: (E1)+(E2) impose four AMBIENT conditions",
+      "passed": true
+    },
+    {
+      "name": "STRICT: 120+126 observable dimension is 22",
+      "passed": true
+    },
+    {
+      "name": "STRICT: zero observable relations for 120+126",
+      "passed": true
+    },
+    {
+      "name": "STRICT: generic rank stable across seeds",
+      "passed": true
+    },
+    {
+      "name": "EXACT: invariant-word lower bound is 17",
+      "passed": true
+    },
+    {
+      "name": "MEASURED: charged observable dimension is 13",
+      "passed": true
+    },
+    {
+      "name": "MEASURED: charged sector alone unconstrained",
+      "passed": true
+    },
+    {
+      "name": "MEASURED: 10+126 has no forced relation",
+      "passed": true
+    },
+    {
+      "name": "MEASURED: 10+120+126 observable dimension is 22",
+      "passed": true
+    },
+    {
+      "name": "MEASURED: no observable dimension exceeds 22",
+      "passed": true
+    },
+    {
+      "name": "EXACT: counting rules have no double counting",
+      "passed": true
+    },
+    {
+      "name": "EXACT: charged 120+126 dominance rank 13 (grade a)",
+      "passed": true
+    },
+    {
+      "name": "MEASURED: fibre dim 12 and Sigma varies along it",
+      "passed": true
+    },
+    {
+      "name": "MEASURED: seed-42 null dir is charged Jarlskog",
+      "passed": true
+    },
+    {
+      "name": "MEASURED: measured-boundary RG round-trip stable",
+      "passed": true
+    },
+    {
+      "name": "MEASURED: measured spectrum at GUT below 120+126 wall",
+      "passed": true
+    },
+    {
+      "name": "EXACT: rational Mnu words add no direction beyond 17",
+      "passed": true
+    },
+    {
+      "name": "EXACT: fraction-field/resultant combos add no direction",
+      "passed": true
+    },
+    {
+      "name": "EXACT: neutrino observable rank 22 certified (grade a)",
+      "passed": true
+    },
+    {
+      "name": "MEASURED: pencil identity is 120+126-specific",
+      "passed": true
+    },
+    {
+      "name": "MEASURED: pencil breaking scales as eps^2",
+      "passed": true
+    },
+    {
+      "name": "MEASURED: declaration cost breaks census tie",
+      "passed": true
+    },
+    {
+      "name": "MEASURED: pencil hierarchy preference direction prior-robust",
+      "passed": true
+    },
+    {
+      "name": "MEASURED: exclusion concentrated by CKM locking",
+      "passed": true
+    },
+    {
+      "name": "MEASURED: hierarchy preference NOT pencil-specific",
+      "passed": true
+    },
+    {
+      "name": "MEASURED: pencil algebraic origin chain verified (grade b)",
+      "passed": true
+    },
+    {
+      "name": "MEASURED: single-S spectral 3->2 observation (grade b)",
+      "passed": true
+    },
+    {
+      "name": "MEASURED: preference is M_R structure NOT repeated root",
+      "passed": true
+    },
+    {
+      "name": "STRUCTURE: Pfaffian pencil does NOT generalise to SU(5) 45",
+      "passed": true
+    },
+    {
+      "name": "MEASURED: seven-content scoreboard 120+126 cost>=1, 10+126 cost 0",
+      "passed": true
+    },
+    {
+      "name": "STRICT: vev alignment keeps dimension 22",
+      "passed": true
+    },
+    {
+      "name": "STRICT: two 126 copies also dimension 22",
+      "passed": true
+    },
+    {
+      "name": "MEASURED: RG breaks exact proportionality",
+      "passed": true
+    },
+    {
+      "name": "MEASURED: RG shifts m_tau/m_b toward window",
+      "passed": true
+    },
+    {
+      "name": "STRICT: v_L seesaw constraint keeps dimension 22",
+      "passed": true
+    },
+    {
+      "name": "transpose criterion is T-weighted, not a copy",
+      "passed": true
+    },
+    {
+      "name": "naive counting overcounts 120+126 by 1",
+      "passed": true
+    },
+    {
+      "name": "naive counting overcounts 10+120 by 3",
+      "passed": true
+    },
+    {
+      "name": "10+120 spectra separate once corrected",
+      "passed": true
+    },
+    {
+      "name": "all conditioning above 1e-5",
+      "passed": true
+    },
+    {
+      "name": "no sample near a mass degeneracy",
+      "passed": true
+    }
+  ],
+  "n_assertions": 70,
+  "n_passed": 70
+}

@@ -1,0 +1,76 @@
+==========================================================================
+  [PASS] eighteen contents enumerated
+  [PASS] seven contents are spectrum-splitting
+  [PASS] eleven contents are excluded
+  [PASS] P_add = 0 for EVERY viable content
+  [PASS] every viable content has rank 13
+  [PASS] P_ex in {1,3} on the viable set
+  [PASS] P = baseline + P_add identically
+  [PASS] 120 alone excluded by masslessness
+  [PASS] 120 carries free d/e coefficients
+  [PASS] 126 does NOT split (one bidoublet)
+  [PASS] 10+120 is viable after the correction
+  [PASS] collapsed identity holds to 1e-13
+  [PASS] correct identity FAILS (median > 0.1)
+  [PASS] surviving identity sym Me = -3 sym Md holds
+  [PASS] withdrawn bound: lower edge breached
+  [PASS] withdrawn bound: upper edge breached
+  [PASS] collapsed bound never breached
+  [PASS] seesaw surjectivity verified to 1e-9
+  [PASS] constructed M_R is symmetric
+  [PASS] Y10=0 forces V_CKM diagonal
+  [PASS] no generic Me proportional to M_nu (type-II)
+  [PASS] reduced neutrino map is dominant
+  [PASS] A S^-1 A is symmetric
+  [PASS] A S^-1 A has rank at most two
+  [PASS] EXACT: tr(A S^-1) = 0
+  [PASS] EXACT: det(A S^-1) = 0
+  [PASS] EXACT: B^2 has a repeated eigenvalue
+  [PASS] EXACT: pencil (M_nu, S) has a repeated eigenvalue
+  [PASS] EXACT: explicit (E1) and (E2) vanish identically
+  [PASS] EXACT: (E1)+(E2) impose four AMBIENT conditions
+  [PASS] STRICT: 120+126 observable dimension is 22
+  [PASS] STRICT: zero observable relations for 120+126
+  [PASS] STRICT: generic rank stable across seeds
+  [PASS] EXACT: invariant-word lower bound is 17
+  [PASS] MEASURED: charged observable dimension is 13
+  [PASS] MEASURED: charged sector alone unconstrained
+  [PASS] MEASURED: 10+126 has no forced relation
+  [PASS] MEASURED: 10+120+126 observable dimension is 22
+  [PASS] MEASURED: no observable dimension exceeds 22
+  [PASS] EXACT: counting rules have no double counting
+  [PASS] EXACT: charged 120+126 dominance rank 13 (grade a)
+  [PASS] MEASURED: fibre dim 12 and Sigma varies along it
+  [PASS] MEASURED: seed-42 null dir is charged Jarlskog
+  [PASS] MEASURED: measured-boundary RG round-trip stable
+  [PASS] MEASURED: measured spectrum at GUT below 120+126 wall
+  [PASS] EXACT: rational Mnu words add no direction beyond 17
+  [PASS] EXACT: fraction-field/resultant combos add no direction
+  [PASS] EXACT: neutrino observable rank 22 certified (grade a)
+  [PASS] MEASURED: pencil identity is 120+126-specific
+  [PASS] MEASURED: pencil breaking scales as eps^2
+  [PASS] MEASURED: declaration cost breaks census tie
+  [PASS] MEASURED: pencil hierarchy preference direction prior-robust
+  [PASS] MEASURED: exclusion concentrated by CKM locking
+  [PASS] MEASURED: hierarchy preference NOT pencil-specific
+  [PASS] MEASURED: pencil algebraic origin chain verified (grade b)
+  [PASS] MEASURED: single-S spectral 3->2 observation (grade b)
+  [PASS] MEASURED: preference is M_R structure NOT repeated root
+  [PASS] STRUCTURE: Pfaffian pencil does NOT generalise to SU(5) 45
+  [PASS] MEASURED: seven-content scoreboard 120+126 cost>=1, 10+126 cost 0
+  [PASS] STRICT: vev alignment keeps dimension 22
+  [PASS] STRICT: two 126 copies also dimension 22
+  [PASS] MEASURED: RG breaks exact proportionality
+  [PASS] MEASURED: RG shifts m_tau/m_b toward window
+  [PASS] STRICT: v_L seesaw constraint keeps dimension 22
+  [PASS] transpose criterion is T-weighted, not a copy
+  [PASS] naive counting overcounts 120+126 by 1
+  [PASS] naive counting overcounts 10+120 by 3
+  [PASS] 10+120 spectra separate once corrected
+  [PASS] all conditioning above 1e-5
+  [PASS] no sample near a mass degeneracy
+==========================================================================
+  70 / 70 assertions passed
+  viable 7 | excluded 11 | P_add set [0]
+  figures -> D:\Documents\qwen-agent\i15g3v3rg3\论文C21\PRD_submission\05_figures
+  results -> D:\Documents\qwen-agent\i15g3v3rg3\论文C21\PRD_submission\06_results
